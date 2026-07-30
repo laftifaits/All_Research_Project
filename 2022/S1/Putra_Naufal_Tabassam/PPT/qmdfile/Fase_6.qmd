@@ -1,0 +1,191 @@
+# Fase 6: Optimasi pada VQE
+
+## Gradien Energi {.scrollable}
+
+::: {.panel-tabset}
+### Rumus Utama
+* Pembaruan parameter sirkuit membutuhkan nilai gradien dari fungsi objektif (energi).
+  $$ \frac{\partial E}{\partial \theta} = \frac{\partial}{\partial \theta} \langle\psi(\theta)|\hat{H}|\psi(\theta)\rangle $$
+* Melalui komutator unitari, turunan analitik dari nilai ekspektasi kuantum dapat disederhanakan menjadi:
+  $$ \frac{\partial \langle E(\theta)\rangle}{\partial \theta} = \frac{i}{2} \langle{\psi(\theta)}| [\sigma, M] |{\psi(\theta)}\rangle $$
+  (dimana $M$ merepresentasikan operator gabungan pada sirkuit).
+
+### Penurunan Rumus
+<div class="scrollable" style="max-height: 450px; font-size: 0.65em;">
+**Penurunan: Gradien Energi dan Parameter Shift Rule**
+
+**Langkah 1 — Turunan Parsial Nilai Ekspektasi:**
+$$\frac{\partial E(\theta)}{\partial \theta_j} = \left\langle \frac{\partial \psi(\theta)}{\partial \theta_j} \right| \hat{\mathcal{H}} |\psi(\theta)\rangle + \langle \psi(\theta)| \hat{\mathcal{H}} \left| \frac{\partial \psi(\theta)}{\partial \theta_j} \right\rangle$$
+
+**Langkah 2 — Dekomposisi Keadaan Kuantum:**
+Untuk gerbang rotasi berparameter $\theta$: 
+$$|\psi(\theta)\rangle = \hat{U}_B \hat{U}(\theta) \hat{U}_A |00\rangle, \quad \hat{U}(\theta) = e^{-i\frac{\theta}{2}\sigma}$$
+Definisikan $|\phi\rangle = \hat{U}_A|00\rangle$ dan $\hat{M} = \hat{U}_B^\dagger \hat{\mathcal{H}} \hat{U}_B$, sehingga:
+$$E(\theta) = \langle \phi| \hat{U}^\dagger(\theta) \hat{M} \hat{U}(\theta) |\phi\rangle$$
+
+**Langkah 3 — Turunan Operator Uniter dan Komutator:**
+Turunan parsial ekspektasi energi adalah:
+$$\frac{\partial E(\theta)}{\partial \theta} = \langle \phi| \frac{\partial \hat{U}^{\dagger}(\theta)}{\partial \theta} \hat{M} \hat{U}(\theta) |\phi\rangle + \langle \phi| \hat{U}^{\dagger}(\theta) \hat{M} \frac{\partial \hat{U}(\theta)}{\partial \theta} |\phi\rangle$$
+Karena $\frac{\partial \hat{U}(\theta)}{\partial \theta} = -\frac{i}{2}\sigma \hat{U}(\theta)$, persamaan disederhanakan menjadi bentuk komutator:
+$$\frac{\partial E(\theta)}{\partial \theta} = \frac{i}{2} \langle \psi(\theta)| \sigma \hat{M} |\psi(\theta)\rangle - \frac{i}{2} \langle \psi(\theta)| \hat{M}\sigma |\psi(\theta)\rangle = \frac{i}{2} \langle \psi(\theta)| [\sigma, \hat{M}] |\psi(\theta)\rangle$$
+
+**Langkah 4 — Pergeseran Parameter (Parameter Shift):**
+Bentuk komutator sulit diukur pada perangkat keras. Gunakan pergeseran parameter $s$:
+$$\hat{U}(\theta\pm s) = \exp\left[-i\frac{\theta\pm s}{2}\sigma\right] = \hat{U}(\theta)\hat{U}(\pm s)$$
+$$E(\theta+s) = \langle \psi(\theta)| \hat{U}^{\dagger}(s) \hat{M} \hat{U}(s) |\psi(\theta)\rangle$$
+
+**Langkah 5 — Identitas Euler:**
+$$\hat{U}(s) = \cos\left(\frac{s}{2}\right)\hat{I} - i\sin\left(\frac{s}{2}\right)\sigma$$
+Substitusikan untuk pergeseran positif dan negatif:
+$$E(\theta\pm s) = \cos^2\left(\frac{s}{2}\right)\langle\hat{M}\rangle + \sin^2\left(\frac{s}{2}\right) \langle \sigma\hat{M}\sigma\rangle \pm i\sin\left(\frac{s}{2}\right) \cos\left(\frac{s}{2}\right) \langle[\sigma,\hat{M}]\rangle$$
+
+**Langkah 6 — Selisih Ekspektasi Energi:**
+Kurangkan ekspektasi positif dan negatif:
+$$E(\theta+s) - E(\theta-s) = 2i\sin\left(\frac{s}{2}\right)\cos\left(\frac{s}{2}\right)\langle[\sigma,\hat{M}]\rangle = i\sin(s)\langle[\sigma,\hat{M}]\rangle$$
+
+**Langkah 7 — Pemilihan $s = \pi/2$ (Gradien Eksak):**
+Dengan memilih pergeseran sudut $s=\pi/2$, gradien akhir diformulasikan sebagai:
+$$\boxed{\frac{\partial E(\theta)}{\partial \theta} = \frac{1}{2}\left[E\left(\theta+\frac{\pi}{2}\right) - E\left(\theta-\frac{\pi}{2}\right)\right]}$$
+
+<br><br><br>
+</div>
+:::
+
+---
+
+## Parameter Shift Rule (PSR) {.scrollable}
+
+::: {.panel-tabset}
+### Rumus Utama
+* PSR adalah metode kalkulasi gradien analitik (bukan numerik) secara langsung di perangkat keras kuantum.
+* Menggunakan konsep pergeseran parameter $\theta$ sebesar $s = \frac{\pi}{2}$ ke arah positif dan negatif.
+  $$ \langle E(\theta \pm s)\rangle = \langle{\psi (\theta)}| \hat{U}(\pm s)^{\dagger}\hat{M}\hat{U}(\pm s)|{\psi (\theta)}\rangle $$
+* Selisih kedua evaluasi menghasilkan gradien eksak:
+  $$ \frac{\partial \langle E(\theta)\rangle}{\partial \theta} = \frac{1}{2} \left[ \langle E(\theta+s)\rangle - \langle E(\theta-s)\rangle \right] $$
+
+### Penurunan Rumus
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+**Penurunan: Parameter Shift Rule**
+
+**Langkah 1 — Pergeseran Parameter:**
+
+$$\hat{U}(\theta \pm s) = \exp\left[-i\frac{\theta \pm s}{2}\sigma\right] = \hat{U}(\theta)\hat{U}(\pm s)$$
+
+Untuk pergeseran positif:
+
+$$E(\theta+s) = \langle \psi(\theta)| \hat{U}^\dagger(s) \hat{M} \hat{U}(s) |\psi(\theta)\rangle$$
+
+---
+
+**Langkah 2 — Identitas Euler:**
+
+$$\hat{U}(s) = \cos\left(\frac{s}{2}\right)\hat{I} - i\sin\left(\frac{s}{2}\right)\sigma$$
+
+Substitusi:
+
+$$E(\theta+s) = \cos^2\left(\frac{s}{2}\right)\langle\hat{M}\rangle + \sin^2\left(\frac{s}{2}\right) \langle \sigma\hat{M}\sigma\rangle + i\sin\left(\frac{s}{2}\right) \cos\left(\frac{s}{2}\right) \langle[\sigma,\hat{M}]\rangle$$
+
+$$E(\theta-s) = \cos^2\left(\frac{s}{2}\right)\langle\hat{M}\rangle + \sin^2\left(\frac{s}{2}\right) \langle \sigma\hat{M}\sigma\rangle - i\sin\left(\frac{s}{2}\right) \cos\left(\frac{s}{2}\right) \langle[\sigma,\hat{M}]\rangle$$
+
+---
+
+**Langkah 3 — Selisih:**
+
+$$E(\theta+s) - E(\theta-s) = 2i\sin\left(\frac{s}{2}\right)\cos\left(\frac{s}{2}\right)\langle[\sigma,\hat{M}]\rangle = i\sin(s)\langle[\sigma,\hat{M}]\rangle$$
+
+---
+
+**Langkah 4 — Pilih $s = \pi/2$:**
+
+Karena $\sin(\pi/2) = 1$ dan $\frac{\partial E}{\partial \theta} = \frac{i}{2}\langle[\sigma,\hat{M}]\rangle$:
+
+$$\boxed{\frac{\partial E(\theta)}{\partial \theta} = \frac{1}{2}\left[E\left(\theta+\frac{\pi}{2}\right) - E\left(\theta-\frac{\pi}{2}\right)\right]}$$
+
+Gradien dihitung **hanya dari dua evaluasi sirkuit** yang digeser $\pm \pi/2$.
+
+<br><br><br>
+</div>
+:::
+
+---
+
+## Optimasi Klasik: Gradient Descent (GD)
+* **Mekanisme:** Parameter $\theta$ diperbarui searah negatif gradien untuk mencapai minimum energi secara bertahap.
+  $$ \theta_{t+1} = \theta_t - \eta \nabla E(\theta_t) $$
+  * $\theta_{t+1}$: Parameter iterasi baru
+  * $\eta$: Laju pembelajaran (*learning rate*)
+  * $\nabla E(\theta_t)$: Gradien energi pada parameter $\theta_t$
+* **Kekurangan:** Harus mengevaluasi gradien dua kali untuk *setiap* parameter tunggal. Kompleksitas komputasi tumbuh linear $O(N)$ terhadap jumlah parameter, sehingga tidak skalabel untuk PQC besar.
+
+---
+
+## Optimizer SPSA {.scrollable}
+
+::: {.panel-tabset}
+### Rumus Utama
+**SPSA (Simultaneous Perturbation Stochastic Approximation)**
+
+* **Inovasi:** Mengestimasi gradien *seluruh* parameter secara simultan hanya menggunakan dua pengukuran (satu vektor perturbasi acak $\Delta$).
+  $$ \hat{g}_k = \frac{E(\theta_k + c_k \Delta_k) - E(\theta_k - c_k \Delta_k)}{2 c_k \Delta_k} $$
+* Dengan ekspektasi estimasi gradien yang terbukti ekuivalen dengan gradien eksak:
+  $$ \mathbb{E} \left[ \hat{g}_k \right] = \nabla E(\theta_k) $$
+
+### Penurunan Rumus
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+**Penurunan: Estimator Gradien SPSA**
+
+**Langkah 1 — Vektor Perturbasi Acak:**
+
+$$\Delta_k = (\Delta_{k,1}, \Delta_{k,2}, \ldots, \Delta_{k,p}), \quad \Delta_{k,i} = \begin{cases} +1, & P = 1/2 \\ -1, & P = 1/2 \end{cases}$$
+
+Setiap komponen mengikuti distribusi *Rademacher*.
+
+---
+
+**Langkah 2 — Evaluasi Fungsi Biaya:**
+
+$$E_+ = E(\boldsymbol{\theta}_k + c_k\Delta_k), \quad E_- = E(\boldsymbol{\theta}_k - c_k\Delta_k)$$
+
+---
+
+**Langkah 3 — Ekspansi Taylor:**
+
+$$E_+ = E(\boldsymbol{\theta}_k) + c_k \sum_{j=1}^{p} \Delta_j \frac{\partial E}{\partial \theta_j} + \frac{1}{2}c_k^2 \sum_{j=1}^{p} \Delta_j^2 \frac{\partial^2 E}{\partial \theta_j^2} + O(c_k^3)$$
+
+$$E_- = E(\boldsymbol{\theta}_k) - c_k \sum_{j=1}^{p} \Delta_j \frac{\partial E}{\partial \theta_j} + \frac{1}{2}c_k^2 \sum_{j=1}^{p} \Delta_j^2 \frac{\partial^2 E}{\partial \theta_j^2} + O(c_k^3)$$
+
+---
+
+**Langkah 4 — Selisih (suku genap saling hilang):**
+
+$$E_+ - E_- = 2c_k \sum_{j=1}^{p} \Delta_j \frac{\partial E}{\partial \theta_j} + O(c_k^3)$$
+
+---
+
+**Langkah 5 — Estimator Gradien:**
+
+$$\hat{g}_i = \frac{E_+ - E_-}{2c_k \Delta_i} = \frac{\partial E}{\partial \theta_i} + \sum_{j \neq i} \frac{\Delta_j}{\Delta_i} \frac{\partial E}{\partial \theta_j}$$
+
+---
+
+**Langkah 6 — Bukti Tak-Bias:**
+
+Karena $\Delta_j$ independen dan $\mathbb{E}\left[\frac{\Delta_j}{\Delta_i}\right] = 0$ untuk $j \neq i$:
+
+$$\mathbb{E}[\hat{g}_i] = \frac{\partial E}{\partial \theta_i} + \sum_{j \neq i} \underbrace{\mathbb{E}\left[\frac{\Delta_j}{\Delta_i}\right]}_{= 0} \frac{\partial E}{\partial \theta_j} = \frac{\partial E}{\partial \theta_i}$$
+
+$$\therefore \boxed{\mathbb{E}[\hat{\mathbf{g}}_k] = \nabla E(\boldsymbol{\theta}_k)}$$
+
+---
+
+**Langkah 7 — Pembaruan Parameter & Peluruhan:**
+
+$$\boldsymbol{\theta}_{k+1} = \boldsymbol{\theta}_k - a_k \hat{\mathbf{g}}_k$$
+
+dengan hiperparameter peluruhan:
+
+$$a_k = \frac{a}{(A+k+1)^\alpha}, \quad c_k = \frac{c}{(k+1)^\gamma}$$
+
+<br><br><br>
+</div>
+:::

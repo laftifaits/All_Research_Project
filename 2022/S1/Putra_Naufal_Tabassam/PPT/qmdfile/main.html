@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="main_files/libs/clipboard/clipboard.min.js"></script>
+<script src="main_files/libs/quarto-html/tabby.min.js"></script>
+<script src="main_files/libs/quarto-html/popper.min.js"></script>
+<script src="main_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="main_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="main_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="main_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Putra Naufal Tabassam">
+  <meta name="author" content="Pembimbing:">
+  <meta name="author" content="Penguji:">
+  <meta name="keywords" content="Quantum Computing, VQE, Markowitz, Game Theory, Econophysics, Ekonofisika, Tugas Akhir Fisika ITS">
+  <title>OPTIMASI PORTOFOLIO BERBASIS MODEL MARKOWITZ MENGGUNAKAN METODE VARIATIONAL QUANTUM EIGENSOLVER</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="main_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="main_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="main_files/libs/revealjs/dist/theme/quarto-fdaac0e0506a159c16366bc875771b4f.css">
+  <link href="main_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="main_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="main_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="main_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="main_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="main_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="main_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="main_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="main_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title"><span style="font-size: 0.85em;">OPTIMASI PORTOFOLIO BERBASIS MODEL MARKOWITZ MENGGUNAKAN METODE VARIATIONAL QUANTUM EIGENSOLVER</span></h1>
+  <p class="subtitle">Tugas Akhir SF234801<br><span style="font-size: 0.8em;">Kamis, 9 Juli 2026</span></p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Putra Naufal Tabassam 
+</div>
+        <p class="quarto-title-affiliation">
+            NRP : 5001221120
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Pembimbing: 
+</div>
+        <p class="quarto-title-affiliation">
+            Dr.&nbsp;Heru Sukamto, M.Si.
+          </p>
+        <p class="quarto-title-affiliation">
+            Dr.&nbsp;Gagus K. Sunnardianto
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Penguji: 
+</div>
+        <p class="quarto-title-affiliation">
+            Prof.&nbsp;Agus Purwanto, D.Sc.
+          </p>
+        <p class="quarto-title-affiliation">
+            Fahmi Astuti, M.Si., Ph.D.
+          </p>
+    </div>
+</div>
+
+</section>
+<section class="slide level2">
+
+<style>
+  div.quarto-title-authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: 10px;
+    margin-top: 20px;
+  }
+  div.quarto-title-authors > div:nth-child(1) {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  div.quarto-title-authors::after {
+    content: "Departemen Fisika, Institut Teknologi Sepuluh Nopember";
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+</style>
+<!-- include Fase_0.qmd -->
+<!-- include Fase_1.qmd -->
+<!-- include Fase_2.qmd -->
+<!-- include Fase_3.qmd -->
+<!-- include Fase_4.qmd -->
+<!-- include Fase_5.qmd -->
+<!-- include Fase_6.qmd -->
+<!-- include Fase_7.qmd -->
+<!-- include Fase_8.qmd -->
+<!-- include Fase_9.qmd -->
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 60vh; text-align: center; padding: 0 100px;">
+<h3 style="color: #d9534f; margin-bottom: 20px;">
+⚠️ DISCLAIMER ⚠️
+</h3>
+<p style="font-size: 1.2em; line-height: 1.6;">
+Materi yang disajikan dalam presentasi ini murni untuk <strong>tujuan akademis dan penelitian keilmuan</strong>. Presentasi ini <strong>bukan</strong> merupakan bentuk rekomendasi, ajakan, maupun nasihat finansial profesional.
+</p>
+<p style="font-size: 1em; color: #555; margin-top: 30px;">
+Audiens diharapkan untuk selalu bertindak bijak, melakukan riset mandiri (<i>Do Your Own Research</i>), dan bertanggung jawab penuh atas segala bentuk keputusan investasi serta risiko pertumbuhan modalnya masing-masing.
+</p>
+</div>
+</section>
+<section>
+<section id="fase-latar-belakang" class="title-slide slide level1 center">
+<h1>Fase Latar Belakang</h1>
+
+</section>
+<section id="tokoh-penting-yang-terlibat" class="slide level2">
+<h2>Tokoh Penting yang Terlibat</h2>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px;">
+<div style="text-align: center; width: 28%;">
+<img data-src="Gambar/Markowitz_Foto.png" style="border-radius: 15px; height: 220px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="font-size: 0.8em; margin-top: 10px; font-weight: bold; color: #003366;">
+Harry Markowitz
+</div>
+</div>
+<div style="text-align: center; width: 28%;">
+<img data-src="Gambar/LenzIsing_Foto.png" style="border-radius: 15px; height: 220px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="font-size: 0.8em; margin-top: 10px; font-weight: bold; color: #003366;">
+Wilhelm Lenz &amp; Ernst Ising
+</div>
+</div>
+<div style="text-align: center; width: 28%;">
+<img data-src="Gambar/Onsager_Foto.png" style="border-radius: 15px; height: 220px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="font-size: 0.8em; margin-top: 10px; font-weight: bold; color: #003366;">
+Lars Onsager
+</div>
+</div>
+<div style="text-align: center; width: 28%;">
+<img data-src="Gambar/VonNeumann_Foto.png" style="border-radius: 15px; height: 220px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="font-size: 0.8em; margin-top: 10px; font-weight: bold; color: #003366;">
+John von Neumann
+</div>
+</div>
+<div style="text-align: center; width: 28%;">
+<img data-src="Gambar/Morgenstern_Foto.png" style="border-radius: 15px; height: 220px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="font-size: 0.8em; margin-top: 10px; font-weight: bold; color: #003366;">
+Oskar Morgenstern
+</div>
+</div>
+<div style="text-align: center; width: 28%;">
+<img data-src="Gambar/Mantegna_Foto.png" style="border-radius: 15px; height: 220px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+<div style="font-size: 0.8em; margin-top: 10px; font-weight: bold; color: #003366;">
+Rosario N. Mantegna
+</div>
+</div>
+</div>
+</section>
+<section id="penelitian-terdahulu-dan-research-gap" class="slide level2">
+<h2>Penelitian Terdahulu dan Research Gap</h2>
+<style>
+.card{
+border:2px solid #d9d9d9;
+border-radius:12px;
+padding:12px;
+min-height:340px;
+background:#fafafa;
+box-shadow:2px 2px 6px rgba(0,0,0,.08);
+text-align:center;
+font-size:0.9em;
+}
+
+.arrow{
+font-size:2em;
+text-align:center;
+margin-top:120px;
+color:#666;
+}
+
+.title{
+font-weight:bold;
+font-size:1.05em;
+margin-top:8px;
+margin-bottom:8px;
+color:#003366;
+}
+
+.gap{
+border:2px solid #cc3333;
+background:#fff6f6;
+}
+
+.solusi{
+border:2px solid #2e8b57;
+background:#f3fff5;
+}
+
+.metric{
+border:2px solid #5b3cc4;
+background:#faf7ff;
+}
+</style>
+<div class="columns">
+<div class="column" style="width:23%;">
+<div class="card">
+<div class="title">
+<p>Penelitian Terdahulu</p>
+</div>
+<p><img src="Gambar/wang_pct.png" width="350"></p>
+<div style="margin-top: 20px;">
+<p><strong>Wang dkk. (2025)</strong></p>
+<p>VQE + WCVaR + CMA-ES</p>
+<p>Stabilisasi konvergensi energi.</p>
+</div>
+</div>
+</div><div class="column" style="width:4%;">
+<div class="arrow">
+<p>➜</p>
+</div>
+</div><div class="column" style="width:23%;">
+<div class="card">
+<div class="title">
+<p>Penelitian Terdahulu</p>
+</div>
+<p><img src="Gambar/wei_pct.png" width="350"></p>
+<div style="margin-top: 20px;">
+<p><strong>Wei dkk. (2025)</strong></p>
+<p>Quantum-Classical Hybrid Annealing</p>
+<p>Memecah masalah QUBO kompleks menjadi submasalah.</p>
+</div>
+</div>
+</div><div class="column" style="width:4%;">
+<div class="arrow">
+<p>➜</p>
+</div>
+</div><div class="column" style="width:23%;">
+<div class="card gap">
+<div class="title">
+<p>Research Gap</p>
+</div>
+<p><img src="Gambar/barren_plateau.png" width="350"></p>
+<div style="margin-top: 20px;">
+<p>Masih bergantung pada</p>
+<p><strong>inisialisasi acak</strong></p>
+<p>yang rentan mengalami</p>
+<p><strong>Barren Plateau</strong></p>
+</div>
+</div>
+</div><div class="column" style="width:23%;">
+<div class="card solusi">
+<div class="title">
+<p>Solusi</p>
+</div>
+<p><img src="Gambar/GT_pct.png" width="150"></p>
+<div style="margin-top: 20px;">
+<p>Menggunakan <strong>Nash Equilibrium</strong> sebagai <strong>Warm-Start Initialization</strong></p>
+</div>
+</div>
+</div></div>
+<div style="font-size:0.45em;margin-top:20px;color:#666;text-align:center;">
+<p>Sumber: Wang <em>et al.</em> (2025); Wei <em>et al.</em> (2025)</p>
+</div>
+</section>
+<section id="ekonomi-dan-investasi" class="slide level2">
+<h2>Ekonomi dan Investasi</h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh; gap: 30px;">
+<div class="column" style="width:33%;">
+<img data-src="Gambar/nixxon_shock.png" style="width:100.0%"> <img data-src="Gambar/212_Inflasi.png" style="width:100.0%">
+<div style="font-size: 0.7em; text-align: center; margin-top:10px;">
+Inflasi &amp; Guncangan Ekonomi
+</div>
+</div><div class="column" style="width:33%;">
+<img data-src="Gambar/213_Investasi.png" style="width:100.0%">
+<div style="font-size: 0.7em; text-align: center; margin-top:10px;">
+Urgensi Investasi
+</div>
+</div><div class="column" style="width:33%;">
+<img data-src="Gambar/Diversifikasi.png" style="width:100.0%">
+<div style="font-size: 0.7em; text-align: center; margin-top:10px;">
+Diversifikasi Portofolio
+</div>
+</div></div>
+</section>
+<section id="analisis-fundamental-dan-teknikal" class="slide level2">
+<h2>Analisis Fundamental dan Teknikal</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Analisis Fundamental</strong></p>
+<div style="text-align: center;">
+<img data-src="Gambar/221_Cashflow_statement.png" style="width:60.0%">
+<div style="font-size: 0.7em;">
+Struktur laporan arus kas fundamental.
+</div>
+</div>
+<div style="font-size: 0.85em; margin-top: 15px;">
+<ul>
+<li>Ekonometrik Perusahaan</li>
+<li>Kesehatan Fiskal</li>
+<li>Sentimen Pasar</li>
+</ul>
+</div>
+</div><div class="column" style="width:55%;">
+<p><strong>Analisis Teknikal</strong></p>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; text-align: center;">
+<div style="width: 32%;">
+<img data-src="Gambar/222_Candle.png">
+<div style="font-size: 0.6em;">
+<em>Candlestick</em>
+</div>
+</div>
+<div style="width: 32%;">
+<img data-src="Gambar/222_Chart.png">
+<div style="font-size: 0.6em;">
+<em>Price Chart</em>
+</div>
+</div>
+<div style="width: 32%;">
+<img data-src="Gambar/222_SnR.png">
+<div style="font-size: 0.6em;">
+<em>Support &amp; Resistance</em>
+</div>
+</div>
+</div>
+<p><br><br><br></p>
+<div style="font-size: 0.85em; margin-top: 15px;">
+<ul>
+<li>Representasi Psikologi Kolektif dari Agen Pasar</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="analisis-kuantitatif" class="slide level2">
+<h2>Analisis Kuantitatif</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div style="font-size: 0.6em;">
+<ul>
+<li><strong>Simple Return (<span class="math inline">\(R\)</span>):</strong> <span class="math display">\[ R_{i,t} = \frac{P_{i,t} - P_{i,t-1}}{P_{i,t-1}} \]</span></li>
+<li><strong>Expected Return (<span class="math inline">\(\bar{R}\)</span>):</strong> <span class="math display">\[ \bar{R}_i = \frac{1}{n} \sum_{t=1}^n R_{i,t} \]</span></li>
+<li><strong>Variance (<span class="math inline">\(\sigma^2\)</span>):</strong> <span class="math display">\[ \sigma_{i}^2 = \frac{1}{n-1} \sum_{t=1}^n (R_{i,t} - \bar{R}_i)^2 \]</span></li>
+<li><strong>Covariance (<span class="math inline">\(\sigma_{ij}\)</span>):</strong> <span class="math display">\[ \sigma_{ij} = \frac{1}{n-1} \sum_{t=1}^n (R_{i,t} - \bar{R}_i)(R_{j,t} - \bar{R}_j) \]</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:35%;">
+<div style="font-size: 0.6em;">
+<ul>
+<li><strong>Log Return (<span class="math inline">\(r\)</span>):</strong> <span class="math display">\[ r_{i,t} = \ln\left(\frac{P_{i,t}}{P_{i,t-1}}\right) \]</span></li>
+<li><strong>Expected Return (<span class="math inline">\(\bar{r}\)</span>):</strong> <span class="math display">\[ \bar{r}_i = \frac{1}{n} \sum_{t=1}^n r_{i,t} \]</span></li>
+<li><strong>Variance (<span class="math inline">\(\sigma^2\)</span>):</strong> <span class="math display">\[ \sigma_{i}^2 = \frac{1}{n-1} \sum_{t=1}^n (r_{i,t} - \bar{r}_{i})^2 \]</span></li>
+<li><strong>Covariance (<span class="math inline">\(\sigma_{ij}\)</span>):</strong> <span class="math display">\[ \sigma_{ij} = \frac{1}{n-1} \sum_{t=1}^n (r_{i,t} - \bar{r}_i)(r_{j,t} - \bar{r}_j) \]</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:30%;">
+<div style="text-align: center; margin-top: 10px;">
+<img data-src="Gambar/223_Price_log.png" style="width:100.0%">
+<div style="font-size: 0.6em;">
+Transformasi pergerakan harga saham.
+</div>
+</div>
+<div style="font-size: 0.6em; margin-top: 15px;">
+<ul>
+<li><span class="math inline">\(P_{i,t}\)</span>: Harga pada waktu <span class="math inline">\(t\)</span> untuk aset ke-<span class="math inline">\(i\)</span></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="model-markowitz" class="slide level2 scrollable">
+<h2>Model Markowitz</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Rumus Utama</a></li><li><a href="#tabset-1-2">Penurunan Rumus</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:60%;">
+<div style="font-size: 0.75em;">
+<ul>
+<li><strong>Mean-Variance:</strong> <span class="math display">\[ f(\mathbf{\omega}) = \sum_{i,j} \sigma_{ij} \omega_i \omega_j - \lambda \sum_i \mu_i \omega_i \]</span></li>
+<li><strong>Binerisasi:</strong> <span class="math display">\[ f(\mathbf{x}) = \sum_{i,j} \sigma_{ij} \frac{x_i x_j}{K^2} - \lambda \sum_i \mu_i \frac{x_i}{K} \]</span></li>
+</ul>
+</div>
+<div style="font-size: 0.75em">
+<ul>
+<li><span class="math inline">\(\mu_i\)</span>: Imbal hasil rata-rata aset ke-<span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(\sigma_{ij}\)</span>: Kovarians antara aset <span class="math inline">\(i\)</span> dan <span class="math inline">\(j\)</span></li>
+<li><span class="math inline">\(\omega_i\)</span>: Proporsi bobot kontinu aset ke-<span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(\lambda\)</span>: Parameter toleransi risiko</li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<div style="text-align: center; font-size: 0.8em; font-weight: bold; margin-bottom: 5px;">
+Contoh Alokasi Modal (Rp 10 Juta)
+</div>
+<div style="display: flex; justify-content: center; margin-bottom: -10px;">
+<div class="cell" data-reveal="true" data-fig-width="4.5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {"themeVariables": {"pieSectionTextSize": "36px", "pieLegendTextSize": "20px"}}}%%
+pie 
+  "Cash" : 40
+  "BBCA" : 30
+  "ADRO" : 30
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: 0.65em; display: flex; justify-content: center;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Aset</th>
+<th style="text-align: center;">Persentase</th>
+<th style="text-align: left;">Nominal</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Cash</strong></td>
+<td style="text-align: center;">40%</td>
+<td style="text-align: left;">Rp 4.000.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>BBCA</strong></td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: left;">Rp 3.000.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>ADRO</strong></td>
+<td style="text-align: center;">30%</td>
+<td style="text-align: left;">Rp 3.000.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+</div>
+<div id="tabset-1-2">
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+<p><strong>Langkah 1 — Formulasi Lagrangian Kontinu (Markowitz):</strong></p>
+<p>Fungsi biaya Markowitz dalam domain bobot <span class="math inline">\(\omega_i\)</span>:</p>
+<p><span class="math display">\[f(\mathbf{\omega}) = \sum_{i,j} \sigma_{ij} \omega_i \omega_j - \lambda \sum_i \mu_i \omega_i\]</span></p>
+<p>dengan syarat <span class="math inline">\(\sum_i \omega_i = 1\)</span> dan <span class="math inline">\(\omega_i \geq 0\)</span>.</p>
+<hr>
+<p><strong>Langkah 2 — Substitusi Variabel Biner:</strong></p>
+<p>Variabel bobot kontinu <span class="math inline">\(\omega_i\)</span> diubah menjadi variabel biner <span class="math inline">\(x_i \in \{0, 1\}\)</span> melalui hubungan:</p>
+<p><span class="math display">\[\omega_i = \frac{x_i}{K}\]</span></p>
+<p>di mana <span class="math inline">\(K\)</span> adalah jumlah aset yang dipilih dari total <span class="math inline">\(N\)</span> kandidat.</p>
+<hr>
+<p><strong>Langkah 3 — Substitusi ke Lagrangian:</strong></p>
+<p>Substitusi <span class="math inline">\(\omega_i = x_i/K\)</span> ke dalam fungsi Lagrangian:</p>
+<p><span class="math display">\[f(\mathbf{x}) = \sum_{i,j} \sigma_{ij} \frac{x_i}{K} \frac{x_j}{K} - \lambda \sum_i \mu_i \frac{x_i}{K}\]</span></p>
+<p><span class="math display">\[\therefore f(\mathbf{x}) = \sum_{i,j} \sigma_{ij} \frac{x_i x_j}{K^2} - \lambda \sum_i \mu_i \frac{x_i}{K}\]</span></p>
+<p>Nilai <span class="math inline">\(x_i = 1\)</span> merepresentasikan <strong>beli</strong>, sedangkan <span class="math inline">\(x_i = 0\)</span> merepresentasikan <strong>tidak membeli</strong>.</p>
+<hr>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Simbol</th>
+<th style="text-align: center;">Domain Kontinu</th>
+<th style="text-align: center;">Domain Biner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Variabel keputusan</td>
+<td style="text-align: center;"><span class="math inline">\(\omega_i \in [0, 1]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(x_i \in \{0, 1\}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Kendala</td>
+<td style="text-align: center;"><span class="math inline">\(\sum \omega_i = 1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum x_i = K\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="metode-evaluasi-performa-backtesting" class="slide level2">
+<h2>Metode Evaluasi Performa (Backtesting)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<img data-src="Gambar/backtest.png">
+<div style="font-size: 0.7em; text-align: center; margin-top: 10px;">
+Simulasi riwayat harga dan rebalance portofolio secara periodik
+</div>
+</div><div class="column" style="width:50%;">
+<img data-src="Gambar/backtest_data.png">
+<div style="font-size: 0.7em; text-align: center; margin-top: 10px;">
+Data backtesting pada sebuah strategi trading
+</div>
+</div></div>
+</section>
+<section id="tujuan-penelitian" class="slide level2">
+<h2>Tujuan Penelitian</h2>
+<ol type="1">
+<li>Menganalisis formulasi bias aset sebagai parameter medan lokal (<span class="math inline">\(h_i\)</span>) dan interaksi antar aset sebagai koefisien kopling (<span class="math inline">\(J_{ij}\)</span>) melalui pendekatan fungsi potensial dalam sistem Hamiltonian berbasis <em>Exact Potential Game</em> (EPG).</li>
+<li>Mengevaluasi kontribusi strategi <em>warm-start</em> berbasis <em>Nash Equilibrium</em> dalam meningkatkan efisiensi pencarian solusi optimal pada algoritma VQE.</li>
+<li>Menguji kapabilitas algoritma VQE yang menggunakan optimasi SPSA dan <em>Ansatz EfficientSU(2)</em> untuk menghasilkan keputusan alokasi aset yang optimal dalam kondisi pasar yang kompleks.</li>
+</ol>
+</section>
+<section id="batasan-masalah-12" class="slide level2">
+<h2>Batasan Masalah (1/2)</h2>
+<ol type="1">
+<li>Portofolio yang dianalisis dibatasi pada pemilihan 1 aset dari 2 pilihan aset pada sistem <span class="math inline">\(N=2\)</span> dan 2 aset dari 4 pilihan aset pada sistem <span class="math inline">\(N=4\)</span>.</li>
+<li>Model permainan yang digunakan adalah skema <em>non zero-sum game</em> dalam kerangka <em>Exact Potential Game</em>.</li>
+<li>Simulasi dan implementasi algoritma dilakukan menggunakan simulator <em>Pennylane</em> tanpa mempertimbangkan <em>noise</em>.</li>
+</ol>
+</section>
+<section id="batasan-masalah-22" class="slide level2">
+<h2>Batasan Masalah (2/2)</h2>
+<ol start="4" type="1">
+<li>Tugas akhir ini hanya merupakan <em>proof-of-concept</em> dari implementasi <em>warm-start</em> ekuilibrium Nash terhadap performa algoritma VQE dalam menemukan solusi <em>ground state</em> pada model portofolio hibrida.</li>
+<li>Analisis Entropi Von Neumann dibatasi sebagai indikator perubahan distribusi probabilitas keadaan kuantum selama proses optimasi VQE dan tidak digunakan sebagai kajian mendalam mengenai sifat keterbelitan dari <em>ansatz</em>.</li>
+<li>Analisis berfokus pada pengaruh <em>warm-start</em> ekuilibrium Nash terhadap proses optimasi VQE, bukan untuk membuktikan keunggulan komputasi kuantum terhadap metode klasik.</li>
+</ol>
+</section></section>
+<section>
+<section id="fase-metodologi" class="title-slide slide level1 center">
+<h1>Fase Metodologi</h1>
+
+</section>
+<section id="diagram-alir-utama" class="slide level2">
+<h2>Diagram Alir Utama</h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh; gap: 15px;">
+<p><img data-src="Gambar/dialir1.png" style="height: 100%; max-height: 550px; width: auto; object-fit: contain;"></p>
+<p><img data-src="Gambar/dialir2.png" style="height: 100%; max-height: 550px; width: auto; object-fit: contain;"></p>
+<p><img data-src="Gambar/dialir3.png" style="height: 100%; max-height: 550px; width: auto; object-fit: contain;"></p>
+</div>
+</section>
+<section id="teori-permainan" class="slide level2">
+<h2>Teori Permainan</h2>
+<div class="columns" style="display: flex; align-items: center;">
+<div class="column" style="width:65%;">
+<div style="text-align: left; padding-right: 20px; font-size: 1.0em;">
+<ul>
+<li><strong>Teori Permainan:</strong> Cabang matematika terapan yang mengkaji bagaimana agen rasional membuat keputusan strategis di bawah ketergantungan tindakan agen yang lain. <br><br></li>
+<li><strong>Komponen Utama:</strong> Agen (Pemain), Himpunan Strategi, dan Fungsi Utilitas (<em>Payoff</em>). <br><br></li>
+<li><strong>Nash Equilibrium:</strong> Kondisi paling stabil di mana tidak ada satu pun agen yang bisa meningkatkan utilitasnya dengan mengubah strateginya sendiri secara sepihak.</li>
+</ul>
+</div>
+</div><div class="column" style="width:35%;">
+<div style="text-align: center;">
+<img data-src="Gambar/nasheq.png" style="width:100.0%">
+<div style="font-size: 0.7em; margin-top: 10px;">
+<em>Nash Equilibrium</em>
+</div>
+</div>
+</div></div>
+</section>
+<section id="jenis-jenis-permainan-game-types" class="slide level2">
+<h2>Jenis-Jenis Permainan (<em>Game Types</em>)</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<img data-src="Gambar/232_payoff_SH.png">
+<div style="font-size: 0.7em; text-align: center;">
+<em>Stag Hunt</em>
+</div>
+</div><div class="column" style="width:33%;">
+<img data-src="Gambar/232_payoff_PD.png">
+<div style="font-size: 0.7em; text-align: center;">
+<em>Prisoner’s Dilemma</em>
+</div>
+</div><div class="column" style="width:33%;">
+<img data-src="Gambar/232_payoff_BoS.png">
+<div style="font-size: 0.7em; text-align: center; margin-bottom: 15px;">
+<em>Battle of the Sexes</em>
+</div>
+</div></div>
+</section>
+<section id="exact-potential-game-epg" class="slide level2">
+<h2>Exact Potential Game (EPG)</h2>
+<div style="font-size: 0.6em; text-align: right; margin-top: -20px; margin-bottom: 20px; color: #666;">
+<em>Referensi: Monderer &amp; Shapley (1996)</em>
+</div>
+<div class="r-stack">
+<div class="fragment fade-out" data-fragment-index="1" style="width: 100%;">
+<ul>
+<li><strong>Definisi:</strong> Model permainan yang memiliki fungsi potensial global (<span class="math inline">\(\Phi\)</span>), di mana setiap perubahan utilitas individu akibat perubahan strategi sepenuhnya tercermin oleh perubahan nilai <span class="math inline">\(\Phi\)</span>.</li>
+<li><strong>Makna “Potensial” &amp; “Global”:</strong>
+<ul>
+<li><strong>Potensial:</strong> Sistem agen berdinamika menuju nilai ekuilibrium (maksimalisasi utilitas), yang secara fundamental ekuivalen dengan prinsip minimisasi energi (<span class="math inline">\(H = -\Phi\)</span>) dalam fisika fisis.</li>
+<li><strong>Global:</strong> <span class="math inline">\(\Phi\)</span> merangkum seluruh utilitas individu ke dalam satu fungsi skalar tunggal untuk merepresentasikan kualitas konfigurasi strategi permainan secara keseluruhan.</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment fade-in" data-fragment-index="1" style="width: 100%;">
+<ul>
+<li><strong>Kondisi <em>Nash Equilibrium</em>:</strong> Perubahan utilitas lokal (<span class="math inline">\(\Delta u_i\)</span>) sebanding persis dengan perubahan potensial global (<span class="math inline">\(\Delta \Phi\)</span>). <span class="math display">\[ \Delta \Phi = \Phi(s_i', s_{-i}) - \Phi(s_i, s_{-i}) = u_i(s_i', s_{-i}) - u_i(s_i, s_{-i}) \]</span></li>
+<li>Dinamika sistem akan terhenti dan mencapai <em>Nash Equilibrium</em> ketika tidak ada lagi strategi yang menghasilkan peningkatan potensial (<span class="math inline">\(\Delta \Phi &lt; 0\)</span>).</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="epg-pada-alokasi-portofolio" class="slide level2 scrollable">
+<h2>EPG pada Alokasi Portofolio</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Rumus Utama</a></li><li><a href="#tabset-2-2">Penurunan Rumus</a></li><li><a href="#tabset-2-3">Contoh Numerik</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<ul>
+<li>Transformasi persamaan utilitas Markowitz biner menjadi fungsi potensial global EPG: <span class="math display">\[ \Phi(\mathbf{x}) = \sum_{l=1}^N \mu_l \frac{x_l}{K} - \frac{\gamma}{2}\sum_{i=1}^N\sum_{j=1}^N \sigma_{ij} \frac{x_i}{K} \frac{x_j}{K} \]</span></li>
+<li>dengan <span class="math inline">\(\gamma\)</span> mendefinisikan faktor penghindaran risiko (<em>risk aversion</em>) pada fungsi utilitas agen.</li>
+</ul>
+</div>
+<div id="tabset-2-2">
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+<p><strong>Penurunan: Dari Model Markowitz Biner ke Fungsi Potensial EPG</strong></p>
+<p><strong>Langkah 1 — Lagrangian Biner Markowitz:</strong></p>
+<p>Dari transformasi <span class="math inline">\(\omega_i = x_i/K\)</span>, diperoleh fungsi Lagrangian biner:</p>
+<p><span class="math display">\[f(\mathbf{x}) = \sum_{i,j} \sigma_{ij} \frac{x_i x_j}{K^2} - \lambda \sum_i \mu_i \frac{x_i}{K}\]</span></p>
+<hr>
+<p><strong>Langkah 2 — Konversi ke Fungsi Utilitas:</strong></p>
+<p>Definisikan faktor penghindaran risiko <span class="math inline">\(\gamma = 2/\lambda\)</span>, sehingga:</p>
+<p><span class="math display">\[U(\mathbf{x}) = - \frac{1}{\lambda} f(\mathbf{x})\]</span></p>
+<p><span class="math display">\[U(\mathbf{x}) = \sum_i \frac{\mu_i}{K} x_i - \frac{\gamma}{2K^2} \sum_{i,j} \sigma_{ij} x_i x_j\]</span></p>
+<hr>
+<p><strong>Langkah 3 — Utilitas Individu Agen ke-<span class="math inline">\(i\)</span>:</strong></p>
+<p>Jika varians dipisah dari matriks kovarians:</p>
+<p><span class="math display">\[u_i(\mathbf{x}) = \frac{\mu_i}{K} x_i - \frac{\gamma}{2K^2} x_i \left( \sigma_{ii} + \sum_{j \neq i} \sigma_{ij} x_j \right)\]</span></p>
+<hr>
+<p><strong>Langkah 4 — Fungsi Potensial Global <span class="math inline">\(\Phi\)</span>:</strong></p>
+<p>Dari utilitas sistem, fungsi potensial EPG:</p>
+<p><span class="math display">\[\Phi(\mathbf{x}) = \sum_{l=1}^N \mu_l \frac{x_l}{K} - \frac{\gamma}{2}\sum_{i=1}^N\sum_{j=1}^N \sigma_{ij} \frac{x_i}{K} \frac{x_j}{K}\]</span></p>
+<hr>
+<p><strong>Langkah 5 — Dekomposisi untuk Verifikasi <span class="math inline">\(\Delta u_i = \Delta \Phi\)</span>:</strong></p>
+<p>Dekomposisi suku yang mengandung <span class="math inline">\(x_i\)</span> (dengan <span class="math inline">\(x_i^2 = x_i\)</span>):</p>
+<p><span class="math display">\[\Phi(\mathbf{x}) = \frac{\mu_i}{K}x_i - \frac{\gamma}{2} \left( \frac{\sigma_{ii}}{K^2}x_i + \frac{1}{K^2}x_i \sum_{j \neq i} \sigma_{ij}x_j \right) + \underbrace{\sum_{l \neq i} \frac{\mu_l}{K}x_l - \frac{\gamma}{2} \sum_{l \neq i} \sum_{m \neq i} \frac{\sigma_{lm}}{K^2}x_l x_m}_{\text{tidak bergantung pada } x_i}\]</span></p>
+<hr>
+<p><strong>Langkah 6 — Insentif Marginal:</strong></p>
+<p><span class="math display">\[\Delta \Phi = \Phi(1, \mathbf{x}_{-i}) - \Phi(0, \mathbf{x}_{-i}) = \frac{\mu_i}{K} - \frac{\gamma \sigma_{ii}}{2K^2} - \frac{\gamma}{K^2} \sum_{j \neq i} \sigma_{ij} x_j\]</span></p>
+<p>Karena <span class="math inline">\(\Delta u_i = \Delta \Phi\)</span> terjamin <span class="math inline">\(\Rightarrow\)</span> <strong>terbukti</strong> sebagai <em>Exact Potential Game</em>.</p>
+<hr>
+<p><strong>Langkah 7 — Risk Aversion Endogen:</strong></p>
+<p><span class="math display">\[\gamma = \frac{1}{1 + e^{(\bar{\mu}_l/\bar{\sigma}_l)}}\]</span></p>
+<p>dengan <span class="math inline">\(\bar{\mu}_l\)</span> dan <span class="math inline">\(\bar{\sigma}_l\)</span> dari <em>log returns</em>.</p>
+<p><br><br><br></p>
+</div>
+</div>
+<div id="tabset-2-3">
+<div class="scrollable" style="max-height: 450px; font-size: 0.70em;">
+<p><strong>Contoh Pencarian <em>Nash Equilibrium</em> dengan SBR</strong></p>
+<p>Misalkan terdapat tiga aset dengan parameter:</p>
+<p><span class="math display">\[ \gamma = 1,\qquad \mu = \begin{bmatrix} 12\\ 11\\ 8 \end{bmatrix},\qquad \Sigma=\begin{bmatrix} 10 &amp; 8 &amp; 2\\ 8 &amp; 10 &amp; -2\\ 2 &amp; -2 &amp; 10 \end{bmatrix} \]</span></p>
+<p>dan jumlah aset yang harus dipilih adalah:</p>
+<p><span class="math display">\[ K=2 \]</span></p>
+<p>Fungsi potensial didefinisikan sebagai:</p>
+<p><span class="math display">\[ \Phi(x)=\frac{1}{K}\sum_i\mu_i x_i -\frac{\gamma}{2K^2}\sum_{i,j}\Sigma_{ij}x_ix_j \]</span></p>
+<hr>
+<p><strong>Langkah 1 — Inisialisasi</strong></p>
+<p>Sesuai algoritma:</p>
+<p><span class="math display">\[ x=(1,1,0) \]</span></p>
+<p>sehingga:</p>
+<p><span class="math display">\[ S_{in}=\{1,2\},\qquad S_{out}=\{3\} \]</span></p>
+<p>Nilai fungsi potensial awal adalah:</p>
+<p><span class="math display">\[ \Phi(110)=\frac{12+11}{2}-\frac{1}{8}(10+10+8+8)=7 \]</span></p>
+<hr>
+<p><strong>Langkah 2 — Evaluasi Kandidat Swap</strong></p>
+<p><strong>Swap (1,3)</strong></p>
+<p><span class="math display">\[ 110\rightarrow 011 \]</span></p>
+<p><span class="math display">\[ \Phi(011)=\frac{11+8}{2}-\frac18(10+10-2-2)=7.5 \]</span></p>
+<p>Karena:</p>
+<p><span class="math display">\[ 7.5&gt;7 \]</span></p>
+<p>swap <strong>diterima</strong>.</p>
+<hr>
+<p><strong>Langkah 3 — Pembaruan Sekuensial</strong></p>
+<p>Bitstring diperbarui menjadi:</p>
+<p><span class="math display">\[ x=(0,1,1) \]</span></p>
+<p>Sekarang:</p>
+<p><span class="math display">\[ S_{in}=\{2,3\},\qquad S_{out}=\{1\} \]</span></p>
+<p>Kandidat berikutnya:</p>
+<p><span class="math display">\[ 011\rightarrow101 \]</span></p>
+<p>Diperoleh:</p>
+<p><span class="math display">\[ \Phi(101)=\frac{12+8}{2}-\frac18(10+10+2+2)=7 \]</span></p>
+<p>Karena:</p>
+<p><span class="math display">\[ 7&lt;7.5 \]</span></p>
+<p>swap <strong>ditolak</strong>.</p>
+<hr>
+<p><strong>Langkah 4 — Terminasi</strong></p>
+<p>Tidak terdapat lagi <em>swap</em> yang meningkatkan nilai fungsi potensial:</p>
+<p><span class="math display">\[ \Phi' \le \Phi \]</span></p>
+<p>Oleh karena itu algoritma berhenti dan menghasilkan:</p>
+<p><span class="math display">\[ \boxed{x=(0,1,1)} \]</span></p>
+<p>sebagai kandidat <em>Nash Equilibrium</em> yang akan digunakan sebagai strategi <em>warm-start</em> bagi VQE.</p>
+<p><br><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="transformasi-epg-ke-model-ising" class="slide level2 scrollable">
+<h2>Transformasi EPG ke Model Ising</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Transformasi QUBO</a></li><li><a href="#tabset-3-2">Penurunan Rumus</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div style="font-size: 0.75em;">
+<p><strong>Fungsi Energi dari Potensial (Markowitz Biner):</strong> <span class="math display">\[E(\mathbf{x}) = \frac{\gamma}{2K^2}\sum_{i=1}^N\sum_{j=1}^N \sigma_{ij} x_i x_j - \sum_{i=1}^N \frac{\mu_i}{K} x_i\]</span></p>
+<p><strong>Hamiltonian Ising Akhir:</strong> Setelah memetakan variabel biner <span class="math inline">\(x_i \in \{0,1\}\)</span> ke variabel spin <span class="math inline">\(s_i \in \{-1,1\}\)</span>: <span class="math display">\[\boxed{\hat{\mathcal{H}} = - \sum_{i=1}^N h_i \hat{Z}_i - \sum_{i&lt;j}^N J_{ij} \hat{Z}_i \hat{Z}_j + C}\]</span></p>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="scrollable" style="max-height: 500px; font-size: 0.7em;">
+<p><strong>Penurunan: Dari Fungsi Potensial Game ke Hamiltonian Ising</strong></p>
+<p><strong>Langkah 1 — Fungsi Energi dari Potensial:</strong></p>
+<p>Konversi dari maksimasi potensial ke minimasi energi:</p>
+<p><span class="math display">\[E(\mathbf{x}) = -\Phi(\mathbf{x})\]</span></p>
+<p>Substitusi <span class="math inline">\(\Phi\)</span> dari fungsi potensial Markowitz:</p>
+<p><span class="math display">\[E(\mathbf{x}) = \frac{\gamma}{2K^2}\sum_{i=1}^N\sum_{j=1}^N \sigma_{ij} x_i x_j - \sum_{i=1}^N \frac{\mu_i}{K} x_i\]</span></p>
+<hr>
+<p><strong>Langkah 2 — Dekomposisi dengan <span class="math inline">\(x_i^2 = x_i\)</span>:</strong></p>
+<p><span class="math display">\[E(\mathbf{x}) = \frac{\gamma}{2K^2}\left(\sum_{i=1}^N\sigma_{ii} x_i^2 + \sum_{i\ne j}\sigma_{ij} x_ix_j\right) -\sum_{i=1}^N \frac{\mu_i}{K} x_i\]</span></p>
+<p><span class="math display">\[= \frac{\gamma}{2K^2}\sum_{i=1}^N\sigma_{ii} x_i + \frac{\gamma}{2K^2}\sum_{i\ne j}\sigma_{ij} x_ix_j - \sum_{i=1}^N \frac{\mu_i}{K} x_i\]</span></p>
+<p><span class="math display">\[\therefore E(\mathbf{x}) = \sum_{i=1}^N\left(\frac{\gamma \sigma_{ii}}{2K^2} - \frac{\mu_i}{K}\right)x_i + \sum_{i\ne j}\frac{\gamma \sigma_{ij}}{2K^2} x_ix_j\]</span></p>
+<hr>
+<p><strong>Langkah 3 — Penambahan Fungsi Penalti:</strong></p>
+<p>Penalti kuadratik untuk memenuhi kendala <span class="math inline">\(\sum x_i = K\)</span>:</p>
+<p><span class="math display">\[P(\mathbf{x}) = A\left(\sum_{i=1}^N x_i - K\right)^2\]</span></p>
+<p>Penjabaran:</p>
+<p><span class="math display">\[P(\mathbf{x}) = A\sum_{i=1}^N x_i^2 + A\sum_{i\ne j} x_ix_j - 2AK\sum_{i=1}^N x_i + AK^2\]</span></p>
+<hr>
+<p><strong>Langkah 4 — Energi Total (QUBO):</strong></p>
+<p><span class="math display">\[E_{total}(\mathbf{x}) = E(\mathbf{x}) + P(\mathbf{x})\]</span></p>
+<p><span class="math display">\[\therefore E_{total}(\mathbf{x}) = \sum_i \left(\frac{\gamma \sigma_{ii}}{2K^2} + A - \frac{\mu_i}{K} - 2AK\right)x_i + \sum_{i\ne j}\left(\frac{\gamma \sigma_{ij}}{2K^2} + A\right) x_ix_j + AK^2\]</span></p>
+<hr>
+<p><strong>Langkah 5 — Notasi Koefisien QUBO:</strong></p>
+<p><span class="math display">\[Q_{ii} = \frac{\gamma \sigma_{ii}}{2K^2}+A-\frac{\mu_i}{K}-2AK\]</span></p>
+<p><span class="math display">\[Q_{ij} = \frac{\gamma \sigma_{ij}}{2K^2}+A\]</span></p>
+<p>Sehingga:</p>
+<p><span class="math display">\[E_{total}(\mathbf{x}) = \sum_i Q_{ii} x_i + \sum_{i\ne j} Q_{ij} x_ix_j + AK^2\]</span></p>
+<hr>
+<p><strong>Langkah 6 — Transformasi Affine ke Domain Spin:</strong></p>
+<p>Pemetaan biner <span class="math inline">\(x_i \in \{0, 1\}\)</span> ke <em>spin</em> <span class="math inline">\(s_i \in \{-1, 1\}\)</span>:</p>
+<p><span class="math display">\[x_i = \frac{(1 - s_i)}{2}, \quad x_ix_j = \frac{(1-s_i)(1-s_j)}{4}\]</span></p>
+<p>Substitusi:</p>
+<p><span class="math display">\[E_{total}(\mathbf{s}) = \sum_i Q_{ii} \frac{1-s_i}{2} + \sum_{i\ne j} Q_{ij} \frac{1 - s_i - s_j + s_is_j}{4} + AK^2\]</span></p>
+<p><span class="math display">\[\therefore E_{total}(\mathbf{s}) = \sum_i \left(- \frac{Q_{ii}}{2} - \sum_{j \neq i} \frac{Q_{ij}}{2}\right) s_i + \sum_{i\ne j} \frac{Q_{ij}}{4} s_i s_j + \left(\sum_i \frac{Q_{ii}}{2} + \sum_{i\ne j} \frac{Q_{ij}}{4} + AK^2\right)\]</span></p>
+<hr>
+<p><strong>Langkah 7 — Identifikasi Parameter Hamiltonian:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 35%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: center;">Definisi</th>
+<th style="text-align: left;">Makna Fisis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(h_i\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(- \frac{Q_{ii}}{2} - \sum_{j \neq i} \frac{Q_{ij}}{2}\)</span></td>
+<td style="text-align: left;">Medan bias lokal</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(J_{ij}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{Q_{ij}}{4}\)</span></td>
+<td style="text-align: left;">Kopling antar <em>spin</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\sum_i \frac{Q_{ii}}{2} + \sum_{i\ne j} \frac{Q_{ij}}{4} + AK^2\)</span></td>
+<td style="text-align: left;">Konstanta energi</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hasil Akhir — Hamiltonian Ising:</strong></p>
+<p><span class="math display">\[\boxed{\hat{\mathcal{H}} = - \sum_{i=1}^N h_i \hat{Z}_i - \sum_{i&lt;j}^N J_{ij} \hat{Z}_i \hat{Z}_j + C}\]</span></p>
+<p><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="analogi-keputusan-investasi-dan-ising" class="slide level2">
+<h2>Analogi Keputusan Investasi dan Ising</h2>
+<div style="font-size: 0.6em; text-align: right; margin-top: -20px; margin-bottom: 20px; color: #666;">
+<em>Referensi: Lucas (2014); Galam &amp; Walliser (2010)</em>
+</div>
+<p>Memetakan fungsi biaya portofolio ke dalam struktur Hamiltonian sistem fisik.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Komponen Investasi</th>
+<th style="text-align: center;">Analogi Sistem Ising (Fisika)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Aset Keuangan</td>
+<td style="text-align: center;">Partikel <em>Spin</em> (Atas/Bawah)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Keputusan Investasi (Beli/Jual)</td>
+<td style="text-align: center;">Orientasi <em>Spin</em> (+1 / -1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Tren/Ekspektasi Pasar</td>
+<td style="text-align: center;">Medan Magnet Lokal (<span class="math inline">\(h_i\)</span>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Korelasi/Kovariansi Antar Aset</td>
+<td style="text-align: center;">Interaksi Kopling Antar <em>Spin</em> (<span class="math inline">\(J_{ij}\)</span>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Alokasi Modal Paling Efisien</td>
+<td style="text-align: center;">Konfigurasi Energi Terendah (<em>Ground State</em>)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bit-klasik-vs-qubit-kuantum" class="slide level2">
+<h2>Bit Klasik vs Qubit Kuantum</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><strong>Bit Klasik:</strong></p>
+<ul>
+<li>Unit informasi fundamental komputer konvensional.</li>
+<li>Hanya bernilai 0 atau 1.</li>
+<li>0 (tidak ada arus listrik), 1 (ada arus listrik).</li>
+</ul>
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 15px;">
+  <div style="border: 2px solid #555; border-radius: 5px; padding: 10px; background: #f0f0f0; color: black; font-weight: bold; width: 40px; text-align: center;">0</div>
+  <div style="font-size: 1.5em;">⇄</div>
+  <div style="border: 2px solid #555; border-radius: 5px; padding: 10px; background: #f0f0f0; color: black; font-weight: bold; width: 40px; text-align: center;">1</div>
+</div>
+<div style="font-size: 0.7em; text-align: center; margin-top: 5px;">Transistor: 1 dan 0 secara bergantian</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Qubit Kuantum:</strong></p>
+<ul>
+<li>Unit informasi fundamental komputer kuantum.</li>
+<li>Memanfaatkan prinsip Superposisi: 0, 1, atau kombinasi linear keduanya. <span class="math display">\[ |\psi\rangle = \alpha|0\rangle + \beta|1\rangle \]</span></li>
+</ul>
+<div style="display: flex; justify-content: center; align-items: center; margin-top: 15px;">
+  <div style="border: 2px solid #555; border-radius: 50%; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: black; font-weight: bold; text-align: center; width: 140px; height: 140px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <span style="font-size: 1.2em;">0 &amp; 1</span>
+    <span style="font-size: 0.7em; margin-top: 5px;">Bersamaan</span>
+  </div>
+</div>
+<div style="font-size: 0.7em; text-align: center; margin-top: 5px;">Qubit: 1 dan 0 secara bersamaan</div>
+</div></div>
+</section>
+<section id="representasi-geometri-qubit" class="slide level2">
+<h2>Representasi &amp; Geometri Qubit</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div style="font-size: 0.85em;">
+<ul>
+<li><strong>Basis Komputasi:</strong> <span class="math display">\[ |0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |1\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \]</span></li>
+<li><strong>Syarat Normalisasi:</strong> Total probabilitas harus bernilai 1 (<span class="math inline">\(|\alpha|^2 + |\beta|^2 = 1\)</span>).</li>
+<li>Dua parameter sudut:
+<ul>
+<li><span class="math inline">\(\theta\)</span> (Polar): Menentukan probabilitas <span class="math inline">\(|0\rangle\)</span> vs <span class="math inline">\(|1\rangle\)</span>.</li>
+<li><span class="math inline">\(\phi\)</span> (Azimuthal): Menentukan fase kuantum.</li>
+</ul></li>
+<li>Fungsi gelombang qubit: <span class="math display">\[ |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle \]</span></li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<iframe src="bloch_interactive.html" width="100%" height="550px" style="border:none;">
+</iframe>
+<div style="font-size: 0.7em; text-align: center;">
+Interaktif: Atur parameter &amp; putar objek 3D
+</div>
+</div></div>
+</section>
+<section id="desain-sirkuit-kuantum" class="slide level2 scrollable">
+<h2>Desain Sirkuit Kuantum</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Arsitektur Sirkuit</a></li><li><a href="#tabset-4-2">Gerbang Rotasi Total</a></li><li><a href="#tabset-4-3">Gerbang CNOT Total</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<img data-src="Gambar/rangkaian1depth.png" class="quarto-figure quarto-figure-center" style="width:80.0%">
+<div style="font-size: 0.7em; text-align: center;">
+Arsitektur <em>Hardware-Efficient Ansatz</em> dengan <em>depth</em> <span class="math inline">\(D=1\)</span>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+<p><strong>Matriks Rotasi <span class="math inline">\(U_q(\theta)\)</span> untuk 2 Qubit</strong></p>
+<p>Berdasarkan definisi gerbang rotasi <span class="math inline">\(R_y(\theta)\)</span> dan <span class="math inline">\(R_z(\theta)\)</span>: <span class="math display">\[
+\begin{align}
+U_{1q}(\theta) &amp;= R_z(\theta_{1z}) R_y(\theta_{1y}) \\
+&amp;= \begin{pmatrix} e^{-i\theta_{1z}/2} &amp; 0 \\ 0 &amp; e^{i\theta_{1z}/2} \end{pmatrix} \begin{pmatrix} \cos(\theta_{1y}/2) &amp; -\sin(\theta_{1y}/2) \\ \sin(\theta_{1y}/2) &amp; \cos(\theta_{1y}/2) \end{pmatrix} \\
+&amp;= \begin{pmatrix} e^{-i\theta_{1z}/2} \cos(\theta_{1y}/2) &amp; -e^{-i\theta_{1z}/2} \sin(\theta_{1y}/2) \\ e^{i\theta_{1z}/2} \sin(\theta_{1y}/2) &amp; e^{i\theta_{1z}/2} \cos(\theta_{1y}/2) \end{pmatrix}
+\end{align}
+\]</span></p>
+<p>Maka untuk sistem 2 qubit: <span class="math display">\[
+\begin{align}
+U_{q}(\theta) &amp;= [R_z(\theta_{1z}) R_y(\theta_{1y})] \otimes [R_z(\theta_{2z}) R_y(\theta_{2y})]\\
+&amp;= \begin{pmatrix} e^{-i\theta_{1z}/2} \cos(\theta_{1y}/2) &amp; -e^{-i\theta_{1z}/2} \sin(\theta_{1y}/2) \\ e^{i\theta_{1z}/2} \sin(\theta_{1y}/2) &amp; e^{i\theta_{1z}/2} \cos(\theta_{1y}/2) \end{pmatrix} \otimes \begin{pmatrix} e^{-i\theta_{2z}/2} \cos(\theta_{2y}/2) &amp; -e^{-i\theta_{2z}/2} \sin(\theta_{2y}/2) \\ e^{i\theta_{2z}/2} \sin(\theta_{2y}/2) &amp; e^{i\theta_{2z}/2} \cos(\theta_{2y}/2) \end{pmatrix} \\
+&amp;= \begin{pmatrix} e^{-i(\theta_{1z}+\theta_{2z})/2} c_1c_2 &amp; e^{-i(\theta_{1z}+\theta_{2z})/2} c_1s_2 &amp; e^{-i(\theta_{1z}+\theta_{2z})/2} s_1c_2 &amp; e^{-i(\theta_{1z}+\theta_{2z})/2}  s_1s_2  \\ e^{-i\theta_{1z}/2}e^{i\theta_{2z}/2} c_1s_2&amp; e^{-i\theta_{1z}/2}e^{i\theta_{2z}/2}  c_1c_2&amp; e^{-i\theta_{1z}/2}e^{i\theta_{2z}/2}  s_1s_2&amp; e^{-i\theta_{1z}/2}e^{i\theta_{2z}/2}  s_1c_2  \\ e^{i\theta_{1z}/2}e^{-i\theta_{2z}/2} s_1c_2&amp; e^{i\theta_{1z}/2}e^{-i\theta_{2z}/2} s_1s_2&amp; e^{i\theta_{1z}/2}e^{-i\theta_{2z}/2} c_1c_2&amp; e^{i\theta_{1z}/2}e^{-i\theta_{2z}/2}  c_1s_2  \\ e^{i(\theta_{1z}+\theta_{2z})/2}  s_1s_2&amp; e^{i(\theta_{1z}+\theta_{2z})/2}  s_1c_2&amp; e^{i(\theta_{1z}+\theta_{2z})/2}  c_1s_2&amp; e^{i(\theta_{1z}+\theta_{2z})/2} c_1c_2 \end{pmatrix} \end{align}
+\]</span> dengan <span class="math display">\[ c_i=\cos\frac{\theta_{iy}}2,\qquad s_i=\sin\frac{\theta_{iy}}2.  \]</span> <br><br><br><br></p>
+</div>
+</div>
+<div id="tabset-4-3">
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+<p><strong>Matriks Gerbang Keterbelitan (<span class="math inline">\(U_{ent}\)</span>) untuk 2 Qubit</strong></p>
+<p>Untuk lapisan keterbelitan, secara umum didefinisikan: <span class="math display">\[
+U_{ent} = CNOT_{(N-1,0)} \prod_{q=0}^{N-2} CNOT_{(q,q+1)}
+\]</span></p>
+<p>Untuk sistem 2 qubit, hal ini mereduksi menjadi: <span class="math display">\[
+U_{ent} = CNOT_{(1,0)} \cdot CNOT_{(0,1)}
+\]</span></p>
+<p>di mana matriks untuk masing-masing gerbang adalah: <span class="math display">\[
+CNOT_{(1,0)} = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \end{pmatrix} \quad CNOT_{(0,1)} = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \end{pmatrix}
+\]</span></p>
+<p>Sehingga matriks total keterbelitannya adalah: <span class="math display">\[
+U_{ent} = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \end{pmatrix} \cdot \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 0 &amp; 0 \end{pmatrix}
+\]</span> <br><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="optimizer-spsa" class="slide level2 scrollable">
+<h2>Optimizer SPSA</h2>
+<div style="font-size: 0.6em; text-align: right; margin-top: -20px; margin-bottom: 20px; color: #666;">
+<em>Referensi: Spall (1998)</em>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Rumus Utama</a></li><li><a href="#tabset-5-2">Penurunan Rumus</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1">
+<p><strong>SPSA (Simultaneous Perturbation Stochastic Approximation)</strong></p>
+<ul>
+<li><strong>Inovasi:</strong> Mengestimasi gradien <em>seluruh</em> parameter secara simultan hanya menggunakan dua pengukuran (satu vektor perturbasi acak <span class="math inline">\(\Delta\)</span>). <span class="math display">\[ \hat{g}_k = \frac{E(\theta_k + c_k \Delta_k) - E(\theta_k - c_k \Delta_k)}{2 c_k \Delta_k} \]</span></li>
+<li>Dengan ekspektasi estimasi gradien yang terbukti ekuivalen dengan gradien eksak: <span class="math display">\[ \mathbb{E} \left[ \hat{g}_k \right] = \nabla E(\theta_k) \]</span></li>
+</ul>
+</div>
+<div id="tabset-5-2">
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+<p><strong>Penurunan: Estimator Gradien SPSA</strong></p>
+<p><strong>Langkah 1 — Vektor Perturbasi Acak:</strong></p>
+<p><span class="math display">\[\Delta_k = (\Delta_{k,1}, \Delta_{k,2}, \ldots, \Delta_{k,p}), \quad \Delta_{k,i} = \begin{cases} +1, &amp; P = 1/2 \\ -1, &amp; P = 1/2 \end{cases}\]</span></p>
+<p>Setiap komponen mengikuti distribusi <em>Rademacher</em>.</p>
+<hr>
+<p><strong>Langkah 2 — Evaluasi Fungsi Biaya:</strong></p>
+<p><span class="math display">\[E_+ = E(\boldsymbol{\theta}_k + c_k\Delta_k), \quad E_- = E(\boldsymbol{\theta}_k - c_k\Delta_k)\]</span></p>
+<hr>
+<p><strong>Langkah 3 — Ekspansi Taylor:</strong></p>
+<p><span class="math display">\[E_+ = E(\boldsymbol{\theta}_k) + c_k \sum_{j=1}^{p} \Delta_j \frac{\partial E}{\partial \theta_j} + \frac{1}{2}c_k^2 \sum_{j=1}^{p} \Delta_j^2 \frac{\partial^2 E}{\partial \theta_j^2} + O(c_k^3)\]</span></p>
+<p><span class="math display">\[E_- = E(\boldsymbol{\theta}_k) - c_k \sum_{j=1}^{p} \Delta_j \frac{\partial E}{\partial \theta_j} + \frac{1}{2}c_k^2 \sum_{j=1}^{p} \Delta_j^2 \frac{\partial^2 E}{\partial \theta_j^2} + O(c_k^3)\]</span></p>
+<hr>
+<p><strong>Langkah 4 — Selisih (suku genap saling hilang):</strong></p>
+<p><span class="math display">\[E_+ - E_- = 2c_k \sum_{j=1}^{p} \Delta_j \frac{\partial E}{\partial \theta_j} + O(c_k^3)\]</span></p>
+<hr>
+<p><strong>Langkah 5 — Estimator Gradien:</strong></p>
+<p><span class="math display">\[\hat{g}_i = \frac{E_+ - E_-}{2c_k \Delta_i} = \frac{\partial E}{\partial \theta_i} + \sum_{j \neq i} \frac{\Delta_j}{\Delta_i} \frac{\partial E}{\partial \theta_j}\]</span></p>
+<hr>
+<p><strong>Langkah 6 — Bukti Tak-Bias:</strong></p>
+<p>Karena <span class="math inline">\(\Delta_j\)</span> independen dan <span class="math inline">\(\mathbb{E}\left[\frac{\Delta_j}{\Delta_i}\right] = 0\)</span> untuk <span class="math inline">\(j \neq i\)</span>:</p>
+<p><span class="math display">\[\mathbb{E}[\hat{g}_i] = \frac{\partial E}{\partial \theta_i} + \sum_{j \neq i} \underbrace{\mathbb{E}\left[\frac{\Delta_j}{\Delta_i}\right]}_{= 0} \frac{\partial E}{\partial \theta_j} = \frac{\partial E}{\partial \theta_i}\]</span></p>
+<p><span class="math display">\[\therefore \boxed{\mathbb{E}[\hat{\mathbf{g}}_k] = \nabla E(\boldsymbol{\theta}_k)}\]</span></p>
+<hr>
+<p><strong>Langkah 7 — Pembaruan Parameter &amp; Peluruhan:</strong></p>
+<p><span class="math display">\[\boldsymbol{\theta}_{k+1} = \boldsymbol{\theta}_k - a_k \hat{\mathbf{g}}_k\]</span></p>
+<p>dengan hiperparameter peluruhan:</p>
+<p><span class="math display">\[a_k = \frac{a}{(A+k+1)^\alpha}, \quad c_k = \frac{c}{(k+1)^\gamma}\]</span></p>
+<p>dengan nilai <span class="math inline">\(\alpha = 0.602\)</span> dan <span class="math inline">\(\gamma = 0.101\)</span>.</p>
+<p><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="evaluasi-distribusi-probabilitas-entropi" class="slide level2 scrollable">
+<h2>Evaluasi Distribusi Probabilitas (Entropi)</h2>
+<div style="font-size: 0.8em; text-align: center; margin-bottom: 25px; padding: 15px; background-color: #f8f9fa; border-radius: 10px; border: 1px solid #dee2e6;">
+<p><span class="math display">\[ S(\rho) = -\sum_i \lambda_i \log_2 (\lambda_i) \]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 0.6em;">
+<p><strong>Sistem <span class="math inline">\(N=2\)</span></strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Probabilitas mayoritas (<span class="math inline">\(p_1\)</span>)</td>
+<td style="text-align: center;"><span class="math inline">\(0{,}98\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sisa probabilitas (<span class="math inline">\(p_\text{rest}\)</span>)</td>
+<td style="text-align: center;"><span class="math inline">\(0{,}02\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kalkulasi:</strong> <span class="math display">\[ S = -(0{,}98 \cdot \log_2(0{,}98) + 0{,}02 \cdot \log_2(0{,}02)) \approx 0{,}1414 \text{ bit} \]</span></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size: 0.6em;">
+<p><strong>Sistem <span class="math inline">\(N=4\)</span></strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: center;">Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob. Optimal (<span class="math inline">\(p_1\)</span>)</td>
+<td style="text-align: center;"><span class="math inline">\(0{,}94\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Prob. Alternatif (<span class="math inline">\(p_2, p_3, p_4\)</span>)</td>
+<td style="text-align: center;">@ <span class="math inline">\(0{,}02\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kalkulasi:</strong> <span class="math display">\[ S = -\left(0{,}94 \log_2(0{,}94) + 3 \times (0{,}02 \log_2(0{,}02))\right) \approx 0{,}4225 \text{ bit} \]</span></p>
+</div>
+</div></div>
+</section>
+<section id="algoritma-evaluasi-backtesting" class="slide level2">
+<h2>Algoritma Evaluasi: <em>Backtesting</em></h2>
+<p><strong>Skema <em>Rolling Window Backtesting</em>:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource pseudocode number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>Procedure BacktestLoop(Data, K)</span>
+<span id="cb1-2"><a href=""></a>  1. For t in Timeline:</span>
+<span id="cb1-3"><a href=""></a>  2.    mu, Sigma, gamma &lt;- DataPreprocessing(t)</span>
+<span id="cb1-4"><a href=""></a>  3.    H &lt;- BuildHamiltonian(mu, Sigma, gamma)</span>
+<span id="cb1-5"><a href=""></a>  4.    x_NE &lt;- NashSBR(H) // Pencarian Titik Ekuilibrium</span>
+<span id="cb1-6"><a href=""></a>  5.    x_best_t &lt;- AdaptiveVQE(H, x_NE) // GT-VQE Optimization</span>
+<span id="cb1-7"><a href=""></a>  6.    R_t &lt;- ExecuteRebalance(x_best_t) // Pindah Aset Berdasarkan Sinyal</span>
+<span id="cb1-8"><a href=""></a>  7. Return PerformanceMetrics</span>
+<span id="cb1-9"><a href=""></a>EndProcedure</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Siklus dieksekusi secara iteratif melalui jendela waktu berjalan (<em>sliding window</em>).</li>
+</ul>
+</section>
+<section id="perhitungan-metrik-performa-finansial" class="slide level2 scrollable">
+<h2>Perhitungan Metrik Performa Finansial</h2>
+<div class="panel-tabset">
+<ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Metrik Finansial</a></li><li><a href="#tabset-6-2">Optimasi Klasik SLSQP</a></li><li><a href="#tabset-6-3">Contoh Numerik</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1">
+<div style="font-size: 0.7em;">
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><strong>Return Kumulatif:</strong> Mengukur total pertumbuhan persentase modal selama periode simulasi. <span class="math display">\[ R_{cum} = \prod_{t=1}^T (1 + R_t) - 1 \]</span></li>
+<li><strong>Sharpe Ratio:</strong> Rasio antara <em>return</em> ekspektasi terhadap risiko volatilitas portofolio (<span class="math inline">\(\sigma_p\)</span>). <span class="math display">\[ \text{Sharpe} = \frac{\bar{R}_p - R_f}{\sigma_p} \]</span>
+<div style="font-size: 0.8em; margin-top: -15px;">
+<p><span class="math inline">\(\bar{R}_p\)</span>: Rata-rata <em>return</em> portofolio<br> <span class="math inline">\(R_f\)</span>: Suku bunga bebas risiko (<em>risk-free rate</em>)<br> <span class="math inline">\(\sigma_p\)</span>: Volatilitas <em>return</em> portofolio</p>
+</div></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><strong>Maximum Drawdown (MDD):</strong> Risiko kerugian maksimal dari puncak historis portofolio. <span class="math display">\[ MDD = \max \frac{P_{peak} - P_{t}}{P_{peak}} \]</span></li>
+<li><strong>Equal Weight &amp; SLSQP:</strong> Sebagai <em>benchmark</em>, nilai metrik juga dievaluasi untuk portofolio <span class="math inline">\(w_i = 1/K\)</span> (<em>Equal Weight</em>) dan penyelesaian Lagrangian kontinu berbasis <em>Sequential Least Squares Programming</em> (SLSQP).</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="tabset-6-2">
+<p>Algoritma <em>Sequential Least Squares Programming</em> untuk menyelesaikan sub-masalah pemrograman kuadratik sebagai standar komparasi.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource pseudocode number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>Procedure SLSQPOptimizer(mu, Sigma, gamma)</span>
+<span id="cb2-2"><a href=""></a>  1. w_0 &lt;- InitialWeights(1/N)</span>
+<span id="cb2-3"><a href=""></a>  2. B_0 &lt;- I // Inisialisasi Hessian Identitas</span>
+<span id="cb2-4"><a href=""></a>  3. For k = 0, 1, 2, ... until converged:</span>
+<span id="cb2-5"><a href=""></a>  4.     g_k &lt;- gamma * Sigma * w_k - mu // Hitung Gradien</span>
+<span id="cb2-6"><a href=""></a>  5.     Solve Sub-QP: min(g_k^T d + 0.5 d^T B_k d) s.t. constraints</span>
+<span id="cb2-7"><a href=""></a>  6.     a_k &lt;- LineSearch(w_k, d)</span>
+<span id="cb2-8"><a href=""></a>  7.     w_{k+1} &lt;- w_k + a_k * d</span>
+<span id="cb2-9"><a href=""></a>  8.     s_k &lt;- w_{k+1} - w_k, y_k &lt;- g_{k+1} - g_k</span>
+<span id="cb2-10"><a href=""></a>  9.     B_{k+1} &lt;- UpdateBFGS(B_k, s_k, y_k)</span>
+<span id="cb2-11"><a href=""></a>  10. Return w_final</span>
+<span id="cb2-12"><a href=""></a>EndProcedure</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="tabset-6-3">
+<div class="scrollable" style="max-height: 450px; font-size: 0.7em;">
+<p><strong>Contoh Perhitungan SLSQP (Kasus <span class="math inline">\(N=2\)</span>)</strong></p>
+<p>Misalkan: <span class="math display">\[ \mu=\begin{pmatrix}0.10\\0.05\end{pmatrix},\qquad\Sigma=\begin{pmatrix}0.04 &amp; 0.01\\0.01 &amp; 0.02\end{pmatrix},\qquad\gamma=1 \]</span></p>
+<p><strong>Inisialisasi</strong></p>
+<p><span class="math display">\[ w_0=\begin{pmatrix}0.5\\0.5\end{pmatrix},\qquad B_0=\begin{pmatrix}1&amp;0\\0&amp;1\end{pmatrix} \]</span></p>
+<p><strong>1. Hitung Gradien</strong></p>
+<p><span class="math display">\[ g_0=\gamma\Sigma w_0-\mu \]</span></p>
+<p>Karena:</p>
+<p><span class="math display">\[ \Sigma w_0=\begin{pmatrix}0.025\\0.015\end{pmatrix} \]</span></p>
+<p>maka:</p>
+<p><span class="math display">\[ g_0=\begin{pmatrix}-0.075\\-0.035\end{pmatrix} \]</span></p>
+<hr>
+<p><strong>2. Selesaikan Sub-masalah Quadratic Programming</strong></p>
+<p>Sub-QP yang diselesaikan adalah:</p>
+<p><span class="math display">\[ \min_d\left(g_0^Td+\frac12 d^TB_0d\right) \]</span></p>
+<p>dengan kendala:</p>
+<p><span class="math display">\[ d_1+d_2=0 \]</span></p>
+<p>Karena:</p>
+<p><span class="math display">\[ d_2=-d_1 \]</span></p>
+<p>fungsi objektif menjadi:</p>
+<p><span class="math display">\[ g(d_1)=-0.040d_1+d_1^2 \]</span></p>
+<p>Turunan pertama:</p>
+<p><span class="math display">\[ \frac{dg}{dd_1}=-0.040+2d_1=0 \]</span></p>
+<p>memberikan solusi:</p>
+<p><span class="math display">\[ d=\begin{pmatrix}0.02\\-0.02\end{pmatrix} \]</span></p>
+<hr>
+<p><strong>3. Line Search</strong></p>
+<p>Misalkan hasil <em>line search</em> menghasilkan:</p>
+<p><span class="math display">\[ \alpha_0=1 \]</span></p>
+<hr>
+<p><strong>4. Update Bobot</strong></p>
+<p><span class="math display">\[ w_1=w_0+\alpha_0d=\begin{pmatrix}0.52\\0.48\end{pmatrix} \]</span></p>
+<hr>
+<p><strong>5. Update Hessian (BFGS)</strong></p>
+<p>Hitung:</p>
+<p><span class="math display">\[ s_0=w_1-w_0=\begin{pmatrix}0.02\\-0.02\end{pmatrix} \]</span></p>
+<p>kemudian gradien baru:</p>
+<p><span class="math display">\[ g_1=\Sigma w_1-\mu=\begin{pmatrix}-0.0744\\-0.0352\end{pmatrix} \]</span></p>
+<p>sehingga:</p>
+<p><span class="math display">\[ y_0=g_1-g_0=\begin{pmatrix}0.0006\\-0.0002\end{pmatrix} \]</span></p>
+<p>Selanjutnya matriks Hessian diperbarui menggunakan rumus BFGS:</p>
+<p><span class="math display">\[ B_1=B_0-\frac{B_0s_0s_0^TB_0}{s_0^TB_0s_0}+\frac{y_0y_0^T}{y_0^Ts_0} \]</span></p>
+<p>yang kemudian digunakan pada iterasi berikutnya.</p>
+<p><strong>Iterasi selanjutnya mengulangi langkah yang sama hingga memenuhi kriteria konvergensi dan menghasilkan bobot portofolio optimal.</strong></p>
+<p><br><br><br></p>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="fase-hasil-dan-pembahasan" class="title-slide slide level1 center">
+<h1>Fase Hasil dan Pembahasan</h1>
+
+</section>
+<section id="simulasi-interaktif-konvergensi-vqe" class="slide level2">
+<h2>Simulasi Interaktif Konvergensi VQE</h2>
+<iframe src="interactive_vqe.html" width="100%" height="600px" style="border:none; border-radius:15px; background:transparent;">
+</iframe>
+<div class="55em" style="font-size:0; text-align:center; color:#666; margin-top:5px;">
+<p>Silakan sesuaikan parameter bias dan interaksi (<span class="math inline">\(h_i\)</span>, <span class="math inline">\(J_{ij}\)</span>) lalu klik <b>Mulai SPSA</b> untuk melihat simulasi konvergensi.</p>
+</div>
+</section>
+<section id="analisis-entropi-solusi-optimal-entropi-rendah" class="slide level2">
+<h2>Analisis Entropi: Solusi Optimal (Entropi Rendah)</h2>
+<div class="columns" style="display: flex; align-items: center;">
+<div class="column" style="width:70%;">
+<p><img data-src="Gambar/Entropi_rendah.png" style="width:100.0%"></p>
+</div><div class="column" style="width:30%;">
+<div style="font-size: 0.7em; text-align: justify; padding-left: 20px;">
+<ul>
+<li>Probabilitas runtuh di satu <em>state</em> dominan</li>
+<li>Solusi telah konvergen ke titik minimum energi global</li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="analisis-entropi-barren-plateau-entropi-tinggi" class="slide level2">
+<h2>Analisis Entropi: Barren Plateau (Entropi Tinggi)</h2>
+<div class="columns" style="display: flex; align-items: center;">
+<div class="column" style="width:70%;">
+<p><img data-src="Gambar/Entropi_tinggi.png" style="width:100.0%"></p>
+</div><div class="column" style="width:30%;">
+<div style="font-size: 0.7em; text-align: justify; padding-left: 20px;">
+<ul>
+<li>Probabilitas tersebar merata</li>
+<li>Menunjukkan indikasi <em>barren plateau</em></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="pergerakan-harga-saham-n4" class="slide level2">
+<h2>Pergerakan Harga Saham (<span class="math inline">\(N=4\)</span>)</h2>
+<p>Kombinasi saham BBCA, ADRO, TLKM, dan SMGR (2021-2023) dievaluasi dengan mekanisme <em>rebalancing</em> bulanan.</p>
+
+<img data-src="Gambar/pergerakan_harga_asli_N4.png" class="r-stretch"></section>
+<section id="perbandingan-pertumbuhan-modal-benchmark-n2" class="slide level2">
+<h2>Perbandingan Pertumbuhan Modal Benchmark (<span class="math inline">\(N=2\)</span>)</h2>
+<p>Perbandingan performa <em>backtesting</em> antara Portofolio Nash murni (tanpa VQE) dan optimasi portofolio klasik SLSQP untuk 2 aset.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Portofolio Nash Murni</strong> <img data-src="Gambar/hasil_backtest_nash_N2.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Optimasi Klasik (SLSQP)</strong> <img data-src="Gambar/slsqp_vs_benchmarks_N2.png"></p>
+</div></div>
+</section>
+<section id="perbandingan-pertumbuhan-modal-benchmark-n4" class="slide level2">
+<h2>Perbandingan Pertumbuhan Modal Benchmark (<span class="math inline">\(N=4\)</span>)</h2>
+<p>Perbandingan performa <em>backtesting</em> antara Portofolio Nash murni (tanpa VQE) dan optimasi portofolio klasik SLSQP untuk 4 aset.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Portofolio Nash Murni</strong> <img data-src="Gambar/hasil_backtest_nash_N4.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Optimasi Klasik (SLSQP)</strong> <img data-src="Gambar/slsqp_vs_benchmarks_N4.png"></p>
+</div></div>
+</section>
+<section id="perbandingan-pertumbuhan-modal-n2" class="slide level2">
+<h2>Perbandingan Pertumbuhan Modal (<span class="math inline">\(N=2\)</span>)</h2>
+<p>Perbandingan antara VQE Murni (Tanpa GT) dan Algoritma GT-VQE (Hibrida) untuk 2 aset.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>VQE Murni (Tanpa GT)</strong> <img data-src="Gambar/NoGT_hasil_backtest_vqe_N2.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>GT-VQE (Hibrida)</strong> <img data-src="Gambar/GT_hasil_backtest_vqe_N2.png"></p>
+</div></div>
+</section>
+<section id="perbandingan-pertumbuhan-modal-n4" class="slide level2">
+<h2>Perbandingan Pertumbuhan Modal (<span class="math inline">\(N=4\)</span>)</h2>
+<p>Perbandingan antara VQE Murni (Tanpa GT) dan Algoritma GT-VQE (Hibrida) untuk 4 aset.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>VQE Murni (Tanpa GT)</strong> <img data-src="Gambar/NoGT_hasil_backtest_vqe_N4.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>GT-VQE (Hibrida)</strong> <img data-src="Gambar/GT_hasil_backtest_vqe_N4.png"></p>
+</div></div>
+</section>
+<section id="dinamika-adaptasi-kedalaman-sirkuit-n2" class="slide level2">
+<h2>Dinamika Adaptasi Kedalaman Sirkuit (<span class="math inline">\(N=2\)</span>)</h2>
+<p>Efektivitas <em>warm-start</em> terlihat dari dominasi operasional GT-VQE pada kedalaman dangkal, mengurangi fluktuasi <em>depth</em> antar jendela observasi.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>VQE Murni (<span class="math inline">\(N=2\)</span>)</strong> <img data-src="Gambar/NoGT_grafik_depth_per_window_N2.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>GT-VQE Hibrida (<span class="math inline">\(N=2\)</span>)</strong> <img data-src="Gambar/GT_grafik_depth_per_window_N2.png"></p>
+</div></div>
+</section>
+<section id="dinamika-adaptasi-kedalaman-sirkuit-n4" class="slide level2">
+<h2>Dinamika Adaptasi Kedalaman Sirkuit (<span class="math inline">\(N=4\)</span>)</h2>
+<p>Efektivitas <em>warm-start</em> terlihat dari dominasi operasional GT-VQE pada kedalaman dangkal, mengurangi fluktuasi <em>depth</em> antar jendela observasi.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>VQE Murni (<span class="math inline">\(N=4\)</span>)</strong> <img data-src="Gambar/NoGT_grafik_depth_per_window_N4.png"></p>
+</div><div class="column" style="width:50%;">
+<p><strong>GT-VQE Hibrida (<span class="math inline">\(N=4\)</span>)</strong> <img data-src="Gambar/GT_grafik_depth_per_window_N4.png"></p>
+</div></div>
+</section>
+<section id="ringkasan-performa-simulasi-finansial" class="slide level2">
+<h2>Ringkasan Performa Simulasi Finansial</h2>
+<p>Tabel perbandingan <em>backtesting</em> strategi Kuantum, SLSQP, dan <em>Equal Weight</em> untuk Sistem <span class="math inline">\(N=2\)</span> dan <span class="math inline">\(N=4\)</span>.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Strategi Algoritma</th>
+<th style="text-align: center;">Return (<span class="math inline">\(N=2\)</span>)</th>
+<th style="text-align: center;">Sharpe (<span class="math inline">\(N=2\)</span>)</th>
+<th style="text-align: center;">MDD (<span class="math inline">\(N=2\)</span>)</th>
+<th style="text-align: center;">Return (<span class="math inline">\(N=4\)</span>)</th>
+<th style="text-align: center;">Sharpe (<span class="math inline">\(N=4\)</span>)</th>
+<th style="text-align: center;">MDD (<span class="math inline">\(N=4\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>GT-VQE (Hibrida)</strong></td>
+<td style="text-align: center;"><strong>145,07%</strong></td>
+<td style="text-align: center;"><strong>1,0185</strong></td>
+<td style="text-align: center;">30,33%</td>
+<td style="text-align: center;"><strong>73,15%</strong></td>
+<td style="text-align: center;"><strong>1,0107</strong></td>
+<td style="text-align: center;"><strong>16,68%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">VQE (Tanpa GT)</td>
+<td style="text-align: center;">121,30%</td>
+<td style="text-align: center;">0,9331</td>
+<td style="text-align: center;">30,33%</td>
+<td style="text-align: center;">16,89%</td>
+<td style="text-align: center;">0,3592</td>
+<td style="text-align: center;">20,89%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SLSQP (Klasik)</td>
+<td style="text-align: center;">51,34%</td>
+<td style="text-align: center;">0,6736</td>
+<td style="text-align: center;"><strong>15,91%</strong></td>
+<td style="text-align: center;">12,91%</td>
+<td style="text-align: center;">0,2810</td>
+<td style="text-align: center;">21,12%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><em>Equal Weight</em></td>
+<td style="text-align: center;">97,88%</td>
+<td style="text-align: center;">0,9764</td>
+<td style="text-align: center;">27,49%</td>
+<td style="text-align: center;">35,57%</td>
+<td style="text-align: center;">0,6790</td>
+<td style="text-align: center;">18,42%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Catatan:</strong> GT-VQE mendominasi performa pengembalian maupun rasio <em>Sharpe</em> karena inisialisasi <em>Nash Equilibrium</em> berhasil mengeksploitasi informasi struktural pasar.</p>
+</section>
+<section id="kesimpulan" class="slide level2">
+<h2>Kesimpulan</h2>
+<div class="columns">
+<div class="column" style="width:28%;">
+<h3 id="formulasi-epg">Formulasi EPG</h3>
+<div style="font-size: 0.6em; text-align: justify;">
+<p>Formulasi model Markowitz ke dalam kerangka <em>Exact Potential Game</em> (EPG) telah berhasil memetakan utilitas ekonomi menjadi sistem Hamiltonian fisis secara akurat. Penggunaan <em>log return</em> efektif menjaga simetri interaksi risiko tanpa distorsi, sementara implementasi suku penalti mencegah sirkuit kuantum terjebak pada status portofolio yang melanggar diversifikasi.</p>
+</div>
+</div><div class="column" style="width:8%;">
+<div style="font-size: 3em; color: #555; margin-top: 20px; text-align: center;">
+➜
+</div>
+</div><div class="column" style="width:28%;">
+<h3 id="warm-start-nash">Warm-Start Nash</h3>
+<div style="font-size: 0.6em; text-align: justify;">
+<p>Penerapan <em>Nash Equilibrium</em> sebagai <em>warm-start</em> terbukti meningkatkan efisiensi algoritma VQE. Solusi <em>Nash</em> yang diinjeksikan ke awal sirkuit membantu optimasi lolos dari area <em>barren plateaus</em> dan memicu keruntuhan entropi <em>Von Neumann</em>, sehingga memungkinkan pencapaian <em>ground state</em> pada kedalaman sirkuit dengan rata-rata yang lebih dangkal.</p>
+</div>
+</div><div class="column" style="width:8%;">
+<div style="font-size: 3em; color: #555; margin-top: 20px; text-align: center;">
+➜
+</div>
+</div><div class="column" style="width:28%;">
+<h3 id="performa-gt-vqe">Performa GT-VQE</h3>
+<div style="font-size: 0.6em; text-align: justify;">
+<p>Kombinasi arsitektur <em>Hardware-Efficient Ansatz</em> dengan optimasi SPSA memungkinkan sistem merespons volatilitas pasar secara dinamis. Hasil <em>backtesting</em> memvalidasi bahwa algoritma GT-VQE mampu memaksimalkan <em>Return</em> secara superior (73,15%) namun tetap meminimalkan risiko kerugian secara optimal (MDD 16,68%) dibandingkan VQE murni dan metode klasik (<span class="math inline">\(N=4\)</span>).</p>
+</div>
+</div></div>
+</section>
+<section id="saran-pengembangan" class="slide level2">
+<h2>Saran Pengembangan</h2>
+<div class="columns">
+<div class="column" style="width:28%;">
+<h3 id="noise-sirkuit">Noise Sirkuit</h3>
+<div style="font-size: 0.6em; text-align: justify;">
+<p>Mempertimbangkan parameter <em>noise</em> sirkuit, seperti dekoherensi qubit dan <em>gate fidelity</em> dalam mengeksekusi algoritma ini agar divalidasi dan diaplikasikan pada infrastruktur perangkat keras kuantum sesungguhnya.</p>
+</div>
+</div><div class="column" style="width:8%;">
+<div style="font-size: 3em; color: #555; margin-top: 20px; text-align: center;">
+➜
+</div>
+</div><div class="column" style="width:28%;">
+<h3 id="variasi-ansatz">Variasi Ansatz</h3>
+<div style="font-size: 0.6em; text-align: justify;">
+<p>Menggunakan variasi struktur <em>ansatz</em> lain (seperti <em>Qubit-Efficient</em> atau <em>Variational Quantum Circuit</em>) serta membandingkan performa berbagai algoritma optimasi klasik lainnya untuk menemukan kombinasi hibrida dengan laju konvergensi paling efisien.</p>
+</div>
+</div><div class="column" style="width:8%;">
+<div style="font-size: 3em; color: #555; margin-top: 20px; text-align: center;">
+➜
+</div>
+</div><div class="column" style="width:28%;">
+<h3 id="black-swan">Black Swan</h3>
+<div style="font-size: 0.6em; text-align: justify;">
+<p>Menggunakan rentang periode data historis yang lebih panjang dan melakukan pengujian pada periode fenomena <em>Black Swan</em> atau krisis ekonomi untuk mengevaluasi agilitas dan reliabilitas algoritma dalam mempertahankan stabilitas portofolio di pasar ekstrem.</p>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+<br><br>
+<div style="text-align: center;">
+<h1>
+Terima Kasih
+</h1>
+</div>
+</section></section>
+<section>
+<section id="lampiran" class="title-slide slide level1 center">
+<h1>Lampiran</h1>
+
+</section>
+<section id="lampiran-grafik-simulasi-gt-vqe-n4" class="slide level2">
+<h2>Lampiran: Grafik Simulasi GT-VQE (<span class="math inline">\(N=4\)</span>)</h2>
+<div class="columns" style="display: flex; align-items: center;">
+<div class="column" style="width:70%;">
+<p><img data-src="Gambar/GT_N4_22_1_10.png" style="width:100.0%"></p>
+</div><div class="column" style="width:30%;">
+<div style="font-size: 0.7em; text-align: justify; padding-left: 20px;">
+
+</div>
+</div></div>
+</section>
+<section id="lampiran-grafik-simulasi-vqe-murni-n4" class="slide level2">
+<h2>Lampiran: Grafik Simulasi VQE Murni (<span class="math inline">\(N=4\)</span>)</h2>
+<div class="columns" style="display: flex; align-items: center;">
+<div class="column" style="width:70%;">
+<p><img data-src="Gambar/NoGT_N4_22_1_10.png" style="width:100.0%"></p>
+</div><div class="column" style="width:30%;">
+<div style="font-size: 0.7em; text-align: justify; padding-left: 20px;">
+
+</div>
+</div></div>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="main_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="main_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="main_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="main_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="main_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="main_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="main_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="main_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="main_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="main_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="main_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'h.v',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <div class="top-band"></div>
+    <div class="bottom-band"></div>
+
+    <div class="its-header">
+      <img src="logo/Logo-ITS-1.svg" class="logo-its">
+      <img src="logo/cropped-Javicon-Renaudie.svg" class="logo-phi">
+      <img src="logo/LaFTiFA1.svg" class="logo-laftifa">
+      <img src="logo/LogoBrin1.png" class="logo-brin">
+    </div>
+
+    <div class="motto">
+      "The Beauty of Mind"<br>
+      "The Art of Thinking"
+    </div>
+
+    <div class="footer-left">
+      www.its.ac.id
+    </div>
+
+    <div class="footer-right">
+      INSTITUT TEKNOLOGI SEPULUH NOPEMBER, Surabaya - Indonesia
+    </div>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

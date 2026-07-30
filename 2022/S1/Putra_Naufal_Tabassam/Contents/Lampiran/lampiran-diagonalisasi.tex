@@ -1,0 +1,327 @@
+\chapter{Penurunan Diagonalisasi Operator Densitas dan Fungsi Logaritma Operator}
+\label{app:diagonalisasi_operator}
+
+Operator densitas $\rho$ merupakan operator Hermitian sehingga memenuhi
+\begin{equation}
+    \rho^\dagger=\rho.
+\end{equation}
+Berdasarkan Teorema Spektral, setiap operator Hermitian memiliki himpunan nilai eigen real beserta vektor-vektor eigen ortonormal yang memenuhi persamaan eigen
+\begin{equation}
+    \label{eq:persamaan-eigen-operator-densitas}
+    \rho |e_j\rangle
+    =
+    \lambda_j |e_j\rangle,
+\end{equation}
+dengan $\lambda_j$ merupakan nilai eigen dan $|e_j\rangle$ merupakan vektor eigen ke-$j$. Ortonormalitas seluruh vektor eigen dinyatakan sebagai
+\begin{equation}
+    \langle e_i|e_j\rangle
+    =
+    \delta_{ij}.
+\end{equation}
+Seluruh vektor eigen kemudian disusun sebagai kolom-kolom suatu matriks
+\begin{equation}
+    U=
+    \begin{bmatrix}
+        |e_1\rangle &
+        |e_2\rangle &
+        \cdots &
+        |e_n\rangle
+    \end{bmatrix}.
+\end{equation}
+Karena seluruh vektor eigen saling ortonormal, maka berlaku
+\begin{equation}
+    U^\dagger U
+    =
+    I.
+\end{equation}
+
+Dengan mengalikan operator densitas terhadap matriks $U$, maka diperoleh
+\begin{equation}
+\begin{split}
+    \rho U
+    &=
+    \rho
+    \begin{bmatrix}
+        |e_1\rangle &
+        |e_2\rangle &
+        \cdots &
+        |e_n\rangle
+    \end{bmatrix}
+    \\
+    &=
+    \begin{bmatrix}
+        \rho|e_1\rangle &
+        \rho|e_2\rangle &
+        \cdots &
+        \rho|e_n\rangle
+    \end{bmatrix}.
+\end{split}
+\end{equation}
+Sesuai dengan persamaan \eqref{eq:persamaan-eigen-operator-densitas}, diperoleh
+\begin{equation}
+\begin{split}
+    \rho U
+    &=
+    \begin{bmatrix}
+        \lambda_1|e_1\rangle &
+        \lambda_2|e_2\rangle &
+        \cdots &
+        \lambda_n|e_n\rangle
+    \end{bmatrix}
+    \\
+    &=
+    \begin{bmatrix}
+        |e_1\rangle &
+        |e_2\rangle &
+        \cdots &
+        |e_n\rangle
+    \end{bmatrix}
+    \begin{pmatrix}
+        \lambda_1 &0&\cdots&0\\
+        0&\lambda_2&\cdots&0\\
+        \vdots&\vdots&\ddots&\vdots\\
+        0&0&\cdots&\lambda_n
+    \end{pmatrix}.
+\end{split}
+\end{equation}
+Matriks diagonal tersebut dapat dinotasikan sebagai
+\begin{equation}
+    D=
+    \operatorname{diag}
+    (\lambda_1,\lambda_2,\ldots,\lambda_n),
+\end{equation}
+agar diperoleh hubungan
+\begin{equation}
+    \rho U
+    =
+    UD.
+\end{equation}
+Kemudian kedua ruas dikalikan dengan $U^\dagger$ sehingga diperoleh
+\begin{equation}
+    \rho UU^\dagger
+    =
+    UDU^\dagger.
+\end{equation}
+Karena $UU^\dagger=I$, maka diperoleh bentuk diagonalisasi operator
+\begin{equation}
+    \label{eq:diagonalisasi_rho}
+    \rho
+    =
+    UDU^\dagger.
+\end{equation}
+Untuk memperoleh bentuk logaritma operator densitas, terlebih dahulu ditinjau deret Maclaurin dari fungsi logaritma
+\begin{align}
+    \log_2(1+x)
+    &=
+    \sum_{n=1}^{\infty}
+    \frac{(-1)^{n-1}}{n\ln2}
+    x^n,
+    \\
+    \log_2(x)
+    &=
+    \sum_{n=1}^{\infty}
+    \frac{(-1)^{n-1}}{n\ln2}
+    (x-1)^n.
+\end{align}
+
+Karena operator densitas merupakan operator Hermitian yang telah didiagonalisasi sebagaimana ditunjukkan pada persamaan~\eqref{eq:diagonalisasi_rho}, maka deret Maclaurin fungsi logaritma dapat diterapkan pada operator tersebut melalui \textit{functional calculus}. Maka dari itu, diperoleh representasi deret logaritma operator
+\begin{equation}
+\label{eq:deret_log_operator}
+    \log_2(\rho)
+    =
+    \sum_{n=1}^{\infty}
+    \frac{(-1)^{n-1}}
+         {n\ln2}
+    (\rho-I)^n.
+\end{equation}
+Karena operator densitas telah didiagonalisasi sebagaimana disajikan pada persamaan \eqref{eq:diagonalisasi_rho},maka
+\begin{equation}
+\begin{split}
+(\rho-I)^n
+&=
+(UDU^\dagger-I)^n
+\\
+&=
+\left(
+U(D-I)U^\dagger
+\right)^n.
+\end{split}
+\end{equation}
+Dengan menggunakan sifat $U^\dagger U=I$, diperoleh
+\begin{equation}
+\begin{split}
+(\rho-I)^n
+&=
+U(D-I)
+\underbrace{U^\dagger U}_{I}
+(D-I)
+\cdots
+\underbrace{U^\dagger U}_{I}
+(D-I)
+U^\dagger
+\\
+&=
+U(D-I)^nU^\dagger.
+\end{split}
+\end{equation}
+Karena
+\begin{equation}
+D=
+\begin{pmatrix}
+\lambda_1&0&\cdots&0\\
+0&\lambda_2&\cdots&0\\
+\vdots&\vdots&\ddots&\vdots\\
+0&0&\cdots&\lambda_n
+\end{pmatrix},
+\end{equation}
+maka
+\begin{equation}
+(D-I)^n=
+\begin{pmatrix}
+(\lambda_1-1)^n&0&\cdots&0\\
+0&(\lambda_2-1)^n&\cdots&0\\
+\vdots&\vdots&\ddots&\vdots\\
+0&0&\cdots&(\lambda_n-1)^n
+\end{pmatrix}.
+\end{equation}
+Substitusi hasil tersebut ke persamaan~\eqref{eq:deret_log_operator} sehingga menghasilkan
+\begin{equation}
+\begin{split}
+\log_2(\rho)
+&=
+\sum_{n=1}^{\infty}
+\frac{(-1)^{n-1}}
+{n\ln2}
+U(D-I)^nU^\dagger
+\\
+&=
+U
+\left[
+\sum_{n=1}^{\infty}
+\frac{(-1)^{n-1}}
+{n\ln2}
+(D-I)^n
+\right]
+U^\dagger.
+\end{split}
+\end{equation}
+Karena matriks $U$ dan $U^\dagger$ tidak bergantung pada indeks penjumlahan $n$, kedua matriks tersebut dapat dikeluarkan dari operator penjumlahan. Sementara itu, matriks di dalam tanda kurung tetap berbentuk diagonal sehingga fungsi logaritma cukup diterapkan pada setiap elemen diagonalnya.
+\begin{equation}
+\label{eq:log-rho-diagonal}
+\log_2(\rho)
+=
+U
+\begin{pmatrix}
+\log_2(\lambda_1)&0&\cdots&0\\
+0&\log_2(\lambda_2)&\cdots&0\\
+\vdots&\vdots&\ddots&\vdots\\
+0&0&\cdots&\log_2(\lambda_n)
+\end{pmatrix}
+U^\dagger.
+\end{equation}
+
+Untuk memperoleh bentuk eksplisit dari hasil perkalian pada persamaan di atas, ditinjau terlebih dahulu suatu matriks diagonal umum
+\begin{equation}
+A=
+\operatorname{diag}
+(a_1,a_2,\ldots,a_n),
+\end{equation}
+dengan $a_j$ merupakan suatu konstanta. Untuk memperoleh bentuk eksplisit dari hasil perkalian pada persamaan~\eqref{eq:log-rho-diagonal}, ditinjau terlebih dahulu suatu matriks diagonal umum
+\begin{equation}
+\begin{split}
+UA
+&=
+\begin{bmatrix}
+|e_1\rangle&
+|e_2\rangle&
+\cdots&
+|e_n\rangle
+\end{bmatrix}
+\begin{pmatrix}
+a_1&0&\cdots&0\\
+0&a_2&\cdots&0\\
+\vdots&\vdots&\ddots&\vdots\\
+0&0&\cdots&a_n
+\end{pmatrix}
+\\
+&=
+\begin{bmatrix}
+a_1|e_1\rangle&
+a_2|e_2\rangle&
+\cdots&
+a_n|e_n\rangle
+\end{bmatrix}.
+\end{split}
+\end{equation}
+Sementara itu, konjugat Hermitian dari matriks $U$ diberikan oleh
+\begin{equation}
+U^\dagger=
+\begin{bmatrix}
+\langle e_1|\\
+\langle e_2|\\
+\vdots\\
+\langle e_n|
+\end{bmatrix}.
+\end{equation}
+Sehingga bentuk penuh dari perkalian matriks diagonal tersebut adalah
+\begin{equation}
+\begin{split}
+UAU^\dagger
+&=
+\begin{bmatrix}
+a_1|e_1\rangle&
+a_2|e_2\rangle&
+\cdots&
+a_n|e_n\rangle
+\end{bmatrix}
+\begin{bmatrix}
+\langle e_1|\\
+\langle e_2|\\
+\vdots\\
+\langle e_n|
+\end{bmatrix}
+\\
+&=
+a_1|e_1\rangle\langle e_1|
++
+a_2|e_2\rangle\langle e_2|
++\cdots+
+a_n|e_n\rangle\langle e_n|
+\\
+&=
+\sum_{j=1}^{n}
+a_j
+|e_j\rangle
+\langle e_j|.
+\end{split}
+\end{equation}
+
+Dengan mengambil
+\[
+a_j=\log_2(\lambda_j),
+\]
+maka berdasarkan persamaan \eqref{eq:log-rho-diagonal} diperoleh
+\begin{equation}
+\log_2(\rho)
+=
+\sum_{j=1}^{n}
+\log_2(\lambda_j)
+|e_j\rangle
+\langle e_j|.
+\end{equation}
+Karena operator densitas bersifat semidefinit positif, seluruh nilai eigennya memenuhi
+\[
+0\le\lambda_j\le1,
+\]
+dengan
+\[
+\sum_{j=1}^{n}\lambda_j=1.
+\]
+Apabila terdapat nilai eigen $\lambda_j=0$, fungsi $\log_2(\lambda_j)$ memang tidak terdefinisi pada titik tersebut. Akan tetapi, dalam Entropi Von Neumann yang muncul adalah hasil kali $\lambda_j\log_2(\lambda_j)$ sehingga nilainya didefinisikan melalui limit. Akan tetapi, pada Entropi Von Neumann suku yang muncul adalah hasil kali $\lambda_j\log_2(\lambda_j)$ sehingga nilainya didefinisikan melalui limit
+\begin{equation}
+\lim_{x\rightarrow0^{+}}
+x\log_2x
+=
+0,
+\end{equation}
+sehingga keberadaan nilai eigen nol tidak menimbulkan singularitas pada perhitungan Entropi Von Neumann. 
