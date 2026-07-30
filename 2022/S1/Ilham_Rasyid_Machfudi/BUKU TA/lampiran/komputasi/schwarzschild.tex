@@ -1,0 +1,132 @@
+\chapter{Algoritma Komputasi Frekuensi Eigen Schwarzschild}
+\label{app:komputasi-schw}
+
+Berikut adalah algoritma Python yang digunakan untuk mengomputasi frekuensi eigen:
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    breakatwhitespace=false,
+    breakautoindent=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+    columns=fullflexible,
+    keepspaces=true,
+    showstringspaces=false,
+    tabsize=4,
+    frame=none
+}
+
+\begin{lstlisting}[language=Python]
+import numpy as np
+import matplotlib.pyplot as plt
+
+def _chi(om, mu):
+    c = np.sqrt(om**2 - mu**2 + 0j)
+    return c if c.real >= 0 else -c
+
+def _abg(om, mu, L):
+    w = om; ch = _chi(om, mu)
+    w2, w3, w4 = w**2, w**3, w**4
+    ch2, ch3 = ch**2, ch**3
+    m2, m4 = mu**2, mu**4
+    a = lambda n: ch2*(n+1)*(n+1 - 4j*w)
+    b = lambda n: (-2*ch2*n**2
+                   + (6j*ch3 + 2j*ch*w2 - 8j*m2*w + 2*m2 + 8j*w3 - 2*w2)*n
+                   + (-L*ch2 + 12*ch3*w + 3j*ch3 + 4*ch*w3 + 1j*ch*w2
+                      + 4*m4 - 20*m2*w2 - 4j*m2*w + m2 + 16*w4 + 4j*w3 - w2))
+    g = lambda n: (ch2*n**2
+                   + (-2j*ch3 - 2j*ch*w2 + 4j*m2*w - 4j*w3)*n
+                   + (-4*ch3*w - 4*ch*w3 - m4 + 8*m2*w2 - 8*w4))
+    return a, b, g
+
+def cf(om, mu, L, ninv, N):
+    a, b, g = _abg(om, mu, L)
+    up = 0j
+    for k in range(N, ninv, -1):
+        up = a(k-1)*g(k)/(b(k) - up)
+    dn = 0j
+    for k in range(0, ninv):
+        dn = a(k)*g(k+1)/(b(k) - dn)
+    return b(ninv) - up - dn
+
+def find(mu, L, ninv, guess, N=2500, tol=1e-11, it=120):
+    f = lambda w: cf(w, mu, L, ninv, N)
+    z, h = complex(guess), 1e-7
+    for _ in range(it):
+        F = f(z)
+        if abs(F) < tol:
+            return z, abs(F)
+        Fp = (f(z+h) - f(z-h))/(2*h)
+        if Fp == 0:
+            break
+        zn = z - F/Fp
+        if abs(zn - z) < tol:
+            return zn, abs(f(zn))
+        z = zn
+    return z, abs(f(z))
+
+ANCHOR = {(0,0):0.1105-0.1049j, (0,1):0.0861-0.3481j, (0,2):0.0756-0.6010j,
+          (1,0):0.2929-0.0977j, (1,1):0.2645-0.3063j, (1,2):0.2295-0.5401j,
+          (2,0):0.4836-0.0968j, (2,1):0.4639-0.2956j, (2,2):0.4305-0.5086j}
+LS, NS = [0, 1, 2], [0, 1, 2]
+MU = 1.0                                   # massa medan (mu=1)
+M_LINE = np.linspace(0.2, 1.0, 60)         # garis halus
+M_DATA = np.linspace(0.2, 1.0, 7)          # 7 titik data (= tabel)
+COLORS = {0: "tab:blue", 1: "tab:red", 2: "tab:green"}
+
+def massless_M(l, n, Mg):
+    return ANCHOR[(l, n)] / Mg
+
+def massive_M(l, n, Mg, mu=MU):
+    """omega(M) untuk medan bermassa; berhenti saat quasi-resonance."""
+    L = l*(l+1); Ms, oms = [], []
+    g = ANCHOR[(l, n)]; mut_prev = 0.0
+    for M in Mg:
+        mut = mu*M
+        ok = True; ot = g
+        for x in np.linspace(mut_prev, mut,
+                             max(1, int(np.ceil((mut-mut_prev)/0.04)))+1)[1:]:
+            ot, res = find(x, L, n, ot)
+            if res > 1e-7 or (-ot.imag) < 2e-3 or ot.real < 0:
+                ok = False; break
+        if ok:
+            Ms.append(M); oms.append(ot/M); g = ot; mut_prev = mut
+        else:
+            break
+    return np.array(Ms), np.array(oms)
+
+for n in NS:
+    figR, axR = plt.subplots(figsize=(6.5, 5))
+    figI, axI = plt.subplots(figsize=(6.5, 5))
+    for l in LS:
+        c = COLORS[l]
+        # massless: garis halus + marker data
+        o0 = massless_M(l, n, M_LINE)
+        axR.plot(M_LINE, o0.real, "-", color=c, label=fr"$\ell={l},\ \mu=0$")
+        axI.plot(M_LINE, -o0.imag, "-", color=c)
+        o0d = massless_M(l, n, M_DATA)
+        axR.plot(M_DATA, o0d.real, "o", color=c, ms=5)
+        axI.plot(M_DATA, -o0d.imag, "o", color=c, ms=5)
+        # massive (mu=1): garis halus (terpotong di quasi-resonance) + marker data
+        Ms, oM = massive_M(l, n, M_LINE)
+        axR.plot(Ms, oM.real, "--", color=c, label=fr"$\ell={l},\ \mu=1$")
+        axI.plot(Ms, -oM.imag, "--", color=c)
+        if len(Ms):
+            mk = [m for m in M_DATA if m <= Ms.max()+1e-9]
+            axR.plot(mk, np.interp(mk, Ms, oM.real), "s", color=c, ms=5, mfc="white")
+            axI.plot(mk, np.interp(mk, Ms, -oM.imag), "s", color=c, ms=5, mfc="white")
+
+    axR.set_xlabel("M"); axR.set_ylabel(r"$\omega_R$"); axR.grid(alpha=0.3)
+    axR.legend(fontsize=8, ncol=2)
+    figR.tight_layout()
+    fr_ = f"grafik_saf_overtone_n{n}_riil.png"
+    figR.savefig(fr_, dpi=130, bbox_inches="tight"); plt.close(figR)
+    print("Tersimpan:", fr_)
+
+    axI.set_xlabel("M"); axI.set_ylabel(r"$\omega_I$"); axI.grid(alpha=0.3)
+    figI.tight_layout()
+    fi_ = f"grafik_saf_overtone_n{n}_imajiner.png"
+    figI.savefig(fi_, dpi=130, bbox_inches="tight"); plt.close(figI)
+    print("Tersimpan:", fi_)
+\end{lstlisting}

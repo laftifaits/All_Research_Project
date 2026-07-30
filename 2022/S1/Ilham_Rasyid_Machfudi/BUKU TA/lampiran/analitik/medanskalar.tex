@@ -1,0 +1,247 @@
+\chapter{Penurunan Persamaan Perturbasi Medan Skalar}
+\label{app:perturbasi-medan-skalar}
+
+Lampiran ini menyajikan penurunan persamaan perturbasi medan skalar pada ruang-waktu Schwarzschild. Penurunan diawali dari prinsip aksi untuk memperoleh persamaan Klein--Gordon, kemudian dilanjutkan untuk dua kasus, yaitu medan skalar tak bermassa dan medan skalar bermassa.
+
+\section{Penurunan Persamaan Perturbasi Medan Skalar Tak Bermassa}
+\label{app:perturbasi-skalar-massless}
+
+ 
+Sebuah medan skalar uji tak bermassa $\phi$ pada ruang-waktu lengkung memenuhi
+persamaan Klein-Gordon tak bermassa,
+\begin{equation}
+    \Box \phi = \frac{1}{\sqrt{-g}} \partial_\mu \left( \sqrt{-g}\, g^{\mu\nu} \partial_\nu \phi \right) = 0,
+    \label{eq:appkg-takbermassa}
+\end{equation}
+dengan $g$ adalah determinan tensor metrik dan $g^{\mu\nu}$ adalah metrik invers.
+ 
+Ditinjau latar belakang lubang hitam statik bersimetri bola dengan elemen garis
+\begin{equation}
+    ds^2 = -f(r)\, dt^2 + \frac{dr^2}{f(r)} + r^2 d\theta^2 + r^2 \sin^2\theta\, d\varphi^2,
+    \label{eq:appmetrik}
+\end{equation}
+sehingga komponen metrik invers yang tak nol adalah
+\begin{equation}
+    g^{tt} = -\frac{1}{f(r)}, \qquad g^{rr} = f(r), \qquad
+    g^{\theta\theta} = \frac{1}{r^2}, \qquad g^{\varphi\varphi} = \frac{1}{r^2 \sin^2\theta},
+    \label{eq:appginv}
+\end{equation}
+dan determinan metriknya memberikan
+\begin{equation}
+    \sqrt{-g} = r^2 \sin\theta.
+    \label{eq:appakar-g}
+\end{equation}
+ 
+Dengan menyubstitusikan Persamaan \eqref{eq:appginv} dan \eqref{eq:appakar-g} ke dalam
+Persamaan \eqref{eq:appkg-takbermassa}, setiap suku dijabarkan sebagai berikut,
+\begin{align}
+    \partial_t \left( \sqrt{-g}\, g^{tt} \partial_t \phi \right)
+        &= -\frac{r^2 \sin\theta}{f}\, \partial_t^2 \phi, \\
+    \partial_r \left( \sqrt{-g}\, g^{rr} \partial_r \phi \right)
+        &= \sin\theta\, \partial_r \left( f r^2 \partial_r \phi \right), \\
+    \partial_\theta \left( \sqrt{-g}\, g^{\theta\theta} \partial_\theta \phi \right)
+        &= \partial_\theta \left( \sin\theta\, \partial_\theta \phi \right), \\
+    \partial_\varphi \left( \sqrt{-g}\, g^{\varphi\varphi} \partial_\varphi \phi \right)
+        &= \frac{1}{\sin\theta}\, \partial_\varphi^2 \phi.
+\end{align}
+Jumlah keempat suku tersebut dibagi dengan $\sqrt{-g} = r^2 \sin\theta$ menghasilkan
+bentuk eksplisit persamaan Klein-Gordon,
+\begin{equation}
+    -\frac{1}{f} \partial_t^2 \phi
+    + \frac{1}{r^2} \partial_r \left( f r^2 \partial_r \phi \right)
+    + \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta\, \partial_\theta \phi \right)
+    + \frac{1}{r^2 \sin^2\theta} \partial_\varphi^2 \phi = 0.
+    \label{eq:appeom-eksplisit}
+\end{equation}
+ 
+Karena latar belakang bersimetri bola dan statik, solusi dapat dipisahkan dalam basis
+harmonik sferis dengan menuliskan
+\begin{equation}
+    \phi(t, r, \theta, \varphi) = e^{-i\omega t}\, R(r)\, Y_{\ell m}(\theta, \varphi),
+    \label{eq:appseparasi}
+\end{equation}
+dengan $\omega$ frekuensi (yang secara umum kompleks), $R(r)$ fungsi radial, dan
+$Y_{\ell m}(\theta, \varphi)$ harmonik sferis. Komponen waktu memberikan
+$\partial_t^2 \phi = -\omega^2 \phi$, sedangkan harmonik sferis memenuhi persamaan
+eigen bagi bagian sudut,
+\begin{equation}
+    \frac{1}{\sin\theta} \partial_\theta \left( \sin\theta\, \partial_\theta Y_{\ell m} \right)
+    + \frac{1}{\sin^2\theta} \partial_\varphi^2 Y_{\ell m} = -\ell(\ell+1)\, Y_{\ell m}.
+    \label{eq:appeigen}
+\end{equation}
+Substitusi Persamaan \eqref{eq:appseparasi} dan \eqref{eq:appeigen} ke dalam Persamaan
+\eqref{eq:appeom-eksplisit}, lalu membagi dengan faktor bersama
+$e^{-i\omega t} Y_{\ell m}$, menghasilkan persamaan radial
+\begin{equation}
+    \frac{1}{r^2} \frac{d}{dr} \left( f r^2 \frac{dR}{dr} \right)
+    + \left( \frac{\omega^2}{f} - \frac{\ell(\ell+1)}{r^2} \right) R = 0.
+    \label{eq:appradial}
+\end{equation}
+ 
+Untuk membawa Persamaan \eqref{eq:appradial} ke bentuk yang lebih sederhana,
+didefinisikan fungsi gelombang baru
+\begin{equation}
+    R(r) = \frac{\Psi(r)}{r}.
+    \label{eq:appsubstitusi}
+\end{equation}
+Dengan substitusi ini diperoleh $f r^2 R' = f r \Psi' - f \Psi$, sehingga
+\begin{equation}
+    \frac{d}{dr} \left( f r^2 \frac{dR}{dr} \right)
+    = f r \Psi'' + f' r \Psi' - f' \Psi,
+\end{equation}
+dan Persamaan \eqref{eq:appradial} menjadi
+\begin{equation}
+    \frac{f}{r} \Psi'' + \frac{f'}{r} \Psi' - \frac{f'}{r^2} \Psi
+    + \left( \frac{\omega^2}{f} - \frac{\ell(\ell+1)}{r^2} \right) \frac{\Psi}{r} = 0.
+\end{equation}
+Dengan mengalikan seluruh persamaan dengan $r/f$, diperoleh
+\begin{equation}
+    \Psi'' + \frac{f'}{f} \Psi'
+    + \left( \frac{\omega^2}{f^2} - \frac{\ell(\ell+1)}{r^2 f} - \frac{f'}{r f} \right) \Psi = 0,
+    \label{eq:apppra-tortoise}
+\end{equation}
+dengan tanda aksen menyatakan turunan terhadap $r$.
+ 
+Selanjutnya diperkenalkan koordinat \textit{tortoise} $r_*$ yang didefinisikan melalui
+\begin{equation}
+    \frac{dr_*}{dr} = \frac{1}{f(r)},
+    \label{eq:apptortoise}
+\end{equation}
+yang memetakan daerah di luar horizon menjadi seluruh garis riil
+$-\infty < r_* < \infty$. Dengan koordinat ini, operator turunan bertransformasi
+menjadi
+\begin{equation}
+    \frac{d}{dr} = \frac{1}{f} \frac{d}{dr_*}, \qquad
+    \frac{d^2}{dr^2} = \frac{1}{f^2} \frac{d^2}{dr_*^2} - \frac{f'}{f^2} \frac{d}{dr_*}.
+\end{equation}
+Substitusi transformasi ini ke dalam Persamaan \eqref{eq:apppra-tortoise} menyebabkan
+suku turunan pertama saling meniadakan, yakni
+\begin{equation}
+    \frac{d^2 \Psi}{dr^2} + \frac{f'}{f} \frac{d\Psi}{dr}
+    = \frac{1}{f^2} \frac{d^2 \Psi}{dr_*^2},
+\end{equation}
+sehingga setelah dikalikan dengan $f^2$ diperoleh persamaan master berbentuk
+tipe-Schrödinger,
+\begin{equation}
+    \frac{d^2 \Psi}{dr_*^2} + \left( \omega^2 - V(r) \right) \Psi = 0,
+    \label{eq:appmaster}
+\end{equation}
+dengan potensial efektif
+\begin{equation}
+    V(r) = f(r) \left( \frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r} \right).
+    \label{eq:apppotensial}
+\end{equation}
+ 
+Untuk lubang hitam Schwarzschild dengan $f(r) = 1 - 2M/r$ sehingga $f'(r) = 2M/r^2$,
+potensial efektif pada Persamaan \eqref{eq:apppotensial} menjadi
+\begin{equation}
+    V(r) = \left( 1 - \frac{2M}{r} \right)
+    \left( \frac{\ell(\ell+1)}{r^2} + \frac{2M}{r^3} \right),
+    \label{eq:apppotensial-schwarzschild}
+\end{equation}
+yang merupakan potensial efektif perturbasi medan skalar tak bermassa pada latar
+belakang Schwarzschild.
+
+\section{Penurunan Persamaan Perturbasi Medan Skalar Bermassa}
+\label{app:perturbasi-skalar-massive}
+
+ 
+Sebuah medan skalar uji bermassa $\phi$ dengan massa $\mu$ pada ruang-waktu lengkung
+memenuhi persamaan Klein-Gordon bermassa,
+\begin{equation}
+    \left( \Box - \mu^2 \right) \phi
+    = \frac{1}{\sqrt{-g}} \partial_\mu \left( \sqrt{-g}\, g^{\mu\nu} \partial_\nu \phi \right)
+    - \mu^2 \phi = 0.
+    \label{eq:appkg-bermassa}
+\end{equation}
+Perbedaan dengan kasus tak bermassa terletak pada kehadiran suku $-\mu^2 \phi$.
+ 
+Ditinjau latar belakang lubang hitam statik bersimetri bola dengan elemen garis
+\begin{equation}
+    ds^2 = -f(r)\, dt^2 + \frac{dr^2}{f(r)} + r^2 d\theta^2 + r^2 \sin^2\theta\, d\varphi^2,
+    \label{eq:appmetrik-b}
+\end{equation}
+dengan komponen metrik invers tak nol
+\begin{equation}
+    g^{tt} = -\frac{1}{f(r)}, \qquad g^{rr} = f(r), \qquad
+    g^{\theta\theta} = \frac{1}{r^2}, \qquad g^{\varphi\varphi} = \frac{1}{r^2 \sin^2\theta},
+\end{equation}
+dan $\sqrt{-g} = r^2 \sin\theta$. Bagian d'Alembertian pada Persamaan
+\eqref{eq:appkg-bermassa} dijabarkan dengan cara yang sama seperti pada kasus tak
+bermassa, sehingga bentuk eksplisit persamaan Klein-Gordon bermassa menjadi
+\begin{equation}
+    -\frac{1}{f} \partial_t^2 \phi
+    + \frac{1}{r^2} \partial_r \left( f r^2 \partial_r \phi \right)
+    + \frac{1}{r^2 \sin\theta} \partial_\theta \left( \sin\theta\, \partial_\theta \phi \right)
+    + \frac{1}{r^2 \sin^2\theta} \partial_\varphi^2 \phi
+    - \mu^2 \phi = 0.
+    \label{eq:appeom-eksplisit-b}
+\end{equation}
+ 
+Dengan ansatz pemisahan variabel yang sama,
+\begin{equation}
+    \phi(t, r, \theta, \varphi) = e^{-i\omega t}\, R(r)\, Y_{\ell m}(\theta, \varphi),
+    \label{eq:appseparasi-b}
+\end{equation}
+yang memanfaatkan $\partial_t^2 \phi = -\omega^2 \phi$ dan persamaan eigen harmonik
+sferis
+\begin{equation}
+    \frac{1}{\sin\theta} \partial_\theta \left( \sin\theta\, \partial_\theta Y_{\ell m} \right)
+    + \frac{1}{\sin^2\theta} \partial_\varphi^2 Y_{\ell m} = -\ell(\ell+1)\, Y_{\ell m},
+\end{equation}
+serta membagi dengan faktor bersama $e^{-i\omega t} Y_{\ell m}$, diperoleh persamaan radial
+\begin{equation}
+    \frac{1}{r^2} \frac{d}{dr} \left( f r^2 \frac{dR}{dr} \right)
+    + \left( \frac{\omega^2}{f} - \frac{\ell(\ell+1)}{r^2} - \mu^2 \right) R = 0.
+    \label{eq:appradial-b}
+\end{equation}
+Tampak bahwa kehadiran massa hanya menambahkan suku $-\mu^2$ pada persamaan radial,
+sedangkan struktur lainnya identik dengan kasus tak bermassa.
+ 
+Selanjutnya dilakukan substitusi $R(r) = \Psi(r)/r$, yang menghasilkan
+\begin{equation}
+    \frac{d}{dr} \left( f r^2 \frac{dR}{dr} \right)
+    = f r \Psi'' + f' r \Psi' - f' \Psi,
+\end{equation}
+sehingga Persamaan \eqref{eq:appradial-b} menjadi
+\begin{equation}
+    \frac{f}{r} \Psi'' + \frac{f'}{r} \Psi' - \frac{f'}{r^2} \Psi
+    + \left( \frac{\omega^2}{f} - \frac{\ell(\ell+1)}{r^2} - \mu^2 \right) \frac{\Psi}{r} = 0.
+\end{equation}
+Dengan mengalikan seluruh persamaan dengan $r/f$ diperoleh
+\begin{equation}
+    \Psi'' + \frac{f'}{f} \Psi'
+    + \left( \frac{\omega^2}{f^2} - \frac{\ell(\ell+1)}{r^2 f} - \frac{f'}{r f} - \frac{\mu^2}{f} \right) \Psi = 0.
+    \label{eq:apppra-tortoise-b}
+\end{equation}
+ 
+Dengan memperkenalkan koordinat \textit{tortoise} $r_*$ yang didefinisikan melalui
+$dr_*/dr = 1/f(r)$, operator turunan bertransformasi menjadi
+\begin{equation}
+    \frac{d}{dr} = \frac{1}{f} \frac{d}{dr_*}, \qquad
+    \frac{d^2}{dr^2} = \frac{1}{f^2} \frac{d^2}{dr_*^2} - \frac{f'}{f^2} \frac{d}{dr_*},
+\end{equation}
+yang menyebabkan suku turunan pertama pada Persamaan \eqref{eq:apppra-tortoise-b}
+saling meniadakan. Setelah dikalikan dengan $f^2$, diperoleh persamaan master
+berbentuk tipe-Schrödinger,
+\begin{equation}
+    \frac{d^2 \Psi}{dr_*^2} + \left( \omega^2 - V(r) \right) \Psi = 0,
+    \label{eq:appmaster-b}
+\end{equation}
+dengan potensial efektif yang kini memuat suku massa tambahan,
+\begin{equation}
+    V(r) = f(r) \left( \frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r} + \mu^2 \right).
+    \label{eq:apppotensial-b}
+\end{equation}
+ 
+Untuk lubang hitam Schwarzschild dengan $f(r) = 1 - 2M/r$ sehingga $f'(r) = 2M/r^2$,
+potensial efektif pada Persamaan \eqref{eq:apppotensial-b} menjadi
+\begin{equation}
+    V(r) = \left( 1 - \frac{2M}{r} \right)
+    \left( \frac{\ell(\ell+1)}{r^2} + \frac{2M}{r^3} + \mu^2 \right),
+    \label{eq:apppotensial-schwarzschild-b}
+\end{equation}
+Suku $\mu^2$ menyebabkan potensial efektif tidak lagi menuju nol pada jarak jauh,
+melainkan menuju nilai $\mu^2$ ketika $r \to \infty$ pada latar belakang yang datar
+secara asimtotik, sehingga membedakan perilaku asimtotik kasus bermassa dari kasus
+tak bermassa.

@@ -1,0 +1,121 @@
+\section{\textit{Quasinormal Modes} (QNM)}
+\label{sec:qnm}
+
+\noindent Sistem fisis yang mengalami gangguan kecil di sekitar keadaan setimbangnya pada
+umumnya berosilasi pada sekumpulan frekuensi khas yang disebut mode normal. Contoh paling
+sederhana dijumpai pada dawai yang kedua ujungnya terikat: gangguan pada dawai tersebut
+terurai menjadi gelombang-gelombang tegak dengan frekuensi diskret yang ditentukan oleh
+panjang dawai beserta syarat batas di kedua ujungnya. Dalam sistem konservatif semacam ini,
+energi gangguan tidak dapat keluar dari sistem, sehingga tiap mode berosilasi dengan
+frekuensi yang bernilai real dan amplitudonya bertahan tanpa teredam. Faktor evolusi waktu
+mode normal berbentuk $e^{-i\omega t}$ dengan $\omega$ real, sehingga hanya menghasilkan
+osilasi murni tanpa peluruhan.
+
+Situasi berbeda terjadi pada sistem yang bersifat terbuka atau berdisipasi, yaitu sistem
+yang dapat kehilangan energi ke lingkungan sekitarnya. Contoh paling sederhana adalah
+osilator teredam, yang mengalami gaya gesek sebanding kecepatan sehingga energinya berkurang
+seiring waktu \parencite{boas2006}. Contoh lain yang lebih dekat dengan persoalan gelombang
+adalah rongga akustik atau optik yang temboknya tidak sepenuhnya memantulkan, sehingga
+sebagian gelombang di dalamnya lolos keluar. Pada sistem semacam ini, syarat batas tidak lagi
+mengurung energi sepenuhnya, sehingga frekuensi karakteristiknya tidak lagi bernilai real,
+melainkan kompleks. Mode osilasi teredam semacam ini secara umum disebut
+\textit{quasinormal modes}, yakni mode yang menyerupai mode normal namun dengan frekuensi
+kompleks akibat sifat terbuka dari sistem yang ditinjau \parencite{Kokkotas1999}.
+
+Frekuensi kompleks tersebut dapat dituliskan secara sederhana sebagai
+\begin{equation}
+    \omega = \omega_R - i\omega_I,
+    \label{eq:omega-qnm}
+\end{equation}
+dengan $\omega_R$ bagian real yang menyatakan laju osilasi dan $\omega_I$ bagian imajiner
+yang menyatakan laju redaman ($\omega_I > 0$). Spektrum QNM terdiri atas deretan mode yang
+diberi label indeks \textit{overtone} $n = 0, 1, 2, \dots$, dengan nilai $n$ yang lebih besar
+pada umumnya menghasilkan $\omega_I$ yang lebih besar pula, sehingga mode dengan
+\textit{overtone} lebih tinggi meluruh lebih cepat. Mode dengan redaman paling lambat, yaitu
+$\omega_I$ terkecil pada $n = 0$, disebut mode fundamental. Sebagai gambaran, hal ini
+menyerupai lonceng yang dipukul: nada dasarnya bertahan berdengung paling lama, sedangkan
+nada-nada tambahan di atasnya lebih cepat meredup, sehingga bunyi yang masih terdengar
+beberapa saat kemudian didominasi oleh nada dasar tersebut.
+
+Lubang hitam yang dikenai gangguan merupakan salah satu wujud sistem terbuka tersebut.
+Energi gangguan tidak terkurung, melainkan dapat lolos dengan cara terserap masuk ke horizon
+peristiwa maupun teradiasikan menuju tak hingga spasial, sehingga osilasinya teredam seiring
+waktu \parencite{Regge1957, Vishveshwara1970}. Frekuensi quasinormal lubang hitam diperoleh
+sebagai solusi persamaan diferensial \eqref{eq:master-skalar} dengan nilai frekuensi
+berbentuk Persamaan~\eqref{eq:omega-qnm}. Sejalan dengan itu, frekuensi mode kuasinormal
+dapat digunakan untuk menganalisis kestabilan lubang hitam. Lubang hitam dikatakan stabil
+terhadap suatu jenis perturbasi apabila nilai $\omega_I$ bernilai positif, sehingga setiap
+gangguan pasti akan teredam seiring berjalannya waktu. Sebaliknya, apabila $\omega_I$ bernilai
+negatif, gangguan justru tumbuh secara eksponensial, sehingga lubang hitam dikatakan tidak
+stabil, yaitu gangguan yang amplitudonya membesar tanpa henti tanpa mengalami peredaman
+\parencite{Konoplya2011}.
+
+Secara matematis, peluruhan maupun pertumbuhan gangguan tersebut dapat dilihat dari faktor
+evolusi waktu. Solusi persamaan master \eqref{eq:master-skalar} hanya memuat informasi bagian
+radial, sehingga perlu digabungkan kembali dengan faktor evolusi waktu $e^{-i\omega t}$ yang
+telah dipisahkan melalui ansatz \eqref{eq:ansatz}, menghasilkan bentuk gelombang utuh
+\begin{equation}
+    \phi \sim e^{-i\omega t}e^{\pm i\omega r_*}.
+    \label{eq:gelombang-utuh}
+\end{equation}
+Substitusi $\omega = \omega_R - i\omega_I$ ke dalam faktor waktu memberikan
+$e^{-i\omega t} = e^{-i\omega_R t}\, e^{-\omega_I t}$, yang memperlihatkan bahwa
+$\omega_I > 0$ menghasilkan peluruhan eksponensial sedangkan $\omega_I < 0$ menghasilkan
+pertumbuhan eksponensial, sesuai dengan interpretasi kestabilan yang telah diuraikan di atas.
+Selain faktor waktu, bentuk gelombang utuh \eqref{eq:gelombang-utuh} juga memperlihatkan arah
+rambat gelombang di kedua ujung domain melalui tanda pada eksponen $e^{\pm i\omega r_*}$. Dengan
+arah rambat tersebut, kondisi batas fisik yang diberlakukan di horizon peristiwa serta di tak
+hingga spasial dapat dinyatakan, sehingga frekuensi eigen dapat diperoleh secara lengkap.
+
+Potensial efektif sangat berpengaruh dari kondisi batas ruang-waktu yang ditinjau. Pada ruang-waktu
+Schwarzschild yang datar secara asimtotik, potensial efektif meluruh menuju nol pada kedua
+ujung domain tersebut. Akibatnya, suku potensial pada persamaan master
+\eqref{eq:master-skalar} dapat dianggap nol dan persamaan tereduksi menjadi
+\begin{equation}
+    \frac{d^2\Psi}{dr_*^2} + \omega^2\Psi = 0
+\end{equation}
+yang memiliki solusi umum,
+\begin{equation}
+    \Psi \sim e^{\pm i\omega r_*}
+\end{equation}
+dalam koordinat \textit{tortoise} \parencite{Konoplya2011, Horowitz2000}. Solusi ini
+merupakan bagian radial dari bentuk gelombang utuh \eqref{eq:gelombang-utuh}, sehingga arah
+rambat tiap solusi dapat ditinjau dengan menggabungkannya kembali dengan faktor evolusi
+waktu. Digabungkan dengan faktor tersebut, solusi $e^{-i\omega r_*}$ merambat ke arah $r_*$
+mengecil dan diinterpretasikan sebagai gelombang masuk murni di horizon peristiwa, sedangkan
+solusi $e^{+i\omega r_*}$ merambat ke arah $r_*$ membesar dan diinterpretasikan sebagai
+gelombang keluar murni menuju daerah asimtotik. Dengan demikian, kondisi batas fisik untuk
+lubang hitam Schwarzschild memberlakukan gelombang masuk murni di horizon peristiwa dan
+gelombang keluar murni di tak hingga spasial,
+\begin{align}
+    \Psi &\sim e^{-i\omega r_*}, \qquad r_* \to -\infty \quad (\text{horizon peristiwa}), \notag \\
+    \Psi &\sim e^{+i\omega r_*}, \qquad r_* \to +\infty \quad (\text{tak hingga spasial}).
+    \label{eq:bc-schwarzschild}
+\end{align}
+Kondisi batas di horizon merepresentasikan bahwa energi jatuh ke dalam lubang hitam tanpa
+pantulan, sedangkan kondisi batas di tak hingga merepresentasikan bahwa hanya radiasi yang
+menjauhi lubang hitam yang diperbolehkan.
+
+Situasi berbeda terjadi pada latar belakang Schwarzschild Anti-de Sitter. Kehadiran suku
+tambahan dalam fungsi metrik mengubah perilaku dan karakteristik geometris, sehingga
+potensial efektif tidak meluruh menuju nol di tak hingga, melainkan tumbuh tanpa batas
+($V(r) \to \infty$ ketika $r \to \infty$), sehingga tak hingga spasial berperilaku sebagai
+dinding pemantul. Berbeda dengan kasus Schwarzschild yang dapat kehilangan energi melalui horizon peristiwa
+maupun tak hingga spasial, pada latar belakang ini energi tidak dapat lolos menuju tak
+hingga, sehingga satu-satunya cara gangguan meluruh adalah dengan terserap masuk ke horizon
+peristiwa. Mekanisme ini sudah cukup untuk membuat frekuensi tetap bernilai kompleks,
+sehingga gangguan tetap meluruh secara eksponensial meskipun energi tidak dapat lolos menuju
+tak hingga. Kondisi batas gelombang keluar murni tidak dapat diterapkan seperti pada
+Schwarzschild karena gelombang divergen saat menyentuh batas tak hingga spasial anti-de
+Sitter. Untuk memenuhi kondisi batas fisik, diberlakukan syarat tambahan pada tak hingga
+spasial, yaitu gelombang harus lenyap \parencite{Horowitz2000}. Dengan demikian, kondisi
+batas untuk lubang hitam Schwarzschild anti-de Sitter memberlakukan gelombang masuk murni
+di horizon peristiwa dan kondisi Dirichlet di tak hingga spasial,
+\begin{alignat}{3}
+    \Psi &\sim e^{-i\omega r_*}, &\quad &r_* \to -\infty \quad &&(\text{horizon peristiwa}), \notag \\
+    \Psi &\to 0, &\quad &r_* \to \text{constant} \quad &&(\text{batas anti-de Sitter}).
+    \label{eq:bc-sads}
+\end{alignat}
+Kondisi yang melenyapkan medan pada batas anti-de Sitter ini dikenal sebagai kondisi batas
+Dirichlet, yang memilih mode \textit{normalizable} dan konsisten dengan kerangka
+korespondensi anti-de Sitter \parencite{MossNorman2002}.

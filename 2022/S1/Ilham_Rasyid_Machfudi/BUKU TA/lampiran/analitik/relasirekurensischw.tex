@@ -1,0 +1,273 @@
+\chapter{Penurunan Relasi Rekurensi Schwarzschild}
+\label{app:rekuren-schw}
+
+\section{Medan Skalar Tak Bermassa}
+
+Penjabaran berikut menguraikan proses substitusi \textit{ansatz} Frobenius ke dalam persamaan gelombang radial untuk memperoleh bentuk polinomial koefisien $A(x), B(x),$ dan $C(x)$. 
+
+Persamaan diferensial radial utama untuk medan skalar tak bermassa pada latar belakang lubang hitam Schwarzschild dengan penetapan parameter massa $M=1$ dinyatakan oleh:
+\begin{equation}
+    f(r)^2 \frac{d^2\Psi}{dr^2} + f(r)f'(r) \frac{d\Psi}{dr} + \left[ \omega^2 - V(r) \right] \Psi = 0 \label{eq:app_radial_master}
+\end{equation}
+dengan fungsi metrik dan potensial efektif didefinisikan sebagai:
+\begin{equation}
+    f(r) = 1 - \frac{2}{r}, \qquad f'(r) = \frac{2}{r^2}, \qquad V(r) = f(r) \left[ \frac{\ell(\ell+1)}{r^2} + \frac{2}{r^3} \right]
+\end{equation}
+Penetapan $M=1$ ini semata-mata bertujuan untuk menyederhanakan penjabaran aljabar berikut. Karena $M$ merupakan satu-satunya skala pada ruang-waktu Schwarzschild, bentuk umum untuk $M$ sembarang diperoleh kembali dengan mensubstitusikan $\omega \to M\omega$ pada seluruh koefisien akhir, sebagaimana tampak pada koefisien relasi rekurensi umum $\alpha_k$, $\beta_k$, $\gamma_k$ pada Persamaan~\eqref{eq:koef-rekurensi-schw}.
+Untuk memfaktorkan perilaku asimtotik gelombang, \textit{ansatz} Leaver dituliskan sebagai perkalian antara faktor prapembilang $\chi(r)$ dan fungsi regular $u(x)$:
+\begin{equation}
+    \Psi(r) = \chi(r) u(x), \qquad \text{dengan} \quad \chi(r) = e^{i\omega r}\,(r - 2)^{-2i\omega}\, r^{\,4i\omega}
+\end{equation}
+Turunan pertama dan turunan kedua dari $\Psi(r)$ terhadap koordinat radial $r$ dievaluasi menggunakan aturan rantai dan aturan perkalian:
+\begin{align}
+    \frac{d\Psi}{dr} &= \chi' u + \chi \frac{du}{dr} \label{eq:app_turunan_1} \\
+    \frac{d^2\Psi}{dr^2} &= \chi'' u + 2\chi' \frac{du}{dr} + \chi \frac{d^2u}{dr^2} \label{eq:app_turunan_2}
+\end{align}
+Substitusi Persamaan \eqref{eq:app_turunan_1} dan \eqref{eq:app_turunan_2} kembali ke dalam Persamaan \eqref{eq:app_radial_master} akan mengelompokkan suku-suku berdasarkan tingkat turunan dari fungsi $u$:
+\begin{equation}
+    f^2 \left( \chi'' u + 2\chi' \frac{du}{dr} + \chi \frac{d^2u}{dr^2} \right) + f f' \left( \chi' u + \chi \frac{du}{dr} \right) + (\omega^2 - V)\chi u = 0
+\end{equation}
+Dengan membagi seluruh ruas persamaan menggunakan faktor $\chi$, didapatkan persamaan diferensial untuk fungsi regular $u$ dalam koordinat $r$:
+\begin{equation}
+    f(r)^2 \frac{d^2u}{dr^2} + \left( 2f(r)^2 \frac{\chi'}{\chi} + f(r)f'(r) \right) \frac{du}{dr} + \left( f(r)^2 \frac{\chi''}{\chi} + f(r)f'(r) \frac{\chi'}{\chi} + \omega^2 - V(r) \right) u = 0 \label{eq:app_ode_r_basis}
+\end{equation}
+Suku turunan logaritmik dari prapembilang, $\frac{\chi'}{\chi}$, dapat disederhanakan sebagai berikut:
+\begin{equation}
+    \ln \chi = i\omega r - 2i\omega \ln(r-2) + 4i\omega \ln r
+\end{equation}
+\begin{equation}
+    \frac{\chi'}{\chi} = \frac{d}{dr}(\ln \chi) = i\omega \left( 1 - \frac{2}{r-2} + \frac{4}{r} \right)
+\end{equation}
+Domain penyelesaian kemudian dikompaktifikasi melalui transformasi koordinat dari $r$ menjadi variabel $x$, dengan definisi $x = 1 - \frac{2}{r}$. Hubungan balik antara kedua sistem koordinat ini memberikan:
+\begin{equation}
+    r = \frac{2}{1-x}, \qquad r-2 = \frac{2x}{1-x}, \qquad f(r) = x, \qquad f'(r) = \frac{(1-x)^2}{2}
+\end{equation}
+Operator turunan bertransformasi sesuai aturan diferensiasi:
+\begin{align}
+    \frac{du}{dr} &= \frac{dx}{dr} \frac{du}{dx} = \frac{(1-x)^2}{2} \frac{du}{dx} \\
+    \frac{d^2u}{dr^2} &= \frac{(1-x)^4}{4} \frac{d^2u}{dx^2} - \frac{(1-x)^3}{2} \frac{du}{dx}
+\end{align}
+Substitusi nilai fungsi metrik dan transformasi operator ke dalam Persamaan \eqref{eq:app_ode_r_basis} menghasilkan persamaan diferensial dalam basis variabel $x$:
+\begin{align}
+    x^2 &\left[ \frac{(1-x)^4}{4} \frac{d^2u}{dx^2} - \frac{(1-x)^3}{2} \frac{du}{dx} \right] \notag \\
+    &+ \left( 2x^2 \frac{\chi'}{\chi} + \frac{x(1-x)^2}{2} \right) \left[ \frac{(1-x)^2}{2} \frac{du}{dx} \right] \notag \\
+    &+ \left( x^2 \frac{\chi''}{\chi} + \frac{x(1-x)^2}{2} \frac{\chi'}{\chi} + \omega^2 - V(r) \right) u = 0
+\end{align}
+Untuk mereduksi persamaan tersebut menjadi bentuk polinomial murni tanpa fraksi penyebut, kalikan seluruh ruas dengan \textbf{faktor pembersih Leaver} yang bernilai $\frac{4}{(1-x)^2}$. Operasi ini secara langsung menstrukturkan persamaan menjadi bentuk:
+\begin{equation}
+    A(x) \frac{d^2u}{dx^2} + B(x) \frac{du}{dx} + C(x)u = 0
+\end{equation}
+Koefisien $A(x)$ diperoleh dari suku turunan kedua:
+\begin{equation}
+    A(x) = \frac{4}{(1-x)^2} \left[ x^2 \frac{(1-x)^4}{4} \right] = x^2(1-x)^2 = x^2 - 2x^3 + x^4
+\end{equation}
+Koefisien $B(x)$ diperoleh dengan mengekspansi komponen turunan logaritmik $\frac{\chi'}{\chi}$ dalam basis $x$, yaitu $\frac{\chi'}{\chi} = i\omega \left( 4 - 2x - \frac{1}{x} \right)$, yang kemudian menghasilkan:
+\begin{align}
+    B(x) &= -2x^2(1-x) + 4x^2 \left(\frac{\chi'}{\chi}\right) + x(1-x)^2 \notag \\
+    &= (-2x^2 + 2x^3) + 4x^2 \left[ i\omega \left( 4 - 2x - \frac{1}{x} \right) \right] + (x - 2x^2 + x^3) \notag \\
+    &= (1-4i\omega)x + (-4+16i\omega)x^2 + (3-8i\omega)x^3
+\end{align}
+Koefisien $C(x)$ diperoleh dengan mengekspansi suku konstan terhadap fungsi $u$, substitusi nilai turunan logaritmik tingkat dua $\frac{\chi''}{\chi}$, dan potensial efektif $V(r)$ dalam basis $x$. Setelah pengelompokkan suku-suku identik, penjabaran aljabar memberikan hasil:
+\begin{align}
+    C(x) &= \frac{4}{(1-x)^2} \left[ x^2 \frac{\chi''}{\chi} + \frac{x(1-x)^2}{2} \frac{\chi'}{\chi} + \omega^2 - V(r) \right] \notag \\
+    &= \left[-\ell(\ell+1)-1+32\omega^2+8i\omega\right]x + \left[1-16\omega^2-8i\omega\right]x^2
+\end{align}
+\noindent
+Ketiga polinomial koefisien $A(x)$, $B(x)$, dan $C(x)$ inilah yang kemudian diekspansi menggunakan deret Frobenius untuk memperoleh relasi rekurensi tiga suku.
+
+\section{Medan Skalar Bermassa}
+
+Persamaan Klein--Gordon untuk medan skalar bermassa diberikan oleh
+\begin{equation}
+    \left(\Box-\mu^2\right)\phi=0.
+\end{equation}
+Dengan menggunakan pemisahan variabel
+\begin{equation}
+    \phi(t,r,\theta,\varphi) = \frac{\Psi(r)}{r} Y_{\ell m}(\theta,\varphi) e^{-i\omega t},
+\end{equation}
+diperoleh persamaan radial
+\begin{equation}
+    f(r)^2\frac{d^2\Psi}{dr^2} + f(r)f'(r)\frac{d\Psi}{dr} + \left[ \omega^2 - V(r) \right]\Psi=0,
+\end{equation}
+dengan fungsi metrik
+\begin{equation}
+    f(r)=1-\frac{2M}{r},
+\end{equation}
+serta potensial efektif
+\begin{equation}
+    V(r) = f(r) \left[ \frac{\ell(\ell+1)}{r^2} + \frac{2M}{r^3} + \mu^2 \right].
+\end{equation}
+Untuk memperoleh solusi yang memenuhi syarat batas gelombang keluar di tak hingga dan gelombang masuk di horizon, digunakan ansatz Frobenius
+\begin{equation}
+    \Psi(r) = e^{i\omega r} r^{2iM\omega} x^{-2iM\omega} u(x),
+\end{equation}
+dengan transformasi koordinat
+\begin{equation}
+    x = 1-\frac{2M}{r}.
+\end{equation}
+Selanjutnya didefinisikan
+\begin{equation}
+    \chi(r) = e^{i\omega r} r^{2iM\omega} x^{-2iM\omega},
+\end{equation}
+sehingga ansatz dapat dituliskan menjadi
+\begin{equation}
+    \Psi=\chi u.
+\end{equation}
+Turunan pertama terhadap koordinat radial diberikan oleh
+\begin{equation}
+    \frac{d\Psi}{dr} = \chi' u + \chi\frac{du}{dr}.
+\end{equation}
+Untuk menghitung turunan fungsi $\chi(r)$, terlebih dahulu diambil logaritmanya,
+\begin{equation}
+    \ln\chi = i\omega r + 2iM\omega\ln r - 2iM\omega\ln x.
+\end{equation}
+Turunan terhadap $r$ menghasilkan
+\begin{equation}
+    \frac{\chi'}{\chi} = i\omega + \frac{2iM\omega}{r} - 2iM\omega\frac{x'}{x}.
+\end{equation}
+Karena
+\begin{equation}
+    x = 1-\frac{2M}{r},
+\end{equation}
+maka
+\begin{equation}
+    \frac{dx}{dr} = \frac{2M}{r^2},
+\end{equation}
+sehingga diperoleh
+\begin{equation}
+    \boxed{ \frac{\chi'}{\chi} = i\omega + \frac{2iM\omega}{r} - \frac{4iM^2\omega}{r^2x} }.
+\end{equation}
+Dengan demikian,
+\begin{equation}
+    \boxed{ \chi' = \chi \left( i\omega + \frac{2iM\omega}{r} - \frac{4iM^2\omega}{r^2x} \right). }
+\end{equation}
+Sementara itu,
+\begin{equation}
+    \frac{du}{dr} = \frac{du}{dx} \frac{dx}{dr} = \frac{2M}{r^2} \frac{du}{dx}.
+\end{equation}
+Apabila didefinisikan
+\begin{equation}
+    u_x \equiv \frac{du}{dx},
+\end{equation}
+maka
+\begin{equation}
+    \frac{du}{dr} = \frac{2M}{r^2}u_x.
+\end{equation}
+Substitusi seluruh hasil tersebut ke dalam turunan pertama memberikan
+\begin{equation}
+    \boxed{ \frac{d\Psi}{dr} = \chi \left[ \left( i\omega + \frac{2iM\omega}{r} - \frac{4iM^2\omega}{r^2x} \right)u + \frac{2M}{r^2}u_x \right]. }
+\end{equation}
+Untuk mempermudah penulisan pada langkah-langkah berikutnya, didefinisikan fungsi
+\begin{equation}
+    F(r) = i\omega + \frac{2iM\omega}{r} - \frac{4iM^2\omega}{r^2x},
+\end{equation}
+sehingga turunan pertama dapat dituliskan secara ringkas sebagai
+\begin{equation}
+    \frac{d\Psi}{dr} = \chi \left[ Fu + \frac{2M}{r^2}u_x \right].
+\end{equation}
+Selanjutnya turunan kedua dihitung dengan kembali menggunakan aturan hasil kali,
+\begin{equation}
+    \frac{d^2\Psi}{dr^2} = \chi' \left( Fu + \frac{2M}{r^2}u_x \right) + \chi \frac{d}{dr} \left( Fu + \frac{2M}{r^2}u_x \right).
+\end{equation}
+Karena
+\begin{equation}
+    \chi'=F\chi,
+\end{equation}
+maka
+\begin{equation}
+    \frac{d^2\Psi}{dr^2} = \chi F \left( Fu + \frac{2M}{r^2}u_x \right) + \chi \frac{d}{dr} \left( Fu + \frac{2M}{r^2}u_x \right).
+\end{equation}
+Turunan pada suku kedua dihitung satu per satu. Untuk suku pertama diperoleh
+\begin{equation}
+    \frac{d}{dr}(Fu) = F'u + F\frac{2M}{r^2}u_x.
+\end{equation}
+Sedangkan
+\begin{equation}
+    \frac{d}{dr} \left( \frac{2M}{r^2}u_x \right) = -\frac{4M}{r^3}u_x + \frac{4M^2}{r^4}u_{xx},
+\end{equation}
+dengan
+\begin{equation}
+    u_{xx} = \frac{d^2u}{dx^2}.
+\end{equation}
+Akibatnya,
+\begin{equation}
+    \frac{d}{dr} \left( Fu + \frac{2M}{r^2}u_x \right) = F'u + F\frac{2M}{r^2}u_x - \frac{4M}{r^3}u_x + \frac{4M^2}{r^4}u_{xx}.
+\end{equation}
+Dengan mensubstitusikan hasil tersebut ke persamaan sebelumnya, diperoleh bentuk akhir turunan kedua
+\begin{equation}
+    \boxed{ \frac{d^2\Psi}{dr^2} = \chi \left[ (F^2+F')u + \left( \frac{4MF}{r^2} - \frac{4M}{r^3} \right)u_x + \frac{4M^2}{r^4}u_{xx} \right]. }
+\end{equation}
+Selanjutnya dihitung turunan dari fungsi $F(r)$. Berdasarkan definisi
+\begin{equation}
+    F(r) = i\omega + \frac{2iM\omega}{r} - \frac{4iM^2\omega}{r^2x},
+\end{equation}
+dengan
+\begin{equation}
+    x=1-\frac{2M}{r},
+\end{equation}
+maka turunan terhadap koordinat radial diberikan oleh
+\begin{equation}
+    \frac{dF}{dr} = \frac{d}{dr} \left( \frac{2iM\omega}{r} \right) - 4iM^2\omega \frac{d}{dr} \left( \frac{1}{r^2x} \right).
+\end{equation}
+Turunan suku pertama menghasilkan
+\begin{equation}
+    \frac{d}{dr} \left( \frac{2iM\omega}{r} \right) = -\frac{2iM\omega}{r^2}.
+\end{equation}
+Selanjutnya digunakan identitas
+\begin{equation}
+    \frac{1}{r^2x} = r^{-2}x^{-1},
+\end{equation}
+sehingga
+\begin{equation}
+    \frac{d}{dr} \left( \frac{1}{r^2x} \right) = -2r^{-3}x^{-1} - r^{-2}x^{-2} \frac{dx}{dr}.
+\end{equation}
+Karena
+\begin{equation}
+    \frac{dx}{dr} = \frac{2M}{r^2},
+\end{equation}
+maka diperoleh
+\begin{equation}
+    \frac{d}{dr} \left( \frac{1}{r^2x} \right) = -\frac{2}{r^3x} - \frac{2M}{r^4x^2}.
+\end{equation}
+Akibatnya,
+\begin{align}
+    \frac{d}{dr} \left( -\frac{4iM^2\omega}{r^2x} \right) &= -4iM^2\omega \left( -\frac{2}{r^3x} - \frac{2M}{r^4x^2} \right) \nonumber\\
+    &= \frac{8iM^2\omega}{r^3x} + \frac{8iM^3\omega}{r^4x^2}.
+\end{align}
+Dengan demikian,
+\begin{equation}
+    \boxed{ F'(r) = -\frac{2iM\omega}{r^2} + \frac{8iM^2\omega}{r^3x} + \frac{8iM^3\omega}{r^4x^2}. }
+\end{equation}
+Selanjutnya ekspresi $\Psi$, $\Psi'$, dan $\Psi''$ disubstitusikan ke dalam persamaan radial
+\begin{equation}
+    f(r)^2\frac{d^2\Psi}{dr^2} + f(r)f'(r)\frac{d\Psi}{dr} + \left[ \omega^2 - V(r) \right] \Psi =0.
+\end{equation}
+Dengan menggunakan hasil yang telah diperoleh sebelumnya,
+\begin{align}
+    \Psi &= \chi u,\\
+    \frac{d\Psi}{dr} &= \chi \left( Fu + \frac{2M}{r^2}u_x \right),\\
+    \frac{d^2\Psi}{dr^2} &= \chi \left[ (F^2+F')u + \left( \frac{4MF}{r^2} - \frac{4M}{r^3} \right)u_x + \frac{4M^2}{r^4}u_{xx} \right],
+\end{align}
+diperoleh
+\begin{align}
+    0={}& f^2\chi \left[ (F^2+F')u + \left( \frac{4MF}{r^2} - \frac{4M}{r^3} \right)u_x + \frac{4M^2}{r^4}u_{xx} \right] \nonumber\\
+    & + ff'\chi \left( Fu + \frac{2M}{r^2}u_x \right) + (\omega^2-V)\chi u.
+\end{align}
+Karena seluruh suku mengandung faktor $\chi$, maka persamaan dapat dibagi dengan $\chi$ sehingga menjadi
+\begin{align}
+    0={}& f^2(F^2+F')u + f^2 \left( \frac{4MF}{r^2} - \frac{4M}{r^3} \right)u_x + f^2 \frac{4M^2}{r^4}u_{xx} \nonumber\\
+    & + ff'Fu + ff' \frac{2M}{r^2}u_x + (\omega^2-V)u.
+\end{align}
+Selanjutnya seluruh suku dikelompokkan berdasarkan orde turunannya sehingga diperoleh
+\begin{equation}
+    \boxed{ \frac{4M^2f^2}{r^4}u_{xx} + \left[ f^2 \left( \frac{4MF}{r^2} - \frac{4M}{r^3} \right) + ff' \frac{2M}{r^2} \right]u_x + \left[ f^2(F^2+F') + ff'F + \omega^2 - V(r) \right]u = 0. }
+\end{equation}
+Persamaan di atas masih dinyatakan dalam koordinat radial $r$. Selanjutnya dilakukan transformasi koordinat menggunakan
+\begin{equation}
+    x=1-\frac{2M}{r},
+\end{equation}
+atau secara ekuivalen
+\begin{equation}
+    r=\frac{2M}{1-x},
+\end{equation}
+sehingga seluruh koefisien persamaan diferensial dapat dinyatakan sebagai fungsi polinomial terhadap variabel $x$. Bentuk inilah yang selanjutnya digunakan untuk memperoleh koefisien $A(x)$, $B(x)$, dan $C(x)$ dengan bantuan komputasi simbolik.

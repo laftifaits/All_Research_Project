@@ -1,0 +1,212 @@
+\chapter{Penurunan Relasi Rekurensi Schwarzschild Anti de-Sitter}
+\label{app:rekuren-sads}
+
+\section{Medan Skalar Tak Bermassa}
+
+Persamaan diferensial radial utama untuk medan skalar tak bermassa pada latar belakang lubang hitam Schwarzschild Anti-de Sitter dinyatakan oleh
+\begin{equation} f(r)^2\frac{d^2\Psi}{dr^2} + f(r)f'(r)\frac{d\Psi}{dr} + \left[\omega^2 - V(r)\right]\Psi = 0, \end{equation}
+dengan fungsi metrik Schwarzschild Anti-de Sitter
+\begin{equation} f(r) = 1 - \frac{2M}{r} + \frac{r^2}{L^2}, \end{equation}
+serta potensial efektif
+\begin{equation} V(r) = f(r)\left[\frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r}\right]. \end{equation}
+Untuk memperoleh solusi yang memenuhi syarat batas gelombang masuk di horizon peristiwa, digunakan ansatz Frobenius
+\begin{equation} \Psi(r) = (r-r_h)^{-\lambda}u(z), \qquad \lambda = \frac{i\omega}{f'(r_h)}, \end{equation}
+dengan $u(z) = \sum_{n=0}^{\infty}a_nz^n$. Untuk mempermudah penurunan selanjutnya didefinisikan
+\begin{equation} \chi(r) = (r-r_h)^{-\lambda}, \qquad \text{sehingga} \qquad \Psi = \chi u. \end{equation}
+Turunan pertama terhadap koordinat radial diberikan oleh
+\begin{equation} \frac{d\Psi}{dr} = \chi'u + \chi\frac{du}{dr}, \end{equation}
+dengan $\chi' = -\dfrac{\lambda}{r-r_h}\chi$.
+
+Selanjutnya, agar seluruh koefisien persamaan diferensial dinyatakan dalam fungsi variabel $z$, terlebih dahulu digunakan hubungan
+\begin{equation} r-r_h = \frac{r_h}{1-z} - r_h = \frac{r_hz}{1-z}, \end{equation}
+sehingga diperoleh
+\begin{equation} \boxed{ \frac{1}{r-r_h} = \frac{1-z}{r_hz}. } \end{equation}
+Dengan mensubstitusikan hubungan tersebut ke dalam turunan pertama, diperoleh
+\begin{equation} \boxed{ \frac{d\Psi}{dr} = \chi \left[ -\frac{\lambda(1-z)}{r_hz}u + \frac{(1-z)^2}{r_h}u_z \right]. } \end{equation}
+Untuk mempermudah penulisan pada langkah-langkah selanjutnya, didefinisikan fungsi
+\begin{equation} \boxed{ F(z) = -\frac{\lambda(1-z)}{r_hz}. } \end{equation}
+Dengan demikian, turunan pertama dapat dituliskan dalam bentuk yang lebih ringkas sebagai
+\begin{equation} \boxed{ \frac{d\Psi}{dr} = \chi \left[ F(z)u + \frac{(1-z)^2}{r_h}u_z \right]. } \end{equation}
+Selanjutnya turunan kedua dihitung menggunakan aturan hasil kali,
+\begin{equation} \frac{d^2\Psi}{dr^2} = \chi' \left( Fu + \frac{(1-z)^2}{r_h}u_z \right) + \chi \frac{d}{dr} \left( Fu + \frac{(1-z)^2}{r_h}u_z \right). \end{equation}
+Karena
+\begin{equation} \chi' = F\chi, \end{equation}
+maka
+\begin{equation} \boxed{ \frac{d^2\Psi}{dr^2} = \chi F \left( Fu + \frac{(1-z)^2}{r_h}u_z \right) + \chi \frac{d}{dr} \left( Fu + \frac{(1-z)^2}{r_h}u_z \right). } \end{equation}
+Turunan pada ruas kedua dihitung satu per satu. Untuk suku pertama diperoleh
+\begin{equation} \frac{d}{dr}(Fu) = F'u + F \frac{du}{dr}. \end{equation}
+Dengan menggunakan hubungan
+\begin{equation} \frac{du}{dr} = \frac{(1-z)^2}{r_h}u_z, \end{equation}
+diperoleh
+\begin{equation} \boxed{ \frac{d}{dr}(Fu) = F'u + F \frac{(1-z)^2}{r_h} u_z. } \end{equation}
+Selanjutnya dihitung turunan fungsi $F(z)$. Berdasarkan definisinya,
+\begin{equation} F(z) = -\frac{\lambda}{r_h} \frac{1-z}{z}, \end{equation}
+maka
+\begin{equation} \frac{dF}{dz} = -\frac{\lambda}{r_h} \frac{d}{dz} \left( \frac{1-z}{z} \right). \end{equation}
+Karena
+\begin{equation} \frac{1-z}{z} = \frac{1}{z}-1, \end{equation}
+maka
+\begin{equation} \frac{dF}{dz} = \frac{\lambda}{r_hz^2}. \end{equation}
+Dengan menggunakan aturan rantai,
+\begin{equation} \frac{dF}{dr} = \frac{dF}{dz} \frac{dz}{dr}, \end{equation}
+serta
+\begin{equation} \frac{dz}{dr} = \frac{(1-z)^2}{r_h}, \end{equation}
+diperoleh
+\begin{equation} \boxed{ F' = \frac{\lambda(1-z)^2} {r_h^2z^2}. } \end{equation}
+Selanjutnya dihitung turunan suku kedua,
+\begin{equation} \frac{d}{dr} \left( \frac{(1-z)^2}{r_h}u_z \right). \end{equation}
+Dengan menggunakan aturan hasil kali diperoleh
+\begin{align} \frac{d}{dr} \left( \frac{(1-z)^2}{r_h}u_z \right) &= \frac{d}{dr} \left( \frac{(1-z)^2}{r_h} \right) u_z + \frac{(1-z)^2}{r_h} \frac{du_z}{dr}. \end{align}
+Turunan faktor pertama menghasilkan
+\begin{equation} \frac{d}{dr} (1-z)^2 = -2(1-z) \frac{dz}{dr}, \end{equation}
+sehingga
+\begin{equation} \frac{d}{dr} \left( \frac{(1-z)^2}{r_h} \right) = -\frac{2(1-z)^3}{r_h^2}. \end{equation}
+Sedangkan
+\begin{equation} \frac{du_z}{dr} = u_{zz} \frac{dz}{dr} = u_{zz} \frac{(1-z)^2}{r_h}. \end{equation}
+Dengan demikian diperoleh
+\begin{equation} \boxed{ \frac{d}{dr} \left( \frac{(1-z)^2}{r_h}u_z \right) = -\frac{2(1-z)^3}{r_h^2}u_z + \frac{(1-z)^4}{r_h^2}u_{zz}. } \end{equation}
+Menggabungkan seluruh hasil di atas menghasilkan bentuk akhir turunan kedua,
+\begin{equation} \boxed{ \frac{d^2\Psi}{dr^2} = \chi \left[ (F^2+F')u + \left( \frac{2F(1-z)^2}{r_h} - \frac{2(1-z)^3}{r_h^2} \right)u_z + \frac{(1-z)^4}{r_h^2}u_{zz} \right]. } \end{equation}
+Persamaan radial yang diperoleh sebelumnya masih dinyatakan dalam koordinat radial $r$. Oleh karena itu, seluruh fungsi yang masih bergantung pada $r$ ditransformasikan ke dalam variabel
+\begin{equation} z = 1-\frac{r_h}{r}, \end{equation}
+dengan hubungan
+\begin{equation} r = \frac{r_h}{1-z}, \end{equation}
+sehingga diperoleh
+\begin{equation} \frac{1}{r} = \frac{1-z}{r_h}, \qquad \frac{1}{r^2} = \frac{(1-z)^2}{r_h^2}, \end{equation}
+serta
+\begin{equation} \frac{dz}{dr} = \frac{(1-z)^2}{r_h}. \end{equation}
+Selanjutnya fungsi metrik Schwarzschild Anti-de Sitter dapat dinyatakan sebagai
+\begin{equation} f(z) = 1 - \frac{2M(1-z)}{r_h} + \frac{r_h^2}{L^2(1-z)^2}, \end{equation}
+dengan turunannya
+\begin{equation} f'(r) = \frac{2M(1-z)^2}{r_h^2} + \frac{2r_h}{L^2(1-z)}. \end{equation}
+Potensial efektif kemudian berubah menjadi
+\begin{equation} V(z) = f(z) \left[ \frac{\ell(\ell+1)(1-z)^2}{r_h^2} + \frac{2M(1-z)^3}{r_h^3} + \frac{2}{L^2} \right]. \end{equation}
+Dengan demikian, seluruh besaran pada persamaan radial telah dinyatakan sebagai fungsi dari variabel $z$. Akan tetapi, apabila ansatz
+\begin{equation} \Psi(r) = (r-r_h)^{-i\omega/f'(r_h)} \sum_{n=0}^{\infty} a_nz^n \end{equation}
+dituliskan seluruhnya dalam variabel $z$, maka diperoleh hubungan
+\begin{equation} r-r_h = \frac{r_hz}{1-z}, \end{equation}
+sehingga faktor singular di sekitar horizon dapat dituliskan sebagai
+\begin{equation} (r-r_h)^{-i\omega/f'(r_h)} = r_h^{-i\omega/f'(r_h)} z^{-i\omega/f'(r_h)} (1-z)^{i\omega/f'(r_h)}. \end{equation}
+Konsekuensinya, lebih menguntungkan apabila seluruh proses diferensiasi selanjutnya dilakukan langsung terhadap variabel $z$. Dengan pendekatan tersebut, seluruh koefisien persamaan diferensial hanya bergantung pada satu variabel bebas sehingga persamaan radial dapat dituliskan dalam bentuk
+\begin{equation} A(z)\frac{d^2u}{dz^2} + B(z)\frac{du}{dz} + C(z)u = 0, \end{equation}
+dengan $A(z)$, $B(z)$, dan $C(z)$ merupakan fungsi polinomial terhadap $z$. Mengingat bentuk eksplisit ketiga koefisien tersebut sangat panjang, ekspansi aljabarnya dilakukan menggunakan manipulasi simbolik berbantuan perangkat lunak komputasi aljabar. Selanjutnya, fungsi reguler $u(z)$ diekspansikan dalam bentuk deret Frobenius,
+\begin{equation} u(z) = \sum_{n=0}^{\infty} a_nz^n, \end{equation}
+sehingga diperoleh relasi rekurensi bagi koefisien $a_n$ yang kemudian digunakan dalam penentuan frekuensi kuasinormal.
+
+\section{Medan Skalar Bermassa}
+
+Persamaan Klein-Gordon untuk medan skalar bermassa dinyatakan sebagai
+\begin{equation} \left(\Box-\mu^2\right)\phi=0. \end{equation}
+Dengan menggunakan pemisahan variabel
+\begin{equation} \phi(t,r,\theta,\varphi) = \frac{\Psi(r)}{r} Y_{\ell m}(\theta,\varphi) e^{-i\omega t}, \end{equation}
+diperoleh persamaan radial
+\begin{equation} f(r)^2 \frac{d^2\Psi}{dr^2} + f(r)f'(r) \frac{d\Psi}{dr} + \left[ \omega^2 - V(r) \right] \Psi =0, \end{equation}
+dengan fungsi metrik Schwarzschild Anti-de Sitter
+\begin{equation} f(r) = 1-\frac{2M}{r} +\frac{r^2}{L^2}, \end{equation}
+dan potensial efektif
+\begin{equation} V(r) = f(r) \left[ \frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r} + \mu^2 \right]. \end{equation}
+Untuk memperoleh solusi yang memenuhi syarat batas gelombang masuk di horizon peristiwa, digunakan transformasi koordinat
+\begin{equation} z = 1-\frac{r_h}{r}, \end{equation}
+sehingga
+\begin{equation} r = \frac{r_h}{1-z}, \end{equation}
+dan
+\begin{equation} \frac{dz}{dr} = \frac{r_h}{r^2} = \frac{(1-z)^2}{r_h}. \end{equation}
+Ansatz Frobenius yang digunakan adalah
+\begin{equation} \Psi(r) = (r-r_h)^{-\lambda} u(z), \end{equation}
+dengan
+\begin{equation} \lambda = \frac{i\omega}{f'(r_h)}, \end{equation}
+serta
+\begin{equation} u(z) = \sum_{n=0}^{\infty} a_nz^n. \end{equation}
+Untuk mempermudah penurunan selanjutnya didefinisikan
+\begin{equation} \chi(r) = (r-r_h)^{-\lambda}, \end{equation}
+sehingga
+\begin{equation} \Psi = \chi u. \end{equation}
+Turunan pertama terhadap koordinat radial diberikan oleh
+\begin{equation} \frac{d\Psi}{dr} = \chi'u + \chi \frac{du}{dr}. \end{equation}
+Karena
+\begin{equation} \chi = (r-r_h)^{-\lambda}, \end{equation}
+maka
+\begin{equation} \chi' = -\frac{\lambda}{r-r_h}\chi. \end{equation}
+Sementara itu,
+\begin{equation} \frac{du}{dr} = \frac{du}{dz} \frac{dz}{dr} = \frac{(1-z)^2}{r_h} u_z, \end{equation}
+dengan
+\begin{equation} u_z = \frac{du}{dz}. \end{equation}
+Akibatnya diperoleh
+\begin{equation} \frac{d\Psi}{dr} = \chi \left[ -\frac{\lambda}{r-r_h}u + \frac{(1-z)^2}{r_h}u_z \right]. \end{equation}
+Selanjutnya digunakan hubungan
+\begin{equation} r-r_h = \frac{r_hz}{1-z}, \end{equation}
+sehingga
+\begin{equation} \frac{1}{r-r_h} = \frac{1-z}{r_hz}. \end{equation}
+Dengan demikian turunan pertama dapat dituliskan menjadi
+\begin{equation} \boxed{ \frac{d\Psi}{dr} = \chi \left[ -\frac{\lambda(1-z)}{r_hz} u + \frac{(1-z)^2}{r_h} u_z \right]. } \end{equation}
+Untuk mempersingkat notasi didefinisikan
+\begin{equation} F(z) = -\frac{\lambda(1-z)}{r_hz}, \end{equation}
+sehingga
+\begin{equation} \boxed{ \frac{d\Psi}{dr} = \chi \left[ F(z)u + \frac{(1-z)^2}{r_h} u_z \right]. } \end{equation}
+Selanjutnya turunan kedua terhadap koordinat radial dihitung dengan kembali menggunakan aturan hasil kali,
+\begin{equation} \frac{d^2\Psi}{dr^2} = \chi' \left( Fu + \frac{(1-z)^2}{r_h}u_z \right) + \chi \frac{d}{dr} \left( Fu + \frac{(1-z)^2}{r_h}u_z \right). \end{equation}
+Karena
+\begin{equation} \chi' = F\chi, \end{equation}
+maka
+\begin{equation} \frac{d^2\Psi}{dr^2} = \chi F \left( Fu + \frac{(1-z)^2}{r_h}u_z \right) + \chi \frac{d}{dr} \left( Fu + \frac{(1-z)^2}{r_h}u_z \right). \end{equation}
+Turunan pada ruas kedua dihitung secara terpisah. Untuk suku pertama diperoleh
+\begin{equation} \frac{d}{dr} (Fu) = F'u + F \frac{du}{dr}. \end{equation}
+Dengan menggunakan
+\begin{equation} \frac{du}{dr} = \frac{(1-z)^2}{r_h} u_z, \end{equation}
+maka
+\begin{equation} \frac{d}{dr} (Fu) = F'u + F \frac{(1-z)^2}{r_h} u_z. \end{equation}
+Selanjutnya dihitung turunan fungsi $F(z)$. Berdasarkan definisinya,
+\begin{equation} F(z) = -\frac{\lambda(1-z)}{r_hz}, \end{equation}
+diperoleh
+\begin{equation} \frac{dF}{dz} = \frac{\lambda}{r_hz^2}. \end{equation}
+Dengan menggunakan aturan rantai
+\begin{equation} \frac{dF}{dr} = \frac{dF}{dz} \frac{dz}{dr}, \end{equation}
+serta
+\begin{equation} \frac{dz}{dr} = \frac{(1-z)^2}{r_h}, \end{equation}
+diperoleh
+\begin{equation} \boxed{ F' = \frac{\lambda(1-z)^2} {r_h^2z^2}. } \end{equation}
+Untuk suku kedua digunakan aturan hasil kali,
+\begin{align} \frac{d}{dr} \left( \frac{(1-z)^2}{r_h} u_z \right) &= \frac{d}{dr} \left( \frac{(1-z)^2}{r_h} \right) u_z + \frac{(1-z)^2}{r_h} \frac{du_z}{dr}. \end{align}
+Turunan faktor pertama menghasilkan
+\begin{equation} \frac{d}{dr} \left( \frac{(1-z)^2}{r_h} \right) = -\frac{2(1-z)^3}{r_h^2}, \end{equation}
+sedangkan
+\begin{equation} \frac{du_z}{dr} = u_{zz} \frac{dz}{dr} = \frac{(1-z)^2}{r_h} u_{zz}. \end{equation}
+Dengan demikian diperoleh
+\begin{equation} \frac{d}{dr} \left( \frac{(1-z)^2}{r_h} u_z \right) = -\frac{2(1-z)^3}{r_h^2} u_z + \frac{(1-z)^4}{r_h^2} u_{zz}. \end{equation}
+Menggabungkan seluruh hasil di atas menghasilkan
+\begin{align} \frac{d^2\Psi}{dr^2} = \chi \Biggl[ (F^2+F')u + \left( \frac{2F(1-z)^2}{r_h} - \frac{2(1-z)^3}{r_h^2} \right) u_z + \frac{(1-z)^4}{r_h^2} u_{zz} \Biggr]. \end{align}
+Selanjutnya seluruh fungsi metrik dinyatakan dalam variabel $z$. Berdasarkan transformasi
+\begin{equation} r=\frac{r_h}{1-z}, \end{equation}
+diperoleh
+\begin{equation} f(z) = 1 - \frac{2M(1-z)}{r_h} + \frac{r_h^2}{L^2(1-z)^2}, \end{equation}
+dengan turunannya
+\begin{equation} f'(r) = \frac{2M(1-z)^2}{r_h^2} + \frac{2r_h}{L^2(1-z)}. \end{equation}
+Potensial efektif medan skalar bermassa menjadi
+\begin{equation} V(z) = f(z) \left[ \frac{\ell(\ell+1)(1-z)^2}{r_h^2} + \frac{2M(1-z)^3}{r_h^3} + \frac{2}{L^2} + \mu^2 \right]. \end{equation}
+Selanjutnya, ekspresi $\Psi$, $\Psi'$, dan $\Psi''$ disubstitusikan ke dalam persamaan radial
+\begin{equation} f(r)^2 \frac{d^2\Psi}{dr^2} + f(r)f'(r) \frac{d\Psi}{dr} + \left[ \omega^2 - V(z) \right] \Psi = 0. \end{equation}
+Dengan menggunakan
+\begin{equation} \Psi = \chi u, \end{equation}
+\begin{equation} \frac{d\Psi}{dr} = \chi \left[ F(z)u + \frac{(1-z)^2}{r_h} u_z \right], \end{equation}
+serta
+\begin{equation} \frac{d^2\Psi}{dr^2} = \chi \left[ (F^2+F')u + \left( \frac{2F(1-z)^2}{r_h} - \frac{2(1-z)^3}{r_h^2} \right) u_z + \frac{(1-z)^4}{r_h^2} u_{zz} \right], \end{equation}
+maka diperoleh
+\begin{align} 0 ={}& f(z)^2 \chi \Biggl[ (F^2+F')u + \left( \frac{2F(1-z)^2}{r_h} - \frac{2(1-z)^3}{r_h^2} \right) u_z + \frac{(1-z)^4}{r_h^2} u_{zz} \Biggr] + f(z)f'(z) \chi \left[ F(z)u + \frac{(1-z)^2}{r_h} u_z \right] + \left[ \omega^2 - V(z) \right] \chi u. \end{align}
+Karena seluruh suku memiliki faktor $\chi$, maka persamaan dapat dibagi dengan $\chi$ sehingga diperoleh
+\begin{align} 0 ={}& f(z)^2(F^2+F')u + f(z)^2 \left( \frac{2F(1-z)^2}{r_h} - \frac{2(1-z)^3}{r_h^2} \right) u_z + f(z)^2 \frac{(1-z)^4}{r_h^2} u_{zz} + f(z)f'(z) F(z) u + f(z)f'(z) \frac{(1-z)^2}{r_h} u_z + \left[ \omega^2 - V(z) \right] u. \end{align}
+Selanjutnya seluruh suku dikelompokkan berdasarkan orde turunannya sehingga diperoleh
+\begin{equation} A(z) u_{zz} + B(z) u_z + C(z) u = 0, \end{equation}
+dengan koefisien
+\begin{equation} \boxed{ A(z) = f(z)^2 \frac{(1-z)^4}{r_h^2}. } \end{equation}
+Koefisien di depan turunan pertama diberikan oleh
+\begin{equation} \boxed{ B(z) = f(z)^2 \left( \frac{2F(z)(1-z)^2}{r_h} - \frac{2(1-z)^3}{r_h^2} \right) + f(z)f'(z) \frac{(1-z)^2}{r_h}. } \end{equation}
+Sedangkan koefisien fungsi diberikan oleh
+\begin{equation} \boxed{ C(z) = f(z)^2 \left[ F(z)^2 + F'(z) \right] + f(z)f'(z) F(z) + \omega^2 - V(z). } \end{equation}
+Dengan menggunakan bentuk eksplisit
+\begin{equation} F(z) = -\frac{\lambda(1-z)}{r_hz}, \end{equation}
+\begin{equation} F'(z) = \frac{\lambda(1-z)^2}{r_h^2z^2}, \end{equation}
+serta
+\begin{equation} V(z) = f(z) \left[ \frac{\ell(\ell+1)(1-z)^2}{r_h^2} + \frac{2M(1-z)^3}{r_h^3} + \frac{2}{L^2} + \mu^2 \right], \end{equation}
+maka koefisien $A(z)$, $B(z)$, dan $C(z)$ seluruhnya telah dinyatakan sebagai fungsi variabel $z$. Persamaan diferensial tersebut selanjutnya dapat diselesaikan menggunakan metode Frobenius melalui ekspansi deret pangkat
+\begin{equation} u(z) = \sum_{n=0}^{\infty} a_nz^n, \end{equation}
+yang menghasilkan relasi rekurensi bagi koefisien $a_n$.

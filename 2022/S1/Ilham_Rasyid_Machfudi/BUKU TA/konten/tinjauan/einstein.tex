@@ -1,0 +1,62 @@
+\section{Teori Relativitas Umum}
+\label{sec:relativitas-umum}
+
+\noindent Teori relativitas umum yang dirumuskan oleh Einstein mengubah pemahaman manusia mengenai gravitasi. 
+Dalam pandangan Newtonian, gravitasi dipahami sebagai gaya tarik-menarik antar dua benda yang bermassa.
+Einstein mengubah pandangan ini dengan memandang gravitasi bukan sebagai gaya, melainkan sebagai 
+manifestasi geometris dari kelengkungan ruang-waktu yang disebabkan oleh distribusi materi dan energi 
+\parencite{Einstein1916}. Dengan demikian, terdapat hubungan timbal balik materi dan energi menentukan 
+bagaimana ruang-waktu dapat melengkung, dan sebaliknya, lengkungan ruang-waktu menentukan bagaimana materi 
+dapat bergerak melaluinya.
+
+Dalam relativitas umum, geometri ruang-waktu sepenuhnya ditentukan oleh tensor metrik 
+($g_{\mu\nu}$). Tensor metrik merupakan besaran fundamental yang mendefinisikan bagaimana 
+jarak dan selang waktu diukur pada setiap titik di ruang-waktu. Dari tensor metrik ini 
+diturunkan simbol Christoffel ($\Gamma^\lambda_{\mu\nu}$), yaitu besaran yang mendefinisikan 
+aturan untuk membandingkan vektor di dua titik berbeda di ruang-waktu lengkung, karena di 
+ruang-waktu yang melengkung, vektor di satu titik tidak dapat langsung dibandingkan dengan 
+vektor di titik lain tanpa aturan transportasi yang konsisten. Simbol Christoffel inilah 
+yang muncul dalam persamaan geodesik, yaitu persamaan yang mendeskripsikan lintasan alami 
+sebuah partikel akibat kelengkungan ruang-waktu, sehingga menjadi penghubung matematis 
+antara geometri dan gerak materi yang telah disinggung sebelumnya 
+\parencite{Wald1984, Carroll2004}.
+
+Selanjutnya, dari simbol Christoffel, kelengkungan ruang-waktu dapat dikuantifikasi secara 
+matematis melalui tensor Riemann \parencite{Wald1984}. Tensor Riemann ($R^\rho_{\sigma\mu\nu}$) memuat seluruh 
+informasi kelengkungan secara lengkap di setiap titik dan dari segala arah, namun jumlah 
+komponen independennya sangat banyak sehingga tidak praktis untuk digunakan langsung dalam 
+persamaan medan. Informasi kelengkungan tersebut dapat diringkas melalui operasi yang disebut kontraksi. 
+Dengan operasi ini, informasi kelengkungan yang semula 
+mencakup seluruh arah secara rinci dirangkum menjadi informasi yang lebih umum, dengan 
+konsekuensi bahwa sebagian detail per arah tidak lagi termuat secara terpisah. 
+Kontraksi pertama pada tensor Riemann menghasilkan tensor Ricci 
+($R_{\mu\nu}$), yang merangkum informasi kelengkungan per arah di suatu titik. Kontraksi 
+lebih lanjut pada tensor Ricci menghasilkan skalar Ricci ($R$), yaitu besaran tunggal tanpa 
+indeks yang merangkum kelengkungan keseluruhan di suatu titik tanpa membedakan arah 
+\parencite{Carroll2004, Misner1973}.
+
+Hubungan antara geometri kelengkungan ruang-waktu dan distribusi materi-energi
+di dalamnya dinyatakan melalui persamaan medan Einstein. Dengan menggunakan
+\textit{natural unit} $G = c = 1$, persamaan medan Einstein berbentuk
+\begin{equation}
+    G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi T_{\mu\nu}
+    \label{eq:efe}
+\end{equation}
+\noindent dengan $G_{\mu\nu}$ merupakan tensor Einstein yang merepresentasikan geometri 
+ruang-waktu, $\Lambda$ adalah konstanta Kosmologi, dan $T_{\mu\nu}$ adalah tensor 
+energi-momentum yang merepresentasikan distribusi materi dan energi \parencite{Carroll2004}. 
+Tensor Einstein sendiri dibangun dari tensor Ricci dan skalar Ricci yang telah 
+diperkenalkan sebelumnya, yaitu
+\begin{equation}
+    G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu}.
+    \label{eq:einstein-tensor}
+\end{equation}
+
+Bentuk persamaan ini memperlihatkan secara matematis hubungan timbal balik yang telah 
+disinggung di awal: ruas kiri pada Persamaan \eqref{eq:efe} merepresentasikan geometri 
+ruang-waktu, sedangkan ruas kanan merepresentasikan kandungan materi dan energi 
+\parencite{Schutz2009}. Dengan demikian, distribusi materi dan energi menentukan 
+bagaimana ruang-waktu melengkung, dan sebaliknya kelengkungan tersebut menentukan 
+bagaimana materi bergerak melaluinya, sebagaimana telah dijelaskan melalui peran simbol 
+Christoffel dalam persamaan geodesik. Penurunan lengkap persamaan medan Einstein dapat 
+dilihat pada Lampiran~\ref{app:penurunan-efe}.

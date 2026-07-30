@@ -1,0 +1,59 @@
+\chapter{Penurunan Persamaan Medan Einstein}
+\label{app:penurunan-efe}
+Persamaan medan Einstein diperoleh melalui prinsip aksi stasioner, yaitu dengan memvariasikan aksi total terhadap tensor metrik invers $g^{\mu\nu}$. Sejalan dengan konvensi pada Bab Tinjauan Pustaka, seluruh penurunan menggunakan satuan natural $G=c=1$. Aksi total terdiri atas aksi gravitasi dan aksi materi,
+\begin{equation} S=S_{\mathrm{grav}}+S_{\mathrm{M}}, \end{equation}
+dengan
+\begin{equation} S_{\mathrm{grav}} = \frac{1}{16\pi} \int (R-2\Lambda)\sqrt{-g}\,d^4x, \label{eq:aksi-grav} \end{equation}
+serta
+\begin{equation} S_{\mathrm{M}} = \int \sqrt{-g}\, \mathcal{L}_m \,d^4x. \label{eq:aksi-materi} \end{equation}
+Variasi aksi total terhadap metrik memberikan
+\begin{equation} \delta S = \delta S_{\mathrm{grav}} + \delta S_{\mathrm{M}}. \end{equation}
+Oleh karena itu, variasi masing-masing bagian akan ditentukan terlebih dahulu.
+
+\subsection*{Variasi aksi gravitasi}
+Variasi aksi gravitasi dituliskan sebagai
+\begin{equation} \delta S_{\mathrm{grav}} = \frac{1}{16\pi} \int \delta \left[ (R-2\Lambda)\sqrt{-g} \right] d^4x. \end{equation}
+Dengan menggunakan aturan perkalian diperoleh
+\begin{equation} \delta \left[ (R-2\Lambda)\sqrt{-g} \right] = \sqrt{-g}\, \delta R + (R-2\Lambda) \delta\sqrt{-g}. \label{eq:produk} \end{equation}
+Selanjutnya diperlukan bentuk variasi skalar Ricci dan variasi determinan metrik. Skalar Ricci didefinisikan sebagai
+\begin{equation} R = g^{\mu\nu} R_{\mu\nu}, \end{equation}
+sehingga variasinya menjadi
+\begin{align} \delta R &= \delta (g^{\mu\nu}R_{\mu\nu}) \nonumber\\ &= R_{\mu\nu}\, \delta g^{\mu\nu} + g^{\mu\nu} \delta R_{\mu\nu}. \label{eq:deltaR} \end{align}
+Suku kedua pada Persamaan \eqref{eq:deltaR} dapat disederhanakan menggunakan identitas Palatini,
+\begin{equation} \delta R_{\mu\nu} = \nabla_\lambda (\delta\Gamma^\lambda_{\mu\nu}) - \nabla_\nu (\delta\Gamma^\lambda_{\mu\lambda}), \end{equation}
+sehingga
+\begin{equation} g^{\mu\nu}\delta R_{\mu\nu} = \nabla_\lambda V^\lambda, \end{equation}
+dengan
+\begin{equation} V^\lambda = g^{\mu\nu}\delta\Gamma^\lambda_{\mu\nu} - g^{\mu\lambda} \delta\Gamma^\sigma_{\mu\sigma}. \end{equation}
+Menurut Teorema Gauss,
+\begin{equation} \int \nabla_\lambda V^\lambda \sqrt{-g}\, d^4x = \oint V^\lambda d\Sigma_\lambda. \end{equation}
+Integral permukaan tersebut dianggap bernilai nol karena variasi metrik diasumsikan menghilang pada batas ruang-waktu. Dengan demikian,
+\begin{equation} \delta R = R_{\mu\nu} \delta g^{\mu\nu}. \label{eq:deltaR2} \end{equation}
+Selanjutnya ditinjau variasi determinan metrik. Determinan tensor metrik memenuhi identitas
+\begin{equation} \delta g = -g\,g_{\mu\nu} \delta g^{\mu\nu}, \end{equation}
+sehingga
+\begin{align} \delta\sqrt{-g} &= \frac{1}{2} (-g)^{-1/2} \delta(-g) \nonumber\\ &= -\frac{1}{2} \sqrt{-g} g_{\mu\nu} \delta g^{\mu\nu}. \label{eq:deltasqrtg} \end{align}
+Substitusi Persamaan \eqref{eq:deltaR2} dan \eqref{eq:deltasqrtg} ke dalam Persamaan \eqref{eq:produk} memberikan
+\begin{align} \delta S_{\mathrm{grav}} &= \frac{1}{16\pi} \int \Bigg[ R_{\mu\nu} - \frac12 (R-2\Lambda) g_{\mu\nu} \Bigg] \delta g^{\mu\nu} \sqrt{-g} \,d^4x \nonumber\\ &= \frac{1}{16\pi} \int \left[ R_{\mu\nu} -\frac12Rg_{\mu\nu} +\Lambda g_{\mu\nu} \right] \delta g^{\mu\nu} \sqrt{-g} \,d^4x. \label{eq:gravakhir} \end{align}
+
+\subsection*{Variasi aksi materi}
+Variasi aksi materi didefinisikan sebagai
+\begin{equation} \delta S_{\mathrm M} = \int \delta (\sqrt{-g}\mathcal L_m) d^4x. \end{equation}
+Tensor energi-momentum didefinisikan melalui
+\begin{equation} T_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta (\sqrt{-g}\mathcal L_m)} {\delta g^{\mu\nu}}, \end{equation}
+sehingga
+\begin{equation} \delta S_{\mathrm M} = -\frac12 \int T_{\mu\nu} \delta g^{\mu\nu} \sqrt{-g} \,d^4x. \label{eq:materiakhir} \end{equation}
+
+\subsection*{Persamaan medan Einstein}
+Dengan menjumlahkan Persamaan \eqref{eq:gravakhir} dan \eqref{eq:materiakhir} diperoleh
+\begin{align} \delta S &= \int \Bigg[ \frac{1}{16\pi} \left( R_{\mu\nu} - \frac12Rg_{\mu\nu} + \Lambda g_{\mu\nu} \right) - \frac12 T_{\mu\nu} \Bigg] \nonumber\\ &\qquad\times \delta g^{\mu\nu} \sqrt{-g} \,d^4x. \end{align}
+Prinsip aksi stasioner mensyaratkan
+\begin{equation} \delta S=0. \end{equation}
+Karena variasi metrik $\delta g^{\mu\nu}$ bersifat sembarang, maka koefisien di depannya harus sama dengan nol,
+\begin{equation} \frac{1}{16\pi} \left( R_{\mu\nu} - \frac12Rg_{\mu\nu} + \Lambda g_{\mu\nu} \right) - \frac12 T_{\mu\nu} =0. \end{equation}
+Mengalikan kedua ruas dengan $16\pi$ menghasilkan
+\begin{equation} R_{\mu\nu} - \frac12 Rg_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi T_{\mu\nu}. \end{equation}
+Dengan mendefinisikan tensor Einstein sebagai
+\begin{equation} G_{\mu\nu} = R_{\mu\nu} - \frac12 Rg_{\mu\nu}, \end{equation}
+akhirnya diperoleh persamaan medan Einstein
+\begin{equation} G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi T_{\mu\nu}. \end{equation}

@@ -1,0 +1,38 @@
+\definecolor{biruITS}{HTML}{1168AD}
+% \thispagestyle{plain}
+
+\newgeometry{
+  top=\dimexpr0.25\paperheight+2mm\relax, % Teks dimulai 5mm di bawah batas bawah garis horizontal biru
+  left=30mm,
+  right=30mm,
+  bottom=25mm
+}
+
+\begin{tikzpicture}[remember picture, overlay]
+  % Titik bantu disamakan dengan sampul luar, tanpa menggambar background warna.
+  \coordinate (TopBlue) at ([yshift=0.75\paperheight]current page.south west);
+  \coordinate (TopBlueRight) at ([yshift=0.75\paperheight]current page.south east);
+
+  % Shape horizontal biru, mengikuti posisi garis hijau pada sampul luar.
+  \fill[biruITS]
+    ([yshift=3mm]TopBlue)
+    rectangle
+    ([yshift=3mm + 10mm]TopBlueRight);
+
+  \coordinate (ImageBottomLeft) at ([yshift=3mm + 10mm + 5mm]TopBlue);
+
+  \node[anchor=south west, inner sep=0pt] at ([xshift=30mm]ImageBottomLeft) {
+    \includegraphics[height=3.5cm]{sampul/gambar/logo_its.png}
+  };
+\end{tikzpicture}
+
+\begingroup
+  \rmfamily
+  \raggedright
+
+  \input{sampul/konten-id-dalam.tex}
+  \par
+\endgroup
+
+\restoregeometry
+\clearpage

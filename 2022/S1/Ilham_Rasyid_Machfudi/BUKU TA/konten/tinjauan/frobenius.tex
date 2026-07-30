@@ -1,0 +1,267 @@
+\section{Metode Frobenius}
+\label{sec:metode_frobenius}
+
+\noindent Untuk mendapatkan nilai frekuensi kuasinormal dari persamaan master
+\eqref{eq:master-skalar}, persamaan tersebut harus diselesaikan dengan memenuhi
+kondisi batas fisik pada kedua titik singularnya, yaitu di horizon peristiwa dan
+di daerah terjauh. Metode Frobenius merupakan salah satu teknik penyelesaian yang 
+dapat digunakan untuk menyelesaikan
+persamaan diferensial linear di sekitar titik singular dengan menyatakan
+solusi sebagai deret pangkat \parencite{Leaver1985, Konoplya2011, Riley2006}.
+
+Suatu persamaan diferensial linear orde dua secara umum dapat dituliskan dalam bentuk baku
+\begin{equation}
+    \frac{d^2y}{dr^2} + P(r)\frac{dy}{dr} + Q(r)\,y = 0,
+    \label{eq:ode-baku}
+\end{equation}
+dengan $P(r)$ dan $Q(r)$ merupakan koefisien yang bergantung pada $r$. Apabila kedua
+koefisien tersebut bernilai berhingga dan analitik di suatu titik, titik tersebut disebut
+titik biasa (\textit{ordinary point}), dan solusinya dapat dinyatakan langsung sebagai
+deret Taylor biasa di sekitar titik itu \parencite{Riley2006, boas2006}.
+
+Sebelum solusi ditentukan melalui metode Frobenius, jenis titik tempat solusi ditinjau
+harus diperiksa terlebih dahulu, apakah titik tersebut merupakan titik biasa, titik singular
+reguler, atau titik singular tak reguler. Pemeriksaan ini penting karena bentuk deret solusi
+yang berlaku bergantung pada jenis titiknya. Pada titik biasa, solusi cukup dinyatakan
+sebagai deret Taylor biasa. Pada titik singular, deret Taylor biasa tidak lagi berlaku,
+sehingga metode Frobenius memperluas bentuk deret tersebut dengan mengalikannya dengan suatu
+faktor pangkat $(r - r_0)^{\sigma}$,
+\begin{equation}
+    y(r) = (r - r_0)^{\sigma} \sum_{n=0}^{\infty} a_n (r - r_0)^n , \qquad a_0 \neq 0,
+    \label{eq:frobenius-umum}
+\end{equation}
+dengan $r_0$ merupakan titik singular yang ditinjau dan eksponen $\sigma$ menampung perilaku
+singular solusi di titik tersebut. Bentuk deret inilah yang memungkinkan metode Frobenius
+menyelesaikan persamaan diferensial orde dua meskipun koefisiennya divergen, dengan syarat 
+singularitasnya berjenis reguler.
+
+Jenis suatu titik ditentukan dengan meninjau perilaku koefisien $P(r)$ dan $Q(r)$ pada
+bentuk baku \eqref{eq:ode-baku} di titik tersebut. Apabila keduanya berhingga dan analitik
+di suatu titik $r = r_0$, titik itu merupakan titik biasa. Sebaliknya, apabila salah satu di
+antaranya divergen, titik itu merupakan titik singular yang masih dibedakan lebih lanjut
+menurut tingkat kedivergenannya. Dalam menganalisis suatu titik singular $r = r_0$, ditinjau kedua limit
+\begin{equation}
+    p_0 = \lim_{r \to r_0} (r - r_0)\,P(r), \qquad
+    q_0 = \lim_{r \to r_0} (r - r_0)^2\, Q(r).
+    \label{eq:limit-singular}
+\end{equation}
+Apabila kedua limit pada Persamaan~\eqref{eq:limit-singular} bernilai berhingga, titik
+$r = r_0$ tergolong titik singular reguler. Sebaliknya, apabila salah satu limit tersebut
+divergen, titik $r = r_0$ tergolong titik singular tak reguler \parencite{Riley2006, boas2006}.
+
+Nilai eksponen $\sigma$ pada deret Frobenius \eqref{eq:frobenius-umum} diperoleh dengan
+mensubstitusikan deret tersebut ke dalam persamaan bentuk baku \eqref{eq:ode-baku}. Turunan
+pertama dan kedua dari deret Frobenius adalah
+\begin{equation}
+    \frac{dy}{dr} = \sum_{n=0}^{\infty}(n+\sigma)\,a_n\,(r-r_0)^{n+\sigma-1}, \qquad
+    \frac{d^2y}{dr^2} = \sum_{n=0}^{\infty}(n+\sigma)(n+\sigma-1)\,a_n\,(r-r_0)^{n+\sigma-2}.
+    \label{eq:turunan-frobenius}
+\end{equation}
+
+Untuk mendapatkan nilai $\sigma$ yang menentukan perilaku solusi di sekitar titik singular,
+ditinjau koefisien suku $n = 0$, yang khususnya hanya melibatkan $a_0$ dan $\sigma$ tanpa
+bergantung pada koefisien $a_n$ lainnya. Persamaan yang diperoleh dari suku ini dikenal
+sebagai persamaan indicial \parencite{Riley2006, boas2006}, yang berbentuk
+\begin{equation}
+    \Big[\sigma(\sigma-1) + p_0\,\sigma + q_0\Big]\,a_0 = 0.
+    \label{eq:indicial-a0}
+\end{equation}
+Koefisien $P(r)$ dan $Q(r)$ pada bentuk baku \eqref{eq:ode-baku} tidak dapat dievaluasi
+langsung di $r = r_0$ karena keduanya divergen di titik tersebut. Akan tetapi, kombinasi
+$(r-r_0)P(r)$ dan $(r-r_0)^2 Q(r)$ yang muncul secara alami dari substitusi deret justru
+tetap berhingga di $r = r_0$, dan nilai limitnya di titik tersebut persis $p_0$ dan $q_0$
+yang telah didefinisikan pada Persamaan~\eqref{eq:limit-singular}.
+
+Karena $a_0 \neq 0$ menurut definisi deret Frobenius, faktor di dalam kurung siku yang harus
+bernilai nol, sehingga diperoleh
+\begin{equation}
+    \sigma(\sigma - 1) + p_0\,\sigma + q_0 = 0,
+    \label{eq:indicial-umum}
+\end{equation}
+yang dikenal sebagai persamaan indicial \parencite{Riley2006, boas2006}. Persamaan ini
+merupakan persamaan kuadrat dalam $\sigma$ sehingga memiliki dua akar, $\sigma_1$ dan
+$\sigma_2$, yang menjelaskan dua perilaku solusi di titik singular tersebut.
+
+Setelah nilai eksponen $\sigma$ diperoleh melalui persamaan indicial
+\eqref{eq:indicial-umum}, ansatz Frobenius secara khusus perturbasi dapat dinyatakan secara umum sebagai
+\begin{equation}
+    \Psi(r) = W(r) \sum_{n=0}^{\infty} a_n\, z^n,
+    \label{eq:ansatz_frobenius}
+\end{equation}
+dengan $z$ memetakan kondisi batas ruang-waktu menjadi $0 \le z < 1$
+\parencite{Konoplya2011}. Faktor $W(r)$ menampung seluruh perilaku singular di titik-titik
+batas, dan tidak selalu berupa faktor pangkat tunggal $(r-r_h)^\sigma$ seperti pada
+Persamaan~\eqref{eq:frobenius-umum}. Bentuk eksplisit
+$W(r)$ disusun secara terpisah pada masing-masing latar belakang.
+
+\subsection{Metode Frobenius pada Schwarzschild}
+\label{subsec:frobenius-schwarzschild}
+
+\noindent Kerangka umum di atas diterapkan pada persamaan radial perturbasi medan skalar
+\eqref{eq:pers-radial} untuk latar belakang Schwarzschild, dengan fungsi metrik
+$f(r) = 1 - 2M/r$ dan horizon peristiwa terletak pada $r_h = 2M$. Membagi seluruh persamaan
+dengan $f^2(r)$ membawa persamaan radial ke dalam bentuk baku \eqref{eq:ode-baku} dengan
+koefisien
+\begin{equation}
+    P(r) = \frac{f'(r)}{f(r)}, \qquad
+    Q(r) = \frac{\omega^2}{f^2(r)} - \frac{1}{f(r)}\left(\frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r}\right),
+    \label{eq:PQ-schwarzschild}
+\end{equation}
+dengan turunan fungsi metrik di horizon peristiwa
+\begin{equation}
+    f'(r_h) = \frac{2M}{r_h^2} = \frac{1}{2M}.
+\end{equation}
+Dengan menggunakan koefisien $P(r)$ dan $Q(r)$ pada Persamaan~\eqref{eq:PQ-schwarzschild}
+serta pendekatan linear $f(r) \approx f'(r_h)(r-r_h)$ di sekitar horizon, limit pada
+Persamaan~\eqref{eq:limit-singular} diperoleh sebagai
+\begin{equation}
+    p_0 = 1, \qquad q_0 = \frac{\omega^2}{f'(r_h)^2} = 4M^2\omega^2,
+\end{equation}
+sehingga persamaan indicial \eqref{eq:indicial-umum} untuk latar belakang Schwarzschild
+berbentuk
+\begin{equation}
+    \sigma^2 + 4M^2\omega^2 = 0,
+    \label{eq:indicial_horizon_saf}
+\end{equation}
+maka didapatkan akar-akarnya
+\begin{equation}
+    \sigma_{\pm} = \pm\frac{i\omega}{f'(r_h)} = \pm 2iM\omega.
+    \label{eq:eksponen_horizon_saf}
+\end{equation}
+Kedua akar ini berpadanan dengan dua perilaku solusi di horizon peristiwa. Untuk menentukan
+akar mana yang sesuai, ditinjau kembali syarat batas pada
+Persamaan~\eqref{eq:bc-schwarzschild}, maka kondisi batas gelombang masuk murni memilih
+$\sigma_- = -2iM\omega$.
+
+Pada kondisi batas tak hingga spasial, sifat titik singular di $r \to \infty$ perlu ditinjau
+melalui substitusi $x = 1/r$, yang memetakan $r \to \infty$ menjadi $x \to 0$, sehingga
+kriteria limit \eqref{eq:limit-singular} dapat diterapkan pada titik ini. Dengan
+mensubstitusikan $f(1/x) = 1 - 2Mx$ ke dalam Persamaan~\eqref{eq:PQ-schwarzschild} yang telah
+ditransformasi ke variabel $x$, diperoleh
+\begin{equation}
+\begin{aligned}
+    \tilde{P}(x) &= \frac{2}{x} - \frac{2M}{x(1-2Mx)},
+    &\tilde{p}_0 &= \lim_{x\to0} x\tilde{P}(x) = 2, \\[4pt]
+    \tilde{Q}(x) &= \frac{\omega^2}{x^2(1-2Mx)^2} - \frac{\ell(\ell+1)+2Mx}{x^2(1-2Mx)},
+    &\tilde{q}_0 &= \lim_{x\to0} x^2\tilde{Q}(x) \to \infty.
+\end{aligned}
+\label{eq:transformasi-tak-hingga}
+\end{equation}
+Karena $\tilde{q}_0$ divergen, $x=0$ (yaitu $r\to\infty$) merupakan titik singular tak
+reguler. Akibatnya, ansatz Frobenius sederhana pada
+Persamaan~\eqref{eq:frobenius-umum} tidak lagi cukup, dan diperlukan \textit{generalized
+Frobenius} yang mengizinkan faktor asimtotik berbentuk gabungan suku eksponensial dan suku
+pangkat.
+
+Faktor asimtotik pada tak hingga spasial diperoleh melalui koordinat \textit{tortoise}. Pada
+daerah $r$ yang sangat besar, koordinat \textit{tortoise} pada
+Persamaan~\eqref{eq:koordinat-tortoise} dapat diekspansi sebagai
+\begin{equation}
+    r_* \approx r + 2M \ln r + \text{konstan}, \qquad r \to \infty,
+    \label{eq:ekspansi_tortoise_saf}
+\end{equation}
+sehingga solusi gelombang keluar murni $\Psi \sim e^{i\omega r_*}$ menjadi
+\begin{equation}
+    \Psi \sim e^{i\omega r}\, r^{2iM\omega}, \qquad r \to \infty,
+    \label{eq:asimtotik_saf}
+\end{equation}
+yang merupakan bentuk \textit{generalized Frobenius} berupa gabungan faktor eksponensial
+$e^{i\omega r}$ dan faktor pangkat $r^{2iM\omega}$, sekaligus merepresentasikan gelombang
+keluar murni sesuai kondisi batas yang telah dijelaskan pada Persamaan~\eqref{eq:bc-schwarzschild}.
+
+Faktor horizon $(r-r_h)^{-2iM\omega}$ turut menyumbang pangkat tambahan di $r \to \infty$,
+karena
+\begin{equation}
+    (r-r_h)^{-2iM\omega} = r^{-2iM\omega}\left(1-\frac{r_h}{r}\right)^{-2iM\omega}.
+    \label{eq:ekspansi-horizon-tak-hingga}
+\end{equation}
+Suku $(1-r_h/r)^{-2iM\omega}$ analitik dan menuju satu ketika $r\to\infty$, sehingga dapat
+diserap ke dalam deret pangkat, sedangkan $r^{-2iM\omega}$ tersisa sebagai sumbangan murni di
+tak hingga. Agar perilaku gelombang keluar pada Persamaan~\eqref{eq:asimtotik_saf} tetap
+terpenuhi, sumbangan ini dikompensasi faktor $r^{4iM\omega}$, menghasilkan ansatz Frobenius
+Schwarzschild
+\begin{equation}
+    \Psi(r) = e^{i\omega r}\,(r - r_h)^{-2iM\omega}\, r^{\,4iM\omega} \sum_{n=0}^{\infty} a_n\, z^n,
+    \qquad z = \frac{r - r_h}{r},
+    \label{eq:ansatz_saf}
+\end{equation}
+dengan deret $\sum a_n z^n$ reguler di seluruh domain $r_h \le r < \infty$ ($r_h = 2M$),
+karena seluruh perilaku singular telah ditampung oleh faktor di depan deret.
+
+\subsection{Metode Frobenius pada Schwarzschild Anti-de Sitter}
+\label{subsec:frobenius-sads}
+
+\noindent Kerangka umum di atas diterapkan pada persamaan radial perturbasi medan skalar
+\eqref{eq:pers-radial} untuk latar belakang Schwarzschild Anti-de Sitter, dengan fungsi
+metrik $f(r) = 1 - 2M/r + r^2/L^2$. Membagi seluruh persamaan dengan $f^2(r)$ membawa
+persamaan radial ke dalam bentuk baku \eqref{eq:ode-baku} dengan koefisien $P(r)$ dan $Q(r)$
+yang berbentuk sama seperti Persamaan~\eqref{eq:PQ-schwarzschild}, hanya dengan fungsi
+metrik $f(r)$ yang berbeda.
+
+Berbeda dengan ruang-waktu Schwarzschild, geometri asimtotik Schwarzschild Anti-de Sitter
+(SAdS) memiliki batas konformal yang bersifat \textit{timelike}. Dengan sifat yang berbeda
+tersebut, maka diperlukan tinjauan pada kedua batas, yaitu di sekitar horizon peristiwa
+maupun di sekitar batas konformal.
+
+Di sekitar horizon peristiwa ($r\rightarrow r_h$), pendekatan linear
+$f(r) \approx f'(r_h)(r-r_h)$ yang sama seperti pada kasus Schwarzschild tetap berlaku,
+sehingga limit pada Persamaan~\eqref{eq:limit-singular} kembali menghasilkan
+\begin{equation}
+    p_0 = 1, \qquad q_0 = \frac{\omega^2}{f'(r_h)^2}.
+\end{equation}
+Kedua nilai limit ini hanya bergantung pada $f'(r_h)$, bukan pada
+bentuk eksplisit suku-suku $f(r)$ lainnya, sehingga persamaan indikal yang diperoleh
+memiliki bentuk yang sama seperti kasus Schwarzschild,
+
+\begin{equation}
+    \sigma^2+\frac{\omega^2}{f'(r_h)^2}=0,
+    \qquad
+    \sigma_{\pm}=\pm\frac{i\omega}{f'(r_h)},
+    \label{eq:indicial_horizon_sads}
+\end{equation}
+dengan turunan fungsi metrik pada horizon diberikan oleh
+\begin{equation}
+    f'(r_h)=\frac{2M}{r_h^2}+\frac{2r_h}{L^2}
+    =\frac{1}{r_h}+\frac{3r_h}{L^2},
+    \label{eq:fprime_sads}
+\end{equation}
+Sesuai dengan syarat batas gelombang masuk (\textit{ingoing}) pada horizon peristiwa, dipilih akar indikal negatif sehingga diperoleh
+\begin{equation}
+\sigma=-\frac{i\omega}{f'(r_h)}.
+\end{equation}
+
+Sementara itu, di batas tak hingga ($r\rightarrow\infty$), kondisi batas digunakan pada
+ruang-waktu Schwarzschild Anti-de Sitter adalah kondisi batas Dirichlet, yaitu medan skalar
+harus musnah pada batas konformal AdS ($\Psi\rightarrow0$ ketika $r\rightarrow\infty$)
+\parencite{Horowitz2000,MossNorman2002}. Berbeda dengan ruang-waktu Schwarzschild yang
+memiliki titik singular tak reguler di tak hingga, titik $r\rightarrow\infty$ pada SAdS
+merupakan titik singular reguler dari persamaan radial, sehingga metode Frobenius standar
+tetap berlaku. Akan tetapi, syarat $\Psi\rightarrow0$ saja belum menentukan laju peluruhan
+solusi terhadap $r$, sehingga masih terdapat lebih dari satu kemungkinan perilaku asimtotik
+yang konsisten dengan syarat tersebut. Untuk menentukan laju tersebut secara presisi,
+perilaku asimtotik solusi ditinjau melalui persamaan indikal dengan mengasumsikan solusi
+berbentuk $\Psi\sim r^\Delta$, sehingga diperoleh
+\begin{equation}
+    \Delta^2+\Delta-2=0, \qquad \Delta=1 \quad\text{atau}\quad \Delta=-2
+    \label{eq:indicial_ads}
+\end{equation}
+
+Kedua akar tersebut merepresentasikan dua perilaku solusi di batas AdS, yaitu solusi yang
+tumbuh sebanding dengan $r$ dan solusi yang meluruh sebanding dengan $r^{-2}$. Dari kedua
+kemungkinan ini, hanya $\Delta=-2$ yang benar-benar memenuhi syarat $\Psi\rightarrow0$,
+sedangkan $\Delta=1$ justru menyebabkan solusi divergen. Dengan demikian, kondisi batas
+Dirichlet secara tegas memilih akar $\Delta=-2$.
+
+Dengan menerapkan syarat batas Dirichlet tersebut, solusi Frobenius tidak memerlukan
+\textit{prefaktor} tambahan di batas tak hingga dan cukup memfaktorkan perilaku singular di
+sekitar horizon peristiwa. Hal ini karena variabel deret $z=1-r_h/r$ memetakan tak hingga
+spasial ke $z=1$, sehingga perilaku peluruhan $\Delta=-2$ tidak perlu dituliskan sebagai
+faktor pangkat $r^{-2}$ secara eksplisit, melainkan cukup dituntut melalui syarat bahwa
+deret $\sum a_n z^n$ itu sendiri bernilai nol tepat di $z=1$. Bentuk solusi yang digunakan
+adalah
+\begin{equation}
+    \Psi(r)=(r-r_h)^{-i\omega/f'(r_h)}\sum_{n=0}^{\infty} a_n z^n, \qquad z=1-\frac{r_h}{r}.
+    \label{eq:ansatz_sads}
+\end{equation}
+dengan syarat Dirichlet dipenuhi melalui kondisi bahwa deret tersebut bernilai nol ketika
+dievaluasi pada batas AdS, yaitu $z=1$ \parencite{Horowitz2000}.

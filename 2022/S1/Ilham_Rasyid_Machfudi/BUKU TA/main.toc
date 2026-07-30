@@ -1,0 +1,58 @@
+\contentsline {chapter}{LEMBAR PENGESAHAN}{i}{section*.1}%
+\contentsline {chapter}{APPROVAL SHEET}{iii}{section*.2}%
+\contentsline {chapter}{LEMBAR ORISINALITAS}{v}{section*.3}%
+\contentsline {chapter}{STATEMENT OF ORIGINALITY}{vii}{section*.4}%
+\contentsline {chapter}{ABSTRAK}{ix}{chapter*.5}%
+\contentsline {chapter}{ABSTRACT}{xi}{chapter*.6}%
+\contentsline {chapter}{KATA PENGANTAR}{xiii}{chapter*.7}%
+\contentsline {chapter}{DAFTAR ISI}{xv}{Item.20}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xix}{chapter*.21}%
+\contentsline {chapter}{DAFTAR TABEL}{xxi}{chapter*.22}%
+\contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.24}%
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.25}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{2}{section.26}%
+\contentsline {section}{\numberline {1.3}Tujuan Penelitian}{2}{section.29}%
+\contentsline {section}{\numberline {1.4}Batasan Masalah}{2}{section.32}%
+\contentsline {section}{\numberline {1.5}Manfaat Penelitian}{2}{section.38}%
+\contentsline {section}{\numberline {1.6}Kebaruan Penelitian}{3}{section.42}%
+\contentsline {section}{\numberline {1.7}Sistematika Penulisan}{3}{section.46}%
+\contentsline {chapter}{\numberline {2}TINJAUAN PUSTAKA}{5}{chapter.47}%
+\contentsline {section}{\numberline {2.1}Teori Relativitas Umum}{5}{section.48}%
+\contentsline {section}{\numberline {2.2}Solusi Schwarzschild}{6}{section.51}%
+\contentsline {subsection}{\numberline {2.2.1}Konstanta Kosmologi dalam Ruang-Waktu Schwarzschild}{7}{subsection.55}%
+\contentsline {section}{\numberline {2.3}Lubang Hitam Schwarzschild}{8}{section.57}%
+\contentsline {subsection}{\numberline {2.3.1}Lubang Hitam Schwarzschild Anti-de Sitter}{10}{subsection.64}%
+\contentsline {section}{\numberline {2.4}Teori Perturbasi Lubang Hitam}{11}{section.71}%
+\contentsline {subsection}{\numberline {2.4.1}Perturbasi Medan Skalar}{12}{subsection.73}%
+\contentsline {subsection}{\numberline {2.4.2}Perturbasi Medan Skalar Bermassa}{13}{subsection.86}%
+\contentsline {section}{\numberline {2.5}\textit {Quasinormal Modes} (QNM)}{14}{section.90}%
+\contentsline {section}{\numberline {2.6}Metode Frobenius}{16}{section.97}%
+\contentsline {subsection}{\numberline {2.6.1}Metode Frobenius pada Schwarzschild}{18}{subsection.105}%
+\contentsline {subsection}{\numberline {2.6.2}Metode Frobenius pada Schwarzschild Anti-de Sitter}{19}{subsection.116}%
+\contentsline {chapter}{\numberline {3}METODOLOGI}{23}{chapter.123}%
+\contentsline {section}{\numberline {3.1}Metode Penelitian}{23}{section.124}%
+\contentsline {section}{\numberline {3.2}Diagram Alir Metodologi}{23}{section.125}%
+\contentsline {chapter}{\numberline {4}HASIL DAN PEMBAHASAN}{25}{chapter.127}%
+\contentsline {section}{\numberline {4.1}Relasi Rekursif Tiga Suku}{25}{section.128}%
+\contentsline {subsection}{\numberline {4.1.1}Schwarzschild}{26}{subsection.133}%
+\contentsline {subsection}{\numberline {4.1.2}Schwarzschild Anti-de Sitter}{27}{subsection.143}%
+\contentsline {section}{\numberline {4.2}Spektrum Frekuensi Eigen Mode Kuasinormal}{28}{section.149}%
+\contentsline {subsection}{\numberline {4.2.1}Schwarzschild}{28}{subsection.150}%
+\contentsline {subsection}{\numberline {4.2.2}Schwarzschild Anti-de Sitter}{33}{subsection.157}%
+\contentsline {section}{\numberline {4.3}Kestabilan Lubang Hitam}{38}{section.164}%
+\contentsline {chapter}{\numberline {5}PENUTUP}{41}{chapter.165}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{41}{section.166}%
+\contentsline {section}{\numberline {5.2}Saran}{41}{section.169}%
+\contentsline {chapter}{DAFTAR PUSTAKA}{43}{chapter*.173}%
+\contentsline {chapter}{\numberline {A}Penurunan Persamaan Medan Einstein}{47}{appendix.174}%
+\contentsline {chapter}{\numberline {B}Penurunan Persamaan Perturbasi Medan Skalar}{51}{appendix.200}%
+\contentsline {section}{\numberline {B.1}Penurunan Persamaan Perturbasi Medan Skalar Tak Bermassa}{51}{section.201}%
+\contentsline {section}{\numberline {B.2}Penurunan Persamaan Perturbasi Medan Skalar Bermassa}{53}{section.224}%
+\contentsline {chapter}{\numberline {C}Penurunan Relasi Rekurensi Schwarzschild}{57}{appendix.239}%
+\contentsline {section}{\numberline {C.1}Medan Skalar Tak Bermassa}{57}{section.240}%
+\contentsline {section}{\numberline {C.2}Medan Skalar Bermassa}{59}{section.258}%
+\contentsline {chapter}{\numberline {D}Penurunan Relasi Rekurensi Schwarzschild Anti de-Sitter}{65}{appendix.308}%
+\contentsline {section}{\numberline {D.1}Medan Skalar Tak Bermassa}{65}{section.309}%
+\contentsline {section}{\numberline {D.2}Medan Skalar Bermassa}{69}{section.353}%
+\contentsline {chapter}{\numberline {E}Algoritma Komputasi Frekuensi Eigen Schwarzschild}{75}{appendix.412}%
+\contentsline {chapter}{\numberline {F}Algoritma Komputasi Frekuensi Eigen Schwarzschild Anti-de Sitter}{79}{appendix.525}%

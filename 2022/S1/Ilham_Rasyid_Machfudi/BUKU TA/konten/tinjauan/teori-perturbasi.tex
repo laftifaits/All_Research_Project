@@ -1,0 +1,145 @@
+\section{Teori Perturbasi Lubang Hitam}
+\label{sec:teori_perturbasi}
+
+\noindent Meskipun lubang hitam dikenal sebagai objek yang stabil dalam konteks mekanika 
+klasik, pertanyaan mengenai stabilitasnya terhadap gangguan kecil tetap menjadi pertanyaan 
+fisik yang mendasar. Pada tahun 1957, Regge dan Wheeler melakukan studi stabilitas pertama 
+dengan menganalisis bagaimana metrik Schwarzschild berubah ketika dikenai perturbasi kecil 
+\parencite{Regge1957}:
+\begin{equation}
+    g_{\mu\nu} = g_{\mu\nu}^{\text{background}} + h_{\mu\nu},
+\end{equation}
+dengan $|h_{\mu\nu}| \ll 1$. Penelitian ini menunjukkan bahwa perturbasi kecil pada lubang hitam Schwarzschild menghasilkan persamaan gelombang dengan potensial efektif yang kemudian dikenal sebagai persamaan Regge-Wheeler \parencite{Frolov1998}.
+
+Temuan ini membuka perspektif baru bahwa respons dinamis lubang hitam terhadap gangguan 
+dapat dipelajari secara sistematis melalui analisis perturbasi linier. Gangguan pada lubang 
+hitam sendiri dapat dibedakan menjadi tiga jenis berdasarkan spin medan yang meninjaunya, 
+yaitu medan skalar (spin $s=0$), medan elektromagnetik (spin $s=1$), dan medan gravitasi 
+(spin $s=2$) \parencite{Konoplya2011}. Ketiga jenis gangguan ini memiliki tingkat kerumitan 
+analisis yang berbeda; medan skalar merupakan jenis gangguan paling sederhana karena 
+dinamikanya tidak memberikan pengaruh balik terhadap geometri ruang-waktu, sehingga menjadi 
+titik awal yang wajar sebelum meninjau jenis gangguan yang lebih kompleks.
+
+\subsection{Perturbasi Medan Skalar}
+\label{subsec:perturbasi-skalar}
+ 
+\noindent Sebuah medan skalar mematuhi persamaan Klein-Gordon dalam ruang-waktu lengkung,
+\begin{equation}
+    \partial_\mu \left(\sqrt{-g} g^{\mu\nu} \partial_\nu \phi\right) = 0.
+    \label{eq:dinamika-medan-skalar}
+\end{equation}
+Karena latar belakang yang ditinjau berupa lubang hitam Schwarzschild yang bersifat statis 
+dan bersimetri bola, persamaan ini dapat disederhanakan melalui separasi variabel dengan 
+mengeluarkan variabel $\theta$ dan $\varphi$ dari permasalahan yang ditinjau. Ansatz yang 
+digunakan untuk separasi variabel adalah
+\begin{equation}
+    \phi(t, r, \theta, \varphi) = e^{-i\omega t}\, R(r)\, Y_{\ell m}(\theta, \varphi),
+    \label{eq:ansatz}
+\end{equation}
+Dengan mensubstitusikan ansatz \eqref{eq:ansatz} beserta komponen tensor metrik ke dalam 
+persamaan \eqref{eq:dinamika-medan-skalar}, didapatkan
+\begin{equation}
+    \frac{\omega^2}{f(r)}\, R(r)\, Y_{\ell m} + \frac{Y_{\ell m}}{r^2}\frac{d}{dr}\left(r^2 f(r) \frac{dR}{dr}\right) + \frac{R(r)}{r^2}\, \nabla^2_{\theta,\varphi} Y_{\ell m} = 0,
+    \label{eq:sebelum-eigen}
+\end{equation}
+Pada Persamaan \eqref{eq:sebelum-eigen}, 
+$\nabla^2_{\theta,\varphi}$ adalah bagian sudut dari operator Laplace-Beltrami. Karena 
+harmonik sferis $Y_{\ell m}(\theta,\varphi)$ merupakan fungsi eigen dari operator tersebut,
+\begin{equation}
+    \nabla^2_{\theta,\varphi}\, Y_{lm} = -l(l+1)\, Y_{lm}, \qquad l = 0, 1, 2, \dots,
+    \label{eq:eigen-harmonik-sferis}
+\end{equation}
+Persamaan \eqref{eq:sebelum-eigen} dapat dibagi dengan $R(r)\,Y_{\ell m}$, sehingga bagian sudutnya
+saling meniadakan dan tersisa persamaan diferensial radial murni untuk $R(r)$,
+\begin{equation}
+    \frac{1}{r^2}\frac{d}{dr}\left(r^2 f(r) \frac{dR}{dr}\right) + \left[\frac{\omega^2}{f(r)} - \frac{\ell(\ell+1)}{r^2}\right] R(r) = 0.
+    \label{eq:radial-R}
+\end{equation}
+Bentuk persamaan ini dapat disederhanakan dengan memperkenalkan koordinat radial baru $\Psi(r)$ 
+melalui
+\begin{equation}
+    R(r) = \frac{\Psi(r)}{r},
+    \label{eq:transformasi-psi}
+\end{equation}
+yang mengubah Persamaan \eqref{eq:radial-R} menjadi persamaan gelombang perturbasi lubang hitam 
+Schwarzschild dalam variabel $\Psi$,
+\begin{equation}
+    f^2(r)\frac{d^2\Psi}{dr^2} + f(r)f'(r)\frac{d\Psi}{dr} + \left[\omega^2 - f(r)\left(\frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r}\right)\right]\Psi = 0.
+    \label{eq:pers-radial}
+\end{equation}
+Suku yang menyertai $\Psi$ pada 
+Persamaan \eqref{eq:pers-radial} kelak dikenal sebagai potensial 
+Regge-Wheeler $V(r)$,
+\begin{equation}
+    V(r) = f(r) \left( \frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r} \right),
+    \label{eq:potensial-skalar}
+\end{equation}
+di mana nilai fungsi metrik lubang hitam Schwarzschild adalah $f(r) = 1 - 2M/r$,
+\begin{equation}
+    V(r) = \left( 1 - \frac{2M}{r} \right) \left( \frac{\ell(\ell+1)}{r^2} + \frac{2M}{r^3} \right).
+    \label{eq:potensial-schwarzschild-skalar}
+\end{equation}
+Diperkenalkan koordinat \textit{tortoise} $r_*$, yang dikenal pula sebagai koordinat
+\textit{tortoise} Regge-Wheeler \parencite{Regge1957}, dan didefinisikan melalui
+hubungan
+\begin{equation}
+    dr_* = \frac{dr}{f(r)}.
+    \label{eq:def-tortoise}
+\end{equation}
+Nilai koordinat \textit{tortoise} diperoleh dengan mengintegralkan $1/f(r)$ terhadap $r$
+sesuai hubungan \eqref{eq:def-tortoise}. Dengan menyubstitusikan fungsi metrik Schwarzschild
+$f(r) = 1 - 2M/r$, menghasilkan nilai koordinat tortoise:
+\begin{equation}
+    r_* = r + 2M \ln \left(\frac{r}{2M} - 1\right).
+    \label{eq:koordinat-tortoise}
+\end{equation}
+Dengan memasukkan nilai $r = 2M$, diperoleh nilai tak hingga negatif ($r_* = -\infty$).
+Hal ini diinterpretasikan bahwa ketika mendekati horizon peristiwa, daerah di sekitar horizon peristiwa 
+dapat dibentangkan menjadi domain yang lebih luas. Sementara itu,
+tak hingga spasial ($r \to \infty$) tetap terletak pada $r_* \to +\infty$. Dengan demikian,
+koordinat \textit{tortoise} memetakan domain radial $r \in (2M, \infty)$ menjadi
+$r_* \in (-\infty, \infty)$, sehingga horizon peristiwa dan tak hingga spasial dapat ditinjau
+dalam satu domain yang sama.
+
+Substitusi koordinat \textit{tortoise} ini menghilangkan suku turunan pertama pada Persamaan 
+\eqref{eq:pers-radial}, sehingga persamaan tersebut dapat ditulis ulang dalam variabel $r_*$ 
+menjadi bentuk \textit{Schr\"{o}dinger-like} \parencite{Konoplya2011},
+\begin{equation}
+    \frac{d^2 \Psi}{dr_*^2} + \left( \omega^2 - V(r) \right) \Psi = 0,
+    \label{eq:master-skalar}
+\end{equation}
+dengan $V(r)$ adalah potensial Regge-Wheeler yang telah didefinisikan pada Persamaan 
+\eqref{eq:potensial-skalar}. Penurunan lengkapnya dapat dilihat pada 
+Lampiran~\ref{app:perturbasi-skalar-massless}.
+
+\subsection{Perturbasi Medan Skalar Bermassa}
+\label{subsec:perturbasi-skalar-bermassa}
+
+\noindent Selain kasus medan skalar tak bermassa, penelitian ini juga meninjau kasus medan 
+skalar bermassa untuk mengetahui bagaimana kehadiran massa medan memengaruhi spektrum 
+frekuensi kuasinormal yang dihasilkan. Persamaan gelombang untuk medan skalar bermassa 
+diperoleh dengan menambahkan suku massa $\mu$ ke dalam persamaan Klein-Gordon,
+\begin{equation}
+    \partial_\mu \left(\sqrt{-g} g^{\mu\nu} \partial_\nu \phi\right) - \mu^2 \phi = 0
+    \label{eq:medan-skalar-bermassa}
+\end{equation}
+dengan $\mu$ menyatakan massa medan skalar itu sendiri, yang perlu dibedakan dari massa 
+objek lubang hitam $M$ yang telah dibahas sebelumnya. Karena kehadiran massa tidak mengubah simetri latar belakang, prosedur pemisahan variabel dan transformasi yang sama tetap dapat diterapkan, sehingga diperoleh persamaan master dengan bentuk yang serupa dengan Persamaan \eqref{eq:master-skalar} \parencite{Konoplya2011,Berti2016}.
+
+Perbedaan pada kasus bermassa muncul pada potensial efektifnya, yang memperoleh suku massa tambahan,
+\begin{equation}
+    V(r) = f(r) \left( \frac{\ell(\ell+1)}{r^2} + \frac{f'(r)}{r} + \mu^2 \right),
+    \label{eq:potensial-bermassa}
+\end{equation}
+sehingga potensial efektif lubang hitam Schwarzschild menjadi
+\begin{equation}
+    V(r) = \left( 1 - \frac{2M}{r} \right) \left( \frac{\ell(\ell+1)}{r^2} + \frac{2M}{r^3} + \mu^2 \right).
+    \label{eq:potensial-schwarzschild-bermassa}
+\end{equation}
+Suku massa $\mu^2$ ini mengubah perilaku asimtotik potensial efektif, sehingga nilai potensial 
+pada jarak jauh tidak lagi menuju nol melainkan menuju $\mu^2$ pada latar belakang yang datar 
+secara asimtotik. Secara fisis, hal ini menunjukkan bahwa medan skalar bermassa tidak dapat 
+merambat bebas menuju jarak yang sangat jauh sebagaimana medan tak bermassa, karena keberadaan 
+potensial yang tidak lenyap pada jarak jauh cenderung menahan sebagian medan tetap berada di 
+sekitar lubang hitam alih-alih meloloskannya sepenuhnya menuju tak hingga. Penjabaran lengkap 
+tiap tahap penurunan untuk kasus bermassa ini dapat dilihat pada Lampiran~\ref{app:perturbasi-skalar-massive}.

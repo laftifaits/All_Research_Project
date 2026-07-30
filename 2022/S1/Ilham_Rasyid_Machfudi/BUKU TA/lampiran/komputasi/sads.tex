@@ -1,0 +1,144 @@
+\chapter{Algoritma Komputasi Frekuensi Eigen Schwarzschild Anti-de Sitter}
+\label{app:komputasi-sads}
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    breakatwhitespace=false,
+    breakautoindent=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+    columns=fullflexible,
+    keepspaces=true,
+    showstringspaces=false,
+    tabsize=4,
+    frame=none
+}
+
+\begin{lstlisting}[language=Python]
+import numpy as np
+import matplotlib.pyplot as plt
+
+def _stu(r_plus, l, omega, m2):
+    xp = 1.0/r_plus; c = l*(l+1)
+    s = np.array([xp*(xp**2+3), 4*xp**2+9, 6*xp+10/xp, 4+5/xp**2,
+                  (xp**2+1)/xp**3], dtype=complex)
+    t = np.array([xp*(xp**2+3)-2j*omega*xp**2, 6*xp**2+12-4j*omega*xp,
+                  12*xp+18/xp-2j*omega, 10+12/xp**2, 3/xp+3/xp**3], dtype=complex)
+    u = np.array([0, (c+1)*xp**2+3+m2, 2*c*xp+3*xp+3/xp, c+3+3/xp**2,
+                  (xp**2+1)/xp**3], dtype=complex)
+    return s, t, u
+
+def FA(omega, r_plus, l, m2, N=800):
+    xp = 1.0/r_plus
+    kappa = 0.5*(2/xp + (r_plus**3+r_plus)*xp**2)
+    s, t, u = _stu(r_plus, l, omega, m2)
+    b = np.zeros(N+1, dtype=complex); b[0] = 1.0
+    for nn in range(1, N+1):
+        Pn = 2*xp**2*nn*(nn*kappa - 1j*omega)
+        acc = 0j
+        for k in range(max(0, nn-4), nn):
+            m = nn-k
+            acc += (k*(k-1)*s[m] + k*t[m] + u[m]) * ((-xp)**m) * b[k]
+        b[nn] = -acc/Pn
+    return np.sum(b)
+
+def findA(r_plus, l, m2, guess, N=800, tol=1e-10, it=200):
+    f = lambda w: FA(w, r_plus, l, m2, N)
+    z, h = complex(guess), 1e-7
+    for _ in range(it):
+        fz = f(z)
+        if abs(fz) < tol:
+            return z, abs(fz)
+        fp = (f(z+h) - f(z-h))/(2*h)
+        if abs(fp) < 1e-300:
+            break
+        zn = z - fz/fp
+        if abs(zn - z) < tol:
+            return zn, abs(f(zn))
+        z = zn
+    return z, abs(f(z))
+
+def overtones0(r_plus, l, nmax=3, N=800):
+    g0 = r_plus*(1.85-2.66j)
+    found = [findA(r_plus, l, 0.0, g0, N)[0]]
+    found.append(findA(r_plus, l, 0.0, found[0]+r_plus*(1.31-2.26j), N)[0])
+    for _ in range(2, nmax):
+        found.append(findA(r_plus, l, 0.0, found[-1]+(found[-1]-found[-2]), N)[0])
+    return found
+
+def to_mass(r_plus, l, om0, m2_target=1.0, dstep=0.25, N=800):
+    g = om0
+    for x in np.linspace(0, m2_target, int(np.ceil(m2_target/dstep))+1)[1:]:
+        om, _ = findA(r_plus, l, x, g, N); g = om
+    return om
+
+LS, NS = [0, 1, 2], [0, 1, 2]
+COLORS = {0: "tab:blue", 1: "tab:red", 2: "tab:green"}
+
+# Gunakan grid komputasi rapat agar pencarian akar stabil saat turun,
+# tetapi hanya simpan nilai r+ diskret yang diminta.
+CALC_STEPS = [100.0, 50.0, 10.0, 5.0, 2.0, 1.0, 0.8, 0.6, 0.4]
+TARGET_RS = [0.4, 0.8, 1.0, 10.0, 50.0, 100.0]
+
+# ---- hitung mu=0 (continuation) lalu mu=1 ----
+DATA = {}
+for l in LS:
+    ov = overtones0(CALC_STEPS[0], l)
+    seeds = {n: ov[n] for n in NS}
+    rprev = CALC_STEPS[0]
+
+    for rp in CALC_STEPS:
+        for n in NS:
+            # Scaling tebakan awal: proporsional r+ jika rp >= 1, konstan jika rp < 1
+            if rp >= 1.0:
+                guess = seeds[n] * (rp / rprev)
+            else:
+                guess = seeds[n]
+
+            om, _ = findA(rp, l, 0.0, guess)
+            seeds[n] = om
+
+            if rp in TARGET_RS:
+                DATA[(l, n, rp, 0.0)] = om
+                DATA[(l, n, rp, 1.0)] = to_mass(rp, l, om)
+        rprev = rp
+
+RS = np.array(TARGET_RS)
+
+# ---- 6 gambar terpisah ----
+for n in NS:
+    for part, ylab in [("R", r"$\omega_R$"),
+                       ("I", r"$\omega_I$")]:
+        plt.figure(figsize=(7.8, 5.6))
+        for l in LS:
+            y0 = [(DATA[(l, n, rp, 0.0)].real if part == "R"
+                   else -DATA[(l, n, rp, 0.0)].imag) for rp in RS]
+            y1 = [(DATA[(l, n, rp, 1.0)].real if part == "R"
+                   else -DATA[(l, n, rp, 1.0)].imag) for rp in RS]
+
+            plt.plot(RS, y0, "-o", color=COLORS[l], ms=5, label=fr"$\ell={l},\ \mu=0$")
+            plt.plot(RS, y1, "--s", color=COLORS[l], ms=5, mfc="white",
+                     label=fr"$\ell={l},\ \mu=1$")
+
+        # Skala linier, label disesuaikan
+        plt.xlabel(r"$r_+$")
+        plt.ylabel(ylab)
+        plt.grid(alpha=0.3)
+        plt.legend(fontsize=8)
+        plt.tight_layout()
+        plt.savefig(f"grafik_sads_n{n}_w{part}.png", dpi=140, bbox_inches="tight")
+        plt.close()
+print("Tersimpan 6 gambar SAdS: grafik_sads_n{0,1,2}_{wR,wI}.png")
+
+# ---- tabel ----
+print("\nTABEL SAdS - omega = omega_R - i*omega_I")
+for n in NS:
+    print(f"\n  overtone n = {n}")
+    print(f"  {'l':>2} {'r+':>5} | {'wR(mu0)':>9} {'wI(mu0)':>9} | {'wR(mu1)':>9} {'wI(mu1)':>9}")
+    print("  "+"-"*52)
+    for l in LS:
+        for rp in RS:
+            a = DATA[(l, n, rp, 0.0)]; b = DATA[(l, n, rp, 1.0)]
+            print(f"  {l:>2} {rp:>5.1f} | {a.real:>9.3f} {-a.imag:>9.3f} | {b.real:>9.3f} {-b.imag:>9.3f}")
+\end{lstlisting}

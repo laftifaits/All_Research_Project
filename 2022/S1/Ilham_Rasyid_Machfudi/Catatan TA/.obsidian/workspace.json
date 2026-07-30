@@ -1,0 +1,336 @@
+{
+  "main": {
+    "id": "5d0648c6f77495eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "a543555d32ec0b51",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc361478ff08b7a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Metode Frobenius pada Schwarzschild.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Metode Frobenius pada Schwarzschild"
+            }
+          },
+          {
+            "id": "5d86a504f4c41428",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Metode Frobenius secara Umum.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Metode Frobenius secara Umum"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a9cd48f6c9c6e422",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e55782fe49e32ed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "db59f2048a9f35b8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ed970bcbee191a0e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0f6835ad597c6cc8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "829cc9fc6824c638",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti"
+            }
+          }
+        ]
+      },
+      {
+        "id": "877efb4d5dc199ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "924757b22f147fa3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Teori Perturbasi/Penurunan Perturbasi Medan Skalar di Schwarzschild.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Penurunan Perturbasi Medan Skalar di Schwarzschild"
+            }
+          },
+          {
+            "id": "21d438396cba5b75",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Metode Frobenius secara Umum.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.7132754515900187,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Metode Frobenius secara Umum"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "e00387d64883b6b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "d46e81af91251464",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64f3ea2273949820",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti"
+            }
+          },
+          {
+            "id": "9c0d2184bb5e5983",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti"
+            }
+          },
+          {
+            "id": "35db64e5364bb564",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "70fdfa4e1030e98a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f5f099d4c276a1a2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Catatan tambahan mengenai perturbasi medan skalar dari 2 catatan Berti"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "5d86a504f4c41428",
+  "lastOpenFiles": [
+    "Metode Frobenius secara Umum.md",
+    "Metode Frobenius pada Schwarzschild.md",
+    "QNM/Perbaikan Metode Frobenius QNM dibagi r.md",
+    "QNM/Perbaikan Metode Frobenius QNM dibagi r pangkat.md",
+    "QNM/Penjelasan A(z), B(z), C(z).md",
+    "QNM/Penjelasan r pangkat -1.md",
+    "Teori Perturbasi/persamaan gerak dari medan materi.md",
+    "Teori Perturbasi/Penurunan Fluktuasi Skalar hingga Potensial Radial.md",
+    "Teori Perturbasi/Penurunan Perturbasi Medan Skalar di Schwarzschild.md",
+    "Teori Perturbasi/Penurunan Fluktuasi Medan Skalar.md",
+    "QNM/Metode Frobenius.md",
+    "QNM/Pengerjaan QNM dengan Metode Frobenius.md",
+    "Untitled 2.md",
+    "Draft TA/Latar Belakang.md",
+    "Pengerjaan Deret Frobenius pada SAdS.md",
+    "Titik singularitas dalam SdS.md",
+    "AdS Space/Persamaan Gelombang SAdS.md",
+    "SdS/Penyelesaian QNM di Schwarzschild de Sitter.md",
+    "Pasted image 20260530194008.png",
+    "Draft TA",
+    "Untitled 1.md",
+    "Untitled.md",
+    "SdS",
+    "Teori Perturbasi/Perturbasi pada Geometri Schwarzschild Anti de-Sitter dimensi d.md",
+    "AdS Space/Anti de-Sitter Space.md",
+    "Eliminasi Gauss.md",
+    "Persamaan Eigen.md",
+    "QNM/Definisi QNM.md",
+    "QNM/Titik singular dan Syarat Batas.md",
+    "AdS Space",
+    "QNM",
+    "Teori Perturbasi",
+    "Lubang Hitam",
+    "Untitled.base",
+    "Untitled 1.base"
+  ]
+}

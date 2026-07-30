@@ -1,0 +1,158 @@
+\section{Relasi Rekursif Tiga Suku}
+\label{sec:rekurensi}
+
+Pada bagian ini dijelaskan proses mendapatkan relasi rekursif dengan menyubstitusikan solusi Frobenius ke dalam persamaan master radial \eqref{eq:pers-radial} hingga diperoleh relasi rekursif tiga suku. Koefisien relasi rekursif yang diperoleh selanjutnya digunakan sebagai dasar dalam perhitungan numerik frekuensi mode kuasinormal.
+
+\noindent Substitusi ansatz \eqref{eq:ansatz_frobenius} ke dalam persamaan radial hingga didapatkan relasi
+rekursif bagi koefisien $a_n$. Relasi rekursif ini harus diselesaikan lebih lanjut
+menggunakan metode pecahan berlanjut, yang mensyaratkan relasi rekursif berbentuk tiga suku,
+\begin{equation}
+    \alpha_n a_{n+1} + \beta_n a_n + \gamma_n a_{n-1} = 0,
+    \label{eq:three_term}
+\end{equation}
+dengan koefisien $\alpha_n$, $\beta_n$, dan $\gamma_n$ sebagai fungsi yang mengandung
+$\omega$. Apabila relasi rekursif yang diperoleh memiliki lebih dari tiga suku, relasi
+tersebut terlebih dahulu direduksi menjadi tiga suku melalui eliminasi Gaussian
+\parencite{Leaver1985, Konoplya2011}.
+
+Bentuk pecahan berlanjut diperoleh langsung dari relasi rekursif tiga suku tersebut.
+Dengan mendefinisikan rasio antara dua koefisien berurutan,
+\begin{equation}
+    R_n = \frac{a_n}{a_{n-1}},
+\end{equation}
+dan membagi Persamaan~\eqref{eq:three_term} dengan $a_n$, diperoleh hubungan rekursif
+\begin{equation}
+    R_n = \frac{-\gamma_n}{\beta_n + \alpha_n R_{n+1}}.
+    \label{eq:rasio-rekursif}
+\end{equation}
+Penerapan Persamaan~\eqref{eq:rasio-rekursif} secara berulang menghasilkan bentuk pecahan
+yang bersusun tanpa batas, yang dikenal sebagai pecahan berlanjut \parencite{Leaver1985}.
+
+Deret Frobenius hanya konvergen apabila koefisien $a_n$ merupakan solusi minimal dari relasi
+rekursif. Konvergensi deret pada batas luar domain ($z \to 1$) setara dengan terpenuhinya kondisi batas fisik pada batas
+tersebut, dan hanya tercapai untuk nilai $\omega$ diskret tertentu yang merupakan frekuensi
+\textit{quasinormal modes} \parencite{Konoplya2011}. Syarat solusi minimal terpenuhi ketika
+rasio $R_1 = a_1/a_0$ dari pecahan berlanjut konsisten dengan relasi rekursif pada $n = 0$,
+yaitu $\alpha_0 a_1 + \beta_0 a_0 = 0$ (karena $a_{-1}$ tidak ada). Penggabungan kedua syarat
+menghasilkan kondisi pecahan berlanjut
+\begin{equation}
+    \beta_0 = \frac{\alpha_0 \gamma_1}{\beta_1 - \cfrac{\alpha_1 \gamma_2}{\beta_2 - \cfrac{\alpha_2 \gamma_3}{\beta_3 - \cdots}}}.
+    \label{eq:continued_fraction}
+\end{equation}
+Persamaan~\eqref{eq:continued_fraction} bersifat transenden dan diselesaikan secara numerik
+dengan memotong pecahan berlanjut pada kedalaman tertentu. Setiap akar $\omega$ yang
+diperoleh berpadanan dengan satu mode pada spektrum frekuensi \textit{quasinormal modes}
+\parencite{Leaver1985, Konoplya2011}.
+
+\subsection{Schwarzschild}
+\label{subsec:deriv-schw}
+
+Ansatz Frobenius untuk ruang-waktu Schwarzschild telah diperoleh pada Persamaan~\eqref{eq:ansatz_saf}. Untuk menurunkan relasi rekursif, ansatz tersebut dituliskan kembali dalam bentuk
+\begin{equation}
+    \Psi(r)=\underbrace{e^{i\omega r}(r-2M)^{-2iM\omega}r^{4iM\omega}}_{W(r)}\underbrace{\sum_{n=0}^{\infty}a_nz^n}_{u(z)}.
+    \label{eq:ansatz-schw-full}
+\end{equation} 
+
+Variabel deret yang digunakan adalah
+\begin{equation}
+    z=\frac{r-r_h}{r}=1-\frac{r_h}{r}, \qquad r=\frac{r_h}{1-z},
+    \label{eq:variabel-z-schw}
+\end{equation}
+dengan $r_h=2M$. Variabel ini memetakan horizon peristiwa ke $z=0$ dan tak hingga spasial ke $z=1$. Dengan menggunakan fungsi metrik Schwarzschild pada Persamaan~\eqref{eq:fungsi-metrik-schwarzschild}, diperoleh
+\begin{equation}
+    f(r)=1-\frac{2M}{r} = z.
+    \label{eq:f-sama-dengan-z}
+\end{equation}
+Kesamaan bentuk antara $f(r)$ dan $z$ menyederhanakan transformasi persamaan radial ke dalam variabel deret.
+
+Turunan variabel $z$ terhadap $r$ diberikan oleh
+\begin{equation}
+    \frac{dz}{dr}=\frac{2M}{r^2}=\frac{(1-z)^2}{2M}, \qquad \frac{d^2z}{dr^2}=-\frac{4M}{r^3}=-\frac{(1-z)^3}{2M^2}.
+    \label{eq:dzdr-schw}
+\end{equation}
+Dengan menerapkan aturan hasil kali dan aturan rantai pada $\Psi(r)=W(r)u(z)$, diperoleh
+\begin{align}
+    \frac{d\Psi}{dr} &= W\left[\frac{W'}{W}u+\frac{dz}{dr}\frac{du}{dz}\right], \notag\\[4pt]
+    \frac{d^2\Psi}{dr^2} &= W\left[\frac{W''}{W}u+\left(2\frac{W'}{W}\frac{dz}{dr}+\frac{d^2z}{dr^2}\right)\frac{du}{dz}+\left(\frac{dz}{dr}\right)^2\frac{d^2u}{dz^2}\right].
+    \label{eq:turunan-produk-schw}
+\end{align}
+Turunan faktor asimtotik yang diperlukan adalah
+\begin{equation}
+    \frac{W'}{W}=i\omega-\frac{2iM\omega}{r-2M}+\frac{4iM\omega}{r}, \qquad \frac{W''}{W}=\frac{d}{dr}\left(\frac{W'}{W}\right)+\left(\frac{W'}{W}\right)^2.
+    \label{eq:turunan-W-schw}
+\end{equation}
+
+Persamaan~\eqref{eq:turunan-produk-schw} dan \eqref{eq:turunan-W-schw} kemudian disubstitusikan ke dalam persamaan master radial \eqref{eq:pers-radial}. Setelah seluruh persamaan dibagi dengan $W(r)$, semua fungsi yang masih bergantung pada $r$ dinyatakan dalam variabel $z$ menggunakan Persamaan~\eqref{eq:variabel-z-schw}, \eqref{eq:f-sama-dengan-z}, dan \eqref{eq:dzdr-schw}. Eliminasi faktor bersama dan penyebut menghasilkan persamaan diferensial
+\begin{equation}
+    A(z)\frac{d^2u}{dz^2}+B(z)\frac{du}{dz}+C(z)u=0.
+    \label{eq:ode-polynomial-schw}
+\end{equation}
+Penjabaran aljabar secara lengkap dari tahap substitusi hingga diperolehnya Persamaan~\eqref{eq:ode-polynomial-schw} diberikan pada Lampiran~\ref{app:rekuren-schw}.
+
+Koefisien polinomial pada Persamaan~\eqref{eq:ode-polynomial-schw} diperoleh sebagai
+\begin{equation}
+    \begin{aligned}
+        A(z) &= z^4-2z^3+z^2, \\
+        B(z) &= (3-8iM\omega)z^3+(-4+16iM\omega)z^2+(1-4iM\omega)z, \\
+        C(z) &= \left(1-16M^2\omega^2-8iM\omega\right)z^2+\left[-\ell(\ell+1)-1+32M^2\omega^2+8iM\omega\right]z.
+    \end{aligned}
+    \label{eq:koef-schw}
+\end{equation}
+Deret $u(z)$ pada Persamaan~\eqref{eq:ansatz-schw-full} beserta turunannya kemudian disubstitusikan ke dalam Persamaan~\eqref{eq:ode-polynomial-schw}. Berdasarkan struktur pangkat pada Persamaan~\eqref{eq:koef-schw}, pencocokan koefisien pada setiap pangkat $z$ hanya melibatkan $a_{k+1}$, $a_k$, dan $a_{k-1}$. Dengan demikian, relasi yang diperoleh memiliki bentuk tiga suku sebagaimana Persamaan~\eqref{eq:three_term}, dengan koefisien
+\begin{equation}
+    \begin{aligned}
+        \alpha_k &= (k+1)(k+1-4iM\omega), \\
+        \beta_k &= -2k(k+1)-\ell(\ell+1)-1+32M^2\omega^2+8iM\omega(2k+1), \\
+        \gamma_k &= (k-4iM\omega)^2.
+    \end{aligned}
+    \label{eq:koef-rekurensi-schw}
+\end{equation}
+
+\subsection{Schwarzschild Anti-de Sitter}
+\label{subsec:deriv-sads}
+
+\noindent Ansatz Frobenius untuk ruang-waktu Schwarzschild Anti-de Sitter telah diperoleh pada
+Persamaan~\eqref{eq:ansatz_sads}. Untuk menurunkan relasi rekursif, langkah berikutnya adalah mensubstitusikan solusi Frobenius tersebut ke dalam persamaan master radial. Seluruh turunan terhadap koordinat $r$ kemudian ditransformasikan ke dalam variabel $z$. Selanjutnya, persamaan dikalikan dengan faktor yang sesuai untuk menghilangkan penyebut sehingga diperoleh persamaan diferensial berkoefisien polinomial,
+\begin{equation}
+    \widetilde{A}(z)\frac{d^2u}{dz^2} + \widetilde{B}(z)\frac{du}{dz} + \widetilde{C}(z)u = 0, \quad u(z)=\sum_{n=0}^{\infty}a_n z^n 
+\end{equation}
+Konvolusi deret yang muncul selama proses substitusi menghasilkan persamaan jalinan indeks untuk setiap basis, yang selanjutnya digunakan untuk memperoleh relasi rekursif.
+
+Derajat polinomial $\widetilde{A}(z)$, $\widetilde{B}(z)$, dan $\widetilde{C}(z)$
+pada kasus SAdS lebih tinggi dibandingkan Schwarzschild karena fungsi metrik $f(r)$ memuat
+suku tambahan $r^2/L^2$ yang berasal dari konstanta kosmologi. Suku ini menyumbang pangkat
+$r$ yang lebih tinggi pada pembilang persamaan radial, sehingga ketika seluruh persamaan
+ditransformasikan ke variabel $z$, derajat polinomial koefisiennya turut meningkat.
+Akibatnya, jumlah suku pada relasi rekursif yang dihasilkan pun bertambah, sebagaimana
+diuraikan pada Lampiran~\ref{app:rekuren-sads}.
+
+Pada kasus Schwarzschild Anti-de Sitter, derajat polinomial koefisien yang lebih tinggi menyebabkan relasi rekursif yang diperoleh berbentuk $N$ suku,
+\begin{equation}
+    \sum_{j=0}^{\min(N-1,k)} c_{j,k}^{(N)}(\omega)\, a_{k-j} = 0,
+    \label{eq:rekurensi-N-suku}
+\end{equation}
+dengan $N>3$, sehingga tidak dapat langsung diselesaikan dengan metode pecahan berlanjut yang mensyaratkan bentuk tiga suku. Pada Persamaan~\eqref{eq:rekurensi-N-suku}, indeks $k$ menyatakan suku deret yang sedang ditinjau (sejalan dengan indeks $a_k$), sedangkan indeks $j$ menyatakan jarak suku $a_{k-j}$ terhadap $a_k$ dalam relasi tersebut. Oleh karena itu, diperlukan metode tambahan Eliminasi Gaussian untuk mereduksi relasi rekursif tersebut menjadi tiga suku.
+
+Metode Eliminasi Gaussian yang telah disebutkan pada Subbab~\ref{sec:rekurensi} diterapkan secara bertahap untuk menghilangkan koefisien berindeks $j$ terluar, dimulai dari relasi $N$ suku hingga tersisa tiga suku \parencite{Konoplya2011}. Setiap tahap reduksi mengubah relasi $(m+1)$ suku menjadi relasi $m$ suku, dengan $m$ berkurang secara berurutan dari $N-1$ hingga $3$. Koefisien pada tahap ke-$m$ diperoleh dari koefisien pada tahap sebelumnya melalui
+\begin{equation}
+    c_{j,k}^{(m)}(\omega) = c_{j,k}^{(m+1)}(\omega), \qquad j=0 \ \text{atau}\ k<m,
+\end{equation}
+\begin{equation}
+    c_{j,k}^{(m)}(\omega) = c_{j,k}^{(m+1)}(\omega)
+    - \frac{c_{m,k}^{(m+1)}(\omega)\, c_{j-1,k-1}^{(m)}(\omega)}{c_{m-1,k-1}^{(m)}(\omega)},
+    \qquad j\geq 1 \ \text{dan}\ k\geq m.
+\end{equation}
+Baris pertama berlaku untuk suku yang belum tersentuh proses eliminasi pada tahap tersebut, sedangkan baris kedua menghitung koreksi bagi suku yang terpengaruh akibat penghapusan koefisien terluar $c_{m,k}^{(m+1)}$. Iterasi ini diterapkan berulang hingga diperoleh relasi rekursif tiga suku pada $m=3$.
+
+Hasil reduksi tersebut dapat dituliskan dalam bentuk
+
+\begin{equation}
+    \tilde{\alpha}_k a_{k+1}
+    +
+    \tilde{\beta}_k a_k
+    +
+    \tilde{\gamma}_k a_{k-1}
+    =0,
+\end{equation}
+
+dengan $\tilde{\alpha}_k \equiv c_{0,k}^{(3)}$, $\tilde{\beta}_k \equiv c_{1,k}^{(3)}$, dan $\tilde{\gamma}_k \equiv c_{2,k}^{(3)}$ merupakan koefisien hasil reduksi Eliminasi Gaussian pada tahap terakhir. Berbeda dengan latar belakang Schwarzschild, relasi rekursif tiga suku ini diselesaikan secara langsung melalui rekursi maju untuk memperoleh setiap koefisien $a_k$, kemudian dijumlahkan sebagai deret; akar $\omega$ yang membuat jumlah deret tersebut lenyap pada batas anti-de Sitter, sesuai kondisi Dirichlet pada Persamaan~\eqref{eq:ansatz_sads}, merupakan frekuensi kompleks mode kuasinormal \parencite{Horowitz2000}.

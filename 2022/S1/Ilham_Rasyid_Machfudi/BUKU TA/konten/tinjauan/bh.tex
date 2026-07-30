@@ -1,0 +1,183 @@
+\section{Lubang Hitam Schwarzschild}
+\label{sec:lubang-hitam}
+
+\noindent Lubang hitam merupakan salah satu prediksi dari teori relativitas 
+umum, yaitu suatu daerah dalam ruang-waktu yang memiliki medan gravitasi sedemikian kuat 
+sehingga tidak ada benda apa pun, termasuk cahaya, yang dapat lepas dari dalamnya begitu 
+telah melewati suatu batas tertentu \parencite{Frolov1998}. Secara lebih formal, 
+lubang hitam dapat didefinisikan sebagai daerah ruang-waktu yang secara kausal terputus 
+dari pengamat pada jarak tak hingga, yakni tidak ada sinyal fisis maupun informasi apa 
+pun dari daerah tersebut yang dapat mencapai daerah yang jauh \parencite{Chandrasekhar1983}. 
+Berbeda dengan objek astrofisika pada umumnya, lubang hitam tidak dicirikan oleh permukaan fisis yang padat, melainkan oleh 
+struktur kausal ruang-waktunya sendiri, yang batasnya dikenal sebagai horizon peristiwa.
+
+Horizon peristiwa merupakan permukaan yang membatasi daerah lubang hitam dari daerah 
+ruang-waktu di luarnya, di mana segala sesuatu yang melintasinya menuju ke dalam, baik 
+materi maupun radiasi, tidak dapat lagi kembali keluar, sehingga daerah yang masih dapat 
+berkomunikasi dengan pengamat di kejauhan terpisah secara permanen dari daerah di baliknya 
+\parencite{Frolov1998, Wald1984}. Meskipun demikian, horizon peristiwa berbeda dari permukaan fisis biasa seperti dinding 
+atau batas suatu objek padat. Seorang pengamat yang melintasi horizon peristiwa tidak akan 
+merasakan keganjilan fisis apa pun secara lokal pada saat melintas, karena horizon 
+peristiwa bukan merupakan tempat dengan kelengkungan tak hingga, melainkan semata-mata 
+penanda batas kausal. Dalam pembahasan pada penelitian ini, horizon 
+peristiwa berperan penting sebagai salah satu titik batas domain fisis yang menjadi acuan 
+kondisi batas.
+
+Di samping horizon peristiwa, lubang hitam juga dicirikan oleh keberadaan singularitas, 
+yaitu di titik pusat lubang hitam tempat kelengkungan ruang-waktu menjadi tak hingga dan 
+deskripsi geometri klasik tidak lagi berlaku \parencite{Frolov1998}. Berbeda dengan horizon 
+peristiwa yang hanya menandai batas kausal, singularitas merupakan tempat kelengkungan 
+yang sesungguhnya tak hingga dan tidak dapat dihilangkan oleh transformasi koordinat 
+apa pun.
+
+Berbeda dengan objek astrofisika lain yang memerlukan banyak besaran untuk 
+mendeskripsikannya secara lengkap, lubang hitam justru dicirikan oleh jumlah besaran yang 
+sangat sedikit. Berdasarkan teorema ketiadaan rambut (\textit{no-hair theorem}), lubang 
+hitam sepenuhnya dicirikan hanya oleh tiga besaran, yaitu massa, momentum sudut, dan muatan 
+listrik \parencite{Frolov1998, Ruffini1971}. Pada geometri ruang-waktu yang statis dan 
+bersimetri bola sebagaimana dideskripsikan oleh solusi Schwarzschild, momentum sudut dan 
+muatan listrik bernilai nol, sehingga diperoleh jenis lubang hitam paling sederhana yang 
+sepenuhnya dicirikan hanya oleh massanya.
+
+Cara paling langsung untuk memahami struktur geometri lubang hitam Schwarzschild adalah 
+dengan meninjau perilaku kerucut cahaya (\textit{light cone}) di sekitarnya 
+\parencite{Carroll2004}. Lintasan cahaya radial diperoleh dengan menetapkan $\theta$ dan 
+$\varphi$ konstan serta $ds^2 = 0$ pada elemen garis Schwarzschild. Karena $\theta$ dan 
+$\varphi$ tidak berubah sepanjang lintasan, perubahan infinitesimalnya $d\theta$ dan 
+$d\varphi$ bernilai nol, sehingga elemen garis tereduksi menjadi
+\begin{equation}
+    0 = -f(r)\,dt^2 + f(r)^{-1}\,dr^2,
+\end{equation}
+yang menghasilkan laju koordinat cahaya radial
+\begin{equation}
+    \frac{dt}{dr} = \pm\frac{1}{f(r)}.
+    \label{eq:laju-cahaya-radial}
+\end{equation}
+Pada jarak yang jauh dari lubang hitam ($r \gg 2M$), $f(r) \to 1$ sehingga $dt/dr \to \pm 1$ 
+dan kerucut cahaya tampak terbuka lebar seperti pada ruang-waktu datar. Akan tetapi, ketika 
+$r$ mendekati $2M$, fungsi metrik $f(r) \to 0$ sehingga $dt/dr \to \pm\infty$, yang berarti 
+kerucut cahaya semakin menyempit dan akhirnya menutup sepenuhnya tepat di $r = 2M$ 
+\parencite{Carroll2004}. Penutupan kerucut cahaya ini secara fisis menunjukkan bahwa cahaya 
+yang berada di permukaan $r = 2M$ tidak lagi dapat merambat menjauh dari lubang hitam, 
+melainkan hanya dapat menyusuri permukaan itu sendiri atau jatuh ke dalam.
+
+Secara formal, perilaku ini berkaitan langsung dengan sifat kausal dari permukaan 
+$r = \text{konstan}$ itu sendiri. Permukaan horizon peristiwa secara definisi merupakan 
+permukaan nol (\textit{null hypersurface}), yaitu permukaan yang hanya dapat dilintasi ke 
+satu arah oleh kurva kausal \parencite{Carroll2004}. Untuk menentukan letak permukaan ini, 
+setiap permukaan $r = \text{konstan}$ memiliki vektor normal yang diberikan oleh gradien 
+fungsi $r$,
+\begin{equation}
+    \eta_\mu = \partial_\mu r,
+\end{equation}
+yang secara alamiah berbentuk \textit{one-form} (kovektor) dan selalu tegak lurus terhadap 
+permukaan $r = \text{konstan}$ \parencite{Carroll2004}. Sifat kausal permukaan ditentukan 
+oleh norma vektor normalnya. Karena $\eta_\mu$ berindeks bawah, normanya dihitung 
+menggunakan invers metrik $g^{\mu\nu}$. Mengingat bahwa $\partial_\mu r$ hanya memiliki 
+komponen tak nol pada $\mu = r$, perhitungan norma secara langsung menghasilkan
+\begin{equation}
+    g^{\mu\nu}\eta_\mu\eta_\nu = g^{rr}.
+\end{equation}
+Ketika $g^{rr} = 0$, vektor normal bersifat \textit{null} sehingga permukaan menjadi 
+\textit{null hypersurface} yang hanya dapat ditembus satu arah, yang persis merupakan 
+definisi horizon peristiwa \parencite{Carroll2004}.
+
+Berdasarkan elemen garis Schwarzschild pada Persamaan~\eqref{eq:metrik-schwarzschild}, komponen radial kovarian tensor metrik diberikan oleh $g_{rr}=f(r)^{-1}$. Karena metrik Schwarzschild bersifat diagonal dan $g^{\mu\nu}$ merupakan invers dari $g_{\mu\nu}$, komponen radial kontravariannya dapat dituliskan sebagai
+\begin{equation}
+g^{rr}=f(r)=1-\frac{2M}{r}.
+\label{eq:grr-invers-schwarzschild}
+\end{equation}
+Kriteria $g^{rr}=0$ ini konsisten dengan penutupan kerucut cahaya yang telah ditinjau pada Persamaan~\eqref{eq:laju-cahaya-radial}, karena keduanya bergantung pada syarat $f(r) \to 0$ pada radius yang sama. Letak horizon peristiwa ditentukan dengan mencari akar fungsi metrik tersebut, sehingga diperoleh
+\begin{equation}
+f(r_h)=1-\frac{2M}{r_h}=0 \quad \Rightarrow \quad r_h=2M.
+\label{eq:horizon-schwarzschild}
+\end{equation}
+Nilai $r_h=2M$ dikenal sebagai radius Schwarzschild dan menandai letak horizon peristiwa lubang hitam Schwarzschild \parencite{Carroll2004}.
+
+Permukaan $r = 2M$ yang diperoleh dari kriteria $g^{rr} = 0$ ini bukanlah singularitas 
+fisis, melainkan singularitas koordinat yang muncul akibat pemilihan sistem koordinat 
+Schwarzschild dan dapat dihilangkan dengan pemilihan koordinat yang sesuai. Adapun 
+singularitas yang sesungguhnya terletak pada $r = 0$, tempat kelengkungan ruang-waktu 
+menjadi tak hingga dan tidak dapat dihilangkan oleh transformasi koordinat apa pun 
+\parencite{Frolov1998}. Dengan demikian, $r = 2M$ merupakan \textit{null hypersurface} 
+yang menandai batas kausal sebagaimana telah didefinisikan, sedangkan $r = 0$ merupakan 
+singularitas fisis yang sesungguhnya berada di pusatnya.
+
+Pada jarak yang jauh dari horizon peristiwa ($r \to \infty$), fungsi metrik mendekati 
+nilai satu sehingga ruang-waktu Schwarzschild bersifat datar secara asimtotik. Sifat 
+datar asimtotik ini menentukan bagaimana kondisi batas diterapkan pada daerah yang jauh 
+dari lubang hitam, sebagaimana akan ditinjau pada pembahasan perturbasi medan skalar.
+
+\subsection{Lubang Hitam Schwarzschild Anti-de Sitter}
+\label{subsec:lh-sads}
+
+\noindent Lubang hitam Schwarzschild Anti-de Sitter merupakan bentuk generalisasi lubang hitam
+Schwarzschild pada ruang-waktu dengan konstanta Kosmologi bernilai negatif. Geometri
+ruang-waktunya dideskripsikan oleh fungsi metrik
+\begin{equation}
+    f(r) = 1 - \frac{2M}{r} - \frac{\Lambda}{3} r^2, \qquad \Lambda < 0.
+    \label{eq:f-sads}
+\end{equation}
+Dengan mendefinisikan jari-jari anti-de Sitter $L$ melalui hubungan $\Lambda = -3/L^2$,
+fungsi metrik dapat dituliskan kembali sebagai
+\begin{equation}
+    f(r) = 1 - \frac{2M}{r} + \frac{r^2}{L^2}.
+    \label{eq:f-sads-L}
+\end{equation}
+
+Sebagaimana pada kasus Schwarzschild, letak horizon peristiwa dapat ditentukan dari akar
+fungsi metrik yang bernilai nol. Akan tetapi, kehadiran suku tambahan pada Persamaan
+\eqref{eq:f-sads-L} menyebabkan persamaan tidak lagi memiliki penyelesaian sesederhana
+pada latar belakang Schwarzschild, sehingga horizon peristiwa $r_+$ didefinisikan sebagai
+akar positif terbesar dari persamaan
+\begin{equation}
+    f(r_+) = 1 - \frac{2M}{r_+} + \frac{r_+^2}{L^2} = 0.
+    \label{eq:horizon-sads}
+\end{equation}
+Dengan mengalikan persamaan tersebut dengan $r_+ L^2$, syarat horizon dapat dinyatakan
+dalam bentuk polinomial
+\begin{equation}
+    r_+^3 + L^2 r_+ - 2M L^2 = 0,
+    \label{eq:horizon-sads-polinomial}
+\end{equation}
+yang merupakan persamaan pangkat tiga.
+
+Karena Persamaan \eqref{eq:horizon-sads-polinomial} telah berbentuk tereduksi, akar-akarnya
+dapat diperoleh melalui rumus Cardano. Akar real dari persamaan tersebut adalah
+\begin{equation}
+    r_+ = \sqrt[3]{M L^2 + \sqrt{M^2 L^4 + \frac{L^6}{27}}}
+        + \sqrt[3]{M L^2 - \sqrt{M^2 L^4 + \frac{L^6}{27}}},
+    \label{eq:horizon-cardano-sads}
+\end{equation}
+sedangkan kedua akar sisanya berbentuk pasangan kompleks konjugat
+\begin{equation}
+    r_{2,3} = -\frac{r_+}{2} \pm i\,\sqrt{L^2 + \frac{3}{4} r_+^2}.
+    \label{eq:akar-kompleks-sads}
+\end{equation}
+Dengan demikian, Persamaan \eqref{eq:horizon-sads-polinomial} memiliki tepat satu akar real
+positif yang diidentifikasi sebagai horizon peristiwa $r_+$, serta sepasang akar kompleks
+konjugat berbagian real negatif yang tidak bersesuaian dengan jari-jari fisis mana pun
+\parencite{Horowitz2000}.
+
+Perbedaan mendasar dari lubang hitam Schwarzschild terletak pada perilaku geometri di daerah
+yang sangat jauh dari horizon peristiwa. Pada ruang-waktu Schwarzschild Anti-de Sitter (SAdS),
+suku tambahan pada fungsi metrik tumbuh tanpa batas ketika $r \rightarrow \infty$, sehingga
+ruang-waktu tidak lagi mendekati ruang datar, melainkan mendekati geometri Anti-de Sitter
+yang memiliki kelengkungan negatif konstan \parencite{Horowitz2000}. Akibatnya, struktur
+ruang-waktu pada daerah asimtotik menjadi sangat berbeda dengan ruang-waktu Schwarzschild.
+
+Meskipun daerah tersebut berada pada jarak tak hingga, geometri di sana masih dapat dipelajari
+melalui suatu transformasi konformal yang memetakan titik-titik di tak hingga menjadi suatu
+batas yang berhingga. Batas hasil pemetaan ini dikenal sebagai batas konformal. Dengan
+demikian, sifat geometri pada daerah yang sangat jauh dari lubang hitam tetap dapat dianalisis
+tanpa harus berhadapan secara langsung dengan titik yang berada di tak hingga.
+
+Karakteristik batas konformal bergantung pada jenis ruang-waktu yang ditinjau. Pada
+ruang-waktu Schwarzschild yang bersifat datar secara asimtotik ($\Lambda = 0$), batas
+konformal bersifat \textit{light-like}. Hal ini menunjukkan bahwa cahaya maupun gelombang
+yang merambat menjauhi lubang hitam dapat terus bergerak menuju tak hingga tanpa kembali
+lagi ke daerah sekitar lubang hitam. Sebaliknya, pada ruang-waktu Anti-de Sitter
+($\Lambda < 0$), batas konformal bersifat \textit{timelike}. Secara fisis, batas ini dapat
+dibayangkan menyerupai sebuah dinding pemantul yang mengurung ruang-waktu, sehingga gelombang
+yang merambat ke arah luar tidak dapat terus menjalar menuju tak hingga, melainkan akan
+dipantulkan kembali.

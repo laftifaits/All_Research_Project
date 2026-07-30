@@ -1,0 +1,91 @@
+\section{Solusi Schwarzschild}
+\label{sec:solusi-schwarzschild}
+
+\noindent Persamaan medan Einstein pada Persamaan~\eqref{eq:efe} berlaku sangat umum untuk 
+sembarang distribusi materi dan energi, sehingga secara matematis sulit diselesaikan secara 
+langsung. Kasus paling sederhana yang dapat ditinjau adalah kondisi vakum ($T_{\mu\nu} = 0$), 
+yakni ketika ditinjau geometri ruang-waktu di luar suatu objek masif di mana tidak terdapat 
+materi maupun energi. Pada kondisi ini, ruas kanan persamaan medan Einstein lenyap. Dengan mengambil trace 
+persamaan medan Einstein pada kondisi vakum, diperoleh bahwa skalar Ricci $R$ juga 
+lenyap, sehingga persamaan medan Einstein pada kondisi vakum tereduksi menjadi 
+$R_{\mu\nu} = 0$. Perlu ditekankan bahwa lenyapnya tensor Ricci 
+tidak berarti ruang-waktu menjadi datar, karena tensor Riemann yang memuat seluruh informasi 
+kelengkungan masih dapat bernilai tak nol; ruang-waktu vakum di sekitar objek masif tetap 
+melengkung meskipun tidak terdapat materi di titik yang ditinjau \parencite{Carroll2004}. 
+Penyelesaian persamaan medan Einstein pada kondisi vakum inilah yang pertama kali diperoleh 
+sebagai solusi eksak oleh Karl Schwarzschild pada tahun 1916, tidak lama setelah Einstein 
+mempublikasikan teori relativitas umum \parencite{Schwarzschild1916}.
+
+Untuk menyelesaikan persamaan medan Einstein pada kondisi vakum, Schwarzschild mengasumsikan bahwa ruang-waktu di luar objek masif yang tidak berotasi dan tidak bermuatan bersifat statis dan bersimetri bola \parencite{Wald1984,Carroll2004}. Sifat statis menunjukkan bahwa geometri ruang-waktu tidak berubah terhadap waktu, sedangkan simetri bola menunjukkan bahwa geometri tetap sama terhadap rotasi di sekitar pusat objek.
+
+Dengan menggunakan koordinat bola $(t,r,\theta,\varphi)$, kedua asumsi tersebut memungkinkan elemen garis dituliskan dengan dua fungsi radial yang belum diketahui, masing-masing untuk komponen waktu dan komponen radial. Penyelesaian persamaan medan Einstein pada kondisi vakum untuk ansatz tersebut menunjukkan bahwa kedua fungsi ini saling berkebalikan \parencite{Wald1984}, sehingga elemen garis dapat dituliskan dengan satu fungsi metrik tunggal $f(r)$, menghasilkan solusi Schwarzschild
+\begin{equation}
+ds^2=-f(r)\,dt^2+f(r)^{-1}\,dr^2+r^2\left(d\theta^2+\sin^2\theta\,d\varphi^2\right),
+\label{eq:metrik-schwarzschild}
+\end{equation}
+dengan $f(r)$ merupakan fungsi metrik yang bergantung pada koordinat radial. Bagian angular $r^2(d\theta^2+\sin^2\theta\,d\varphi^2)$ menunjukkan sifat simetri bola, sedangkan $r$ menyatakan radius. Bentuk fungsi metrik yang memenuhi persamaan medan Einstein pada kondisi vakum diberikan oleh
+\begin{equation}
+f(r)=1-\frac{2GM}{c^2r}.
+\label{eq:fungsi-metrik-si}
+\end{equation}
+
+Dalam \textit{natural unit} dengan $G=c=1$, fungsi metrik tersebut menjadi
+\begin{equation}
+f(r)=1-\frac{2M}{r}.
+\label{eq:fungsi-metrik-schwarzschild}
+\end{equation}
+sehingga kesamaan dimensi antara $r$ (panjang) dan $M$ (massa) yang tampak pada persamaan 
+ini semata-mata merupakan konsekuensi dari pemilihan satuan tersebut, bukan berarti kedua 
+besaran tersebut secara fisis setara. Fungsi metrik inilah yang sepenuhnya menentukan 
+struktur geometri ruang-waktu Schwarzschild \parencite{Wald1984}.
+
+Solusi Schwarzschild mendeskripsikan geometri ruang-waktu di luar sembarang 
+objek bermassa $M$ yang tidak berotasi dan tidak bermuatan, selama daerah yang ditinjau 
+berada di luar permukaan objek tersebut. Pada objek astrofisika seperti bintang atau planet, 
+daerah di dalam permukaan objek masih mengandung materi, sehingga kondisi vakum tidak 
+terpenuhi dan solusi Schwarzschild tidak berlaku di sana; solusi ini hanya menggambarkan 
+geometri pada daerah kosong di luar permukaannya. Semakin kecil radius suatu objek untuk 
+massa $M$ yang tetap, semakin dekat pula daerah berlakunya solusi Schwarzschild terhadap 
+pusat objek tersebut, sehingga cakupan geometri yang dapat dideskripsikan oleh solusi ini 
+menjadi semakin luas.
+
+Pada jarak yang jauh dari sumber gravitasi ($r \to \infty$), fungsi metrik 
+pada Persamaan~\eqref{eq:fungsi-metrik-schwarzschild} mendekati nilai satu, sehingga 
+ruang-waktu Schwarzschild bersifat datar secara asimtotik. Hal ini berarti geometri 
+ruang-waktu mendekati ruang-waktu Minkowski pada jarak yang jauh dari objek masif, sehingga 
+pengaruh gravitasi melemah dan menghilang seiring bertambahnya jarak. Sifat datar asimtotik 
+inilah yang menjadi karakteristik utama ruang-waktu Schwarzschild dengan konstanta 
+Kosmologi bernilai nol.
+
+\subsection{Konstanta Kosmologi dalam Ruang-Waktu Schwarzschild}
+\label{subsec:konstanta-Kosmologi}
+
+\noindent Solusi Schwarzschild pada Persamaan~\eqref{eq:metrik-schwarzschild} 
+diperoleh dengan mengasumsikan konstanta Kosmologi $\Lambda$ bernilai nol. Konstanta 
+Kosmologi merupakan suku tambahan pada persamaan medan Einstein yang diperkenalkan oleh 
+Einstein pada tahun 1917 dengan alasan meyakini alam semesta bersifat statis 
+\parencite{Einstein1917}. Tanpa suku $\Lambda$, persamaan medan Einstein memprediksi bahwa 
+alam semesta harus runtuh akibat tarikan gravitasi materi. Untuk mencegah hal ini, Einstein 
+menambahkan $\Lambda$ sebagai suku penolak yang menciptakan keseimbangan, sehingga 
+menghasilkan model alam semesta yang statis \parencite{Carroll2004}.
+
+Ketika konstanta Kosmologi bernilai tak nol ($\Lambda \neq 0$), persamaan medan Einstein 
+pada kondisi vakum tetap diselesaikan dengan asumsi ruang-waktu yang sama seperti sebelumnya, 
+yaitu statis dan bersimetri bola, sehingga bentuk umum tensor metrik dan elemen garis tetap 
+mengikuti Persamaan~\eqref{eq:metrik-schwarzschild}; hanya fungsi metriknya yang berubah. 
+Penyelesaian persamaan menghasilkan fungsi metrik baru,
+\begin{equation}
+    f(r) = 1 - \frac{2M}{r} - \frac{\Lambda}{3} r^2,
+    \label{eq:fungsi-metrik-umum}
+\end{equation}
+yang pertama kali diperoleh oleh Kottler \parencite{Kottler1918}, sehingga menggeneralisasi 
+solusi Schwarzschild dengan menambahkan satu suku tambahan yang sebanding dengan $\Lambda r^2$. 
+Kehadiran suku tambahan inilah yang mengubah perilaku asimtotik geometri ruang-waktu pada 
+jarak yang jauh, sehingga nilai dan tanda dari $\Lambda$ akan sangat menentukan struktur 
+geometri serta karakteristik ruang-waktu yang dihasilkan.
+
+Dalam penelitian ini, fokus diberikan pada dua kasus khusus. Pada kasus $\Lambda = 0$, 
+diperoleh ruang-waktu Schwarzschild yang datar secara asimtotik (Schwarzschild 
+\textit{Asymptotically Flat}). Pada kasus $\Lambda < 0$, ruang-waktu bersifat anti-de Sitter 
+secara asimtotik (Schwarzschild Anti-de Sitter) dengan kelengkungan negatif konstan pada 
+jarak jauh.

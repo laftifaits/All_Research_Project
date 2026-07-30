@@ -1,0 +1,36 @@
+\definecolor{biruITS}{HTML}{1168AD}
+\thispagestyle{empty}
+
+\newgeometry{
+  top=\dimexpr0.25\paperheight-10mm\relax, % Teks dimulai 5mm di bawah batas atas kotak biru
+  left=30mm,
+  right=30mm,
+  bottom=25mm
+}
+
+\begin{tikzpicture}[remember picture, overlay]
+  
+  % 1. Kotak Biru (#1168ad) diperpanjang 15mm dari tinggi sebelumnya
+  \coordinate (TopBlue) at ([yshift={0.75\paperheight + 15mm}]current page.south west);
+  \coordinate (TopBlueRight) at ([yshift={0.75\paperheight + 15mm}]current page.south east);
+  \fill[biruITS] (current page.south west) rectangle (TopBlueRight);
+  
+  % Menampilkan Gambar yang bisa Anda input sendiri di area putih
+  \node[anchor=north west, inner sep=0pt] at ([xshift=30mm, yshift=-5mm]current page.north west) {
+    % Ganti 'logo-its.png' dengan nama file gambar Anda
+    \includegraphics[height=3.5cm]{sampul/gambar/Logo-ITS-1.png} 
+  };
+
+\end{tikzpicture}
+
+\begingroup
+  \color{white} % Mengubah warna teks menjadi putih agar kontras dengan background biru
+  \sffamily     % Menggunakan font sans-serif modern
+  \raggedright  % Membuat isi sampul rata kiri
+
+  % Memanggil file isi konten sampul
+  \input{sampul/konten-id.tex}
+  \par
+\endgroup
+
+\restoregeometry
