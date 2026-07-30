@@ -1,0 +1,597 @@
+\chapter{Pembuktian Identitas dan Penurunan Tambahan Bab~2}
+
+\section{Pembuktian Identitas Kalkulus Eksterior}
+\label{app:proofs-exterior}
+
+\subsection{Pembuktian Persamaan~(\ref{eq:wedge-graded})}
+\label{app:proof-wedge-graded}
+ 
+Persamaan~\eqref{eq:wedge-graded} memiliki bentuk
+\begin{equation*}
+    \alpha_p \wedge \beta_q = (-1)^{pq}\,\beta_q \wedge \alpha_p,
+\end{equation*}
+untuk $\alpha_p \in \Omega^p(M)$ dan $\beta_q \in \Omega^q(M)$.
+ 
+Tulis $\alpha_p$ dan $\beta_q$ dalam komponen:
+\begin{equation}
+    \alpha_p = \frac{1}{p!}\,\alpha_{i_1 \cdots i_p}\,dx^{i_1} \wedge \cdots \wedge dx^{i_p}, \qquad
+    \beta_q = \frac{1}{q!}\,\beta_{j_1 \cdots j_q}\,dx^{j_1} \wedge \cdots \wedge dx^{j_q}.
+\end{equation}
+Maka wedge product:
+\begin{align}
+    \alpha_p \wedge \beta_q
+    &= \frac{1}{p!\,q!}\,\alpha_{i_1 \cdots i_p}\,\beta_{j_1 \cdots j_q}\,
+    dx^{i_1} \wedge \cdots \wedge dx^{i_p} \wedge dx^{j_1} \wedge \cdots \wedge dx^{j_q}. \label{app221-eq:start}
+\end{align}
+ 
+Untuk mengubah urutan menjadi $\beta_q \wedge \alpha_p$, kita perlu memindahkan $q$ buah faktor $dx^{j_k}$ melewati $p$ buah faktor $dx^{i_l}$. Setiap pertukaran satu pasang 1-form menghasilkan faktor $(-1)$ dari~\eqref{eq:wedge-def}.
+ 
+Suku $dx^{j_1}$ berada pada posisi $p + 1$ (tepat setelah seluruh faktor $dx^{i}$). Untuk membawanya ke posisi pertama (sebelum $dx^{i_1}$), diperlukan $p$ kali pertukaran berurutan:
+\begin{align}
+    &dx^{i_1} \wedge \cdots \wedge dx^{i_{p-1}} \wedge dx^{i_p} \wedge dx^{j_1} \wedge dx^{j_2} \wedge \cdots \wedge dx^{j_q} \nonumber\\[3pt]
+    &\quad = (-1)\,dx^{i_1} \wedge \cdots \wedge dx^{i_{p-1}} \wedge dx^{j_1} \wedge dx^{i_p} \wedge dx^{j_2} \wedge \cdots \wedge dx^{j_q} \nonumber\\[3pt]
+    &\quad = (-1)^2\,dx^{i_1} \wedge \cdots \wedge dx^{j_1} \wedge dx^{i_{p-1}} \wedge dx^{i_p} \wedge dx^{j_2} \wedge \cdots \wedge dx^{j_q} \nonumber\\[3pt]
+    &\quad\;\;\vdots \nonumber\\[3pt]
+    &\quad = (-1)^p\,dx^{j_1} \wedge dx^{i_1} \wedge \cdots \wedge dx^{i_p} \wedge dx^{j_2} \wedge \cdots \wedge dx^{j_q}.
+\end{align}
+ 
+Setelah langkah 1, $dx^{j_2}$ berada tepat setelah $dx^{i_p}$. Memindahkannya melewati $dx^{i_p}, dx^{i_{p-1}}, \ldots, dx^{i_1}$ memerlukan $p$ pertukaran, menghasilkan faktor $(-1)^p$ tambahan:
+\begin{equation}
+    = (-1)^{2p}\,dx^{j_1} \wedge dx^{j_2} \wedge dx^{i_1} \wedge \cdots \wedge dx^{i_p} \wedge dx^{j_3} \wedge \cdots \wedge dx^{j_q}.
+\end{equation}
+ 
+Setiap suku $dx^{j_k}$ memerlukan $p$ pertukaran untuk melewati seluruh faktor $dx^{i}$. Terdapat $q$ buah suku $dx^{j_k}$ yang harus dipindahkan, sehingga total jumlah pertukaran adalah $p \times q = pq$, menghasilkan faktor total $(-1)^{pq}$. Secara eksplisit:
+\begin{align}
+    &dx^{i_1} \wedge \cdots \wedge dx^{i_p} \wedge dx^{j_1} \wedge \cdots \wedge dx^{j_q} \nonumber\\[4pt]
+    &\quad = (-1)^p\,dx^{j_1} \wedge dx^{i_1} \wedge \cdots \wedge dx^{i_p} \wedge dx^{j_2} \wedge \cdots \wedge dx^{j_q} \nonumber\\[4pt]
+    &\quad = (-1)^{2p}\,dx^{j_1} \wedge dx^{j_2} \wedge dx^{i_1} \wedge \cdots \wedge dx^{i_p} \wedge dx^{j_3} \wedge \cdots \wedge dx^{j_q} \nonumber\\[4pt]
+    &\quad\;\;\vdots \nonumber\\[4pt]
+    &\quad = (-1)^{pq}\,dx^{j_1} \wedge \cdots \wedge dx^{j_q} \wedge dx^{i_1} \wedge \cdots \wedge dx^{i_p}. \label{app221-eq:permuted}
+\end{align}
+ 
+Substitusi~\eqref{app221-eq:permuted} ke~\eqref{app221-eq:start}:
+\begin{align}
+    \alpha_p \wedge \beta_q
+    &= \frac{(-1)^{pq}}{p!\,q!}\,\alpha_{i_1 \cdots i_p}\,\beta_{j_1 \cdots j_q}\,
+    dx^{j_1} \wedge \cdots \wedge dx^{j_q} \wedge dx^{i_1} \wedge \cdots \wedge dx^{i_p}.
+\end{align}
+Karena $\alpha_{i_1 \cdots i_p}$ dan $\beta_{j_1 \cdots j_q}$ adalah bilangan real (komutatif), urutannya dapat dipertukarkan:
+\begin{align}
+    &= (-1)^{pq}\,\underbrace{\frac{1}{q!}\,\beta_{j_1 \cdots j_q}\,dx^{j_1} \wedge \cdots \wedge dx^{j_q}}_{\displaystyle = \beta_q} \wedge \underbrace{\frac{1}{p!}\,\alpha_{i_1 \cdots i_p}\,dx^{i_1} \wedge \cdots \wedge dx^{i_p}}_{\displaystyle = \alpha_p}.
+\end{align}
+ 
+Dengan demikian:
+\begin{equation}
+    \alpha_p \wedge \beta_q = (-1)^{pq}\,\beta_q \wedge \alpha_p. \qquad\square
+\end{equation}
+
+\subsection{Pembuktian Persamaan~(\ref{eq:graded-leibniz})}
+\label{app:proof-graded-leibniz}
+
+Persamaan~\eqref{eq:graded-leibniz} memiliki bentuk
+\begin{equation*}
+    d(\alpha_p \wedge \beta_q) = d\alpha_p \wedge \beta_q + (-1)^p\,\alpha_p \wedge d\beta_q.
+\end{equation*}
+
+\noindent\textbf{Bukti.} Tulis $\alpha_p = \alpha_i\,\widehat{dx^i}$ dan $\beta_q = \beta_j\,\widehat{dx^j}$ dengan notasi $\widehat{dx^i} \equiv dx^{i_1} \wedge \cdots \wedge dx^{i_p}$, $\widehat{dx^j} \equiv dx^{j_1} \wedge \cdots \wedge dx^{j_q}$ (basis konstan, $d\widehat{dx^i} = 0$). Terapkan $d$ pada produk:
+\begin{align}
+    d(\alpha_p \wedge \beta_q)
+    &= d(\alpha_i\,\beta_j) \wedge \widehat{dx^i} \wedge \widehat{dx^j} \nonumber\\[4pt]
+    &= \beta_j\,d\alpha_i \wedge \widehat{dx^i} \wedge \widehat{dx^j}
+    + \alpha_i\,d\beta_j \wedge \widehat{dx^i} \wedge \widehat{dx^j}. \label{app-lb-eq:two-terms}
+\end{align}
+Suku pertama langsung teridentifikasi:
+\begin{equation}\label{app-lb-eq:term1}
+    \beta_j\,d\alpha_i \wedge \widehat{dx^i} \wedge \widehat{dx^j}
+    = \underbrace{(d\alpha_i \wedge \widehat{dx^i})}_{d\alpha_p} \wedge \underbrace{(\beta_j\,\widehat{dx^j})}_{\beta_q}
+    = d\alpha_p \wedge \beta_q.
+\end{equation}
+Pada suku kedua, geser 1-form $d\beta_j$ melewati $p$ buah 1-form basis $dx^{i_1}, \ldots, dx^{i_p}$:
+\begin{align}
+    \alpha_i\,d\beta_j \wedge \widehat{dx^i} \wedge \widehat{dx^j}
+    &= (-1)^p\,\alpha_i\,\widehat{dx^i} \wedge d\beta_j \wedge \widehat{dx^j} \nonumber\\[4pt]
+    &= (-1)^p\,\underbrace{(\alpha_i\,\widehat{dx^i})}_{\alpha_p} \wedge \underbrace{(d\beta_j \wedge \widehat{dx^j})}_{d\beta_q}
+    = (-1)^p\,\alpha_p \wedge d\beta_q. \label{app-lb-eq:term2}
+\end{align}
+Substitusi~\eqref{app-lb-eq:term1} dan~\eqref{app-lb-eq:term2} ke~\eqref{app-lb-eq:two-terms}:
+\begin{equation}
+    d(\alpha_p \wedge \beta_q) = d\alpha_p \wedge \beta_q + (-1)^p\,\alpha_p \wedge d\beta_q. \qquad\square
+\end{equation}
+
+\subsection{Pembuktian Persamaan~(\ref{eq:hodge-coord})}
+\label{app:proof-hodge-formula}
+ 
+Persamaan~\eqref{eq:hodge-coord} diturunkan dari definisi aksiomatik operator Hodge star \cite{nakahara2003geometry, eguchi1980}:
+\begin{equation}\label{app-hf-eq:axiom}
+    \alpha \wedge \star\beta = \langle\alpha,\beta\rangle\,\mathrm{vol}_g,
+\end{equation}
+untuk setiap $\alpha, \beta \in \Lambda^p(M)$, dengan $\mathrm{vol}_g = e^0 \wedge e^1 \wedge \cdots \wedge e^{n-1}$ dalam basis vielbein ortonormal. \textit{Inner product} pada basis: $\langle e^{a_1} \wedge \cdots \wedge e^{a_p},\, e^{b_1} \wedge \cdots \wedge e^{b_p}\rangle = \delta^{a_1 \cdots a_p}_{b_1 \cdots b_p}$.
+ 
+\bigskip\noindent\textbf{Bukti.} Tuliskan ansatz:
+\begin{equation}
+    \star(e^{a_1} \wedge \cdots \wedge e^{a_p}) = c^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,e^{a_{p+1}} \wedge \cdots \wedge e^{a_n}.
+\end{equation}
+Substitusi $\alpha = \beta = e^{a_1} \wedge \cdots \wedge e^{a_p}$ ke~\eqref{app-hf-eq:axiom}. Sisi kanan: $\langle\alpha,\alpha\rangle = 1$, sehingga bernilai $\mathrm{vol}_g$. Sisi kiri, dengan identitas $e^{a_1} \wedge \cdots \wedge e^{a_n} = \varepsilon_{a_1 \cdots a_n}\,\mathrm{vol}_g$:
+\begin{equation}
+    c^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,\varepsilon_{a_1 \cdots a_p\, a_{p+1} \cdots a_n}\,\mathrm{vol}_g = \mathrm{vol}_g.
+\end{equation}
+Samakan koefisien:
+\begin{equation}\label{app-hf-eq:condition}
+    c^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,\varepsilon_{a_1 \cdots a_p\, a_{p+1} \cdots a_n} = 1.
+\end{equation}
+Karena $\varepsilon$ adalah satu-satunya tensor antisimetrik total, tuliskan $c = \mathcal{A}\,\varepsilon_{a_1 \cdots a_n}$. Substitusi ke~\eqref{app-hf-eq:condition}:
+\begin{equation}
+    \mathcal{A}\sum_{a_{p+1},\ldots,a_n} \varepsilon_{a_1 \cdots a_n}^2 = 1.
+\end{equation}
+Untuk indeks $a_1, \ldots, a_p$ tetap dan saling berbeda, suku $\varepsilon^2 \neq 0$ hanya jika $(a_{p+1}, \ldots, a_n)$ adalah permutasi dari himpunan komplemen $\{0,\ldots,n-1\} \setminus \{a_1,\ldots,a_p\}$. Jumlah permutasi tersebut $(n-p)!$, dan $\varepsilon^2 = 1$ untuk setiap suku. Maka $\mathcal{A} \cdot (n-p)! = 1$, sehingga:
+\begin{equation}
+    \star(e^{a_1} \wedge \cdots \wedge e^{a_p}) = \frac{1}{(n-p)!}\,\varepsilon^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,e^{a_{p+1}} \wedge \cdots \wedge e^{a_n}.
+\end{equation}
+Dalam basis koordinat, penggantian $e^a \to dx^\mu$ disertai penyisipan faktor $\sqrt{|g|}$ menghasilkan persamaan~\eqref{eq:hodge-coord}. $\square$
+ 
+ 
+% ============================================================
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:hodge-double})}
+\label{app:proof-hodge-double}
+ 
+Persamaan~\eqref{eq:hodge-double} memiliki bentuk $\star\star\omega_p = (-1)^{p(n-p)}\omega_p$.
+ 
+\bigskip\noindent\textbf{Bukti.} Terapkan $\star$ dua kali pada elemen basis menggunakan~\eqref{eq:hodge-frame}. $\star$ pertama ($p$-form $\to$ $(n-p)$-form):
+\begin{equation}
+    \star(e^{a_1} \wedge \cdots \wedge e^{a_p}) = \frac{1}{(n-p)!}\,\varepsilon^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,e^{a_{p+1}} \wedge \cdots \wedge e^{a_n}.
+\end{equation}
+$\star$ kedua ($(n-p)$-form $\to$ $p$-form):
+\begin{equation}
+    \star(e^{a_{p+1}} \wedge \cdots \wedge e^{a_n}) = \frac{1}{p!}\,\varepsilon^{a_{p+1} \cdots a_n}_{\ \ \ \ \ \ \ \ \ \ \ b_1 \cdots b_p}\,e^{b_1} \wedge \cdots \wedge e^{b_p}.
+\end{equation}
+Gabungkan:
+\begin{equation}\label{app-hd-eq:combined}
+    \star\star(e^{a_1} \wedge \cdots \wedge e^{a_p}) = \frac{1}{(n-p)!\,p!}\,\varepsilon^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,\varepsilon^{a_{p+1} \cdots a_n}_{\ \ \ \ \ \ \ \ \ \ \ b_1 \cdots b_p}\,e^{b_1} \wedge \cdots \wedge e^{b_p}.
+\end{equation}
+Identitas kontraksi Levi-Civita atas $(n-p)$ indeks (untuk $\det(\eta_{ab}) = +1$):
+\begin{equation}\label{app-hd-eq:eps-identity}
+    \varepsilon^{a_1 \cdots a_p}_{\ \ \ \ \ \ \ \ a_{p+1} \cdots a_n}\,\varepsilon^{a_{p+1} \cdots a_n}_{\ \ \ \ \ \ \ \ \ \ \ b_1 \cdots b_p} = (-1)^{p(n-p)}\,(n-p)!\,\delta^{a_1 \cdots a_p}_{b_1 \cdots b_p}.
+\end{equation}
+Faktor $(-1)^{p(n-p)}$ berasal dari $p(n-p)$ pertukaran indeks yang diperlukan untuk membawa kedua simbol Levi-Civita ke bentuk standar sebelum kontraksi. Substitusi ke~\eqref{app-hd-eq:combined}:
+\begin{align}
+    \star\star(e^{a_1} \wedge \cdots \wedge e^{a_p})
+    &= \frac{(-1)^{p(n-p)}}{p!}\,\delta^{a_1 \cdots a_p}_{b_1 \cdots b_p}\,e^{b_1} \wedge \cdots \wedge e^{b_p} \nonumber\\[4pt]
+    &= \frac{(-1)^{p(n-p)}}{p!}\cdot p!\,e^{a_1} \wedge \cdots \wedge e^{a_p} = (-1)^{p(n-p)}\,e^{a_1} \wedge \cdots \wedge e^{a_p}.
+\end{align}
+Karena hasil ini berlaku pada setiap elemen basis dan $\star$ linear:
+\begin{equation}
+    \star\star\omega_p = (-1)^{p(n-p)}\,\omega_p. \qquad\square
+\end{equation}
+ 
+ 
+% ============================================================
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:hodge-inner-sym}) dan~(\ref{eq:hodge-wedge-sym})}
+\label{app:proof-hodge-symmetry}
+ 
+Persamaan~\eqref{eq:hodge-wedge-sym} memiliki bentuk $\alpha_p \wedge \star\beta_p = \beta_p \wedge \star\alpha_p$, dan~\eqref{eq:hodge-inner-sym} mengikuti langsung darinya.
+ 
+\bigskip\noindent\textbf{Bukti.} Dari definisi~\eqref{app-hf-eq:axiom}:
+\begin{equation}
+    \alpha_p \wedge \star\beta_p = \langle\alpha_p,\,\beta_p\rangle\,\mathrm{vol}_g, \qquad
+    \beta_p \wedge \star\alpha_p = \langle\beta_p,\,\alpha_p\rangle\,\mathrm{vol}_g.
+\end{equation}
+\textit{Inner product} pada $p$-form dalam basis ortonormal:
+\begin{equation}
+    \langle\alpha_p,\,\beta_p\rangle = \frac{1}{p!}\,\alpha_{a_1 \cdots a_p}\,\beta^{a_1 \cdots a_p}.
+\end{equation}
+Karena setiap komponen $\alpha_{a_1 \cdots a_p}$ dan $\beta^{a_1 \cdots a_p}$ adalah bilangan real (komutatif):
+\begin{equation}
+    \alpha_{a_1 \cdots a_p}\,\beta^{a_1 \cdots a_p} = \beta^{a_1 \cdots a_p}\,\alpha_{a_1 \cdots a_p},
+\end{equation}
+sehingga $\langle\alpha_p,\beta_p\rangle = \langle\beta_p,\alpha_p\rangle$. Maka:
+\begin{equation}
+    \alpha_p \wedge \star\beta_p = \langle\alpha_p,\beta_p\rangle\,\mathrm{vol}_g = \langle\beta_p,\alpha_p\rangle\,\mathrm{vol}_g = \beta_p \wedge \star\alpha_p.
+\end{equation}
+Integralkan kedua ruas atas $M$:
+\begin{equation}
+    (\alpha_p,\,\beta_p) = \int_M \alpha_p \wedge \star\beta_p = \int_M \beta_p \wedge \star\alpha_p = (\beta_p,\,\alpha_p). \qquad\square
+\end{equation}
+
+\subsection{Pembuktian Persamaan~(\ref{eq:interior-leibniz})}
+\label{app:proof-interior-leibniz}
+ 
+Persamaan~\eqref{eq:interior-leibniz} memiliki bentuk
+\begin{equation*}
+    i_a(\alpha \wedge \beta) = (i_a\,\alpha) \wedge \beta + (-1)^p\,\alpha \wedge (i_a\,\beta),
+\end{equation*}
+untuk $\alpha \in \Omega^p(M)$, $\beta \in \Omega^q(M)$, dan $i_a \equiv \iota_{e_a}$ dengan $i_a(e^b) = \delta^b_a$.
+ 
+\bigskip
+ 
+Misalkan identitas berlaku untuk $\Omega^{p-1}$. Tulis $\alpha = e^k \wedge \tilde\alpha$ dengan $\tilde\alpha \in \Omega^{p-1}$:
+\begin{align}
+    i_a(\alpha \wedge \beta)
+    &= i_a(e^k \wedge \tilde\alpha \wedge \beta) \nonumber\\[4pt]
+    &= (i_a\,e^k)\,(\tilde\alpha \wedge \beta) + (-1)^1\,e^k \wedge i_a(\tilde\alpha \wedge \beta) \nonumber\\[4pt]
+    &= \delta^k_a\,(\tilde\alpha \wedge \beta) - e^k \wedge \big[(i_a\tilde\alpha) \wedge \beta + (-1)^{p-1}\,\tilde\alpha \wedge (i_a\beta)\big] \nonumber\\[4pt]
+    &= \underbrace{\delta^k_a\,\tilde\alpha \wedge \beta - e^k \wedge (i_a\tilde\alpha) \wedge \beta}_{\displaystyle = (i_a\alpha) \wedge \beta} + \underbrace{(-1)^p\,e^k \wedge \tilde\alpha}_{\displaystyle = (-1)^p\,\alpha} \wedge\, (i_a\beta).
+\end{align}
+Pada baris kedua digunakan kasus $p = 1$ untuk $e^k$. Pada baris ketiga digunakan hipotesis induksi untuk $\tilde\alpha \in \Omega^{p-1}$. Identifikasi suku: dua suku pertama membentuk $(i_a\alpha) \wedge \beta$ karena $i_a(e^k \wedge \tilde\alpha) = \delta^k_a\tilde\alpha - e^k \wedge i_a\tilde\alpha$; suku ketiga membentuk $(-1)^p\alpha \wedge i_a\beta$ karena $-(-1)^{p-1} = (-1)^p$ dan $e^k \wedge \tilde\alpha = \alpha$. $\square$
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:dual-spin})}
+\label{app:proof-spin-duality}
+ 
+Dibuktikan konsistensi $\omega^a = \frac{1}{2}\varepsilon^{abc}\omega_{bc}$ dan $\omega^{ab} = \varepsilon^{abc}\omega_c$.
+ 
+\bigskip\noindent\textbf{Bukti arah maju} ($\omega^{ab} \to \omega^a \to \omega^{ab}$). Substitusi definisi $\omega^a$ ke $\varepsilon^{abc}\omega_c$:
+\begin{align}
+    \varepsilon^{abc}\,\omega_c
+    &= \frac{1}{2}\,\varepsilon^{abc}\,\varepsilon_{cef}\,\omega^{ef}
+    = \frac{1}{2}\,(\delta^a_e\,\delta^b_f - \delta^a_f\,\delta^b_e)\,\omega^{ef}
+    = \frac{1}{2}\,(\omega^{ab} - \omega^{ba})
+    = \omega^{ab},
+\end{align}
+di mana antisimetri $\omega^{ab} = -\omega^{ba}$ digunakan pada langkah terakhir.
+ 
+\bigskip\noindent\textbf{Bukti arah mundur} ($\omega^a \to \omega^{ab} \to \omega^a$). Substitusi $\omega^{ab} = \varepsilon^{abc}\omega_c$ ke $\frac{1}{2}\varepsilon^{abc}\omega_{bc}$:
+\begin{equation}
+    \frac{1}{2}\,\varepsilon^{abc}\,\omega_{bc}
+    = \frac{1}{2}\,\varepsilon^{abc}\,\varepsilon_{bcf}\,\omega^f
+    = \frac{1}{2}\cdot 2\,\delta^a_f\,\omega^f
+    = \omega^a,
+\end{equation}
+di mana identitas kontraksi ganda $\varepsilon^{abc}\varepsilon_{bcf} = 2\,\delta^a_f$ digunakan. $\square$
+ 
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:bianchi1}) dan~(\ref{eq:bianchi2})}
+\label{app:proof-bianchi}
+ 
+\subsubsection{Identitas Bianchi Pertama: $DT^a = R^a_{\ b} \wedge e^b$}
+ 
+\noindent\textbf{Bukti.} Dari $T^a = de^a + \omega^a_{\ b} \wedge e^b$, terapkan $DT^a = dT^a + \omega^a_{\ b} \wedge T^b$. Hitung $dT^a$:
+\begin{align}
+    dT^a &= \underbrace{d^2e^a}_{=\,0} + d\omega^a_{\ b} \wedge e^b - \omega^a_{\ b} \wedge de^b
+    = d\omega^a_{\ b} \wedge e^b - \omega^a_{\ b} \wedge de^b.
+\end{align}
+Hitung $\omega^a_{\ b} \wedge T^b$:
+\begin{equation}
+    \omega^a_{\ b} \wedge T^b = \omega^a_{\ b} \wedge de^b + \omega^a_{\ b} \wedge \omega^b_{\ c} \wedge e^c.
+\end{equation}
+Jumlahkan: suku $\omega^a_{\ b} \wedge de^b$ saling menghapus, tersisa:
+\begin{equation}
+    DT^a = d\omega^a_{\ b} \wedge e^b + \omega^a_{\ b} \wedge \omega^b_{\ c} \wedge e^c = \underbrace{(d\omega^a_{\ b} + \omega^a_{\ c} \wedge \omega^c_{\ b})}_{R^a_{\ b}} \wedge\, e^b = R^a_{\ b} \wedge e^b. \qquad\square
+\end{equation}
+ 
+\subsubsection{Identitas Bianchi Kedua: $DR^a_{\ b} = 0$}
+ 
+\noindent\textbf{Bukti.} Dari $R^a_{\ b} = d\omega^a_{\ b} + \omega^a_{\ c} \wedge \omega^c_{\ b}$, hitung $dR^a_{\ b}$:
+\begin{equation}
+    dR^a_{\ b} = \underbrace{d^2\omega^a_{\ b}}_{=\,0} + d\omega^a_{\ c} \wedge \omega^c_{\ b} - \omega^a_{\ c} \wedge d\omega^c_{\ b}.
+\end{equation}
+Substitusi $d\omega^a_{\ c} = R^a_{\ c} - \omega^a_{\ e} \wedge \omega^e_{\ c}$ (dan analog untuk $d\omega^c_{\ b}$):
+\begin{align}
+    dR^a_{\ b} &= R^a_{\ c} \wedge \omega^c_{\ b} - \omega^a_{\ e} \wedge \omega^e_{\ c} \wedge \omega^c_{\ b} - \omega^a_{\ c} \wedge R^c_{\ b} + \omega^a_{\ c} \wedge \omega^c_{\ e} \wedge \omega^e_{\ b}.
+\end{align}
+Relabel $e \to c$, $c \to e$ pada suku kedua: $-\omega^a_{\ c} \wedge \omega^c_{\ e} \wedge \omega^e_{\ b}$, identik dengan suku keempat. Keduanya saling menghapus:
+\begin{equation}
+    dR^a_{\ b} = R^a_{\ c} \wedge \omega^c_{\ b} - \omega^a_{\ c} \wedge R^c_{\ b}.
+\end{equation}
+Substitusi ke $DR^a_{\ b} = dR^a_{\ b} + \omega^a_{\ c} \wedge R^c_{\ b} - R^a_{\ c} \wedge \omega^c_{\ b}$:
+\begin{equation}
+    DR^a_{\ b} = \cancel{R^a_{\ c} \wedge \omega^c_{\ b}} - \cancel{\omega^a_{\ c} \wedge R^c_{\ b}} + \cancel{\omega^a_{\ c} \wedge R^c_{\ b}} - \cancel{R^a_{\ c} \wedge \omega^c_{\ b}} = 0. \qquad\square
+\end{equation}
+
+\subsection{Pembuktian Persamaan~(\ref{eq:delta-R})}
+\label{app:proof-delta-R}
+ 
+Persamaan~\eqref{eq:delta-R} memiliki bentuk $\delta R_a = D(\delta\omega_a)$.
+ 
+\bigskip\noindent\textbf{Bukti.} Dari $R_a = d\omega_a + \frac{1}{2}\varepsilon_{abc}\,\omega^b \wedge \omega^c$, variasi $\omega_a \to \omega_a + \delta\omega_a$:
+\begin{equation}
+    \delta R_a = d(\delta\omega_a) + \frac{1}{2}\varepsilon_{abc}\,(\delta\omega^b \wedge \omega^c + \omega^b \wedge \delta\omega^c).
+\end{equation}
+Pada suku kedua, gunakan $\omega^b \wedge \delta\omega^c = -\delta\omega^c \wedge \omega^b$ dan relabel $b \leftrightarrow c$:
+\begin{align}
+    \frac{1}{2}\varepsilon_{abc}\,(\delta\omega^b \wedge \omega^c - \delta\omega^c \wedge \omega^b)
+    &= \frac{1}{2}\varepsilon_{abc}\,\delta\omega^b \wedge \omega^c - \frac{1}{2}\varepsilon_{a\underline{c}\underline{b}}\,\delta\omega^b \wedge \omega^c \nonumber\\
+    &= \frac{1}{2}\varepsilon_{abc}\,\delta\omega^b \wedge \omega^c + \frac{1}{2}\varepsilon_{abc}\,\delta\omega^b \wedge \omega^c \nonumber\\
+    &= \varepsilon_{abc}\,\omega^b \wedge \delta\omega^c.
+\end{align}
+Maka $\delta R_a = d(\delta\omega_a) + \varepsilon_{abc}\,\omega^b \wedge \delta\omega^c \equiv D(\delta\omega_a)$. $\square$
+ 
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:leibniz-D})}
+\label{app:proof-leibniz-D}
+ 
+Persamaan~\eqref{eq:leibniz-D} memiliki bentuk $D(A \wedge B) = DA \wedge B + (-1)^p\,A \wedge DB$ untuk $A \in \Omega^p$.
+ 
+\bigskip\noindent\textbf{Bukti.} Turunan kovarian eksterior pada form bernilai aljabar Lie $\mathfrak{so}(2,1)$ didefinisikan sebagai $D\Phi^a = d\Phi^a + \varepsilon^{abc}\,\omega_b \wedge \Phi_c$. Terapkan pada $A^a \wedge B_a$ (kontraksi atas indeks Lorentz):
+\begin{equation}
+    D(A^a \wedge B_a) = d(A^a \wedge B_a) + \varepsilon^{abc}\,\omega_b \wedge (A_c \wedge B_a).
+\end{equation}
+Suku pertama, menggunakan aturan Leibniz biasa~\eqref{eq:graded-leibniz}:
+\begin{equation}
+    d(A^a \wedge B_a) = dA^a \wedge B_a + (-1)^p\,A^a \wedge dB_a.
+\end{equation}
+Suku kedua, distribusikan koneksi menggunakan aturan Leibniz pada perkalian skalar:
+\begin{equation}
+    \varepsilon^{abc}\,\omega_b \wedge (A_c \wedge B_a) = (\varepsilon^{abc}\,\omega_b \wedge A_c) \wedge B_a + (-1)^p\,A^a \wedge (\varepsilon^{abc}\,\omega_b \wedge B_c).
+\end{equation}
+Tanda $(-1)^p$ muncul karena 1-form $\omega_b$ harus melewati $p$-form $A_c$ untuk mencapai $B_a$. Gabungkan:
+\begin{align}
+    D(A^a \wedge B_a)
+    &= \underbrace{(dA^a + \varepsilon^{abc}\,\omega_b \wedge A_c)}_{DA^a} \wedge B_a + (-1)^p\,A^a \wedge \underbrace{(dB_a + \varepsilon_{abc}\,\omega^b \wedge B^c)}_{DB_a} \nonumber\\
+    &= DA^a \wedge B_a + (-1)^p\,A^a \wedge DB_a. \qquad\square
+\end{align}
+ 
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:delta-eta})}
+\label{app:proof-delta-eta}
+ 
+Persamaan~\eqref{eq:delta-eta} memiliki bentuk $\delta\eta = \delta e^a \wedge \eta_a$.
+ 
+\bigskip\noindent\textbf{Bukti.} Dari $\eta = \frac{1}{3!}\varepsilon_{abc}\,e^a \wedge e^b \wedge e^c$, variasi $e^a \to e^a + \delta e^a$:
+\begin{equation}
+    \delta\eta = \frac{1}{6}\varepsilon_{abc}\,(\delta e^a \wedge e^b \wedge e^c + e^a \wedge \delta e^b \wedge e^c + e^a \wedge e^b \wedge \delta e^c).
+\end{equation}
+Suku kedua: relabel $a \leftrightarrow b$, gunakan $\varepsilon_{bac} = -\varepsilon_{abc}$, tukar $\delta e^a$ melewati $e^b$ (faktor $-1$):
+\begin{equation}
+    \frac{1}{6}\varepsilon_{abc}\,e^a \wedge \delta e^b \wedge e^c = \frac{1}{6}\varepsilon_{\underline{b}\underline{a}c}\,e^b \wedge \delta e^a \wedge e^c = \frac{1}{6}(-1)(-1)\,\varepsilon_{abc}\,\delta e^a \wedge e^b \wedge e^c.
+\end{equation}
+Identik dengan suku pertama. Suku ketiga: relabel $a \leftrightarrow c$, gunakan $\varepsilon_{cba} = -\varepsilon_{abc}$, pindahkan $\delta e^a$ ke depan ($(-1)^2$), tukar $e^c \leftrightarrow e^b$ ($-1$):
+\begin{equation}
+    \frac{1}{6}\varepsilon_{abc}\,e^a \wedge e^b \wedge \delta e^c = \frac{1}{6}(-1)(+1)(-1)\,\varepsilon_{abc}\,\delta e^a \wedge e^b \wedge e^c.
+\end{equation}
+Identik dengan suku pertama. Jumlahkan:
+\begin{equation}
+    \delta\eta = \frac{3}{6}\,\varepsilon_{abc}\,\delta e^a \wedge e^b \wedge e^c = \frac{1}{2}\,\varepsilon_{abc}\,\delta e^a \wedge e^b \wedge e^c = \delta e^a \wedge \underbrace{\frac{1}{2}\varepsilon_{abc}\,e^b \wedge e^c}_{\eta_a}. \qquad\square
+\end{equation}
+
+\subsection{Sifat Siklik Trace pada Form Bernilai Aljabar Lie}
+\label{app:proof-cyclic-trace}
+ 
+Misalkan $X = X^a_\mu T_a\,dx^\mu$, $Y = Y^b_\nu T_b\,dx^\nu$, $Z = Z^c_\rho T_c\,dx^\rho$ adalah 1-form bernilai aljabar Lie. Maka:
+\begin{equation}
+    \mathrm{Tr}(X \wedge Y \wedge Z) = \mathrm{Tr}(T_a T_b T_c)\,X^a_\mu Y^b_\nu Z^c_\rho\,dx^\mu \wedge dx^\nu \wedge dx^\rho.
+\end{equation}
+Trace matriks bersifat siklik karena komutativitas komponen skalar:
+\begin{equation}
+    \mathrm{Tr}(T_a T_b T_c) = \sum_{i,j,k}(T_a)^i_{\ j}(T_b)^j_{\ k}(T_c)^k_{\ i} = \sum_{i,j,k}(T_b)^j_{\ k}(T_c)^k_{\ i}(T_a)^i_{\ j} = \mathrm{Tr}(T_b T_c T_a).
+\end{equation}
+Permutasi siklik tiga 1-form melibatkan dua pertukaran (faktor $(-1)^2 = +1$):
+\begin{equation}
+    dx^\mu \wedge dx^\nu \wedge dx^\rho = dx^\nu \wedge dx^\rho \wedge dx^\mu.
+\end{equation}
+Koefisien skalar komutatif. Gabungkan:
+\begin{equation}\label{app-ct-eq:cyclic-1forms}
+    \mathrm{Tr}(X \wedge Y \wedge Z) = \mathrm{Tr}(Y \wedge Z \wedge X) = \mathrm{Tr}(Z \wedge X \wedge Y).
+\end{equation}
+ 
+\subsubsection{Generalisasi Tergraduasi: Dua Form}
+ 
+Untuk $\alpha_p \in \Omega^p(M,\mathfrak{g})$ dan $\beta_q \in \Omega^q(M,\mathfrak{g})$:
+\begin{equation}
+    \mathrm{Tr}(\alpha_p \wedge \beta_q) = \alpha_{a,I}\,\beta_{b,J}\,\mathrm{Tr}(T_a T_b)\,dx^I \wedge dx^J,
+\end{equation}
+dengan $dx^I = dx^{i_1} \wedge \cdots \wedge dx^{i_p}$. Pertukaran $\alpha \leftrightarrow \beta$:
+\begin{equation}
+    \mathrm{Tr}(\beta_q \wedge \alpha_p) = \beta_{b,J}\,\alpha_{a,I}\,\mathrm{Tr}(T_b T_a)\,dx^J \wedge dx^I.
+\end{equation}
+Dari $\mathrm{Tr}(T_b T_a) = \mathrm{Tr}(T_a T_b)$ (siklik untuk 2 matriks), komutatifitas skalar, dan $dx^J \wedge dx^I = (-1)^{pq}\,dx^I \wedge dx^J$ (antikomutativitas tergraduasi~\eqref{eq:wedge-graded}):
+\begin{equation}\label{app-ct-eq:graded-2forms}
+    \mathrm{Tr}(\alpha_p \wedge \beta_q) = (-1)^{pq}\,\mathrm{Tr}(\beta_q \wedge \alpha_p).
+\end{equation}
+ 
+Kasus yang digunakan pada variasi aksi CS: $\delta A$ (1-form) dan $dA$ (2-form), sehingga $(-1)^{1 \times 2} = +1$:
+\begin{equation}
+    \mathrm{Tr}(\delta A \wedge dA) = \mathrm{Tr}(dA \wedge \delta A).
+\end{equation}
+ 
+\subsubsection{Generalisasi Tergraduasi: Tiga Form}
+ 
+Untuk $\alpha \in \Omega^p$, $\beta \in \Omega^q$, $\gamma \in \Omega^r$ bernilai $\mathfrak{g}$, pindahkan $\gamma$ (derajat $r$) melewati $\alpha \wedge \beta$ (derajat $p+q$):
+\begin{equation}\label{app-ct-eq:graded-3forms}
+    \mathrm{Tr}(\alpha \wedge \beta \wedge \gamma) = (-1)^{r(p+q)}\,\mathrm{Tr}(\gamma \wedge \alpha \wedge \beta).
+\end{equation}
+Faktor tanda dari antikomutativitas tergraduasi; trace matriks tetap siklik. Untuk tiga 1-form ($p = q = r = 1$): $(-1)^{1 \cdot 2} = +1$, mereproduksi~\eqref{app-ct-eq:cyclic-1forms}.
+ 
+\subsubsection{Korolari: Invariansi Adjoint}
+ 
+Dari sifat siklik $\mathrm{Tr}(T_a T_b T_c) = \mathrm{Tr}(T_c T_a T_b)$:
+\begin{align}
+    \langle [Z,X], Y\rangle + \langle X, [Z,Y]\rangle
+    &= \mathrm{Tr}(ZXY) - \cancel{\mathrm{Tr}(XZY)} + \cancel{\mathrm{Tr}(XZY)} - \mathrm{Tr}(XYZ) \nonumber\\
+    &= \mathrm{Tr}(ZXY) - \mathrm{Tr}(XYZ) = 0. \qquad\square
+\end{align}
+ 
+ \subsection{Kontraksi Persamaan Medan Einstein}
+\label{app:proof-einstein-contraction}
+
+Dari persamaan medan dalam formalisme vielbein:
+\begin{equation}
+    R^{ab} \wedge \eta_{abc} + 2\Lambda\, \eta_c = 0,
+\end{equation}
+suku pertama didefinisikan sebagai $\Omega^c$:
+\begin{equation}
+    \Omega^c = \varepsilon_{ab}{}^{cd}\, R^{ab} \wedge e_d.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Ekspansi komponen tensor kurvatur}
+
+Ekspresikan 2-form kurvatur $R^{ab}$ dalam komponen tensor Riemann:
+\begin{equation}
+    R^{ab} = \frac{1}{2}\, R^{ab}{}_{mn}\, e^m \wedge e^n.
+\end{equation}
+Substitusi ke dalam $\Omega^c$:
+\begin{equation}
+    \Omega^c = \frac{1}{2}\, R^{ab}{}_{mn}\, \varepsilon_{ab}{}^{cd}\, (e^m \wedge e^n \wedge e_d).
+\end{equation}
+Dengan menggunakan identitas (pembuktian di bawah):
+\begin{equation}\label{eq:3form-dual}
+    e^m \wedge e^n \wedge e_d = -\varepsilon^{mn}{}_{dk}\, \eta^k,
+\end{equation}
+diperoleh:
+\begin{equation}
+    \Omega^c = -\frac{1}{2}\, R^{ab}{}_{mn}\left(\varepsilon_{ab}{}^{cd}\, \varepsilon^{mn}{}_{dk}\right) \eta^k.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Kontraksi simbol Levi-Civita}
+
+Kontraksi dua simbol Levi-Civita pada indeks $d$ memberikan:
+\begin{equation}
+    \varepsilon_{ab}{}^{cd}\, \varepsilon^{mn}{}_{dk} = -\delta^{mnc}_{abk},
+\end{equation}
+dengan $\delta^{mnc}_{abk}$ adalah determinan delta Kronecker $3 \times 3$:
+\begin{equation}
+    \delta^{mnc}_{abk} =
+    \begin{vmatrix}
+    \delta^m_a & \delta^m_b & \delta^m_k \\
+    \delta^n_a & \delta^n_b & \delta^n_k \\
+    \delta^c_a & \delta^c_b & \delta^c_k
+    \end{vmatrix}.
+\end{equation}
+Ekspansi determinan menghasilkan enam suku:
+\begin{equation}
+    \delta^{mnc}_{abk} = \delta^m_a \delta^n_b \delta^c_k - \delta^m_a \delta^n_k \delta^c_b - \delta^m_b \delta^n_a \delta^c_k + \delta^m_b \delta^n_k \delta^c_a + \delta^m_k \delta^n_a \delta^c_b - \delta^m_k \delta^n_b \delta^c_a.
+\end{equation}
+Substitusi ke $\Omega^c$:
+\begin{equation}
+    \Omega^c = \frac{1}{2}\, R^{ab}{}_{mn}\, \delta^{mnc}_{abk}\, \eta^k.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi per suku}
+
+Dengan sifat antisimetri tensor Riemann $R^{ab}{}_{mn} = -R^{ba}{}_{mn} = -R^{ab}{}_{nm}$:
+
+Suku 1 ($\delta^m_a \delta^n_b \delta^c_k$):
+$R^{ab}{}_{mn}\, \delta^m_a \delta^n_b \delta^c_k = R^{ab}{}_{ab}\, \delta^c_k = R\, \delta^c_k$.
+
+Suku 2 ($-\delta^m_a \delta^n_k \delta^c_b$):
+$-R^{ab}{}_{mn}\, \delta^m_a \delta^n_k \delta^c_b = -R^{ab}{}_{ak}\, \delta^c_b = -R^{ac}{}_{ak} = -R^c{}_k$.
+
+Suku 3 ($-\delta^m_b \delta^n_a \delta^c_k$):
+$-R^{ab}{}_{mn}\, \delta^m_b \delta^n_a \delta^c_k = -R^{ab}{}_{ba}\, \delta^c_k = R^{ab}{}_{ab}\, \delta^c_k = R\, \delta^c_k$,
+
+menggunakan $R^{ab}{}_{ba} = -R^{ab}{}_{ab}$.
+
+Suku 4 ($\delta^m_b \delta^n_k \delta^c_a$):
+$R^{ab}{}_{mn}\, \delta^m_b \delta^n_k \delta^c_a = R^{ab}{}_{bk}\, \delta^c_a = R^{ca}{}_{ak} = -R^{ac}{}_{ak} = -R^c{}_k$.
+
+Suku 5 ($\delta^m_k \delta^n_a \delta^c_b$):
+$R^{ab}{}_{mn}\, \delta^m_k \delta^n_a \delta^c_b = R^{ab}{}_{ka}\, \delta^c_b = -R^{ab}{}_{ak}\, \delta^c_b = -R^{ac}{}_{ak} = -R^c{}_k$.
+
+Suku 6 ($-\delta^m_k \delta^n_b \delta^c_a$):
+$-R^{ab}{}_{mn}\, \delta^m_k \delta^n_b \delta^c_a = -R^{ab}{}_{kb}\, \delta^c_a = -R^{ca}{}_{ka} = -R^c{}_k$.
+
+\vspace{0.5em}
+\noindent \textbf{Penjumlahan total}
+
+\begin{equation}
+    R^{ab}{}_{mn}\, \delta^{mnc}_{abk} = 2R\, \delta^c_k - 4R^c{}_k,
+\end{equation}
+sehingga:
+\begin{equation}
+    \Omega^c = \left(R\, \delta^c_k - 2R^c{}_k\right)\eta^k = -2\left(R^c{}_k - \frac{1}{2}R\, \delta^c_k\right)\eta^k = -2\, G^c{}_k\, \eta^k.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Persamaan medan Einstein}
+
+Substitusi ke persamaan medan:
+\begin{align}
+    -2\, G^c{}_k\, \eta^k + 2\Lambda\, \eta_c &= 0, \nonumber\\
+    \left(G^c{}_k - \Lambda\, \delta^c{}_k\right)\eta^k &= 0.
+\end{align}
+Karena $\eta^k$ membentuk basis 3-form non-degenerate, koefisiennya harus nol:
+\begin{equation}
+    G^c{}_k - \Lambda\, \delta^c{}_k = 0, \qquad G^c{}_k = R^c{}_k - \frac{1}{2}R\, \delta^c_k.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Pembuktian identitas~\eqref{eq:3form-dual}}
+
+Dari definisi $\eta_k = \frac{1}{3!}\, \varepsilon_{kabc}\, e^a \wedge e^b \wedge e^c$, kalikan dengan $\varepsilon^{mnsk}$:
+\begin{equation}
+    \varepsilon^{mnsk}\, \eta_k = \frac{1}{3!}\, \varepsilon^{mnsk}\, \varepsilon_{kabc}\, e^a \wedge e^b \wedge e^c.
+\end{equation}
+Dengan $\varepsilon_{kabc} = -\varepsilon_{abck}$ (tiga pertukaran), kontraksi memberikan $\varepsilon^{mnsk}\, \varepsilon_{kabc} = -\delta^{mns}_{abc}$, dan karena $\delta^{mns}_{abc}\, e^a \wedge e^b \wedge e^c = 3!\,(e^m \wedge e^n \wedge e^s)$, diperoleh:
+\begin{equation}
+    \varepsilon^{mnsk}\, \eta_k = -(e^m \wedge e^n \wedge e^s),
+\end{equation}
+atau ekuivalennya: $e^m \wedge e^n \wedge e^d = -\varepsilon^{mndk}\, \eta_k$.
+
+\subsection{Pembuktian Persamaan~(\ref{eq:field-strength-comp})}
+\label{app:proof-F-comp}
+ 
+\noindent\textbf{Suku $dA$.} Koefisien $\partial_\nu A^a_\mu$ didekomposisi menjadi bagian simetrik dan antisimetrik di bawah $\mu \leftrightarrow \nu$. Bagian simetrik lenyap terhadap $dx^\nu \wedge dx^\mu$ (antisimetrik), tersisa:
+\begin{equation}
+    dA = \frac{1}{2}(\partial_\mu A^a_\nu - \partial_\nu A^a_\mu)\,T_a\,dx^\mu \wedge dx^\nu.
+\end{equation}
+ 
+\noindent\textbf{Suku $A \wedge A$.} Dekomposisi $T_a T_b = \frac{1}{2}\{T_a,T_b\} + \frac{1}{2}[T_a,T_b]$. Kontribusi antikomutator: $A^a_\mu A^b_\nu\{T_a,T_b\}\,dx^\mu \wedge dx^\nu$. Tukar $a \leftrightarrow b$ dan $\mu \leftrightarrow \nu$ secara simultan:
+\begin{equation}
+    A^a_\mu A^b_\nu\{T_a,T_b\}\,dx^\mu \wedge dx^\nu = A^b_\nu A^a_\mu\{T_b,T_a\}\,dx^\nu \wedge dx^\mu = -A^a_\mu A^b_\nu\{T_a,T_b\}\,dx^\mu \wedge dx^\nu,
+\end{equation}
+karena $\{T_a,T_b\}$ simetrik dan $dx^\nu \wedge dx^\mu$ antisimetrik. Ekspresi yang sama dengan negatifnya sendiri haruslah nol. Tersisa komutator:
+\begin{equation}
+    A \wedge A = \frac{1}{2}f_{bc}^{\ \ a}\,A^b_\mu A^c_\nu\,T_a\,dx^\mu \wedge dx^\nu. \qquad\square
+\end{equation}
+ 
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:cs-action-coord})}
+\label{app:proof-cs-coord}
+ 
+\noindent\textbf{Suku $\mathrm{Tr}(A \wedge dA)$.} Dari $A = A^a_\rho T_a\,dx^\rho$ dan $dA = (\partial_\nu A^b_\mu)T_b\,dx^\nu \wedge dx^\mu$:
+\begin{equation}
+    \mathrm{Tr}(A \wedge dA) = A^a_\rho\,\partial_\nu A^b_\mu\,\kappa_{ab}\,dx^\rho \wedge dx^\nu \wedge dx^\mu = \varepsilon^{\mu\nu\rho}\,\kappa_{ab}\,A^a_\rho\,\partial_\nu A^b_\mu\,d^3x.
+\end{equation}
+ 
+\noindent\textbf{Suku $\mathrm{Tr}(A \wedge A \wedge A)$.} Antisimetrisasi total atas $(\mu,\nu,\rho)$ dan sifat siklik trace:
+\begin{align}
+    \mathrm{Tr}(A \wedge A \wedge A)
+    &= A^a_\mu A^b_\nu A^c_\rho\,\mathrm{Tr}(T_a T_b T_c)\,\varepsilon^{\mu\nu\rho}\,d^3x.
+\end{align}
+Dekomposisi $\mathrm{Tr}(T_a T_b T_c) = \frac{1}{2}\mathrm{Tr}(T_a\{T_b,T_c\}) + \frac{1}{2}\mathrm{Tr}(T_a[T_b,T_c])$. Suku antikomutator simetrik di $b \leftrightarrow c$ lenyap terhadap $A^b_\nu A^c_\rho\,\varepsilon^{\mu\nu\rho}$ (antisimetrik di $\nu \leftrightarrow \rho$). Tersisa:
+\begin{equation}
+    \mathrm{Tr}(A \wedge A \wedge A) = \frac{1}{2}\,\varepsilon^{\mu\nu\rho}\,f_{bc}^{\ \ d}\,\kappa_{ad}\,A^a_\mu A^b_\nu A^c_\rho\,d^3x.
+\end{equation}
+Substitusi ke aksi~\eqref{eq:cs-action} memberikan~\eqref{eq:cs-action-coord}. $\square$
+ 
+ 
+\subsection{Pembuktian Persamaan~(\ref{eq:cs-variation})}
+\label{app:proof-cs-variation}
+ 
+Variasi aksi~\eqref{eq:cs-action}:
+\begin{equation}
+    \delta S_{CS} = \frac{k}{4\pi}\int_M \big[\delta\,\mathrm{Tr}(A \wedge dA) + \tfrac{2}{3}\,\delta\,\mathrm{Tr}(A \wedge A \wedge A)\big].
+\end{equation}
+ 
+\noindent\textbf{Variasi suku pertama.} Gunakan $\delta(dA) = d(\delta A)$:
+\begin{equation}
+    \delta\,\mathrm{Tr}(A \wedge dA) = \mathrm{Tr}(\delta A \wedge dA) + \mathrm{Tr}(A \wedge d(\delta A)).
+\end{equation}
+Dari aturan Leibniz~\eqref{eq:graded-leibniz} dengan $A$ (1-form): $A \wedge d(\delta A) = dA \wedge \delta A - d(A \wedge \delta A)$. Dari~\eqref{app-ct-eq:graded-2forms}: $\mathrm{Tr}(\delta A \wedge dA) = \mathrm{Tr}(dA \wedge \delta A)$. Maka:
+\begin{equation}\label{app-cs-eq:var-AdA}
+    \delta\,\mathrm{Tr}(A \wedge dA) = 2\,\mathrm{Tr}(dA \wedge \delta A) - d\,\mathrm{Tr}(A \wedge \delta A).
+\end{equation}
+ 
+\noindent\textbf{Variasi suku kedua.} Ekspansi menghasilkan tiga suku. Dari sifat siklik trace untuk tiga 1-form~\eqref{app-ct-eq:cyclic-1forms}, ketiga suku identik:
+\begin{equation}\label{app-cs-eq:var-AAA}
+    \delta\,\mathrm{Tr}(A \wedge A \wedge A) = 3\,\mathrm{Tr}(\delta A \wedge A \wedge A).
+\end{equation}
+ 
+\noindent\textbf{Penggabungan.} Substitusi~\eqref{app-cs-eq:var-AdA} dan~\eqref{app-cs-eq:var-AAA}:
+\begin{align}
+    \delta S_{CS}
+    &= \frac{k}{4\pi}\int_M \big[2\,\mathrm{Tr}(dA \wedge \delta A) + 2\,\mathrm{Tr}(\delta A \wedge A \wedge A)\big] - \frac{k}{4\pi}\int_M d\,\mathrm{Tr}(A \wedge \delta A) \nonumber\\
+    &= \frac{k}{2\pi}\int_M \mathrm{Tr}\big(\delta A \wedge (dA + A \wedge A)\big) - \frac{k}{4\pi}\int_{\partial M}\mathrm{Tr}(A \wedge \delta A).
+\end{align}
+Kenali $F = dA + A \wedge A$. Untuk $\partial M = \varnothing$, suku batas lenyap dan $\delta S_{CS} = 0$ memberikan:
+\begin{equation}
+    \varepsilon^{\mu\nu\rho}\kappa_{ab}\,\delta A^a_\mu\,F^b_{\nu\rho} = 0.
+\end{equation}
+Karena $\delta A^a_\mu$ sembarang dan $\kappa_{ab}$ non-degenerate: $\varepsilon^{\mu\nu\rho}F^a_{\nu\rho} = 0$. Kontraksi dengan $\varepsilon_{\sigma\mu\lambda}$:
+\begin{equation}
+    (\delta^\nu_\sigma\delta^\rho_\lambda - \delta^\rho_\sigma\delta^\nu_\lambda)F^a_{\nu\rho} = F^a_{\sigma\lambda} - F^a_{\lambda\sigma} = 2F^a_{\sigma\lambda} = 0,
+\end{equation}
+karena $F^a_{\sigma\lambda} = -F^a_{\lambda\sigma}$. Maka $F = 0$. $\square$

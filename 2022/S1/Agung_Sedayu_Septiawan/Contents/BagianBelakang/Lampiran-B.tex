@@ -1,0 +1,1132 @@
+\chapter{Konstruksi Aljabar Lie dan Teori Gauge}
+
+\section{Konstruksi Grup Ortogonal: dari O(2) ke SO(3)}
+\label{app:O2-SO3}
+
+\noindent\textit{Subbab ini bersifat tambahan bacaan: konstruksi ini bersama dengan dua subbab berikutnya ($\mathrm{SO}(2,1)$ dan dekomposisi kiral) menyediakan latar belakang pedagogis menuju $\mathfrak{so}(2,2)$. Pembaca yang sudah familiar dengan konstruksi aljabar Lie ortogonal dapat melompat langsung ke Subbab~\ref{app:generator-construction}.}
+
+Bagian ini membangun aljabar Lie $\mathfrak{so}(n)$ secara bertahap, dimulai dari kasus paling sederhana $n = 2$ hingga $n = 3$. Tujuannya adalah memperkenalkan metode konstruksi generator dan relasi komutasi yang akan digunakan kembali, dengan modifikasi signatur, pada grup Lorentz $\mathrm{SO}(2,1)$ dan grup isometri AdS$_3$ $\mathrm{SO}(2,2)$ pada bagian-bagian berikutnya.
+
+\subsection{Grup Ortogonal O(2)}
+
+Grup ortogonal $\mathrm{O}(n)$ terdiri dari seluruh matriks $n \times n$ bernilai real yang mempertahankan \emph{inner product} Euclidean $\langle\mathbf{u},\mathbf{v}\rangle = \mathbf{u}^T \delta\,\mathbf{v}$, dengan $\delta = \mathrm{diag}(+1,+1,\ldots,+1)$ matriks identitas. Secara formal:
+\begin{equation}\label{a1-eq:On-def}
+    \mathrm{O}(n) = \{A \in \mathrm{GL}(n,\mathbb{R}) \mid A^T A = I\}.
+\end{equation}
+
+Untuk $n = 2$, parameterisasikan matriks umum $A = \begin{pmatrix}a & b \\ c & d\end{pmatrix}$. Syarat $A^T A = I$ memberikan tiga persamaan independen:
+\begin{align}
+    a^2 + c^2 &= 1, \label{a1-eq:norm1}\\
+    b^2 + d^2 &= 1, \label{a1-eq:norm2}\\
+    ab + cd &= 0. \label{a1-eq:ortog}
+\end{align}
+Persamaan~\eqref{a1-eq:norm1} dan~\eqref{a1-eq:norm2} masing-masing merupakan syarat normalisasi kolom pertama dan kedua, sedangkan~\eqref{a1-eq:ortog} adalah syarat ortogonalitas antar-kolom. Dari empat parameter $(a,b,c,d)$ dikurangi tiga persamaan, tersisa satu derajat kebebasan.
+
+\vspace{0.5em}
+Karena~\eqref{a1-eq:norm1} mensyaratkan $(a,c)$ terletak pada lingkaran satuan, tulis:
+\begin{equation}\label{a1-eq:param1}
+    (a,c) = (\cos\theta,\;\sin\theta).
+\end{equation}
+Demikian pula, dari~\eqref{a1-eq:norm2}:
+\begin{equation}\label{a1-eq:param2}
+    (b,d) = (\cos\phi,\;\sin\phi).
+\end{equation}
+Substitusi ke syarat ortogonalitas~\eqref{a1-eq:ortog}:
+\begin{equation}
+    \cos\theta\cos\phi + \sin\theta\sin\phi = \cos(\theta - \phi) = 0,
+\end{equation}
+sehingga $\theta - \phi = \pm\pi/2$, atau ekuivalen: $\phi = \theta \mp \pi/2$.
+
+\vspace{0.5em}
+\noindent \textbf{Keluarga 1: $\phi = \theta + \pi/2$ (rotasi)}
+Substitusi ke~\eqref{a1-eq:param2}:
+\begin{align}
+    b &= \cos(\theta + \pi/2) = -\sin\theta, \nonumber\\
+    d &= \sin(\theta + \pi/2) = \cos\theta.
+\end{align}
+Matriks yang dihasilkan:
+\begin{equation}\label{a1-eq:rotation}
+    R_\theta = \begin{pmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix},
+    \qquad \det R_\theta = \cos^2\theta + \sin^2\theta = +1.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Keluarga 2: $\phi = \theta - \pi/2$ (refleksi)}
+Substitusi:
+\begin{align}
+    b &= \cos(\theta - \pi/2) = \sin\theta, \nonumber\\
+    d &= \sin(\theta - \pi/2) = -\cos\theta.
+\end{align}
+Matriks yang dihasilkan:
+\begin{equation}\label{a1-eq:reflection}
+    S_\theta = \begin{pmatrix}\cos\theta & \sin\theta \\ \sin\theta & -\cos\theta\end{pmatrix},
+    \qquad \det S_\theta = -\cos^2\theta - \sin^2\theta = -1.
+\end{equation}
+Grup $\mathrm{O}(2)$ terdiri dari gabungan kedua keluarga ini: $\mathrm{O}(2) = \{R_\theta\} \cup \{S_\theta\}$.
+
+\subsection{Grup Rotasi Khusus SO(2) dan Generatornya}
+
+Subgrup $\mathrm{SO}(2) \equiv \{A \in \mathrm{O}(2) \mid \det A = +1\}$ hanya memuat keluarga rotasi~\eqref{a1-eq:rotation}. Karena $R_\theta$ berparameter tunggal $\theta$ dan kontinu, $\mathrm{SO}(2)$ merupakan grup Lie berdimensi satu.
+
+\vspace{0.5em}
+Generator aljabar Lie diperoleh dengan mendiferensiasi elemen grup di dekat identitas ($\theta = 0$):
+\begin{equation}\label{a1-eq:generator-so2}
+    X = \left.\frac{dR_\theta}{d\theta}\right|_{\theta = 0}
+    = \left.\begin{pmatrix}-\sin\theta & -\cos\theta \\ \cos\theta & -\sin\theta\end{pmatrix}\right|_{\theta = 0}
+    = \begin{pmatrix}0 & -1 \\ 1 & 0\end{pmatrix}.
+\end{equation}
+Aljabar Lie $\mathfrak{so}(2)$ berdimensi satu, di-\emph{span} oleh $X$ saja. Generator ini bersifat antisimetris: $X^T = -X$, yang merupakan konsekuensi umum dari $A^T A = I$.
+
+\vspace{0.5em}
+Tulis $A(\lambda) = e^{\lambda X}$ dengan $A(0) = I$. Syarat $A^T A = I$ pada orde pertama:
+\begin{equation}
+    (I + \lambda X^T + \cdots)(I + \lambda X + \cdots) = I
+    \qquad\Longrightarrow\qquad
+    X^T + X = 0.
+\end{equation}
+Jadi seluruh generator $\mathfrak{so}(n)$ adalah matriks antisimetris: $X^T = -X$. Jumlah komponen independen matriks antisimetris $n \times n$ adalah $n(n-1)/2$, yang sama dengan dimensi $\mathfrak{so}(n)$.
+
+\subsection{Penghitungan Dimensi dan Perluasan ke SO(3)}
+
+Untuk $n = 2$: $\dim\,\mathfrak{so}(2) = 2(2-1)/2 = 1$, konsisten dengan satu generator $X$.
+
+Untuk $n = 3$: $\dim\,\mathfrak{so}(3) = 3(3-1)/2 = 3$. Secara eksplisit, dari matriks ortogonal $3 \times 3$ ($A^T A = I$), syarat tersebut memberikan 6 persamaan pada 9 komponen matriks, menyisakan $9 - 6 = 3$ derajat kebebasan. Ketiga derajat kebebasan ini berkorespondensi dengan tiga rotasi pada bidang-bidang koordinat $(y,z)$, $(x,z)$, dan $(x,y)$.
+
+\subsection{Matriks Rotasi dan Generator SO(3)}
+
+Tiga matriks rotasi dasar dalam $\mathbb{R}^3$ dan generatornya diturunkan secara eksplisit.
+
+\vspace{0.5em}
+\noindent \textbf{Rotasi di bidang $(y,z)$, sumbu $x$ tetap}
+\begin{equation}\label{a1-eq:Rx}
+    R_x(\theta) = \begin{pmatrix}1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta\end{pmatrix},
+    \qquad
+    J_x = \left.\frac{dR_x}{d\theta}\right|_{\theta=0}
+    = \begin{pmatrix}0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0\end{pmatrix}.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Rotasi di bidang $(x,z)$, sumbu $y$ tetap}
+\begin{equation}\label{a1-eq:Ry}
+    R_y(\theta) = \begin{pmatrix}\cos\theta & 0 & \sin\theta \\ 0 & 1 & 0 \\ -\sin\theta & 0 & \cos\theta\end{pmatrix},
+    \qquad
+    J_y = \left.\frac{dR_y}{d\theta}\right|_{\theta=0}
+    = \begin{pmatrix}0 & 0 & 1 \\ 0 & 0 & 0 \\ -1 & 0 & 0\end{pmatrix}.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Rotasi di bidang $(x,y)$, sumbu $z$ tetap}
+\begin{equation}\label{a1-eq:Rz}
+    R_z(\theta) = \begin{pmatrix}\cos\theta & -\sin\theta & 0 \\ \sin\theta & \cos\theta & 0 \\ 0 & 0 & 1\end{pmatrix},
+    \qquad
+    J_z = \left.\frac{dR_z}{d\theta}\right|_{\theta=0}
+    = \begin{pmatrix}0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}.
+\end{equation}
+Ketiga generator bersifat antisimetris ($J_i^T = -J_i$), sebagaimana dijamin oleh argumen umum di atas.
+
+\subsection{Relasi Komutasi $\mathfrak{so}(3)$}
+
+Relasi komutasi dihitung melalui perkalian matriks eksplisit untuk setiap pasangan generator.
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J_x, J_y]$:}
+Hitung kedua produk secara langsung:
+\begin{equation}
+    J_x J_y = \begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix}\!\begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\1&0&0\\0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    J_y J_x = \begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix}\!\begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix}
+    = \begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix}.
+\end{equation}
+Selisih:
+\begin{equation}\label{a1-eq:comm-xy}
+    [J_x, J_y] = J_x J_y - J_y J_x
+    = \begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix} = J_z.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J_y, J_z]$:}
+\begin{equation}
+    J_y J_z = \begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix}\!\begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\0&0&0\\0&1&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    J_z J_y = \begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\0&0&1\\0&0&0\end{pmatrix}.
+\end{equation}
+Selisih:
+\begin{equation}\label{a1-eq:comm-yz}
+    [J_y, J_z] = \begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix} = J_x.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J_z, J_x]$:}
+\begin{equation}
+    J_z J_x = \begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix}
+    = \begin{pmatrix}0&0&1\\0&0&0\\0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    J_x J_z = \begin{pmatrix}0&0&0\\0&0&-1\\0&1&0\end{pmatrix}\!\begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\0&0&0\\1&0&0\end{pmatrix}.
+\end{equation}
+Selisih:
+\begin{equation}\label{a1-eq:comm-zx}
+    [J_z, J_x] = \begin{pmatrix}0&0&1\\0&0&0\\-1&0&0\end{pmatrix} = J_y.
+\end{equation}
+Ketiga relasi komutasi~\eqref{a1-eq:comm-xy},~\eqref{a1-eq:comm-yz}, dan~\eqref{a1-eq:comm-zx} secara kompak dinyatakan:
+\begin{equation}\label{a1-eq:so3-commutator}
+    [J_i,\, J_j] = \varepsilon_{ijk}\,J_k, \qquad \varepsilon_{123} = +1.
+\end{equation}
+Relasi ini mendefinisikan aljabar Lie $\mathfrak{so}(3)$. Pada lampiran berikutnya, pola yang sama digunakan dengan mengganti metrik $\delta_{ij}$ menjadi metrik Lorentz $\eta_{ab}$, menghasilkan aljabar $\mathfrak{so}(2,1)$ dan $\mathfrak{so}(2,2)$ yang menjadi fondasi formulasi Chern-Simons dari gravitasi.
+
+\section{Grup $\mathrm{SO}(2,1)$ dan Aljabar Lie-nya}
+\label{app:SO21-algebra}
+
+\noindent\textit{Subbab ini bersifat tambahan bacaan, melanjutkan pembangunan bertahap aljabar Lie ortogonal menuju $\mathfrak{so}(2,2)$.}
+
+Pada lampiran sebelumnya, aljabar Lie $\mathfrak{so}(3)$ dibangun dari syarat $A^T\delta A = \delta$ dengan metrik Euclidean $\delta = \mathrm{diag}(+1,+1,+1)$. Pada bagian ini, prosedur yang sama diulangi dengan mengganti metrik menjadi $\eta = \mathrm{diag}(+1,+1,-1)$, menghasilkan aljabar Lie $\mathfrak{so}(2,1)$ yang merupakan landasan dari subaljabar Lorentz dalam $\mathfrak{so}(2,2)$.
+
+\subsection{Konstruksi Generator $\mathfrak{so}(2,1)$}
+
+Grup $\mathrm{SO}(2,1)$ terdiri dari matriks $3 \times 3$ yang mempertahankan bentuk bilinear dengan signatur $(+,+,-)$:
+\begin{equation}\label{a2-eq:so21-def}
+    \mathrm{SO}(2,1) = \{A \in \mathrm{GL}(3,\mathbb{R}) \mid A^T\eta A = \eta,\;\det A = +1\},
+    \quad \eta = \mathrm{diag}(+1,+1,-1).
+\end{equation}
+Linearisasi di sekitar identitas $A = I + \varepsilon X + \mathcal{O}(\varepsilon^2)$:
+\begin{equation}
+    (I + \varepsilon X^T)\,\eta\,(I + \varepsilon X) = \eta
+    \qquad\Longrightarrow\qquad
+    X^T\eta + \eta X = 0.
+\end{equation}
+
+\vspace{0.5em}
+Tulis $X = \begin{pmatrix}p&q&r\\s&t&u\\v&w&z\end{pmatrix}$. Hitung:
+\begin{equation}
+    X^T\eta = \begin{pmatrix}p&s&v\\q&t&w\\r&u&z\end{pmatrix}\!\begin{pmatrix}1&0&0\\0&1&0\\0&0&-1\end{pmatrix}
+    = \begin{pmatrix}p&s&-v\\q&t&-w\\r&u&-z\end{pmatrix},
+\end{equation}
+\begin{equation}
+    \eta X = \begin{pmatrix}1&0&0\\0&1&0\\0&0&-1\end{pmatrix}\!\begin{pmatrix}p&q&r\\s&t&u\\v&w&z\end{pmatrix}
+    = \begin{pmatrix}p&q&r\\s&t&u\\-v&-w&-z\end{pmatrix}.
+\end{equation}
+Jumlahkan:
+\begin{equation}\label{a2-eq:XetaX}
+    X^T\eta + \eta X = \begin{pmatrix}2p & s+q & r-v \\ s+q & 2t & u-w \\ r-v & u-w & -2z\end{pmatrix} = 0.
+\end{equation}
+Dari diagonal: $p = t = z = 0$. Dari entri off-diagonal:
+\begin{equation}
+    \text{posisi }(1,2):\; s = -q, \qquad
+    \text{posisi }(1,3):\; r = v, \qquad
+    \text{posisi }(2,3):\; u = w.
+\end{equation}
+Perbedaan krusial dengan $\mathfrak{so}(3)$ terletak pada tanda: entri $(1,2)$ memenuhi $s = -q$ (antisimetrik, sama seperti $\mathfrak{so}(3)$), tetapi entri $(1,3)$ dan $(2,3)$ memenuhi $r = v$ dan $u = w$ (simetris, kebalikan dari $\mathfrak{so}(3)$). Perbedaan ini berasal dari tanda $-1$ pada $\eta_{33}$.
+
+Bentuk umum generator:
+\begin{equation}\label{a2-eq:general-X}
+    X = \begin{pmatrix}0 & q & r \\ -q & 0 & u \\ r & u & 0\end{pmatrix},
+    \qquad \text{3 parameter bebas} \implies \dim\,\mathfrak{so}(2,1) = 3.
+\end{equation}
+
+\vspace{0.5em}
+Pilih satu parameter aktif pada setiap kali:
+\begin{equation}\label{a2-eq:J-def}
+    J = \begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix} \quad\text{(rotasi di bidang 1--2)},
+\end{equation}
+\begin{equation}\label{a2-eq:K1-def}
+    K_1 = \begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix} \quad\text{(boost di bidang 1--3)},
+\end{equation}
+\begin{equation}\label{a2-eq:K2-def}
+    K_2 = \begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix} \quad\text{(boost di bidang 2--3)}.
+\end{equation}
+Generator $J$ antisimetris ($J^T = -J$), sedangkan $K_1$ dan $K_2$ simetris ($K_i^T = K_i$). Ketiganya memenuhi $X^T\eta + \eta X = 0$ (bukan $X^T + X = 0$).
+
+\subsection{Orbit Generator: Kompak vs Non-Kompak}
+
+Sifat fisik dan topologis generator bergantung pada tanda kuadratnya.
+
+\vspace{0.5em}
+\noindent \textbf{Generator $J$ (kompak)}
+Hitung $J^2$:
+\begin{equation}
+    J^2 = \begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix}\!\begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix}
+    = \begin{pmatrix}-1&0&0\\0&-1&0\\0&0&0\end{pmatrix} = -P_{12},
+\end{equation}
+dengan $P_{12} = \mathrm{diag}(1,1,0)$ proyektor ke bidang 1--2. Kuadrat negatif menghasilkan deret eksponensial periodik (sinus/kosinus):
+\begin{equation}\label{a2-eq:exp-J}
+    e^{\theta J} = I + (\sin\theta)\,J + (1 - \cos\theta)\,P_{12}
+    = \begin{pmatrix}\cos\theta & \sin\theta & 0 \\ -\sin\theta & \cos\theta & 0 \\ 0 & 0 & 1\end{pmatrix}.
+\end{equation}
+Orbit $e^{\theta J}\mathbf{x}$ berupa lingkaran: $x_1'^2 + x_2'^2 = x_1^2 + x_2^2$, dengan $e^{2\pi J} = I$.
+
+\vspace{0.5em}
+\noindent \textbf{Generator $K_1$ (non-kompak)}
+Hitung $K_1^2$:
+\begin{equation}
+    K_1^2 = \begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix}\!\begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix}
+    = \begin{pmatrix}1&0&0\\0&0&0\\0&0&1\end{pmatrix} = +P_{13}.
+\end{equation}
+Kuadrat positif menghasilkan deret eksponensial hiperbolik:
+\begin{equation}\label{a2-eq:exp-K1}
+    e^{\lambda K_1} = I + (\sinh\lambda)\,K_1 + (\cosh\lambda - 1)\,P_{13}
+    = \begin{pmatrix}\cosh\lambda & 0 & \sinh\lambda \\ 0 & 1 & 0 \\ \sinh\lambda & 0 & \cosh\lambda\end{pmatrix}.
+\end{equation}
+Orbit $e^{\lambda K_1}\mathbf{x}$ berupa hiperbola: $x_1'^2 - x_3'^2 = x_1^2 - x_3^2$, tidak periodik.
+
+Dikotomi ini, $J^2 = -P$ vs $K^2 = +P$, mencerminkan perbedaan topologis antara rotasi (orbit kompak) dan boost (orbit non-kompak), dan merupakan akar dari dekomposisi Cartan $\mathfrak{so}(2,1) = \mathfrak{k} \oplus \mathfrak{p}$ yang akan relevan pada struktur $\mathfrak{so}(2,2)$.
+
+\subsection{Relasi Komutasi $\mathfrak{so}(2,1)$}
+\label{a2-sec:comm-so21}
+
+Perkalian matriks eksplisit untuk ketiga pasangan generator.
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J, K_1]$:}
+\begin{equation}
+    JK_1 = \begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\0&0&-1\\0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    K_1 J = \begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix}\!\begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\0&0&0\\0&1&0\end{pmatrix}.
+\end{equation}
+Selisih:
+\begin{equation}\label{a2-eq:JK1}
+    [J, K_1] = \begin{pmatrix}0&0&0\\0&0&-1\\0&-1&0\end{pmatrix} = -K_2.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J, K_2]$:}
+\begin{equation}
+    JK_2 = \begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix}
+    = \begin{pmatrix}0&0&1\\0&0&0\\0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    K_2 J = \begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix}\!\begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\0&0&0\\-1&0&0\end{pmatrix}.
+\end{equation}
+Selisih:
+\begin{equation}\label{a2-eq:JK2}
+    [J, K_2] = \begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix} = K_1.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[K_1, K_2]$:}
+\begin{equation}
+    K_1 K_2 = \begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix}\!\begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix}
+    = \begin{pmatrix}0&1&0\\0&0&0\\0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    K_2 K_1 = \begin{pmatrix}0&0&0\\0&0&1\\0&1&0\end{pmatrix}\!\begin{pmatrix}0&0&1\\0&0&0\\1&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0\\1&0&0\\0&0&0\end{pmatrix}.
+\end{equation}
+Selisih:
+\begin{equation}\label{a2-eq:K1K2}
+    [K_1, K_2] = \begin{pmatrix}0&1&0\\-1&0&0\\0&0&0\end{pmatrix} = J.
+\end{equation}
+Tiga relasi komutasi $\mathfrak{so}(2,1)$:
+\begin{equation}\label{a2-eq:so21-comm}
+    [J, K_1] = -K_2, \qquad [J, K_2] = K_1, \qquad [K_1, K_2] = J.
+\end{equation}
+Bandingkan dengan $\mathfrak{so}(3)$: $[J_i,J_j] = \varepsilon_{ijk}J_k$. Pada $\mathfrak{so}(3)$, komutator dua generator selalu menghasilkan generator ketiga dengan tanda yang ditentukan oleh $\varepsilon_{ijk}$ saja. Pada $\mathfrak{so}(2,1)$, komutator dua boost menghasilkan rotasi (bukan boost), mencerminkan geometri hiperbolik ruang Lorentz.
+
+\section{Dekomposisi $\mathfrak{so}(2,2) \cong \mathfrak{so}(2,1) \oplus \mathfrak{so}(2,1)$}
+\label{app:SO22-decomp}
+
+\noindent\textit{Subbab ini bersifat tambahan bacaan: dekomposisi kiral diverifikasi sebagai fakta struktural aljabar $\mathfrak{so}(2,2)$, namun tidak digunakan pada derivasi utama Bab~4, sesuai batasan masalah pada Bab~1. Pembaca yang hanya tertarik pada alur derivasi gravitasi dapat melompat ke Subbab~\ref{app:generator-construction}.}
+
+Dekomposisi aljabar Lie $\mathfrak{so}(2,2)$ menjadi jumlah langsung dua salinan $\mathfrak{so}(2,1)$ secara struktural menyatakan bahwa $\mathrm{SO}(2,2)$ adalah grup yang dibangun dari dua salinan $\mathrm{SO}(2,1)$. Pada bagian ini, enam generator $\mathfrak{so}(2,2)$ dikonstruksi secara eksplisit, seluruh 15 komutator independennya dihitung, lalu basis kiral yang menghasilkan dekomposisi diidentifikasi.
+
+\vspace{0.5em}
+Pada subbab ini, untuk memudahkan visualisasi rotasi-boost dalam blok diagonal, dipakai metrik $\eta = \mathrm{diag}(+1,+1,-1,-1)$. Subbab~\ref{app:generator-construction} dan~\ref{app:komutasi-JaPa} berikutnya menggunakan konvensi yang berbeda, yaitu $\eta_{IJ} = \mathrm{diag}(+1,-1,-1,+1)$, yang memisahkan tiga indeks ruang-waktu Lorentz $\{0,1,2\}$ dengan signatur $(+,-,-)$ dari indeks ekstra ``3'' dengan $\eta_{33} = +1$. Kedua konvensi adalah representasi yang setara dari aljabar $\mathfrak{so}(2,2)$ yang sama, dan dihubungkan oleh permutasi indeks. Hasil-hasil struktural (dimensi 6, dekomposisi kiral, relasi komutasi umum) tidak bergantung pada pilihan konvensi.
+
+\subsection{Generator Eksplisit}
+
+Grup $\mathrm{SO}(2,2)$ pada konvensi ini mempertahankan metrik $\eta = \mathrm{diag}(+1,+1,-1,-1)$, dengan syarat $X^T\eta + \eta X = 0$ untuk generator aljabar Lie. Dimensi: $4(4-1)/2 = 6$, sesuai dengan enam bidang rotasi/boost dalam ruang $\mathbb{R}^{2,2}$.
+
+Enam generator dipilih sebagai berikut. Dua generator merupakan rotasi (pasangan koordinat dengan metrik bertanda sama):
+\begin{equation}\label{a3-eq:J12}
+    J_{12} = \begin{pmatrix}0&1&0&0\\-1&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}
+    \quad\text{(rotasi bidang 1--2, $\eta_{11}\eta_{22} = +1$)},
+\end{equation}
+\begin{equation}\label{a3-eq:J34}
+    J_{34} = \begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&-1&0\end{pmatrix}
+    \quad\text{(rotasi bidang 3--4, $\eta_{33}\eta_{44} = +1$)}.
+\end{equation}
+Empat generator merupakan \emph{boost} (pasangan dengan metrik bertanda berbeda):
+\begin{equation}\label{a3-eq:boosts}
+    K_{13} = \begin{pmatrix}0&0&1&0\\0&0&0&0\\1&0&0&0\\0&0&0&0\end{pmatrix},\quad
+    K_{14} = \begin{pmatrix}0&0&0&1\\0&0&0&0\\0&0&0&0\\1&0&0&0\end{pmatrix},\quad
+    K_{23} = \begin{pmatrix}0&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&0\end{pmatrix},\quad
+    K_{24} = \begin{pmatrix}0&0&0&0\\0&0&0&1\\0&0&0&0\\0&1&0&0\end{pmatrix}.
+\end{equation}
+Rotasi bersifat antisimetris ($J^T = -J$); boost bersifat simetris di blok campuran, sebagaimana pada $\mathfrak{so}(2,1)$.
+
+\subsection{Tabel 15 Komutator}
+
+Dari enam generator, terdapat $\binom{6}{2} = 15$ pasangan komutator independen. Seluruhnya dihitung melalui perkalian matriks $4 \times 4$ langsung. Dua contoh perhitungan diberikan di bawah; 13 pasangan lainnya mengikuti prosedur yang sama.
+
+\noindent \textbf{Contoh: $[J_{12}, K_{13}]$}
+\begin{equation}
+    J_{12}\,K_{13} = \begin{pmatrix}0&1&0&0\\-1&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&1&0\\0&0&0&0\\1&0&0&0\\0&0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0&0\\0&0&-1&0\\0&0&0&0\\0&0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    K_{13}\,J_{12} = \begin{pmatrix}0&0&1&0\\0&0&0&0\\1&0&0&0\\0&0&0&0\end{pmatrix}\!\begin{pmatrix}0&1&0&0\\-1&0&0&0\\0&0&0&0\\0&0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0&0\\0&0&0&0\\0&1&0&0\\0&0&0&0\end{pmatrix}.
+\end{equation}
+Selisih: $[J_{12},K_{13}] = \begin{psmallmatrix}0&0&0&0\\0&0&-1&0\\0&-1&0&0\\0&0&0&0\end{psmallmatrix} = -K_{23}$.
+
+\noindent \textbf{Contoh: $[K_{13}, K_{14}]$}
+\begin{equation}
+    K_{13}\,K_{14} = \begin{pmatrix}0&0&1&0\\0&0&0&0\\1&0&0&0\\0&0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&0&1\\0&0&0&0\\0&0&0&0\\1&0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&0&0\end{pmatrix},
+\end{equation}
+\begin{equation}
+    K_{14}\,K_{13} = \begin{pmatrix}0&0&0&1\\0&0&0&0\\0&0&0&0\\1&0&0&0\end{pmatrix}\!\begin{pmatrix}0&0&1&0\\0&0&0&0\\1&0&0&0\\0&0&0&0\end{pmatrix}
+    = \begin{pmatrix}0&0&0&0\\0&0&0&0\\0&0&0&0\\0&0&1&0\end{pmatrix}.
+\end{equation}
+Selisih: $[K_{13},K_{14}] = \begin{psmallmatrix}0&0&0&0\\0&0&0&0\\0&0&0&1\\0&0&-1&0\end{psmallmatrix} = J_{34}$.
+
+Tabel lengkap 15 komutator:
+\begin{table}[htbp]
+\centering
+\caption{Relasi Komutasi Aljabar Lie $\mathfrak{so}(2,2)$}
+\label{tab:komutator}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}rcl@{\qquad}rcl@{\qquad}rcl@{}}
+\toprule
+\multicolumn{3}{c}{\textbf{$[J,K]$}} &
+\multicolumn{3}{c}{\textbf{$[K,K]$}} &
+\multicolumn{3}{c}{\textbf{$[J,J]$}} \\
+\midrule
+$[J_{12}, K_{13}]$ & $=$ & $-K_{23}$ &
+$[K_{13}, K_{14}]$ & $=$ & $J_{34}$  &
+$[J_{12}, J_{34}]$ & $=$ & $0$ \\
+
+$[J_{12}, K_{23}]$ & $=$ & $K_{13}$  &
+$[K_{23}, K_{24}]$ & $=$ & $J_{34}$  & & & \\
+
+$[J_{12}, K_{14}]$ & $=$ & $-K_{24}$ &
+$[K_{13}, K_{23}]$ & $=$ & $J_{12}$  & & & \\
+
+$[J_{12}, K_{24}]$ & $=$ & $K_{14}$  &
+$[K_{14}, K_{24}]$ & $=$ & $J_{12}$  & & & \\
+\addlinespace
+$[J_{34}, K_{13}]$ & $=$ & $-K_{14}$ &
+$[K_{13}, K_{24}]$ & $=$ & $0$       & & & \\
+
+$[J_{34}, K_{14}]$ & $=$ & $K_{13}$  &
+$[K_{14}, K_{23}]$ & $=$ & $0$       & & & \\
+
+$[J_{34}, K_{23}]$ & $=$ & $-K_{24}$ & & & & & & \\
+
+$[J_{34}, K_{24}]$ & $=$ & $K_{23}$  & & & & & & \\
+\bottomrule
+\end{tabular}
+\end{table}\\
+Komutator dua boost yang berbagi satu indeks menghasilkan rotasi pada bidang indeks yang tak dibagi (misal $[K_{13},K_{14}] = J_{34}$), sedangkan boost tanpa indeks bersama saling berkomutasi ($[K_{13},K_{24}] = 0$).
+
+\subsection{Konstruksi Basis Kiral}
+
+Aljabar $\mathfrak{so}(2,1)$ berdimensi tiga, dan $\mathfrak{so}(2,2)$ berdimensi enam. Jika dekomposisi $\mathfrak{so}(2,2) \cong \mathfrak{so}(2,1) \oplus \mathfrak{so}(2,1)$ berlaku, harus ada enam generator yang terpartisi menjadi dua triplet, masing-masing menutup membentuk $\mathfrak{so}(2,1)$ dan saling berkomutasi nol (jumlah langsung).
+
+Definisikan basis kiral (``salinan $+$'' dan ``salinan $-$''):
+\begin{align}
+    J^+ &= \tfrac{1}{2}(J_{12} + J_{34}), & K_1^+ &= \tfrac{1}{2}(K_{13} - K_{24}), & K_2^+ &= \tfrac{1}{2}(K_{23} + K_{14}), \label{a3-eq:plus}\\[4pt]
+    J^- &= \tfrac{1}{2}(J_{12} - J_{34}), & K_1^- &= \tfrac{1}{2}(K_{13} + K_{24}), & K_2^- &= \tfrac{1}{2}(K_{23} - K_{14}). \label{a3-eq:minus}
+\end{align}
+
+\subsection{Komutator Salinan $+$}
+
+Komutator dihitung menggunakan bilinearitas dan tabel di atas.
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J^+, K_1^+]$:}
+\begin{align}
+    [J^+, K_1^+] &= \tfrac{1}{4}\big([J_{12}, K_{13}] - [J_{12}, K_{24}] + [J_{34}, K_{13}] - [J_{34}, K_{24}]\big) \nonumber\\[4pt]
+    &= \tfrac{1}{4}\big(-K_{23} - K_{14} - K_{14} - K_{23}\big) \nonumber\\[4pt]
+    &= \tfrac{1}{4}(-2K_{23} - 2K_{14}) = -\frac{K_{23} + K_{14}}{2} = -K_2^+. \label{a3-eq:JpK1p}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[J^+, K_2^+]$:}
+\begin{align}
+    [J^+, K_2^+] &= \tfrac{1}{4}\big([J_{12}, K_{23}] + [J_{12}, K_{14}] + [J_{34}, K_{23}] + [J_{34}, K_{14}]\big) \nonumber\\[4pt]
+    &= \tfrac{1}{4}\big(K_{13} - K_{24} - K_{24} + K_{13}\big) \nonumber\\[4pt]
+    &= \tfrac{1}{4}(2K_{13} - 2K_{24}) = \frac{K_{13} - K_{24}}{2} = K_1^+. \label{a3-eq:JpK2p}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Komutator $[K_1^+, K_2^+]$:}
+\begin{align}
+    [K_1^+, K_2^+] &= \tfrac{1}{4}\big([K_{13}, K_{23}] + [K_{13}, K_{14}] - [K_{24}, K_{23}] - [K_{24}, K_{14}]\big) \nonumber\\[4pt]
+    &= \tfrac{1}{4}\big(J_{12} + J_{34} + J_{34} + J_{12}\big) \nonumber\\[4pt]
+    &= \tfrac{1}{4}(2J_{12} + 2J_{34}) = \frac{J_{12} + J_{34}}{2} = J^+. \label{a3-eq:K1pK2p}
+\end{align}
+Ketiga komutator~\eqref{a3-eq:JpK1p}--\eqref{a3-eq:K1pK2p} persis mereproduksi relasi $\mathfrak{so}(2,1)$ pada~\eqref{a2-eq:so21-comm} (dengan identifikasi $J \to J^+$, $K_1 \to K_1^+$, $K_2 \to K_2^+$).
+
+\subsection{Komutator Salinan $-$}
+
+Prosedur identik menghasilkan:
+\begin{align}
+    [J^-, K_1^-] &= \tfrac{1}{4}\big([J_{12},K_{13}] + [J_{12},K_{24}] - [J_{34},K_{13}] - [J_{34},K_{24}]\big) \nonumber\\
+    &= \tfrac{1}{4}(-K_{23} + K_{14} + K_{14} - K_{23}) = -\frac{K_{23} - K_{14}}{2} = -K_2^-. \label{a3-eq:JmK1m}\\[6pt]
+    [J^-, K_2^-] &= \tfrac{1}{4}\big([J_{12},K_{23}] - [J_{12},K_{14}] - [J_{34},K_{23}] + [J_{34},K_{14}]\big) \nonumber\\
+    &= \tfrac{1}{4}(K_{13} + K_{24} + K_{24} + K_{13}) = \frac{K_{13} + K_{24}}{2} = K_1^-. \label{a3-eq:JmK2m}\\[6pt]
+    [K_1^-, K_2^-] &= \tfrac{1}{4}\big([K_{13},K_{23}] - [K_{13},K_{14}] + [K_{24},K_{23}] - [K_{24},K_{14}]\big) \nonumber\\
+    &= \tfrac{1}{4}(J_{12} - J_{34} - J_{34} + J_{12}) = \frac{J_{12} - J_{34}}{2} = J^-. \label{a3-eq:K1mK2m}
+\end{align}
+Salinan $-$ juga menutup membentuk $\mathfrak{so}(2,1)$.
+
+\subsection{Lenyapnya Komutator Silang}
+
+Untuk membuktikan bahwa kedua salinan membentuk jumlah langsung (bukan sekadar dua subaljabar), seluruh komutator silang harus nol. Terdapat $3 \times 3 = 9$ pasangan silang; tiga yang representatif:
+\begin{align}
+    [J^+, J^-] &= \tfrac{1}{4}\big(\underbrace{[J_{12},J_{12}]}_{=0} - [J_{12},J_{34}] + [J_{34},J_{12}] - \underbrace{[J_{34},J_{34}]}_{=0}\big) \nonumber\\
+    &= \tfrac{1}{4}(0 + 0) = 0. \label{a3-eq:cross-JJ}\\[6pt]
+    [J^+, K_1^-] &= \tfrac{1}{4}\big([J_{12},K_{13}] + [J_{12},K_{24}] + [J_{34},K_{13}] + [J_{34},K_{24}]\big) \nonumber\\
+    &= \tfrac{1}{4}(-K_{23} + K_{14} - K_{14} + K_{23}) = 0. \label{a3-eq:cross-JK}\\[6pt]
+    [K_1^+, K_1^-] &= \tfrac{1}{4}\big(\underbrace{[K_{13},K_{13}]}_{=0} + [K_{13},K_{24}] - [K_{24},K_{13}] - \underbrace{[K_{24},K_{24}]}_{=0}\big) \nonumber\\
+    &= \tfrac{1}{4}(0 - 0) = 0. \label{a3-eq:cross-KK}
+\end{align}
+Enam pasangan silang lainnya menghilang dengan cara yang sama: setiap kali, empat suku dari tabel komutator saling menghapus berpasangan.
+
+Dengan basis kiral~\eqref{a3-eq:plus}--\eqref{a3-eq:minus}:
+\begin{equation}\label{a3-eq:decomposition}
+    \mathfrak{so}(2,2) \cong \mathfrak{so}(2,1)^+ \oplus \mathfrak{so}(2,1)^-.
+\end{equation}
+Dekomposisi ini menunjukkan struktur internal $\mathfrak{so}(2,2)$ sebagai jumlah langsung dua aljabar $\mathfrak{so}(2,1)$. Pada literatur yang mengeksploitasi dekomposisi ini, aksi Chern-Simons pada $\mathfrak{so}(2,2)$ terurai menjadi selisih dua aksi Chern-Simons pada masing-masing salinan $\mathfrak{so}(2,1)^\pm$, yang menjadi titik tolak untuk diskusi AdS/CFT dan teori batas CFT$_2$ \cite{witten1988, achucarro1986}. Pada tesis ini, dekomposisi tersebut hanya dimanfaatkan sebagai fakta struktural untuk mengkarakterisasi ruang bentuk bilinear invarian (Lampiran~A.\ref{app:bilinear-form}); seluruh derivasi gravitasi dilakukan langsung dalam basis $\mathrm{SO}(2,2)$ tunggal tanpa dekomposisi eksplisit.
+
+\section{Konstruksi Generator $M_{IJ}$ dan Relasi Komutasi Umum}
+\label{app:generator-construction}
+
+Pada dua lampiran sebelumnya, generator $\mathfrak{so}(2,1)$ dan $\mathfrak{so}(2,2)$ dikonstruksi secara \emph{ad hoc}, dipilih satu per satu berdasarkan bidang rotasi atau boost yang diinginkan. Pada bagian ini, generator $M_{IJ}$ dibangun secara \emph{kovarian}: didefinisikan untuk sebarang pasangan indeks $(I,J)$ dan sebarang signatur, sehingga berlaku universal untuk $\mathfrak{so}(p,q)$. Relasi komutasi umum yang diturunkan di sini akan menjadi alat utama untuk membuktikan ketiga relasi komutasi $[J_a,J_b]$, $[J_a,P_b]$, $[P_a,P_b]$ pada lampiran berikutnya.
+
+Konvensi indeks: huruf kapital $I, J, K, L, \ldots \in \{0,1,2,3\}$ untuk ruang $\mathbb{R}^{2,2}$, dengan metrik $\eta_{IJ} = \mathrm{diag}(+1,-1,-1,+1)$. Huruf kecil $a, b, c, \ldots \in \{0,1,2\}$ untuk subruang tiga dimensi, dan indeks 3 mewakili arah tambahan.
+
+\subsection{Syarat Generator Aljabar Lie $\mathfrak{so}(p,q)$}
+
+Dari syarat $\Lambda^T\eta\Lambda = \eta$ untuk elemen grup $\mathrm{SO}(p,q)$, linearisasi $\Lambda = \mathbf{1} + \epsilon\,X + \mathcal{O}(\epsilon^2)$ memberikan:
+\begin{equation}\label{a4-eq:lie-cond}
+    X^T\eta + \eta X = 0.
+\end{equation}
+Definisikan $M \equiv \eta X$. Antisimetri $M$ mengikuti langsung:
+\begin{equation}
+    M^T = (\eta X)^T = X^T\eta^T = X^T\eta \stackrel{\eqref{a4-eq:lie-cond}}{=} -\eta X = -M,
+\end{equation}
+sehingga komponen $M_{IJ} = -M_{JI}$. Matriks antisimetris $4 \times 4$ memiliki $4(4-1)/2 = 6$ komponen independen, konsisten dengan $\dim\,\mathfrak{so}(2,2) = 6$.
+
+\subsection{Definisi Kovarian Generator}
+
+Generator $M_{IJ}$ dikonstruksi sebagai antisimetrisasi outer product dari vektor basis dan kovektor dualnya. Definisikan:
+\begin{equation}
+    \text{vektor basis: } (e_I)^A = \delta^A_I, \qquad
+    \text{kovektor dual: } (\tilde{e}_J)_B = \eta_{JB}.
+\end{equation}
+Outer product memberikan matriks $(e_I \otimes \tilde{e}_J)^A_{\ B} = \delta^A_I\,\eta_{JB}$, yang belum antisimetris. Antisimetrisasi:
+\begin{equation}\label{a4-eq:MIJ-def}
+    (M_{IJ})^A_{\ B} = \delta^A_I\,\eta_{JB} - \delta^A_J\,\eta_{IB}.
+\end{equation}
+Antisimetri dalam $(I,J)$ termanifestasi langsung: pertukaran $I \leftrightarrow J$ membalik tanda. Matriks ini memiliki satu baris non-nol di baris $I$ (berisi $\eta_{JB}$) dan satu di baris $J$ (berisi $-\eta_{IB}$), sehingga setiap $M_{IJ}$ merepresentasikan rotasi atau boost pada bidang $(I,J)$.
+
+\vspace{0.5em}
+Untuk $(I,J) = (1,3)$ dengan $\eta = \mathrm{diag}(+1,-1,-1,+1)$:
+\begin{equation}
+    (M_{13})^A_{\ B} = \delta^A_1\,\eta_{3B} - \delta^A_3\,\eta_{1B}.
+\end{equation}
+Entri baris $A = 1$: $(M_{13})^1_{\ B} = \eta_{3B} = (0,0,0,+1)$. Entri baris $A = 3$: $(M_{13})^3_{\ B} = -\eta_{1B} = -(0,-1,0,0) = (0,+1,0,0)$. Baris lain nol. Maka:
+\begin{equation}
+    M_{13} = \begin{pmatrix}0&0&0&0\\0&0&0&1\\0&0&0&0\\0&1&0&0\end{pmatrix},
+\end{equation}
+yang simetris pada posisi $(1,3)$ dan $(3,1)$, sesuai dengan generator boost pada bidang yang melibatkan indeks bertanda berbeda ($\eta_{11} = -1$, $\eta_{33} = +1$).
+
+\subsection{Bukti Syarat $X^T\eta + \eta X = 0$}
+
+Dari $X = \eta^{-1}M_{IJ}$, syarat~\eqref{a4-eq:lie-cond} ekuivalen dengan $\eta M_{IJ} + M_{IJ}^T\eta = 0$. Hitung kedua suku secara eksplisit.
+
+\vspace{0.5em}
+\noindent \textbf{Suku pertama:}
+\begin{equation}
+    (\eta M_{IJ})_{AB} = \eta_{AC}(M_{IJ})^C_{\ B}
+    = \eta_{AC}(\delta^C_I\,\eta_{JB} - \delta^C_J\,\eta_{IB})
+    = \eta_{AI}\,\eta_{JB} - \eta_{AJ}\,\eta_{IB}.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Suku kedua:}
+\begin{equation}
+    (M_{IJ}^T\eta)_{AB} = (M_{IJ})^C_{\ A}\,\eta_{CB}
+    = (\delta^C_I\,\eta_{JA} - \delta^C_J\,\eta_{IA})\,\eta_{CB}
+    = \eta_{IB}\,\eta_{JA} - \eta_{JB}\,\eta_{IA}.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Jumlah:}
+\begin{align}
+    (\eta M_{IJ} + M_{IJ}^T\eta)_{AB}
+    &= (\eta_{AI}\,\eta_{JB} - \eta_{AJ}\,\eta_{IB})
+    + (\eta_{IB}\,\eta_{JA} - \eta_{JB}\,\eta_{IA}) \nonumber\\[4pt]
+    &= \underbrace{(\eta_{AI}\,\eta_{JB} - \eta_{JB}\,\eta_{IA})}_{\displaystyle = 0\text{ (karena }\eta_{AI} = \eta_{IA}\text{)}}
+    + \underbrace{(\eta_{IB}\,\eta_{JA} - \eta_{AJ}\,\eta_{IB})}_{\displaystyle = 0\text{ (karena }\eta_{JA} = \eta_{AJ}\text{)}} = 0.\quad\square
+\end{align}
+
+\subsection{Penurunan Relasi Komutasi Umum}
+
+Komutator $[M_{IJ}, M_{KL}]$ dihitung melalui perkalian komponen~\eqref{a4-eq:MIJ-def}.
+
+\vspace{0.5em}
+\noindent \textbf{Produk pertama:}
+\begin{align}
+    (M_{IJ}\,M_{KL})^A_{\ B}
+    &= (M_{IJ})^A_{\ C}\,(M_{KL})^C_{\ B} \nonumber\\[4pt]
+    &= (\delta^A_I\,\eta_{JC} - \delta^A_J\,\eta_{IC})
+    (\delta^C_K\,\eta_{LB} - \delta^C_L\,\eta_{KB}) \nonumber\\[4pt]
+    &= \delta^A_I\,\eta_{JK}\,\eta_{LB}
+    - \delta^A_I\,\eta_{JL}\,\eta_{KB}
+    - \delta^A_J\,\eta_{IK}\,\eta_{LB}
+    + \delta^A_J\,\eta_{IL}\,\eta_{KB}. \label{a4-eq:prod1}
+\end{align}
+
+\noindent \textbf{Produk kedua} (pertukaran $(I,J) \leftrightarrow (K,L)$):
+\begin{equation}\label{a4-eq:prod2}
+    (M_{KL}\,M_{IJ})^A_{\ B}
+    = \delta^A_K\,\eta_{LI}\,\eta_{JB}
+    - \delta^A_K\,\eta_{LJ}\,\eta_{IB}
+    - \delta^A_L\,\eta_{KI}\,\eta_{JB}
+    + \delta^A_L\,\eta_{KJ}\,\eta_{IB}.
+\end{equation}
+
+\vspace{0.5em}
+Kurangkan~\eqref{a4-eq:prod2} dari~\eqref{a4-eq:prod1} dan kelompokkan. Setiap suku memiliki struktur $\delta^A_?\,\eta_{??}\,\eta_{?B}$, yang persis berbentuk $\eta_{??}\,(M_{??})^A_{\ B}$ sesuai~\eqref{a4-eq:MIJ-def}. Identifikasi:
+\begin{align}
+    [M_{IJ}, M_{KL}]^A_{\ B} &=
+    \eta_{JK}\,\underbrace{(\delta^A_I\,\eta_{LB} - \delta^A_L\,\eta_{IB})}_{(M_{IL})^A_{\ B}}
+    - \eta_{JL}\,\underbrace{(\delta^A_I\,\eta_{KB} - \delta^A_K\,\eta_{IB})}_{(M_{IK})^A_{\ B}} \nonumber\\[4pt]
+    &\quad - \eta_{IK}\,\underbrace{(\delta^A_J\,\eta_{LB} - \delta^A_L\,\eta_{JB})}_{(M_{JL})^A_{\ B}}
+    + \eta_{IL}\,\underbrace{(\delta^A_J\,\eta_{KB} - \delta^A_K\,\eta_{JB})}_{(M_{JK})^A_{\ B}}.
+\end{align}
+Dalam bentuk kompak:
+\begin{equation}\label{a4-eq:comm-general}
+    [M_{IJ}, M_{KL}] = \eta_{JK}\,M_{IL} - \eta_{JL}\,M_{IK} - \eta_{IK}\,M_{JL} + \eta_{IL}\,M_{JK}.
+\end{equation}
+Relasi ini berlaku untuk sebarang signatur $\eta_{IJ}$ dan sebarang dimensi; ia merupakan relasi komutasi universal aljabar Lie $\mathfrak{so}(p,q)$.
+
+\subsection{Versi Indeks Atas dan Campuran}
+
+Untuk keperluan Lampiran~A.\ref{app:komutasi-JaPa}, relasi~\eqref{a4-eq:comm-general} dituliskan dalam dua bentuk tambahan.
+
+Seluruh indeks dinaikkan melalui $M^{IJ} = \eta^{IM}\eta^{JN}M_{MN}$:
+\begin{equation}\label{a4-eq:comm-up}
+    [M^{IJ}, M^{KL}] = \eta^{JK}\,M^{IL} - \eta^{JL}\,M^{IK} - \eta^{IK}\,M^{JL} + \eta^{IL}\,M^{JK}.
+\end{equation}
+Indeks campuran ($M^{IJ}$ terhadap $M_{KL}$):
+\begin{equation}\label{a4-eq:comm-mixed}
+    [M^{IJ}, M_{KL}] = \delta^J_K\,M^I_{\ L} - \delta^I_K\,M^J_{\ L} - \delta^J_L\,M^I_{\ K} + \delta^I_L\,M^J_{\ K}.
+\end{equation}
+Versi ini diperoleh dari~\eqref{a4-eq:comm-general} dengan menaikkan $I,J$ menggunakan $\eta^{IM}\eta_{MK} = \delta^I_K$. Keuntungannya: suku yang mengandung $\delta^I_3$ atau $\delta^J_3$ lenyap langsung ketika $I,J \in \{0,1,2\}$, menyederhanakan perhitungan komutator $[J_a, P_b]$ secara signifikan.
+
+\section{Penurunan Tiga Relasi Komutasi $J_a$, $P_a$}
+\label{app:komutasi-JaPa}
+
+Bagian ini menurunkan ketiga relasi komutasi yang mendefinisikan aljabar Lie gravitasi $2+1$ dimensi, mulai dari relasi komutasi umum $[M_{IJ}, M_{KL}]$ pada~\eqref{a4-eq:comm-general}--\eqref{a4-eq:comm-mixed}. Ketiga relasi ini, $[J_a,J_b]$, $[J_a,P_b]$, dan $[P_a,P_b]$, muncul di Ansatz Witten (Bab~4) ketika koneksi gauge Chern-Simons didekomposisi dalam basis generator.
+
+\subsection{Identifikasi $J_a$ dan $P_a$ dari $M_{IJ}$}
+
+Dengan metrik $\eta_{IJ} = \mathrm{diag}(+1,-1,-1,+1)$, generator gravitasi didefinisikan:
+\begin{equation}\label{a5-eq:JaPa-def}
+    J_a = -\frac{1}{2}\varepsilon_{acd}\,M^{cd}, \qquad
+    P_a = \frac{1}{\ell}\,M_{a3},
+\end{equation}
+dengan $a, c, d \in \{0,1,2\}$ dan $\varepsilon_{012} = +1$. Invers dari definisi pertama:
+\begin{equation}\label{a5-eq:Mab-inv}
+    M_{ab} = -\varepsilon_{abc}\,J^c.
+\end{equation}
+Properti yang digunakan berulang kali:
+\begin{enumerate}
+    \item $\eta_{a3} = 0$ untuk semua $a \in \{0,1,2\}$ (blok off-diagonal nol).
+    \item $\eta_{33} = +1$.
+    \item $M_{33} = 0$ (antisimetri $M_{IJ}$).
+    \item Identitas kontraksi Levi-Civita: $\varepsilon^{ijk}\varepsilon_{ilm} = +(\delta^j_l\,\delta^k_m - \delta^j_m\,\delta^k_l)$. Tanda positif karena $\det(\eta_{ab}) = \eta_{00}\eta_{11}\eta_{22} = (+1)(-1)(-1) = +1$.
+\end{enumerate}
+
+\subsection{Komutator $[J_a, J_b] = \varepsilon_{abc}\,J^c$}
+
+Dari definisi~\eqref{a5-eq:JaPa-def}:
+\begin{equation}\label{a5-eq:JJ-start}
+    [J_a, J_b] = \frac{1}{4}\,\varepsilon_{acd}\,\varepsilon_{bef}\,[M^{cd}, M^{ef}].
+\end{equation}
+Substitusi relasi komutasi~\eqref{a4-eq:comm-up}:
+\begin{equation}
+    [M^{cd}, M^{ef}] = \eta^{de}\,M^{cf} - \eta^{df}\,M^{ce} - \eta^{ce}\,M^{df} + \eta^{cf}\,M^{de}.
+\end{equation}
+Maka~\eqref{a5-eq:JJ-start} menghasilkan empat suku:
+\begin{align}
+    [J_a,J_b] &= \frac{1}{4}\Big(
+    \varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{de}\,M^{cf}
+    - \varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{df}\,M^{ce} \nonumber\\
+    &\qquad\quad - \varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{ce}\,M^{df}
+    + \varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}
+    \Big). \label{a5-eq:JJ-four}
+\end{align}
+
+\vspace{0.5em}
+Relabeling indeks dummy dan antisimetri $\varepsilon$ membuat setiap suku sama dengan suku terakhir.
+
+\noindent\emph{Suku II:} $-\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{df}\,M^{ce}$. Tukar nama $c \leftrightarrow d$ (indeks dummy):
+\begin{equation}
+    -\varepsilon_{a\underline{d}\underline{c}}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}
+    = +\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}.
+\end{equation}
+(Faktor $-1$ dari $\varepsilon_{adc} = -\varepsilon_{acd}$ menghapus tanda minus awal.)
+
+\noindent\emph{Suku III:} $-\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{ce}\,M^{df}$. Tukar $e \leftrightarrow f$:
+\begin{equation}
+    -\varepsilon_{acd}\,\varepsilon_{b\underline{f}\underline{e}}\,\eta^{cf}\,M^{de}
+    = +\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}.
+\end{equation}
+
+\noindent\emph{Suku I:} $\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{de}\,M^{cf}$. Tukar $c \leftrightarrow d$ dan $e \leftrightarrow f$:
+\begin{equation}
+    \varepsilon_{a\underline{d}\underline{c}}\,\varepsilon_{b\underline{f}\underline{e}}\,\eta^{cf}\,M^{de}
+    = (-1)(-1)\,\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}
+    = +\varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}.
+\end{equation}
+Jadi keempat suku identik, dan~\eqref{a5-eq:JJ-four} menjadi:
+\begin{equation}\label{a5-eq:JJ-simplified}
+    [J_a,J_b] = \varepsilon_{acd}\,\varepsilon_{bef}\,\eta^{cf}\,M^{de}.
+\end{equation}
+
+\vspace{0.5em}
+Permutasi siklik: $\varepsilon_{acd} = \varepsilon_{cda}$. Naikkan indeks $c$ pada $\varepsilon_{bef}$ melalui $\eta^{cf}$: $\varepsilon_{be}^{\ \ c} = \eta^{cf}\varepsilon_{bef}$. Suku menjadi:
+\begin{equation}
+    \varepsilon_{cda}\,\varepsilon_{be}^{\ \ c}\,M^{de}.
+\end{equation}
+Kontraksi pada indeks $c$ menggunakan identitas:
+\begin{equation}
+    \varepsilon_{cda}\,\varepsilon^{c}_{\ be} = +(\eta_{db}\,\eta_{ae} - \eta_{de}\,\eta_{ab}).
+\end{equation}
+Kontraksi selanjutnya dengan $M^{de}$:
+\begin{align}
+    (\eta_{db}\,\eta_{ae} - \eta_{de}\,\eta_{ab})\,M^{de}
+    &= \eta_{db}\,\eta_{ae}\,M^{de} - \eta_{de}\,\eta_{ab}\,M^{de} \nonumber\\[4pt]
+    &= M_{ba} - \eta_{ab}\,\underbrace{M^d_{\ d}}_{= 0\text{ (antisimetri)}} \nonumber\\[4pt]
+    &= M_{ba} = -M_{ab}. \label{a5-eq:JJ-Mab}
+\end{align}
+Gunakan invers~\eqref{a5-eq:Mab-inv}: $M_{ab} = -\varepsilon_{abc}\,J^c$, sehingga $-M_{ab} = \varepsilon_{abc}\,J^c$:
+\begin{equation}\label{a5-eq:JJ-result}
+    [J_a, J_b] = \varepsilon_{abc}\,J^c.
+\end{equation}
+Ini persis aljabar $\mathfrak{so}(2,1)$ (subaljabar Lorentz), sebagaimana diharapkan.
+
+\subsection{Komutator $[J_a, P_b] = \varepsilon_{abc}\,P^c$}
+
+Dari definisi~\eqref{a5-eq:JaPa-def}:
+\begin{equation}\label{a5-eq:JP-start}
+    [J_a, P_b] = -\frac{1}{2\ell}\,\varepsilon_{acd}\,[M^{cd}, M_{b3}].
+\end{equation}
+Gunakan versi campuran~\eqref{a4-eq:comm-mixed}:
+\begin{equation}
+    [M^{cd}, M_{b3}] = \delta^d_b\,M^c_{\ 3} - \delta^c_b\,M^d_{\ 3}
+    - \underbrace{\delta^d_3}_{= 0}\,M^c_{\ b} + \underbrace{\delta^c_3}_{= 0}\,M^d_{\ b}.
+\end{equation}
+Dua suku terakhir lenyap karena $c, d \in \{0,1,2\}$ sehingga $\delta^c_3 = \delta^d_3 = 0$. Tersisa:
+\begin{equation}\label{a5-eq:JP-comm}
+    [M^{cd}, M_{b3}] = \delta^d_b\,M^c_{\ 3} - \delta^c_b\,M^d_{\ 3}.
+\end{equation}
+Substitusi ke~\eqref{a5-eq:JP-start} dan kontraksi delta Kronecker suku per suku.
+
+\vspace{0.5em}
+\noindent \textbf{Suku I:}
+\begin{equation}
+    -\frac{1}{2\ell}\,\varepsilon_{acd}\,\delta^d_b\,M^c_{\ 3}
+    = -\frac{1}{2\ell}\,\varepsilon_{acb}\,M^c_{\ 3}
+    = +\frac{1}{2\ell}\,\varepsilon_{abc}\,M^c_{\ 3},
+\end{equation}
+di mana pada langkah terakhir digunakan $\varepsilon_{acb} = -\varepsilon_{abc}$.
+
+\vspace{0.5em}
+\noindent \textbf{Suku II:}
+\begin{equation}
+    +\frac{1}{2\ell}\,\varepsilon_{acd}\,\delta^c_b\,M^d_{\ 3}
+    = +\frac{1}{2\ell}\,\varepsilon_{abd}\,M^d_{\ 3}
+    = +\frac{1}{2\ell}\,\varepsilon_{abc}\,M^c_{\ 3},
+\end{equation}
+di mana pada langkah terakhir direlabel $d \to c$.
+
+Jumlahkan kedua suku:
+\begin{equation}
+    [J_a, P_b] = \frac{1}{2\ell}\,\varepsilon_{abc}\,M^c_{\ 3} + \frac{1}{2\ell}\,\varepsilon_{abc}\,M^c_{\ 3}
+    = \frac{1}{\ell}\,\varepsilon_{abc}\,M^c_{\ 3}.
+\end{equation}
+Kenali $\frac{1}{\ell}\,M^c_{\ 3} = P^c$ dari definisi~\eqref{a5-eq:JaPa-def} (dengan indeks dinaikkan):
+\begin{equation}\label{a5-eq:JP-result}
+    [J_a, P_b] = \varepsilon_{abc}\,P^c.
+\end{equation}
+Relasi ini menyatakan bahwa $P_a$ bertransformasi sebagai vektor di bawah subaljabar Lorentz yang dibangun oleh $J_a$, sebagaimana seharusnya bagi operator translasi dalam ruang-waktu.
+
+\subsection{Komutator $[P_a, P_b] = -\Lambda\,\varepsilon_{abc}\,J^c$}
+
+Dari definisi~\eqref{a5-eq:JaPa-def}:
+\begin{equation}\label{a5-eq:PP-start}
+    [P_a, P_b] = \frac{1}{\ell^2}\,[M_{a3}, M_{b3}].
+\end{equation}
+Gunakan relasi komutasi~\eqref{a4-eq:comm-general} dengan $(I,J,K,L) = (a,3,b,3)$:
+\begin{equation}
+    [M_{a3}, M_{b3}] = \eta_{3b}\,M_{a3} - \eta_{33}\,M_{ab} - \eta_{ab}\,M_{33} + \eta_{a3}\,M_{3b}.
+\end{equation}
+Evaluasi suku demi suku:
+\begin{align}
+    &\eta_{3b}\,M_{a3} = 0 \cdot M_{a3} = 0 && \text{(karena $b \in \{0,1,2\}$, $\eta_{3b} = 0$)}, \nonumber\\[2pt]
+    &\eta_{33}\,M_{ab} = (+1)\,M_{ab} = M_{ab}, && \nonumber\\[2pt]
+    &\eta_{ab}\,M_{33} = \eta_{ab} \cdot 0 = 0 && \text{(antisimetri: $M_{33} = 0$)}, \nonumber\\[2pt]
+    &\eta_{a3}\,M_{3b} = 0 \cdot M_{3b} = 0 && \text{(karena $a \in \{0,1,2\}$, $\eta_{a3} = 0$)}.
+\end{align}
+Tersisa satu suku saja:
+\begin{equation}
+    [M_{a3}, M_{b3}] = -M_{ab}.
+\end{equation}
+Gunakan invers~\eqref{a5-eq:Mab-inv}: $M_{ab} = -\varepsilon_{abc}\,J^c$, sehingga $-M_{ab} = \varepsilon_{abc}\,J^c$:
+\begin{equation}
+    [M_{a3}, M_{b3}] = \varepsilon_{abc}\,J^c.
+\end{equation}
+Substitusi ke~\eqref{a5-eq:PP-start} dan identifikasi $1/\ell^2 = -\Lambda$ (konstanta kosmologis AdS):
+\begin{equation}\label{a5-eq:PP-result}
+    [P_a, P_b] = -\Lambda\,\varepsilon_{abc}\,J^c.
+\end{equation}
+
+\subsection{Kesimpulan}
+
+Ketiga relasi komutasi yang telah diturunkan:
+\begin{align}
+    [J_a, J_b] &= \varepsilon_{abc}\,J^c, \label{a5-eq:summary-JJ}\\[4pt]
+    [J_a, P_b] &= \varepsilon_{abc}\,P^c, \label{a5-eq:summary-JP}\\[4pt]
+    [P_a, P_b] &= -\Lambda\,\varepsilon_{abc}\,J^c, \label{a5-eq:summary-PP}
+\end{align}
+mendefinisikan aljabar Lie $\mathfrak{so}(2,2)$ dalam basis fisis $(J_a, P_a)$.
+
+Persamaan~\eqref{a5-eq:summary-JJ} menyatakan bahwa generator Lorentz $J_a$ menutup membentuk subaljabar $\mathfrak{so}(2,1)$. Persamaan~\eqref{a5-eq:summary-JP} menetapkan bahwa generator translasi $P_a$ bertransformasi sebagai vektor Lorentz. Persamaan~\eqref{a5-eq:summary-PP}, yang membedakan gravitasi AdS dari Poincar\'{e}, menyatakan bahwa komutator dua translasi menghasilkan rotasi Lorentz, dengan koefisien proporsional terhadap $\Lambda$. Pada limit $\Lambda \to 0$ (ruang datar), $[P_a, P_b] = 0$ dan aljabar mereduksi menjadi aljabar Poincar\'{e} $\mathfrak{iso}(2,1)$.
+
+Ketiga relasi ini adalah masukan langsung pada Ansatz Witten di Bab~4: ketika koneksi gauge $\mathcal{A} = \omega^a J_a + e^a P_a$ disubstitusikan ke aksi Chern-Simons, relasi di atas menentukan bagaimana suku-suku kuadratik dalam $\mathcal{A} \wedge \mathcal{A}$ terurai menjadi suku kelengkungan dan torsi.
+
+\section{Bentuk Bilinear Invarian pada $\mathfrak{so}(2,2)$}
+\label{app:bilinear-form}
+
+Aksi Chern-Simons untuk grup gauge $G$ tidak dapat didefinisikan tanpa adanya bentuk bilinear simetris invarian $\langle\,\cdot\,,\,\cdot\,\rangle : \mathfrak{g} \times \mathfrak{g} \to \mathbb{R}$, yang berperan sebagai ``trace'' dalam ekspresi $\mathrm{Tr}(A \wedge dA + \frac{2}{3}A \wedge A \wedge A)$. Bentuk bilinear ini harus memenuhi tiga syarat fundamental: bilinearitas, simetri ($\langle X, Y\rangle = \langle Y, X\rangle$), dan invariansi adjoint ($\langle [Z, X], Y\rangle + \langle X, [Z, Y]\rangle = 0$ untuk seluruh $Z \in \mathfrak{g}$). Pada bagian ini, dikonstruksi bentuk bilinear non-degenerate pada $\mathfrak{so}(2,2)$ yang menghasilkan aksi Einstein-Palatini ketika disubstitusikan dengan ansatz Witten, dan nilai-nilai eksplisit $\langle J_a, J_b\rangle$, $\langle J_a, P_b\rangle$, $\langle P_a, P_b\rangle$ diturunkan.
+
+\subsection{Dua Bentuk Bilinear Invarian pada $\mathfrak{so}(2,2)$}
+\label{app:bilinear-two}
+
+Untuk aljabar Lie semisederhana, bentuk bilinear invarian non-degenerate yang paling dikenal adalah \textit{Killing form}:
+\begin{equation}\label{abf-eq:killing}
+    K(X, Y) = \mathrm{tr}\!\big(\mathrm{ad}_X \circ \mathrm{ad}_Y\big),
+\end{equation}
+di mana $\mathrm{ad}_X(Z) = [X, Z]$ adalah representasi adjoint. Akan tetapi, $\mathfrak{so}(2,2)$ bukanlah aljabar Lie sederhana; ia memiliki struktur yang dapat diperlihatkan melalui dekomposisi kiral $\mathfrak{so}(2,2) \cong \mathfrak{so}(2,1) \oplus \mathfrak{so}(2,1)$ (Lampiran~A.\ref{app:SO22-decomp}). Konsekuensinya, ruang bentuk bilinear simetris invarian pada $\mathfrak{so}(2,2)$ berdimensi dua: terdapat dua bentuk bilinear yang independen secara linier, dan kombinasi linier sembarang dari keduanya juga merupakan bentuk bilinear invarian \cite{witten1988, achucarro1986}.
+
+Untuk mengkarakterisasi kedua bentuk bilinear ini secara eksplisit, digunakan generator $M_{IJ}$ pada $\mathbb{R}^{2,2}$ dengan metrik $\eta_{IJ} = \mathrm{diag}(+1,-1,-1,+1)$, yang memenuhi relasi komutasi~\eqref{a4-eq:comm-general}. Dua bentuk bilinear independen pada $\mathfrak{so}(2,2)$:
+\begin{align}
+    \langle M_{IJ}, M_{KL}\rangle_1 &= \eta_{IK}\,\eta_{JL} - \eta_{IL}\,\eta_{JK} \qquad \text{(bentuk \textit{trace}/Killing)}, \label{abf-eq:bilinear-1}\\[4pt]
+    \langle M_{IJ}, M_{KL}\rangle_2 &= \epsilon_{IJKL} \qquad\qquad\qquad\quad\,\text{(bentuk \textit{Pfaffian})}. \label{abf-eq:bilinear-2}
+\end{align}
+dengan $\epsilon_{IJKL}$ adalah simbol Levi-Civita pada $\mathbb{R}^{2,2}$, dinormalisasi sebagai $\epsilon_{0123} = +1$.
+
+Kedua bentuk simetris di bawah pertukaran $(IJ) \leftrightarrow (KL)$, antisimetris di bawah pertukaran $I \leftrightarrow J$ atau $K \leftrightarrow L$ (sesuai antisimetri $M_{IJ}$), dan dapat diperiksa secara langsung memenuhi syarat invariansi adjoint.
+
+\subsection{Pilihan Bentuk Bilinear untuk Aksi Einstein-Palatini}
+\label{app:bilinear-choice}
+
+Kembali pada basis fisis $J_a$ dan $P_a$ dengan identifikasi:
+\begin{equation}\label{abf-eq:JaPa-recall}
+    J_a = -\tfrac{1}{2}\,\varepsilon_{abc}\,M^{bc}, \qquad P_a = \frac{1}{\ell}\,M_{a3}, \qquad a, b, c \in \{0, 1, 2\}.
+\end{equation}
+Aksi Chern-Simons setelah substitusi ansatz Witten $\mathcal{A} = \omega^a J_a + e^a P_a$ berbentuk:
+\begin{equation}\label{abf-eq:CS-general}
+    S_{CS} = \frac{k}{4\pi}\int_M \big[\,\mathrm{Tr}(\omega \wedge d\omega) + \cdots\,\big],
+\end{equation}
+dengan koefisien-koefisien suku berasal dari evaluasi $\mathrm{Tr}(J_a J_b)$, $\mathrm{Tr}(J_a P_b)$, dan $\mathrm{Tr}(P_a P_b)$. Tujuan akhir adalah agar aksi tersebut tertulis identik dengan aksi Einstein-Palatini:
+\begin{equation}\label{abf-eq:EP-target}
+    S_{EP} = \frac{1}{4\kappa}\int_M \left(e^a \wedge R_a + \frac{\Lambda}{6}\,\varepsilon_{abc}\,e^a \wedge e^b \wedge e^c\right),
+\end{equation}
+yang merupakan kombinasi linear suku $e \wedge R$ (kelengkungan terkopel ke dreibein) dan suku kosmologi $e \wedge e \wedge e$. Tidak boleh ada suku eksotik seperti $\omega \wedge d\omega$ murni maupun $e \wedge T$ yang memberikan dinamika tambahan untuk torsi.
+
+Persyaratan ini menyaring bentuk bilinear: hanya bentuk Pfaffian pada~\eqref{abf-eq:bilinear-2} yang menghasilkan kombinasi yang tepat. Bentuk Killing pada~\eqref{abf-eq:bilinear-1}, sebaliknya, menghasilkan aksi Chern-Simons eksotik yang berbentuk selisih dua aksi Chern-Simons kiral pada $\mathfrak{so}(2,1)^\pm$. Kedua aksi tersebut sah secara matematis, namun yang mereproduksi aksi Einstein-Palatini adalah bentuk Pfaffian.
+
+\subsection{Evaluasi Eksplisit $\langle J_a, J_b\rangle$, $\langle J_a, P_b\rangle$, $\langle P_a, P_b\rangle$}
+\label{app:bilinear-eval}
+
+Dengan bentuk bilinear:
+\begin{equation}\label{abf-eq:bilinear-Pfaff}
+    \langle M_{IJ}, M_{KL}\rangle \equiv \mathrm{Tr}(M_{IJ}\,M_{KL}) = \tfrac{1}{2}\,\epsilon_{IJKL},
+\end{equation}
+faktor $\frac{1}{2}$ dipilih untuk normalisasi yang memberi hasil paling sederhana pada basis fisis. Konvensi: $\epsilon_{IJKL}$ antisimetris total, $\epsilon_{0123} = +1$, dan indeks dinaikkan dengan $\eta^{IJ}$ (sehingga $\epsilon^{0123} = \eta^{00}\eta^{11}\eta^{22}\eta^{33}\,\epsilon_{0123} = (+1)(-1)(-1)(+1) = +1$).
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi $\langle J_a, J_b\rangle$}
+Substitusi~\eqref{abf-eq:JaPa-recall}:
+\begin{align}
+    \langle J_a, J_b\rangle
+    &= \big\langle -\tfrac{1}{2}\,\varepsilon_{acd}\,M^{cd},\, -\tfrac{1}{2}\,\varepsilon_{bef}\,M^{ef}\big\rangle \nonumber\\[4pt]
+    &= \tfrac{1}{4}\,\varepsilon_{acd}\,\varepsilon_{bef}\,\langle M^{cd}, M^{ef}\rangle \nonumber\\[4pt]
+    &= \tfrac{1}{4}\,\varepsilon_{acd}\,\varepsilon_{bef}\cdot \tfrac{1}{2}\,\epsilon^{cdef}.
+\end{align}
+Karena indeks $c, d, e, f$ semuanya pada subruang $\{0, 1, 2\}$, sedangkan $\epsilon^{cdef}$ memerlukan empat indeks berbeda dari $\{0, 1, 2, 3\}$, paling tidak salah satu harus bernilai 3 agar $\epsilon^{cdef} \neq 0$. Tetapi karena $c, d, e, f \in \{0, 1, 2\}$, tidak ada satupun yang bernilai 3. Akibatnya $\epsilon^{cdef} = 0$ untuk seluruh kombinasi yang relevan, sehingga:
+\begin{equation}\label{abf-eq:JJ-zero}
+    \langle J_a, J_b\rangle = \mathrm{Tr}(J_a\,J_b) = 0.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi $\langle P_a, P_b\rangle$}
+\begin{align}
+    \langle P_a, P_b\rangle
+    &= \big\langle \tfrac{1}{\ell}\,M_{a3},\, \tfrac{1}{\ell}\,M_{b3}\big\rangle \nonumber\\[4pt]
+    &= \tfrac{1}{\ell^2}\cdot \tfrac{1}{2}\,\epsilon_{a3b3}.
+\end{align}
+Tetapi $\epsilon_{a3b3} = 0$ untuk seluruh $a, b$ karena dua indeks ``3'' berulang (antisimetri total). Maka:
+\begin{equation}\label{abf-eq:PP-zero}
+    \langle P_a, P_b\rangle = \mathrm{Tr}(P_a\,P_b) = 0.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi $\langle J_a, P_b\rangle$}
+Inilah kombinasi yang berkontribusi pada aksi Einstein-Palatini.
+\begin{align}
+    \langle J_a, P_b\rangle
+    &= \big\langle -\tfrac{1}{2}\,\varepsilon_{acd}\,M^{cd},\, \tfrac{1}{\ell}\,M_{b3}\big\rangle \nonumber\\[4pt]
+    &= -\tfrac{1}{2\ell}\,\varepsilon_{acd}\cdot \tfrac{1}{2}\,\epsilon^{cd}{}_{b3} \nonumber\\[4pt]
+    &= -\tfrac{1}{4\ell}\,\varepsilon_{acd}\,\epsilon^{cd}{}_{b3}.
+\end{align}
+Pada subruang $\{0,1,2\}$ dengan metrik $\eta_{ab} = \mathrm{diag}(+1, -1, -1)$ dan $\eta_{33} = +1$, hubungan antara $\epsilon$ empat-indeks dan $\varepsilon$ tiga-indeks adalah:
+\begin{equation}\label{abf-eq:eps-reduction}
+    \epsilon_{abc3} = \varepsilon_{abc} \qquad\text{(untuk } a, b, c \in \{0, 1, 2\}\text{)},
+\end{equation}
+karena dengan konvensi $\epsilon_{0123} = +1$ dan $\varepsilon_{012} = +1$, pemilihan indeks ke-4 sama dengan $3$ memberikan reduksi konsisten. Maka $\epsilon^{cd}{}_{b3} = \varepsilon^{cd}{}_b$. Substitusi:
+\begin{equation}
+    \langle J_a, P_b\rangle = -\tfrac{1}{4\ell}\,\varepsilon_{acd}\,\varepsilon^{cd}{}_b.
+\end{equation}
+Kontraksi Levi-Civita pada $2+1$ dimensi dengan signatur $(+,-,-)$ dan $\det(\eta_{ab}) = +1$ memberikan identitas:
+\begin{equation}\label{abf-eq:eps-contract}
+    \varepsilon_{acd}\,\varepsilon^{cd}{}_b = \varepsilon_{acd}\,\varepsilon^{ecd}\,\eta_{eb} = -2\,\delta^e_a\,\eta_{eb} = -2\,\eta_{ab},
+\end{equation}
+dengan tanda negatif berasal dari pertukaran dua indeks. Maka:
+\begin{equation}\label{abf-eq:JP-result-raw}
+    \langle J_a, P_b\rangle = -\tfrac{1}{4\ell}\cdot(-2\,\eta_{ab}) = \frac{\eta_{ab}}{2\ell}.
+\end{equation}
+
+\subsection{Normalisasi Akhir dan Hasil}
+\label{app:bilinear-norm}
+
+Untuk memperoleh aksi Chern-Simons yang langsung berbentuk Einstein-Palatini, normalisasi bentuk bilinear dipilih dengan menyerap faktor $1/(2\ell)$ ke dalam level Chern-Simons. Definisikan ulang bentuk bilinear melalui rescaling:
+\begin{equation}\label{abf-eq:bilinear-rescaled}
+    \mathrm{Tr}(M_{IJ}\,M_{KL}) \equiv \ell\,\epsilon_{IJKL},
+\end{equation}
+sehingga:
+\begin{equation}\label{abf-eq:final-summary}
+    \mathrm{Tr}(J_a\,J_b) = 0, \qquad \mathrm{Tr}(J_a\,P_b) = \mathrm{Tr}(P_a\,J_b) = \eta_{ab}, \qquad \mathrm{Tr}(P_a\,P_b) = 0.
+\end{equation}
+Inilah hasil yang digunakan pada Bab~4 (persamaan~\eqref{em43-eq:trace-rel}) untuk mengevaluasi variasi aksi Chern-Simons dan memperoleh persamaan Einstein.
+
+\section{Medan Elektromagnetik sebagai Teori Gauge $U(1)$}
+\label{app:u1-gauge}
+
+Bagian ini menurunkan secara lengkap formalisme teori gauge $U(1)$ yang mendasari sektor elektromagnetik pada Bab~4. Dimulai dari definisi grup $U(1)$ dan aljabar Lie-nya, kemudian dikonstruksi koneksi gauge, transformasi gauge, kuat medan, dan identitas Bianchi.
+
+\subsection{\textit{Unitary Group} $U(1)$ dan Aljabar Lie $\mathfrak{u}(1)$}
+
+Grup uniter $U(N)$ terdiri dari seluruh matriks $N \times N$ berentri bilangan kompleks yang memenuhi syarat uniter:
+\begin{equation}
+  g^\dagger g=gg^\dagger=\mathbb{I},
+\end{equation}
+dengan $g^\dagger$ adalah konjugat transpose (adjoin Hermitian) dan $\mathbb{I}$ adalah matriks identitas.
+
+Untuk teori elektromagnetisme, digunakan teori gauge $U(1)$, yaitu matriks berukuran $1 \times 1$ yang berupa skalar kompleks. Pada kasus skalar, operasi transpose tidak mengubah apa pun, sehingga $g^\dagger$ mereduksi ke konjugat kompleks $g^*$. Syarat uniter untuk $U(1)$ menjadi:
+\begin{align}
+  g^*g&=1 \nonumber \\
+  |g|^2&=1 \label{em43-eq:syarat-uniter}
+\end{align}
+Elemen grup $U(1)$ adalah seluruh bilangan kompleks bermodulus satu.
+
+\subsection{Aljabar Lie $\mathfrak{u}(1)$}
+
+Dalam grup Lie, setiap elemen grup $g$ yang terhubung ke identitas dapat direpresentasikan sebagai eksponensial dari elemen aljabar Lie:
+\begin{equation}\label{em43-eq:representasi-grup}
+  g= e^{\lambda X},
+\end{equation}
+dengan $\lambda$ bilangan real sembarang dan $X$ generator aljabar Lie. Terapkan syarat~\eqref{em43-eq:syarat-uniter} pada bentuk~\eqref{em43-eq:representasi-grup}:
+  \begin{align}
+    (e^{\lambda X})^\dagger (e^{\lambda X})&=1 \nonumber\\
+    e^{\lambda X^\dagger}e^{\lambda X} &= 1 \nonumber\\
+    e^{\lambda( X^\dagger + X)} &= e^0. \label{em43-eq:syarat-hermit}
+  \end{align}
+Agar persamaan~\eqref{em43-eq:syarat-hermit} berlaku untuk semua $\lambda$, eksponennya harus nol:
+\begin{align}
+  X^\dagger + X &= 0 \nonumber \\
+  X^\dagger &= -X. \label{em43-eq:anti-hermitian}
+\end{align}
+Syarat~\eqref{em43-eq:anti-hermitian} disebut syarat anti-Hermitian. Karena $X$ pada $U(1)$ berupa skalar kompleks, $X^\dagger=X^*$, sehingga syarat menjadi:
+\begin{equation}\label{em43-eq:anti-hermitian-2}
+  X^*=-X.
+\end{equation}
+Bilangan yang menghasilkan negatif dari dirinya sendiri di bawah konjugasi adalah bilangan imajiner murni.
+
+Karena $X$ harus imajiner murni, dapat ditulis $X=iy$ dengan $y \in \mathbb{R}$. Satu-satunya generator aljabar Lie $\mathfrak{u}(1)$ adalah:
+\begin{equation}\label{em43-eq:generator-u1}
+  T=i.
+\end{equation}
+Fakta bahwa $\mathfrak{u}(1)$ memiliki satu generator tunggal mencerminkan bahwa $U(1)$ adalah grup Lie berdimensi satu.
+
+Substitusi~\eqref{em43-eq:generator-u1} ke~\eqref{em43-eq:representasi-grup} memberikan bentuk elemen grup $U(1)$:
+\begin{equation}\label{em43-eq:representasi-baru}
+  g=e^{i\lambda}.
+\end{equation}
+
+\subsection{Koneksi Gauge dan Potensial Elektromagnetik}
+
+Dalam kerangka geometri diferensial, interaksi fundamental dideskripsikan melalui struktur bundel utama (\textit{principal bundle}) di atas manifold ruang-waktu $\mathcal{M}$. Dinamika medan interaksi direpresentasikan oleh sebuah koneksi gauge, $\mathcal{A}$, yang secara matematis didefinisikan sebagai sebuah 1-form bernilai aljabar Lie.
+
+Untuk sebuah kelompok simetri umum $G$ dengan aljabar Lie $\mathfrak{g}$, koneksi direpresentasikan secara lokal sebagai ekspansi terhadap basis generatornya:
+\begin{equation}\label{em43-eq:koneksi-umum}
+  \mathcal{A} = A^a_\mu \, T_a \, d x^\mu = A^a \, T_a,
+\end{equation}
+dengan $T_a$ adalah generator dari aljabar Lie $\mathfrak{g}$, indeks $a$ melambangkan derajat kebebasan, dan $A^a = A^a_\mu d x^\mu$ adalah sekumpulan 1-form yang bernilai real. 
+
+Sebagaimana telah ditunjukkan sebelumnya, aljabar Lie $\mathfrak{u}(1)$ hanya memiliki satu generator tunggal yang bersifat anti-Hermitian, yaitu $T = i$. 
+
+Substitusi generator $T=i$ ke dalam persamaan koneksi umum \eqref{em43-eq:koneksi-umum} menyederhanakan ekspresinya menjadi:
+\begin{equation}\label{em43-eq:koneksi-u1}
+  \mathcal{A} = iA, \qquad \text{dengan} \quad A = A_\mu d x^\mu.
+\end{equation}
+Dalam representasi ini, bentuk diferensial bernilai real $A$ diidentifikasi secara fisis sebagai potensial gauge elektromagnetik. Melalui pemetaan inilah, koneksi geometris abstrak $\mathcal{A}$ terhubung secara langsung dengan derajat kebebasan fisis medan elektromagnetik di alam.
+
+\subsection{Transformasi Gauge dan Turunan Kovarian}
+
+Dalam teori medan, sebuah medan materi $\psi$ diizinkan memiliki kebebasan pemilihan fase fisis di setiap titik ruang-waktu. Di bawah transformasi gauge lokal $U(1)$, medan ini ditransformasikan oleh elemen grup $g(x) \in U(1)$ menurut aturan:
+\begin{equation}\label{em43-eq:transf-materi}
+  \psi' = g^{-1}(x) \psi
+\end{equation}
+
+Untuk mengetahui dinamika medan tersebut, diperlukan operasi turunan. Namun, turunan biasa merusak simetri lokal. Turunan dari medan yang telah ditransformasikan menghasilkan:
+\begin{equation}
+  d\psi' = d(g^{-1}\psi) = (dg^{-1})\psi + g^{-1}d\psi.
+\end{equation}
+Suku $(dg^{-1})\psi$ muncul karena fungsi fase $g(x)$ bergantung pada koordinat lokal. Akibatnya $d\psi' \neq g^{-1}(d\psi)$: turunan biasa tidak bertransformasi seperti medannya, yang secara fisis berarti hukum dinamika berubah di bawah transformasi fase lokal.
+
+Untuk mempertahankan invariansi gauge lokal, turunan eksterior biasa $d$ digantikan oleh \emph{turunan kovarian} $D$, yang dibangun dengan menyertakan koneksi gauge $\mathcal{A}$ sebagai medan kompensasi:
+\begin{equation}\label{em43-eq:turunan-kovarian}
+  D\psi = (d + \mathcal{A})\psi
+\end{equation}
+Syarat kovarian menuntut turunan kovarian bertransformasi persis seperti medannya:
+\begin{equation}\label{em43-eq:syarat-kovarian-gauge}
+  (D\psi)' = g^{-1}(D\psi)
+\end{equation}
+Terapkan definisi di atas secara langsung:
+\[
+\begin{aligned}
+  (d+\mathcal{A})'(g^{-1} \psi) &= g^{-1}(d+\mathcal{A})\psi  \\
+  (dg^{-1})\psi + \cancel{g^{-1}d\psi}+ \mathcal{A'}g^{-1}\psi &= \cancel{g^{-1}d\psi} + g^{-1}\mathcal{A}\psi  \\
+  (dg^{-1})\psi + \mathcal{A}'g^{-1}\psi &= g^{-1}A\psi.
+\end{aligned}
+\]
+Bagi kedua ruas dengan $\psi$ dan kalikan dengan $g$:
+\begin{align}
+  (dg^{-1})g + \mathcal{A}'(g^{-1}g) &= g^{-1}\mathcal{A}g \qquad (\text{karena } g^{-1}g=1) \nonumber \\
+  (dg^{-1})g + \mathcal{A}' &= g^{-1}\mathcal{A}g. \label{em43-eq:transformasi-1}
+\end{align}
+Karena turunan konstanta nol, berlaku identitas:
+\begin{align}
+  d(g^{-1}g)&=0 \nonumber \\
+  (dg^{-1})g + g^{-1}dg&=0 \nonumber \\
+  (dg^{-1})g &= - g^{-1}dg. \label{em43-eq:identitas-konstanta}
+\end{align}
+Substitusikan~\eqref{em43-eq:identitas-konstanta} ke~\eqref{em43-eq:transformasi-1}:
+\begin{align}
+  -g^{-1}dg+\mathcal{A}'&=g^{-1}\mathcal{A}g \nonumber \\
+\mathcal{A}'&=g^{-1}\mathcal{A}g + g^{-1}dg. \label{em43-eq:transformasi-gauge-umum}
+\end{align}
+Persamaan~\eqref{em43-eq:transformasi-gauge-umum} merupakan hukum transformasi gauge umum untuk koneksi pada sembarang grup Lie $G$.
+
+Untuk grup $U(1)$ dengan representasi $g = e^{i\lambda}$ menurut~\eqref{em43-eq:representasi-baru}, koneksi $\mathcal{A}$ dan $g$ bersifat skalar sehingga $g^{-1}\mathcal{A}g=g^{-1}g\mathcal{A}$. Transformasi gauge menjadi:
+
+\begin{align}
+\mathcal{A}' &= g^{-1}g\mathcal{A} + g^{-1}dg \nonumber \\
+\mathcal{A}' &= (1)\mathcal{A} + g^{-1}dg \nonumber \\
+\mathcal{A}' &= \mathcal{A} + g^{-1}d(e^{i \lambda}) \nonumber \\
+\mathcal{A}' &= \mathcal{A} + e^{-i \lambda}(i d\lambda e^{i \lambda}) \quad \text{(karena $g^{-1} = e^{-i \lambda}$)} \nonumber \\ 
+\mathcal{A}' &= \mathcal{A} + e^{-i \lambda}e^{i \lambda}(id\lambda) \nonumber \\ 
+\mathcal{A}' &= \mathcal{A} + id\lambda
+\end{align}
+Terapkan definisi~\eqref{em43-eq:koneksi-u1}:
+
+\begin{align}
+  iA' &= iA+ id\lambda \nonumber \\
+  A' &= A+ d\lambda \label{em43-eq:transformasi-gauge}
+\end{align}
+Persamaan~\eqref{em43-eq:transformasi-gauge} merupakan transformasi gauge untuk potensial vektor elektromagnetik.
+
+\subsection{Kuat Medan (\textit{Field Strength}) $\mathcal{F}$}
+
+Kuat medan merupakan kelengkungan (\textit{curvature}) dari koneksi gauge $\mathcal{A}$, yang didefinisikan oleh:
+\begin{equation}\label{em43-eq:kuat-medan}
+  \mathcal{F} = d\mathcal{A} + \mathcal{A} \wedge \mathcal{A}.
+\end{equation}
+Pada elektromagnetisme dengan grup $U(1)$, substitusi $\mathcal{A} = iA$ ke suku kedua memberikan:
+\begin{equation}
+  \mathcal{A} \wedge \mathcal{A} = (iA) \wedge (iA) = i^2 (A \wedge A) = - (A \wedge A)=0,
+\end{equation}
+Dengan lenyapnya suku ini, kelengkungan mereduksi menjadi:
+\begin{equation}
+  \mathcal{F} = d\mathcal{A}.
+\end{equation}
+Substitusi kembali $\mathcal{A} = iA$ dan definisikan tensor kelengkungan fisis $\mathcal{F} = iF$. Diperoleh tensor kuat medan elektromagnetik:
+\begin{equation}
+  F = d A
+\end{equation}
+Lenyapnya suku $\mathcal{A} \wedge \mathcal{A}$ pada grup $U(1)$ inilah yang menjadi alasan mengapa foton, sebagai kuantisasi medan elektromagnetik, tidak memiliki muatan listrik dan tidak dapat berinteraksi secara langsung dengan sesama foton.
+
+\subsection{Komponen kuat medan, invariansi gauge, dan identitas Bianchi}
+
+\paragraph{Komponen kuat medan}
+Potensial gauge adalah 1-form $A = A_\nu\, d x^\nu$. Turunan
+eksteriornya memberikan:
+\begin{align}
+  F &= d(A_\nu\, d x^\nu)
+  = (\partial_\mu A_\nu)\, d x^\mu \wedge d x^\nu
+\end{align}
+Manfaatkan antisimetri \textit{wedge product}
+$d x^\mu \wedge d x^\nu = -d x^\nu \wedge d x^\mu$
+sehingga dapat ditulis ulang:
+\begin{align}
+  F &= \frac{1}{2}\,(\partial_\mu A_\nu - \partial_\nu A_\mu)\,
+    d x^\mu \wedge d x^\nu
+  = \frac{1}{2}\, F_{\mu\nu}\, d x^\mu \wedge d x^\nu,
+\end{align}
+dengan komponen field strength dalam basis koordinat:
+\begin{equation}\label{em43-eq:Fmunu-def}
+  F_{\mu\nu} \equiv \partial_\mu A_\nu - \partial_\nu A_\mu
+\end{equation}
+
+\paragraph{Representasi dalam basis dreibein}
+Dalam model Einstein--Maxwell, kuat medan diproyeksikan ke basis
+ruang singgung lokal (\emph{tangent space}) menggunakan dreibein
+$e^{a} = e^{a}_{\mu}\, d x^{\mu}$:
+\begin{equation}
+  F = \frac{1}{2}\, F_{ab}\, e^{a} \wedge e^{b},
+\end{equation}
+dengan $F_{ab} = e^{\mu}_{a}\, e^{\nu}_{b}\, F_{\mu\nu}$
+
+\paragraph{Invariansi gauge}
+Kuat medan $F$ invarian terhadap transformasi gauge
+\eqref{em43-eq:transformasi-gauge}:
+\begin{align}
+  F' &= d A'
+  = d(A + d\lambda)
+  = d A + \underbrace{d^{2}\lambda}_{= 0}
+  = F
+\end{align}
+Suku $d^{2}\lambda$ lenyap karena nilpotensi $d^{2} = 0$
+
+\paragraph{Identitas Bianchi}
+Satu turunan eksterior lagi pada $F$ memberikan:
+\begin{equation}
+  d F = d(d A) = d^{2} A = 0
+\end{equation}

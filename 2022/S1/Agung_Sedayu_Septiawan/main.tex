@@ -1,0 +1,103 @@
+\documentclass[12pt,a4paper,twoside,openright]{book}
+
+\input{preamble}
+
+\begin{document}
+
+% ============ COVER LUAR ============
+\begin{titlepage}
+    \input{Contents/BagianDepan/"Cover Luar.tex"}
+\end{titlepage}
+
+\backgroundsetup{
+    scale = 1,
+    angle = 0,
+    opacity = 1,
+    firstpage = false,
+    contents = {}
+}
+
+% Halaman kosong setelah cover luar
+% BENAR-BENAR KOSONG tanpa tulisan apapun karena ini adalah sisi
+% belakang hardcover yang akan ditempel ke endpaper saat penjilidan
+\thispagestyle{empty}
+\null
+\cleardoublepage
+
+% ============ FRONT MATTER (roman) ============
+\pagenumbering{roman}
+
+\addcontentsline{toc}{chapter}{Halaman Judul}
+\include{Contents/BagianDepan/Cover Dalam}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Inner Cover}
+\include{Contents/BagianDepan/Inner Cover}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Lembar Pengesahan}
+\include{Contents/BagianDepan/Lembar Pengesahan}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Approval Page}
+\include{Contents/BagianDepan/Approval Page}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Lembar Orisinalitas}
+\include{Contents/BagianDepan/Lembar Orisinalitas}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Statement of Originality}
+\include{Contents/BagianDepan/Statement of Originality}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Abstrak}
+\include{Contents/Abstrak/Abstrak}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Abstract}
+\include{Contents/Abstrak/Abstract}
+\cleardoublepage
+
+\addcontentsline{toc}{chapter}{Kata Pengantar}
+\include{Contents/BagianDepan/Kata Pengantar}
+\cleardoublepage
+
+\tableofcontents
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+% ============ MAIN MATTER (arabic) ============
+% \cleardoublepage sudah memastikan halaman berikut recto (kanan)
+% Bab-1 akan otomatis di-open-right oleh book class
+\pagenumbering{arabic}
+
+\include{Contents/Daster/Bab-1}
+\include{Contents/Daster/Bab-2}
+\include{Contents/Daster/Bab-3}
+\include{Contents/Daster/Bab-4}
+\include{Contents/Daster/Bab-5}
+
+\cleardoublepage
+
+% ============ BIBLIOGRAPHY ============
+\nocite{*}
+\bibliographystyle{apacite}
+\bibliography{Referensi}
+
+\cleardoublepage
+
+% ============ APPENDIX ============
+\begin{appendices}
+    \include{Contents/BagianBelakang/Lampiran-A}
+    \include{Contents/BagianBelakang/Lampiran-B}
+\end{appendices}
+
+\cleardoublepage
+
+% ============ BIODATA ============
+\include{Contents/BagianBelakang/Biodata Penulis}
+
+\end{document}

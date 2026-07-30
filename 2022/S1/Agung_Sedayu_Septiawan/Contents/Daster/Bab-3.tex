@@ -1,0 +1,66 @@
+\chapter{Metodologi}
+
+\section{Metode Penelitian}
+
+Penelitian ini merupakan studi analitik yang menurunkan dinamika gravitasi tiga dimensi secara matematis dari prinsip pertama, tanpa melibatkan eksperimen maupun simulasi numerik. Seluruh formulasi dilakukan dalam kerangka geometri diferensial menggunakan pendekatan orde pertama (\textit{first-order formalism}), dengan menetapkan medan dreibein $e^a$ dan koneksi spin $\omega^a$ sebagai variabel fundamental. Pendekatan ini mengikuti formulasi yang dikembangkan oleh Witten \cite{witten1988} dan Achucarro--Townsend \cite{achucarro1986}, dengan solusi lubang hitam mengacu pada konstruksi Ba\~{n}ados, Teitelboim, dan Zanelli \cite{banados1992, banados1993}.
+
+Langkah awal penelitian difokuskan pada konstruksi aljabar isometri ruang anti-de Sitter secara kovarian, yang dibangun bertahap dari grup ortogonal berdimensi rendah hingga membentuk aljabar Lie $\mathfrak{so}(2,2)$. Aljabar ini memiliki enam generator: tiga generator rotasi Lorentz $J_a$ dan tiga generator yang berperan sebagai translasi $P_a$. Relasi komutasi $[J_a, J_b]$, $[J_a, P_b]$, dan $[P_a, P_b]$ diturunkan secara eksplisit dalam basis fisis, beserta bentuk bilinear invarian $\langle T_A T_B \rangle$ yang diperlukan untuk menuliskan aksi Chern-Simons. Seluruh konstruksi aljabar ini diberikan pada Lampiran~\ref{app:generator-construction}.
+
+Relasi komutasi yang diperoleh kemudian digunakan untuk membuktikan ekuivalensi antara teori gravitasi Einstein dan teori gauge Chern-Simons. Ekuivalensi ini dimungkinkan oleh fakta bahwa gravitasi $2+1$ dimensi bersifat topologis: tidak memiliki derajat kebebasan propagasi lokal, sehingga seluruh informasi fisis terkandung dalam struktur global ruang-waktu. Teori Chern-Simons juga bersifat topologis dengan cara yang sama, karena persamaan medannya mensyaratkan koneksi datar yang juga tidak memiliki derajat kebebasan lokal. Kesamaan sifat topologis inilah yang membuka kemungkinan bahwa kedua teori merupakan formulasi berbeda dari fisika yang sama.
+
+Mekanisme penggabungan kedua teori diwujudkan melalui ansatz Witten. Dalam formulasi gravitasi Einstein, terdapat dua medan 1-form independen: dreibein $e^a$ yang mendeskripsikan kerangka lokal dan koneksi spin $\omega^a$ yang mendeskripsikan kelengkungan. Di sisi lain, teori Chern-Simons hanya memiliki satu medan 1-form berupa koneksi gauge $\mathcal{A}$. Kunci untuk menggabungkan keduanya terletak pada pilihan grup gauge: grup $\mathrm{SO}(2,2)$, yang merupakan grup isometri ruang anti-de Sitter, memiliki enam generator sehingga satu koneksi gauge $\mathcal{A}$ dapat menampung kedua medan gravitasi sekaligus melalui identifikasi $\mathcal{A} = e^a P_a + \omega^a J_a$. Ketika kurvatur gauge $\mathcal{F} = d\mathcal{A} + \mathcal{A} \wedge \mathcal{A}$ dihitung menggunakan relasi komutasi $\mathfrak{so}(2,2)$ dan didekomposisi dalam basis generator $P_a$ dan $J_a$, kondisi koneksi datar $\mathcal{F} = 0$ menghasilkan dua persamaan secara simultan: komponen sepanjang $P_a$ memberikan kondisi bebas torsi $T^a = 0$, dan komponen sepanjang $J_a$ memberikan persamaan medan Einstein dengan konstanta kosmologi $R^a = \Lambda\, \eta^a$. Dengan demikian, satu persamaan medan dari teori Chern-Simons mereproduksi kedua persamaan gravitasi Einstein sekaligus, yang mengkonfirmasi ekuivalensi kedua formulasi.
+
+Berdasarkan fondasi ekuivalensi tersebut, kerangka kerja diaplikasikan untuk merekonstruksi solusi lubang hitam. Persamaan torsi-nol dan persamaan Einstein yang diperoleh dari kondisi $\mathcal{F} = 0$ diselesaikan secara eksplisit untuk ansatz dreibein stasioner-aksisimetris. Kondisi bebas torsi terlebih dahulu digunakan untuk menentukan seluruh komponen koneksi spin sebagai fungsi dari dreibein, kemudian persamaan kelengkungan konstan digunakan untuk menurunkan fungsi-fungsi metrik. Penyelesaian ini menghasilkan metrik lubang hitam BTZ berotasi beserta lokasi horizonnya \cite{banados1992, banados1993}.
+
+Formulasi kemudian diperluas ke sektor interaksi elektromagnetik dengan memperluas grup gauge melalui penambahan generator Abelian $U(1)$. Aksi total dibangun menggunakan aksi Chern-Simons dengan mengonstruksi koneksi gauge total $\mathcal{A}$ berdasarkan ansatz Witten secara langsung, yang secara simultan mengintegrasikan komponen dreibein, koneksi spin, dan potensial elektromagnetik ke dalam satu kesatuan struktur aljabar. Variasi aksi Chern-Simons ini terhadap koneksi gauge menghasilkan kondisi kelurusan (flatness condition) $F = 0$. Kondisi geometri ini secara elegan merangkum persamaan medan gravitasi yang terkopel dengan sektor elektromagnetik dalam tiga dimensi tanpa memerlukan pemisahan aksi secara konvensional.
+
+Pada tahap akhir, analisis diarahkan untuk mengeksplorasi kemungkinan konstruksi solusi ruang-waktu lubang hitam yang bermuatan sekaligus berotasi. Persamaan kelurusan yang diperoleh dari aksi Chern-Simons diselesaikan secara analitik untuk menurunkan bentuk potensial gauge serta komponen dreibein secara utuh. Melalui pemetaan kembali komponen aljabar tersebut ke dalam bentuk metrik ruang-waktu, lokasi horizon peristiwa dapat ditentukan guna menyelidiki batas-batas eksistensi fisis yang mengatur ruang parameter dari konfigurasi lubang hitam tersebut.
+
+\section{Diagram Alir}
+
+Penelitian ini bersifat analitik dan seluruhnya dilakukan melalui penurunan matematis secara deduktif. Titik awal adalah konstruksi aljabar Lie $\mathfrak{so}(2,2)$ dari prinsip pertama, yang menyediakan relasi komutasi bagi ansatz Witten. Koneksi gauge kemudian disubstitusikan ke aksi Chern-Simons untuk memperoleh persamaan medan gravitasi; solusi lubang hitam BTZ diturunkan dengan menyelesaikan persamaan tersebut pada ansatz dreibein stasioner-aksisimetris. Pada tahap berikutnya, aksi Maxwell ditambahkan sebagai sumber materi, dan variasi aksi total menghasilkan sistem persamaan Einstein-Maxwell. Sistem ini diselesaikan dan dianalisis konsistensinya untuk menentukan ruang solusi yang diizinkan. Diagram alir pada Gambar~\ref{fig:DiagramAlir} merangkum alur penelitian dari konstruksi aljabar hingga hasil akhir.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.7cm, 
+        box/.style={
+            draw=black!80,   
+            thick,
+            rounded corners=4pt, 
+            fill=white!5,    
+            text width=7.5cm,  
+            minimum height=0.8cm, 
+            align=center, 
+            font=\small,
+            inner sep=8pt 
+        },
+        arr/.style={-{Stealth[length=2.5mm, width=2.5mm]}, thick, draw=black!80}
+    ]
+    
+    % Definisi Node (Kotak)
+    \node[box] (A) {Konstruksi aljabar $\mathfrak{so}(2,2)$};
+    \node[box, below=of A] (B) {Ansatz Witten dan Ekuivalensi Gravitasi Einstein};
+    \node[box, below=of B] (C) {Solusi Lubang Hitam BTZ};
+    \node[box, below=of C] (D) {Formulasi Einstein-Maxwell:\\aksi total, variasi, persamaan medan};
+    \node[box, below=of D] (E) {Penyelesaian persamaan dan bentuk eksplisit\\tensor energi-momentum};
+    \node[box, below=of E] (F) {Solusi BTZ berotasi-bermuatan}; 
+    \draw[arr] (A) -- (B);
+    \draw[arr] (B) -- (C);
+    \draw[arr] (C) -- (D);
+    \draw[arr] (D) -- (E);
+    \draw[arr] (E) -- (F);
+    
+    \end{tikzpicture}
+    \caption{Diagram alir penelitian.}
+    \label{fig:DiagramAlir}
+\end{figure}
+
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+    \begin{center}
+        Halaman ini sengaja dikosongkan
+    \end{center}
+\vspace*{\fill}
+\pagebreak

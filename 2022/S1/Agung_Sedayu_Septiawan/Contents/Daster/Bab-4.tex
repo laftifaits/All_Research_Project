@@ -1,0 +1,1976 @@
+\chapter{Hasil dan Pembahasan}
+
+Pada Bab~2 telah ditunjukkan bahwa gravitasi $2+1$ dimensi bersifat topologis dan bahwa teori Chern-Simons menghasilkan persamaan medan berupa koneksi datar. Bab ini menghubungkan kedua fakta tersebut secara eksplisit: mula-mula Ansatz Witten digunakan untuk mengidentifikasi koneksi gauge Chern-Simons dengan variabel geometris gravitasi (dreibein dan koneksi spin), kemudian persamaan medan yang dihasilkan diselesaikan untuk memperoleh solusi lubang hitam BTZ, dan terakhir sektor Einstein-Maxwell diperkenalkan untuk mengakomodasi medan elektromagnetik. Konstruksi aljabar $\mathfrak{so}(2,2)$ beserta seluruh relasi komutasinya diturunkan secara lengkap pada Lampiran~\ref{app:generator-construction}. Formulasi ini mengikuti pendekatan Witten \cite{witten1988} dan Achucarro--Townsend \cite{achucarro1986}, dengan solusi lubang hitam BTZ merujuk pada \cite{banados1992, banados1993}.
+
+\section{Ansatz Witten dan Ekuivalensi Einstein--Chern-Simons}
+\label{sec:b4-witten}
+ 
+Gravitasi $2+1$ dimensi memiliki dua variabel independen: koneksi spin $\omega^a$ dan dreibein $e^a$. Keduanya masing-masing merupakan 1-form, dan secara terpisah berperan sebagai koneksi gauge untuk rotasi Lorentz dan ``translasi'' pada ruang anti-de Sitter. Gagasan Witten adalah menggabungkan keduanya menjadi satu koneksi gauge tunggal $\mathcal{A}$ yang bernilai pada aljabar Lie $\mathfrak{so}(2,2)$, sehingga seluruh dinamika gravitasi terkandung dalam satu objek. Relasi komutasi $[J_a,J_b]$, $[J_a,P_b]$, dan $[P_a,P_b]$ yang dipakai di sini diturunkan dari prinsip pertama pada Lampiran~\ref{app:generator-construction} dan Lampiran~\ref{app:komutasi-JaPa}. Dengan koneksi tersebut, variasi aksi Chern-Simons menghasilkan syarat \emph{flat connection} $\mathcal{F}=0$ yang, setelah didekomposisi dalam basis generator, menjadi persamaan medan Einstein dengan konstanta kosmologi dan kondisi bebas torsi. Inilah inti ekuivalensi Einstein--Chern-Simons di $2+1$ dimensi.
+ 
+\subsection{Ansatz Witten untuk Koneksi Gauge}
+ 
+Ekuivalensi antara teori gauge Chern-Simons dan gravitasi Einstein-Palatini dalam ruang anti-de Sitter ($\Lambda < 0$) diwujudkan melalui ansatz Witten, yang mendefinisikan koneksi gauge $\mathcal{A}$ bernilai pada aljabar Lie $\mathfrak{so}(2,2)$:
+\begin{equation} \label{eq:ansatz-witten}
+    \mathcal{A} = \omega^a J_a + e^a P_a,
+\end{equation}
+di mana $\omega^a$ adalah koneksi spin (1-form), $e^a$ adalah vielbein (1-form), $J_a$ adalah generator rotasi Lorentz, dan $P_a$ adalah generator translasi AdS. Generator $P_a$ telah didefinisikan sebagai $P_a \equiv \frac{1}{\ell} M_{a3}$, sehingga faktor radius AdS $\ell$ telah terserap ke dalam definisi generator itu sendiri. Radius AdS terhubung dengan konstanta kosmologi melalui hubungan:
+\begin{equation}
+    \Lambda = -\frac{1}{\ell^2}.
+\end{equation}
+ 
+\noindent Relasi komutasi tak-nol untuk aljabar isometri AdS di 3 dimensi, yang mengikuti dari definisi $P_a = \frac{1}{\ell} M_{a3}$, adalah:
+\begin{align}
+    [J_a, J_b] &= \varepsilon_{abc} J^c, \nonumber \\
+    [J_a, P_b] &= \varepsilon_{abc} P^c, \label{w41-eq:komutator} \\
+    [P_a, P_b] &= \frac{1}{\ell^2}\,\varepsilon_{abc} J^c = -\Lambda\,\varepsilon_{abc} J^c. \nonumber
+\end{align}
+ 
+\subsection{Field Strength dan Persamaan Medan Teori Chern-Simons}
+ 
+Variasi aksi Chern-Simons terhadap koneksi gauge $\mathcal{A}$ menghasilkan persamaan medan berupa kondisi kelengkungan nol (persamaan~\eqref{eq:flatness}). Untuk memperoleh bentuk eksplisit persamaan medan dalam formulasi gravitasi $2+1$ dimensi, perlu dihitung kuat medan gauge (\textit{curvature} 2-form) yang didefinisikan sebagai
+\begin{equation}
+    \mathcal{F}=d\mathcal{A}+\mathcal{A}\wedge\mathcal{A}.
+\end{equation}
+ 
+\noindent Dengan menggunakan ansatz Witten~\eqref{eq:ansatz-witten}, maka diperoleh
+\begin{equation}
+    \mathcal{F}
+    =
+    d(\omega^a J_a + e^a P_a)
+    +
+    (\omega^a J_a + e^a P_a)
+    \wedge
+    (\omega^b J_b + e^b P_b).
+\end{equation}
+ 
+\noindent Suku pertama menghasilkan
+\begin{equation}
+    d\mathcal{A}
+    =
+    d\omega^a J_a
+    +
+    de^a P_a.
+\end{equation}
+ 
+\noindent Suku kedua adalah \textit{wedge product} dari koneksi:
+\begin{align}
+    \mathcal{A} \wedge \mathcal{A} &= \left(\omega^b J_b + e^b P_b\right) \wedge \left(\omega^c J_c + e^c P_c\right) \nonumber \\
+    &= \omega^b \wedge \omega^c \, J_b J_c + \omega^b \wedge e^c \, J_b P_c \nonumber \\
+    &\quad + e^b \wedge \omega^c \, P_b J_c + e^b \wedge e^c \, P_b P_c. \label{w41-eq:wedge_expansion}
+\end{align}
+ 
+\noindent Produk dua generator dapat didekomposisi:
+\begin{equation}
+    J_b J_c = \frac{1}{2}\{J_b, J_c\} + \frac{1}{2}[J_b, J_c],
+\end{equation}
+di mana $\{J_b, J_c\} = J_b J_c + J_c J_b$ (antikomutator, simetrik) dan $[J_b, J_c] = J_b J_c - J_c J_b$ (komutator, antisimetrik).
+ 
+\noindent Untuk suku antikomutator dengan wedge product antisimetrik, tukar indeks dummy $b \leftrightarrow c$:
+\begin{align*}
+    \omega^b \wedge \omega^c \, \{J_b, J_c\} &= \omega^c \wedge \omega^b \, \{J_c, J_b\} \\
+    &= -\omega^b \wedge \omega^c \, \{J_b, J_c\},
+\end{align*}
+yang mengimplikasikan $\omega^b \wedge \omega^c \, \{J_b, J_c\} = 0$. 
+ 
+\noindent Hanya komutator yang berkontribusi:
+\begin{equation}
+    \omega^b \wedge \omega^c \, J_b J_c = \frac{1}{2} \omega^b \wedge \omega^c \, [J_b, J_c].
+\end{equation}
+ 
+\noindent Argumen identik berlaku untuk $P_b P_c$:
+\begin{equation}
+    e^b \wedge e^c \, P_b P_c = \frac{1}{2} e^b \wedge e^c \, [P_b, P_c].
+\end{equation}
+ 
+\noindent Untuk suku campuran, gunakan antisimetri wedge product $e^b \wedge \omega^c = -\omega^c \wedge e^b$:
+\begin{align*}
+    \omega^b \wedge e^c \, J_b P_c + e^b \wedge \omega^c \, P_b J_c &= \omega^b \wedge e^c \, J_b P_c - \omega^c \wedge e^b \, P_b J_c \\
+    &= \omega^b \wedge e^c \, J_b P_c - \omega^b \wedge e^c \, P_c J_b \quad \text{(relabel)} \\
+    &= \omega^b \wedge e^c [J_b, P_c].
+\end{align*}
+ 
+\noindent Substitusi kembali ke persamaan~\eqref{w41-eq:wedge_expansion}:
+\begin{equation}
+    \mathcal{A} \wedge \mathcal{A} = \frac{1}{2} \omega^b \wedge \omega^c [J_b, J_c] + \omega^b \wedge e^c [J_b, P_c] + \frac{1}{2} e^b \wedge e^c [P_b, P_c].
+\end{equation}
+ 
+\noindent Gunakan relasi komutasi~\eqref{w41-eq:komutator}. Maka:
+\begin{equation}
+    \mathcal{A} \wedge \mathcal{A} = \frac{1}{2} \varepsilon_{abc} \omega^b \wedge \omega^c J^a + \varepsilon_{abc} \omega^b \wedge e^c P^a + \frac{1}{2 \ell^2} \varepsilon_{abc} e^b \wedge e^c J^a.
+\end{equation}
+ 
+\noindent Gabungkan dengan $d \mathcal{A}$ dan kelompokkan berdasarkan generator:
+\begin{align}
+    \mathcal{F} &= \left( d\omega^a + \frac{1}{2} \varepsilon^a_{\phantom{a}bc} \omega^b \wedge \omega^c + \frac{1}{2 \ell^2} \varepsilon^a_{\phantom{a}bc} e^b \wedge e^c \right) J^a \nonumber \\
+    &\quad + \left( d e^a + \varepsilon^a_{\phantom{a}bc} \omega^b \wedge e^c \right) P^a. \label{w41-eq:field_strength_final}
+\end{align}
+ 
+\subsection{Persamaan Medan}
+ 
+\noindent Koefisien masing-masing generator pada persamaan~\eqref{w41-eq:field_strength_final} dapat diidentifikasi dengan besaran-besaran geometris yang telah didefinisikan pada Bab~2. Kelengkungan Lorentz 2-form dan torsi:
+\begin{align}
+    R^a &= d\omega^a + \frac{1}{2}\varepsilon^a_{\phantom{a}bc} \omega^b \wedge \omega^c, \\
+    T^a &= d e^a + \varepsilon^a_{\phantom{a}bc} \omega^b \wedge e^c.
+\end{align}
+Bentuk ini identik dengan definisi kelengkungan~\eqref{eq:curvature-vector} dan torsi~\eqref{eq:torsion} pada Bab~2. Perbedaan konteks terletak pada peran variabel: pada Bab~2, $\omega^a$ dan $e^a$ adalah variabel geometris independen dalam formalisme Einstein-Palatini; di sini, keduanya merupakan komponen dari satu koneksi gauge $\mathcal{A}$ melalui ansatz Witten. Secara fisis, besaran $R^a$ dan $T^a$ tetap merepresentasikan kelengkungan dan torsi yang sama.
+ 
+\noindent Definisikan pula dual 2-form dari vielbein:
+\begin{equation}
+    \eta^a = \frac{1}{2}\varepsilon^a_{\phantom{a}bc} e^b \wedge e^c.
+\end{equation}
+ 
+\noindent Dengan substitusi definisi-definisi tersebut, kuat medan $\mathcal{F}$ menyederhana menjadi bentuk yang sangat sederhana:
+\begin{equation}
+    \mathcal{F} = \left( R^a + \frac{1}{\ell^2} \eta^a \right) J_a + T^a P_a.
+\end{equation}
+ 
+\noindent Gunakan $\Lambda = -1/\ell^2$, sehingga $1/\ell^2 = -\Lambda$:
+\begin{equation}
+    \mathcal{F} = \left( R^a - \Lambda\, \eta^a \right) J_a + T^a P_a.
+\end{equation}
+ 
+\noindent Persamaan medan untuk teori Chern-Simons mensyaratkan koneksi yang datar (\textit{flat connection}), yakni $\delta S_{CS} = 0 \implies \mathcal{F} = 0$. Karena generator $J_a$ dan $P_a$ saling independen, maka koefisien untuk masing-masing generator harus bernilai nol secara simultan:
+\begin{equation}
+    R^a - \Lambda\, \eta^a = 0 \qquad \text{dan} \qquad T^a = 0.
+\end{equation}
+Kedua persamaan ini identik dengan persamaan medan Einstein~\eqref{eq:einstein-eq} dan kondisi bebas torsi~\eqref{eq:torsion-free} yang diperoleh dari variasi aksi Einstein-Palatini pada Bab~2, membuktikan ekuivalensi kedua formulasi.
+
+\section{Lubang Hitam BTZ}
+\label{sec:b4-btzrot}
+ 
+Persamaan torsi-nol dan persamaan Einstein yang diperoleh dari kondisi $\mathcal{F} = 0$ kini diselesaikan secara eksplisit. Strategi penyelesaiannya: pertama, kondisi bebas torsi digunakan untuk menentukan seluruh komponen koneksi spin sebagai fungsi dari dreibein; kedua, kondisi kelengkungan konstan digunakan untuk menentukan fungsi-fungsi metrik $N^\phi(r)$ dan $N(r)$. Hasilnya adalah metrik lubang hitam BTZ berotasi beserta lokasi horizonnya \cite{banados1992, banados1993, carlip1995btz, brown1986central}.
+ 
+\subsection{Ansatz Dreibein}
+\label{b42-sec:intro}
+ 
+Kondisi \emph{flatness} $\mathcal{F} = 0$ pada koneksi gauge $\mathfrak{so}(2,2)$ menghasilkan dua persamaan yang ekuivalen dengan persamaan medan Einstein dalam gravitasi 3-dimensi dengan konstanta kosmologi negatif $\Lambda = -1/\ell^2$:
+\begin{align}
+    T^a &= 0 && \text{(kondisi torsi nol),} \label{b42-eq:torsion-intro}\\[4pt]
+    R^a + \frac{1}{2\ell^2}\,\varepsilon^{a}_{\ bc}\,e^b \wedge e^c &= 0 && \text{(persamaan Einstein).} \label{b42-eq:einstein-intro}
+\end{align}
+Pada bagian ini, kedua persamaan tersebut diselesaikan secara eksplisit untuk menemukan solusi lubang hitam BTZ (Ba\~{n}ados--Teitelboim--Zanelli).
+ 
+Seluruh perhitungan menggunakan metrik lokal \emph{mostly-minus}:
+\begin{equation}
+    \eta_{ab} = \mathrm{diag}(+1,\,-1,\,-1), \qquad a,b = 0,1,2,
+\end{equation}
+dan invers $\eta^{ab} = \mathrm{diag}(+1,\,-1,\,-1)$.
+ 
+Simbol Levi-Civita total-antisimetris dinormalisasi sebagai $\varepsilon_{012} = +1$. Komponen dengan indeks pertama yang dinaikkan oleh metrik, $\varepsilon^{a}_{\ bc} = \eta^{ad}\varepsilon_{dbc}$, secara eksplisit:
+\begin{alignat}{3}
+    &\varepsilon^{0}_{\ 12} = \eta^{00}\varepsilon_{012} = (+1)(+1) = +1, &\qquad &\varepsilon^{0}_{\ 21} = -1, \label{b42-eq:eps0}\\[3pt]
+    &\varepsilon^{1}_{\ 02} = \eta^{11}\varepsilon_{102} = (-1)(-1) = +1, &\qquad &\varepsilon^{1}_{\ 20} = -1, \label{b42-eq:eps1}\\[3pt]
+    &\varepsilon^{2}_{\ 01} = \eta^{22}\varepsilon_{201} = (-1)(+1) = -1, &\qquad &\varepsilon^{2}_{\ 10} = +1. \label{b42-eq:eps2}
+\end{alignat}
+ 
+\vspace{0.5em}
+\noindent \textbf{Ansatz dreibein stasioner--aksisimetris}
+
+Dicari solusi yang \emph{stasioner} (tidak bergantung pada waktu $t$) dan \emph{aksisimetris} (tidak bergantung pada sudut $\phi$), sehingga semua fungsi hanya bergantung pada koordinat radial~$r$. Dalam koordinat $(t, r, \phi)$, ansatz dreibein yang memenuhi kedua simetri ini adalah:
+\begin{align}
+    e^0 &= N(r)\,dt, \label{b42-eq:e0}\\
+    e^1 &= \frac{1}{f(r)}\,dr, \label{b42-eq:e1}\\
+    e^2 &= r\,d\phi + r\,N^\phi(r)\,dt. \label{b42-eq:e2}
+\end{align}
+Ansatz ini memuat tiga fungsi radial yang belum diketahui: $N(r)$, $f(r)$, dan $N^\phi(r)$.\footnote{$N(r)$ adalah \emph{fungsi lapse} yang mengukur laju waktu eigen relatif terhadap waktu koordinat; $f(r)$ adalah fungsi radial terkait kebebasan pemilihan koordinat $r$ (\emph{gauge}), yang akan ditetapkan kemudian melalui $f(r) = N(r)$; $N^\phi(r)$ adalah \emph{fungsi shift angular} yang mengakomodasi efek \emph{frame-dragging} akibat rotasi lubang hitam.}
+ 
+Metrik ruang-waktu direkonstruksi dari dreibein melalui:
+\begin{equation}
+    ds^2 = \eta_{ab}\,e^a\,e^b = (e^0)^2 - (e^1)^2 - (e^2)^2.
+\end{equation}
+Substitusi ansatz~\eqref{b42-eq:e0}--\eqref{b42-eq:e2}:
+\begin{equation}
+    ds^2 = N^2\,dt^2 - \frac{dr^2}{f^2} - r^2\!\left(d\phi + N^\phi\,dt\right)^2. \label{b42-eq:metric-ansatz}
+\end{equation}
+Terdapat tiga fungsi radial yang belum diketahui: $N(r)$, $f(r)$, dan $N^\phi(r)$. Ketiga fungsi ini akan ditentukan sepenuhnya oleh persamaan~\eqref{b42-eq:torsion-intro} dan~\eqref{b42-eq:einstein-intro}.
+ 
+\subsection{Penyelesaian Kondisi Bebas Torsi}
+\label{b42-sec:torsion}
+ 
+Kondisi torsi nol~\eqref{b42-eq:torsion-intro} merupakan sistem tiga persamaan (satu untuk setiap $a = 0,1,2$) yang menentukan sembilan komponen koneksi spin $\omega^a_{\ \mu}$ dari dreibein. Bentuk eksplisit $T^a$ diberikan dengan:
+\begin{equation}
+    T^a = de^a + \varepsilon^{a}_{\ bc}\,\omega^b \wedge e^c = 0. \label{b42-eq:torsion-def}
+\end{equation}
+Penjumlahan atas indeks $b$ dan $c$ dijabarkan secara eksplisit untuk setiap nilai $a$, menggunakan komponen $\varepsilon^{a}_{\ bc}$ yang telah dihitung pada persamaan~\eqref{b42-eq:eps0}--\eqref{b42-eq:eps2}.
+ 
+\noindent Untuk $a = 0$:
+ 
+Suku-suku non-trivial hanya muncul untuk pasangan $(b,c) \in \{(1,2),\,(2,1)\}$:
+\begin{align}
+    T^0 &= de^0 + \varepsilon^{0}_{\ 12}\,\omega^1 \wedge e^2 + \varepsilon^{0}_{\ 21}\,\omega^2 \wedge e^1 \nonumber\\[4pt]
+    &= de^0 + (+1)\,\omega^1 \wedge e^2 + (-1)\,\omega^2 \wedge e^1 \nonumber\\[4pt]
+    &= de^0 + \omega^1 \wedge e^2 - \omega^2 \wedge e^1 = 0. \label{b42-eq:T0}
+\end{align}
+ 
+\noindent Untuk $a = 1$:
+ 
+Pasangan $(b,c) \in \{(0,2),\,(2,0)\}$:
+\begin{align}
+    T^1 &= de^1 + \varepsilon^{1}_{\ 02}\,\omega^0 \wedge e^2 + \varepsilon^{1}_{\ 20}\,\omega^2 \wedge e^0 \nonumber\\[4pt]
+    &= de^1 + (+1)\,\omega^0 \wedge e^2 + (-1)\,\omega^2 \wedge e^0 \nonumber\\[4pt]
+    &= de^1 + \omega^0 \wedge e^2 - \omega^2 \wedge e^0 = 0. \label{b42-eq:T1}
+\end{align}
+ 
+\noindent Untuk $a = 2$:
+ 
+Pasangan $(b,c) \in \{(0,1),\,(1,0)\}$:
+\begin{align}
+    T^2 &= de^2 + \varepsilon^{2}_{\ 01}\,\omega^0 \wedge e^1 + \varepsilon^{2}_{\ 10}\,\omega^1 \wedge e^0 \nonumber\\[4pt]
+    &= de^2 + (-1)\,\omega^0 \wedge e^1 + (+1)\,\omega^1 \wedge e^0 \nonumber\\[4pt]
+    &= de^2 - \omega^0 \wedge e^1 + \omega^1 \wedge e^0 = 0. \label{b42-eq:T2}
+\end{align}
+Ketiga persamaan ini secara bersamaan menentukan 9 komponen koneksi spin.
+ 
+\vspace{0.5em}
+\noindent \textbf{Parameterisasi koneksi spin}
+
+Dalam koordinat $(t, r, \phi)$, setiap koneksi spin 1-form memiliki tiga komponen:
+\begin{align}
+    \omega^0 &= \omega^0_{\ t}\,dt + \omega^0_{\ r}\,dr + \omega^0_{\ \phi}\,d\phi, \\
+    \omega^1 &= \omega^1_{\ t}\,dt + \omega^1_{\ r}\,dr + \omega^1_{\ \phi}\,d\phi, \\
+    \omega^2 &= \omega^2_{\ t}\,dt + \omega^2_{\ r}\,dr + \omega^2_{\ \phi}\,d\phi.
+\end{align}
+Total terdapat 9 komponen yang belum diketahui. Komponen-komponen ini diselesaikan dengan mensubstitusikan ansatz dreibein dan koneksi spin ke dalam persamaan torsi, lalu menyamakan koefisien dari setiap basis 2-form yang independen secara linear: $(dt \wedge dr)$, $(dt \wedge d\phi)$, dan $(dr \wedge d\phi)$.
+ 
+Persamaan torsi~\eqref{b42-eq:torsion-def} memuat dua jenis suku: turunan eksterior $de^a$ yang hanya melibatkan dreibein, dan suku $\varepsilon^a_{\ bc}\,\omega^b \wedge e^c$ yang memuat koneksi spin. Karena $de^a$ dapat dihitung secara independen dari koneksi spin, langkah pertama adalah mengevaluasi ketiga $de^a$ terlebih dahulu; kemudian hasilnya disubstitusikan bersama bentuk umum $\omega^a$ ke dalam $T^a = 0$ untuk mengekstraksi persamaan aljabar bagi komponen-komponen $\omega^a_{\ \mu}$.
+ 
+\vspace{0.5em}
+\noindent \textbf{Perhitungan turunan eksterior $de^a$}
+
+Untuk $de^0$:
+\begin{equation}
+    de^0 = d\!\left(N\,dt\right) = \frac{dN}{dr}\,dr \wedge dt = N'\,dr \wedge dt = -N'\,(dt \wedge dr). \label{b42-eq:de0}
+\end{equation}
+ 
+\noindent Untuk $de^1$:
+\begin{equation}
+    de^1 = d\!\left(\frac{1}{f}\,dr\right) = -\frac{f'}{f^2}\,dr \wedge dr = 0, \label{b42-eq:de1}
+\end{equation}
+karena $dr \wedge dr = 0$ (sifat antisimetri \emph{wedge product}).
+ 
+\noindent Untuk $de^2$:
+\begin{align}
+    de^2 &= d\!\left(r\,d\phi + r\,N^\phi\,dt\right) = dr \wedge d\phi + \frac{d(r\,N^\phi)}{dr}\,dr \wedge dt \nonumber\\[4pt]
+    &= dr \wedge d\phi + (N^\phi + r(N^\phi)')\,dr \wedge dt. \label{b42-eq:de2}
+\end{align}
+Dalam basis terurut:
+\begin{equation}
+    de^2 = -(N^\phi + r(N^\phi)')\,(dt \wedge dr) + (dr \wedge d\phi). \label{b42-eq:de2-ordered}
+\end{equation}
+ 
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $T^1 = 0$}
+
+Persamaan torsi untuk $a = 1$:
+\begin{equation}
+    T^1 = de^1 + \omega^0 \wedge e^2 - \omega^2 \wedge e^0 = 0. \label{b42-eq:T1-start}
+\end{equation}
+ 
+Karena $de^1 = 0$, persamaan~\eqref{b42-eq:T1-start} menjadi:
+\begin{equation}
+    \omega^0 \wedge e^2 - \omega^2 \wedge e^0 = 0. \label{b42-eq:T1-reduced}
+\end{equation}
+ 
+Substitusi seluruh bentuk eksplisit ke persamaan~\eqref{b42-eq:T1-reduced}. Suku pertama $\omega^0 \wedge e^2$ menghasilkan $3 \times 2 = 6$ suku:
+\begin{align}
+    \omega^0 \wedge e^2 &= \omega^0_{\ t}\cdot rN^\phi\;\underbrace{dt \wedge dt}_{= 0} \;+\; \omega^0_{\ t}\cdot r\;(dt \wedge d\phi) \nonumber\\[4pt]
+    &\quad +\; \omega^0_{\ r}\cdot rN^\phi\;(dr \wedge dt) \;+\; \omega^0_{\ r}\cdot r\;(dr \wedge d\phi) \nonumber\\[4pt]
+    &\quad +\; \omega^0_{\ \phi}\cdot rN^\phi\;\underbrace{d\phi \wedge dt}_{= -(dt \wedge d\phi)} \;+\; \omega^0_{\ \phi}\cdot r\;\underbrace{d\phi \wedge d\phi}_{= 0}. \label{b42-eq:T1-prod1}
+\end{align}
+ 
+Suku kedua $-\omega^2 \wedge e^0$ menghasilkan $3 \times 1 = 3$ suku:
+\begin{align}
+    -\omega^2 \wedge e^0 &= -\omega^2_{\ t}\cdot N\;\underbrace{dt \wedge dt}_{= 0} \;-\; \omega^2_{\ r}\cdot N\;(dr \wedge dt) \;-\; \omega^2_{\ \phi}\cdot N\;\underbrace{d\phi \wedge dt}_{= -(dt \wedge d\phi)}. \label{b42-eq:T1-prod2}
+\end{align}
+ 
+Setelah menghapus suku-suku yang nol dan mengganti $d\phi \wedge dt = -(dt \wedge d\phi)$, kumpulkan berdasarkan basis 2-form:
+\begin{align}
+    &\Big[rN^\phi\omega^0_{\ r} - N\omega^2_{\ r}\Big]\;(dr \wedge dt) \nonumber\\[6pt]
+    +\;&\Big[r\omega^0_{\ t} - rN^\phi\omega^0_{\ \phi} + N\omega^2_{\ \phi}\Big]\;(dt \wedge d\phi) \nonumber\\[6pt]
+    +\;&\Big[r\omega^0_{\ r}\Big]\;(dr \wedge d\phi) \nonumber\\[6pt]
+    &= 0. \label{b42-eq:T1-grouped}
+\end{align}
+ 
+Karena $(dr \wedge dt)$, $(dt \wedge d\phi)$, dan $(dr \wedge d\phi)$ adalah basis 2-form yang independen secara linear, setiap koefisien dalam kurung siku pada~\eqref{b42-eq:T1-grouped} harus bernilai nol secara terpisah.
+ 
+\noindent Koefisien $dr \wedge d\phi$:
+\begin{equation}
+    r\omega^0_{\ r} = 0 \qquad \Longrightarrow \qquad \omega^0_{\ r} = 0. \label{b42-eq:res-w0r}
+\end{equation}
+ 
+\noindent Koefisien $dr \wedge dt$ (substitusi $\omega^0_{\ r} = 0$):
+\begin{equation}
+    \cancel{rN^\phi\omega^0_{\ r}} - N\omega^2_{\ r} = 0 \qquad \Longrightarrow \qquad \omega^2_{\ r} = 0. \label{b42-eq:res-w2r}
+\end{equation}
+ 
+\noindent Koefisien $dt \wedge d\phi$:
+\begin{equation}
+    r\omega^0_{\ t} - rN^\phi\omega^0_{\ \phi} + N\omega^2_{\ \phi} = 0. \label{b42-eq:constraint-A}
+\end{equation}
+Persamaan ini menghubungkan tiga komponen yang belum ditentukan (\emph{constraint~A}).
+ 
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $T^2 = 0$}
+
+Persamaan torsi untuk $a = 2$:
+\begin{equation}
+    T^2 = de^2 - \omega^0 \wedge e^1 + \omega^1 \wedge e^0 = 0. \label{b42-eq:T2-start}
+\end{equation}
+ 
+Gunakan $\omega^0_{\ r} = 0$ yang sudah diperoleh, sehingga $\omega^0 = \omega^0_{\ t}\,dt + \omega^0_{\ \phi}\,d\phi$. Substitusi bersama $de^2$~\eqref{b42-eq:de2-ordered}, $e^1 = f^{-1}dr$, dan $e^0 = N\,dt$:
+\begin{align}
+    &\Big[-(N^\phi + r(N^\phi)')(dt \wedge dr) + (dr \wedge d\phi)\Big] \nonumber\\[6pt]
+    &- \Big(\omega^0_{\ t}\,dt + \omega^0_{\ \phi}\,d\phi\Big) \wedge \frac{dr}{f} \nonumber\\[6pt]
+    &+ \Big(\omega^1_{\ t}\,dt + \omega^1_{\ r}\,dr + \omega^1_{\ \phi}\,d\phi\Big) \wedge \Big(N\,dt\Big) = 0. \label{b42-eq:T2-substituted}
+\end{align}
+ 
+Suku kedua $-\omega^0 \wedge e^1$:
+\begin{align}
+    -\omega^0 \wedge e^1 &= -\frac{\omega^0_{\ t}}{f}\;(dt \wedge dr) \;+\; \frac{\omega^0_{\ \phi}}{f}\;(dr \wedge d\phi). \label{b42-eq:T2-prod2}
+\end{align}
+ 
+Suku ketiga $+\omega^1 \wedge e^0$:
+\begin{align}
+    \omega^1 \wedge e^0 &= -N\omega^1_{\ r}\;(dt \wedge dr) \;-\; N\omega^1_{\ \phi}\;(dt \wedge d\phi). \label{b42-eq:T2-prod3}
+\end{align}
+ 
+Gabungkan dan kelompokkan berdasarkan basis 2-form:
+\begin{align}
+    &\Big[-(N^\phi + r(N^\phi)') - \frac{\omega^0_{\ t}}{f} - N\omega^1_{\ r}\Big]\;(dt \wedge dr) \nonumber\\[6pt]
+    +\;&\Big[-N\omega^1_{\ \phi}\Big]\;(dt \wedge d\phi) \nonumber\\[6pt]
+    +\;&\Big[1 + \frac{\omega^0_{\ \phi}}{f}\Big]\;(dr \wedge d\phi) \nonumber\\[6pt]
+    &= 0. \label{b42-eq:T2-grouped}
+\end{align}
+ 
+\noindent Koefisien $dt \wedge d\phi$:
+\begin{equation}
+    -N\omega^1_{\ \phi} = 0 \qquad \Longrightarrow \qquad \omega^1_{\ \phi} = 0. \label{b42-eq:res-w1phi}
+\end{equation}
+ 
+\noindent Koefisien $dr \wedge d\phi$:
+\begin{equation}
+    1 + \frac{\omega^0_{\ \phi}}{f} = 0 \qquad \Longrightarrow \qquad \omega^0_{\ \phi} = -f. \label{b42-eq:res-w0phi}
+\end{equation}
+ 
+\noindent Koefisien $dt \wedge dr$:
+\begin{equation}
+    -(N^\phi + r(N^\phi)') - \frac{\omega^0_{\ t}}{f} - N\omega^1_{\ r} = 0. \label{b42-eq:constraint-B}
+\end{equation}
+Ini adalah \emph{constraint~B}.
+ 
+\vspace{0.5em}
+\noindent \textbf{Penyelesaian $T^0 = 0$}
+
+Persamaan torsi untuk $a = 0$:
+\begin{equation}
+    T^0 = de^0 + \omega^1 \wedge e^2 - \omega^2 \wedge e^1 = 0. \label{b42-eq:T0-start}
+\end{equation}
+ 
+Gunakan $de^0 = -N'(dt \wedge dr)$, $\omega^1_{\ \phi} = 0$, dan $\omega^2_{\ r} = 0$. Dengan $\omega^1 = \omega^1_{\ t}\,dt + \omega^1_{\ r}\,dr$ dan $\omega^2 = \omega^2_{\ t}\,dt + \omega^2_{\ \phi}\,d\phi$:
+\begin{align}
+    &\Big[-N'\;(dt \wedge dr)\Big] \nonumber\\[6pt]
+    &+ \Big(\omega^1_{\ t}\,dt + \omega^1_{\ r}\,dr\Big) \wedge \Big(rN^\phi\,dt + r\,d\phi\Big) \nonumber\\[6pt]
+    &- \Big(\omega^2_{\ t}\,dt + \omega^2_{\ \phi}\,d\phi\Big) \wedge \frac{dr}{f} = 0. \label{b42-eq:T0-substituted}
+\end{align}
+ 
+Suku kedua $+\omega^1 \wedge e^2$ ($2 \times 2 = 4$ suku):
+\begin{align}
+    \omega^1 \wedge e^2 &= -rN^\phi\omega^1_{\ r}\;(dt \wedge dr) \;+\; r\omega^1_{\ t}\;(dt \wedge d\phi) \;+\; r\omega^1_{\ r}\;(dr \wedge d\phi). \label{b42-eq:T0-prod2}
+\end{align}
+ 
+Suku ketiga $-\omega^2 \wedge e^1$ ($2 \times 1 = 2$ suku):
+\begin{align}
+    -\omega^2 \wedge e^1 &= -\frac{\omega^2_{\ t}}{f}\;(dt \wedge dr) \;+\; \frac{\omega^2_{\ \phi}}{f}\;(dr \wedge d\phi). \label{b42-eq:T0-prod3}
+\end{align}
+ 
+Gabungkan dan kelompokkan:
+\begin{align}
+    &\Big[-N' - rN^\phi\omega^1_{\ r} - \frac{\omega^2_{\ t}}{f}\Big]\;(dt \wedge dr) \nonumber\\[6pt]
+    +\;&\Big[r\omega^1_{\ t}\Big]\;(dt \wedge d\phi) \nonumber\\[6pt]
+    +\;&\Big[r\omega^1_{\ r} + \frac{\omega^2_{\ \phi}}{f}\Big]\;(dr \wedge d\phi) \nonumber\\[6pt]
+    &= 0. \label{b42-eq:T0-grouped}
+\end{align}
+ 
+\noindent Koefisien $dt \wedge d\phi$:
+\begin{equation}
+    r\omega^1_{\ t} = 0 \qquad \Longrightarrow \qquad \omega^1_{\ t} = 0. \label{b42-eq:res-w1t}
+\end{equation}
+ 
+\noindent Koefisien $dr \wedge d\phi$:
+\begin{equation}
+    r\omega^1_{\ r} + \frac{\omega^2_{\ \phi}}{f} = 0 \qquad \Longrightarrow \qquad \omega^2_{\ \phi} = -fr\,\omega^1_{\ r}. \label{b42-eq:w2phi-rel}
+\end{equation}
+ 
+\noindent Koefisien $dt \wedge dr$:
+\begin{equation}
+    -N' - rN^\phi\omega^1_{\ r} - \frac{\omega^2_{\ t}}{f} = 0 \qquad \Longrightarrow \qquad \omega^2_{\ t} = -f\!\left(N' + rN^\phi\omega^1_{\ r}\right). \label{b42-eq:w2t-rel}
+\end{equation}
+ 
+Karena $\omega^1_{\ t} = 0$ dan $\omega^1_{\ \phi} = 0$, maka:
+\begin{equation}
+    \omega^1 = \omega^1_{\ r}\;dr. \label{b42-eq:w1-radial}
+\end{equation}
+Artinya koneksi spin $\omega^1$ \emph{hanya hidup di arah radial}.
+ 
+Pada titik ini tersisa tiga komponen yang belum ditentukan: $\omega^0_{\ t}$, $\omega^1_{\ r}$, dan $\omega^2_{\ \phi}$ (sementara $\omega^2_{\ t}$ sudah diekspresikan dalam $\omega^1_{\ r}$ melalui~\eqref{b42-eq:w2t-rel}, dan $\omega^2_{\ \phi}$ melalui~\eqref{b42-eq:w2phi-rel}). Diselesaikan menggunakan dua constraint~\eqref{b42-eq:constraint-A} dan~\eqref{b42-eq:constraint-B}.
+ 
+\noindent Substitusi $\omega^0_{\ \phi} = -f$ dan $\omega^2_{\ \phi} = -fr\omega^1_{\ r}$ ke constraint~A~\eqref{b42-eq:constraint-A}:
+\begin{align}
+    r\omega^0_{\ t} - rN^\phi(-f) + N(-fr\omega^1_{\ r}) &= 0, \nonumber\\[4pt]
+    r\omega^0_{\ t} + rfN^\phi - Nfr\omega^1_{\ r} &= 0.
+\end{align}
+Bagi seluruh persamaan dengan $r$ (dengan $r \neq 0$):
+\begin{equation}
+    \omega^0_{\ t} = Nf\omega^1_{\ r} - fN^\phi. \label{b42-eq:w0t-expr}
+\end{equation}
+ 
+\noindent Substitusi~\eqref{b42-eq:w0t-expr} ke constraint~B~\eqref{b42-eq:constraint-B}:
+\begin{align}
+    -(N^\phi + r(N^\phi)') - N\omega^1_{\ r} - \frac{1}{f}\!\left(Nf\omega^1_{\ r} - fN^\phi\right) &= 0, \nonumber\\[4pt]
+    -(N^\phi + r(N^\phi)') - N\omega^1_{\ r} - N\omega^1_{\ r} + N^\phi &= 0, \nonumber\\[4pt]
+    -\cancel{N^\phi} - r(N^\phi)' - 2N\omega^1_{\ r} + \cancel{N^\phi} &= 0, \nonumber\\[4pt]
+    -r(N^\phi)' - 2N\omega^1_{\ r} &= 0.
+\end{align}
+Sehingga diperoleh:
+\begin{equation}
+    \omega^1_{\ r} = -\frac{r(N^\phi)'}{2N}. \label{b42-eq:w1r-final}
+\end{equation}
+ 
+\vspace{0.5em}
+\noindent \textbf{Hasil lengkap koneksi spin}
+
+Substitusi balik~\eqref{b42-eq:w1r-final} ke seluruh relasi:
+ 
+\begin{enumerate}
+    \item Komponen $\omega^0_{\ t}$ dari~\eqref{b42-eq:w0t-expr}:
+    \begin{align}
+        \omega^0_{\ t} &= Nf\!\left(-\frac{r(N^\phi)'}{2N}\right) - fN^\phi = -\frac{fr(N^\phi)'}{2} - fN^\phi. \label{b42-eq:w0t-final}
+    \end{align}
+
+    \item Komponen $\omega^2_{\ \phi}$ dari~\eqref{b42-eq:w2phi-rel}:
+    \begin{align}
+        \omega^2_{\ \phi} &= -fr\!\left(-\frac{r(N^\phi)'}{2N}\right) = +\frac{fr^2(N^\phi)'}{2N}. \label{b42-eq:w2phi-final}
+    \end{align}
+
+    \item Komponen $\omega^2_{\ t}$ dari~\eqref{b42-eq:w2t-rel}:
+    \begin{align}
+        \omega^2_{\ t} &= -f\!\left(N' + rN^\phi\!\left(-\frac{r(N^\phi)'}{2N}\right)\right) = -fN' + \frac{fr^2N^\phi(N^\phi)'}{2N}. \label{b42-eq:w2t-final}
+    \end{align}
+
+    \item Komponen nol:
+    \begin{equation}
+        \omega^0_{\ r} = 0, \qquad \omega^2_{\ r} = 0, \qquad \omega^1_{\ t} = 0, \qquad \omega^1_{\ \phi} = 0.
+    \end{equation}
+\end{enumerate}
+ 
+\noindent Bentuk lengkap koneksi spin:
+\begin{align}
+    \omega^0 &= \left(-\frac{fr(N^\phi)'}{2} - fN^\phi\right)dt - f\,d\phi, \label{b42-eq:omega0-full}\\[8pt]
+    \omega^1 &= -\frac{r(N^\phi)'}{2N}\,dr, \label{b42-eq:omega1-full}\\[8pt]
+    \omega^2 &= \left(-fN' + \frac{fr^2N^\phi(N^\phi)'}{2N}\right)dt + \frac{fr^2(N^\phi)'}{2N}\,d\phi. \label{b42-eq:omega2-full}
+\end{align}
+
+\subsection{Kondisi Kelengkungan Konstan ($R^a$)}
+\label{b42-sec:curvature}
+
+Kelengkungan 2-form $R^a$ didefinisikan oleh persamaan~\eqref{eq:curvature-vector} pada Bab~2:
+\begin{equation}
+    R^a = d\omega^a + \frac{1}{2}\,\varepsilon^{a}_{\ bc}\,\omega^b \wedge \omega^c. \label{b42-eq:curvature-def}
+\end{equation}
+Sebagaimana pada ekspansi torsi, penjumlahan atas $b$ dan $c$ dijabarkan untuk setiap $a$; sifat antisimetri \emph{wedge product} melenyapkan faktor $\frac{1}{2}$.
+
+\noindent Untuk $a = 0$:
+\begin{align}
+    R^0 &= d\omega^0 + \frac{1}{2}\!\left(\varepsilon^{0}_{\ 12}\,\omega^1 \wedge \omega^2 + \varepsilon^{0}_{\ 21}\,\omega^2 \wedge \omega^1\right) \nonumber\\[4pt]
+    &= d\omega^0 + \frac{1}{2}\!\left(\omega^1 \wedge \omega^2 - \omega^2 \wedge \omega^1\right) \nonumber\\[4pt]
+    &= d\omega^0 + \frac{1}{2}\!\left(\omega^1 \wedge \omega^2 + \omega^1 \wedge \omega^2\right) \qquad [\text{karena}\;\omega^2 \wedge \omega^1 = -\omega^1 \wedge \omega^2] \nonumber\\[4pt]
+    &= d\omega^0 + \omega^1 \wedge \omega^2. \label{b42-eq:R0}
+\end{align}
+
+\noindent Untuk $a = 1$:
+\begin{align}
+    R^1 &= d\omega^1 + \frac{1}{2}\!\left(\varepsilon^{1}_{\ 02}\,\omega^0 \wedge \omega^2 + \varepsilon^{1}_{\ 20}\,\omega^2 \wedge \omega^0\right) \nonumber\\[4pt]
+    &= d\omega^1 + \frac{1}{2}\!\left(\omega^0 \wedge \omega^2 - \omega^2 \wedge \omega^0\right) \nonumber\\[4pt]
+    &= d\omega^1 + \frac{1}{2}\!\left(2\,\omega^0 \wedge \omega^2\right) \nonumber\\[4pt]
+    &= d\omega^1 + \omega^0 \wedge \omega^2. \label{b42-eq:R1}
+\end{align}
+
+\noindent Untuk $a = 2$:
+\begin{align}
+    R^2 &= d\omega^2 + \frac{1}{2}\!\left(\varepsilon^{2}_{\ 01}\,\omega^0 \wedge \omega^1 + \varepsilon^{2}_{\ 10}\,\omega^1 \wedge \omega^0\right) \nonumber\\[4pt]
+    &= d\omega^2 + \frac{1}{2}\!\left(\underbrace{(-1)}_{\varepsilon^2_{01}}\omega^0 \wedge \omega^1 + \underbrace{(+1)}_{\varepsilon^2_{10}}\omega^1 \wedge \omega^0\right) \nonumber\\[4pt]
+    &= d\omega^2 + \frac{1}{2}\!\left(-\omega^0 \wedge \omega^1 - \omega^0 \wedge \omega^1\right) \nonumber\\[4pt]
+    &= d\omega^2 - \omega^0 \wedge \omega^1. \label{b42-eq:R2}
+\end{align}
+Perhatikan tanda negatif pada $R^2$, yang berasal dari $\varepsilon^{2}_{\ 01} = -1$.
+
+Persamaan Einstein~\eqref{b42-eq:einstein-intro} menuntut:
+\begin{equation}
+    R^a = -\frac{1}{2\ell^2}\,\varepsilon^{a}_{\ bc}\,e^b \wedge e^c. \label{b42-eq:einstein-curvature}
+\end{equation}
+Ruas kanan dihitung untuk setiap $a$ dengan cara yang sama; permutasi antisimetri melenyapkan faktor $\frac{1}{2}$.
+
+\noindent Untuk $a = 0$:
+\begin{align}
+    -\frac{1}{2\ell^2}\,\varepsilon^{0}_{\ bc}\,e^b \wedge e^c &= -\frac{1}{2\ell^2}\!\left(\varepsilon^{0}_{\ 12}\,e^1 \wedge e^2 + \varepsilon^{0}_{\ 21}\,e^2 \wedge e^1\right) \nonumber\\[4pt]
+    &= -\frac{1}{2\ell^2}\!\left(2\,e^1 \wedge e^2\right) = -\frac{1}{\ell^2}\,e^1 \wedge e^2. \label{b42-eq:rhs-R0}
+\end{align}
+
+\noindent Untuk $a = 1$:
+\begin{align}
+    -\frac{1}{2\ell^2}\,\varepsilon^{1}_{\ bc}\,e^b \wedge e^c &= -\frac{1}{2\ell^2}\!\left(2\,e^0 \wedge e^2\right) = -\frac{1}{\ell^2}\,e^0 \wedge e^2. \label{b42-eq:rhs-R1}
+\end{align}
+
+\noindent Untuk $a = 2$:
+\begin{align}
+    -\frac{1}{2\ell^2}\,\varepsilon^{2}_{\ bc}\,e^b \wedge e^c &= -\frac{1}{2\ell^2}\!\left(\underbrace{(-1)}_{\varepsilon^2_{01}}e^0 \wedge e^1 + \underbrace{(+1)}_{\varepsilon^2_{10}}e^1 \wedge e^0\right) \nonumber\\[4pt]
+    &= -\frac{1}{2\ell^2}\!\left(-e^0 \wedge e^1 - e^0 \wedge e^1\right) \nonumber\\[4pt]
+    &= -\frac{1}{2\ell^2}\!\left(-2\,e^0 \wedge e^1\right) = +\frac{1}{\ell^2}\,e^0 \wedge e^1. \label{b42-eq:rhs-R2}
+\end{align}
+Perhatikan bahwa ruas kanan $R^2$ bertanda positif, konsekuensi langsung dari $\varepsilon^{2}_{\ 01} = -1$.
+
+Dengan menggabungkan ruas kiri~\eqref{b42-eq:R0}--\eqref{b42-eq:R2} dan ruas kanan~\eqref{b42-eq:rhs-R0}--\eqref{b42-eq:rhs-R2}, diperoleh tiga persamaan kelengkungan:
+\begin{align}
+    R^0:\quad d\omega^0 + \omega^1 \wedge \omega^2 &= -\frac{1}{\ell^2}\,e^1 \wedge e^2, \label{b42-eq:R0-full}\\[6pt]
+    R^1:\quad d\omega^1 + \omega^0 \wedge \omega^2 &= -\frac{1}{\ell^2}\,e^0 \wedge e^2, \label{b42-eq:R1-full}\\[6pt]
+    R^2:\quad d\omega^2 - \omega^0 \wedge \omega^1 &= +\frac{1}{\ell^2}\,e^0 \wedge e^1. \label{b42-eq:R2-full}
+\end{align}
+
+Sebelum menyelesaikan sistem~\eqref{b42-eq:R0-full}--\eqref{b42-eq:R2-full}, dihitung $d\omega^a$ dari koneksi spin yang telah diperoleh pada subbab sebelumnya. Karena seluruh komponen hanya bergantung pada $r$, turunan eksterior hanya melibatkan $\partial_r$.
+
+\noindent Untuk $d\omega^0$: dari~\eqref{b42-eq:omega0-full}, $\omega^0 = \omega^0_{\ t}\,dt + \omega^0_{\ \phi}\,d\phi$ dengan $\omega^0_{\ t} = -fr(N^\phi)'/2 - fN^\phi$ dan $\omega^0_{\ \phi} = -f$:
+\begin{align}
+    d\omega^0 &= (\omega^0_{\ t})'\,dr \wedge dt + (\omega^0_{\ \phi})'\,dr \wedge d\phi \nonumber\\[4pt]
+    &= -(\omega^0_{\ t})'\,(dt \wedge dr) + (-f)'\,(dr \wedge d\phi) \nonumber\\[4pt]
+    &= -(\omega^0_{\ t})'\,(dt \wedge dr) - f'\,(dr \wedge d\phi). \label{b42-eq:dw0}
+\end{align}
+
+\noindent Untuk $d\omega^1$: dari~\eqref{b42-eq:omega1-full}, $\omega^1 = \omega^1_{\ r}\,dr$. Karena $dr \wedge dr = 0$:
+\begin{equation}
+    d\omega^1 = (\omega^1_{\ r})'\,dr \wedge dr = 0. \label{b42-eq:dw1}
+\end{equation}
+Fakta bahwa $d\omega^1 = 0$ akan menyederhanakan persamaan $R^1$ secara signifikan.
+
+\noindent Untuk $d\omega^2$: dari~\eqref{b42-eq:omega2-full}, $\omega^2 = \omega^2_{\ t}\,dt + \omega^2_{\ \phi}\,d\phi$ (karena $\omega^2_{\ r} = 0$):
+\begin{align}
+    d\omega^2 &= (\omega^2_{\ t})'\,dr \wedge dt + (\omega^2_{\ \phi})'\,dr \wedge d\phi \nonumber\\[4pt]
+    &= -(\omega^2_{\ t})'\,(dt \wedge dr) + (\omega^2_{\ \phi})'\,(dr \wedge d\phi). \label{b42-eq:dw2}
+\end{align}
+
+\subsection{Mengekstraksi $J$ dan $M$}
+\label{b42-sec:decouple}
+
+Dari ketiga persamaan kelengkungan~\eqref{b42-eq:R0-full}--\eqref{b42-eq:R2-full}, persamaan $R^2$ dipilih sebagai titik awal karena ruas kanannya~\eqref{b42-eq:rhs-R2} secara eksplisit hanya memiliki komponen $dt \wedge dr$:
+\begin{equation}
+    \frac{1}{\ell^2}\,e^0 \wedge e^1 = \frac{1}{\ell^2}\cdot N\,dt \wedge \frac{dr}{f} = \frac{N}{f\ell^2}\,(dt \wedge dr). \label{b42-eq:R2-rhs-explicit}
+\end{equation}
+Tidak ada komponen $dr \wedge d\phi$ maupun $dt \wedge d\phi$. Konsekuensinya, komponen $dr \wedge d\phi$ dari persamaan $R^2$ memberikan persamaan diferensial \emph{homogen} untuk $N^\phi(r)$, yang jauh lebih mudah diselesaikan daripada persamaan dari $R^0$ atau $R^1$.
+
+\vspace{0.5em}
+\noindent \textbf{Komponen $dr \wedge d\phi$ dari $R^2$}
+
+Dari $d\omega^2$~\eqref{b42-eq:dw2}, komponen $dr \wedge d\phi$:
+\begin{equation}
+    d\omega^2\big|_{dr \wedge d\phi} = (\omega^2_{\ \phi})'. \label{b42-eq:dw2-rphi}
+\end{equation}
+
+\noindent Dari $\omega^0 \wedge \omega^1$: substitusi $\omega^0 = \omega^0_{\ t}\,dt - f\,d\phi$ dan $\omega^1 = \omega^1_{\ r}\,dr$:
+\begin{align}
+    \omega^0 \wedge \omega^1 &= (\omega^0_{\ t}\,dt - f\,d\phi) \wedge (\omega^1_{\ r}\,dr) \nonumber\\[4pt]
+    &= \omega^0_{\ t}\,\omega^1_{\ r}\,(dt \wedge dr) - f\,\omega^1_{\ r}\,(d\phi \wedge dr) \nonumber\\[4pt]
+    &= \omega^0_{\ t}\,\omega^1_{\ r}\,(dt \wedge dr) + f\,\omega^1_{\ r}\,(dr \wedge d\phi).
+\end{align}
+Komponen $dr \wedge d\phi$:
+\begin{equation}
+    (\omega^0 \wedge \omega^1)\big|_{dr \wedge d\phi} = f\,\omega^1_{\ r}. \label{b42-eq:w0w1-rphi}
+\end{equation}
+
+\noindent Gabungkan $R^2\big|_{dr \wedge d\phi} = d\omega^2 - \omega^0 \wedge \omega^1$:
+\begin{equation}
+    R^2\big|_{dr \wedge d\phi} = (\omega^2_{\ \phi})' - f\,\omega^1_{\ r}. \label{b42-eq:R2-rphi-lhs}
+\end{equation}
+
+Ruas kanan~\eqref{b42-eq:R2-rhs-explicit} tidak memiliki komponen $dr \wedge d\phi$, sehingga:
+\begin{equation}
+    (\omega^2_{\ \phi})' - f\,\omega^1_{\ r} = 0. \label{b42-eq:R2-rphi-eqn}
+\end{equation}
+
+Substitusi $\omega^2_{\ \phi} = fr^2(N^\phi)'/(2N)$ dari~\eqref{b42-eq:w2phi-final} dan $\omega^1_{\ r} = -r(N^\phi)'/(2N)$ dari~\eqref{b42-eq:w1r-final}:
+\begin{equation}
+    \left(\frac{fr^2(N^\phi)'}{2N}\right)' - f\!\left(-\frac{r(N^\phi)'}{2N}\right) = 0,
+\end{equation}
+\begin{equation}
+    \left(\frac{fr^2(N^\phi)'}{2N}\right)' + \frac{fr(N^\phi)'}{2N} = 0. \label{b42-eq:Nphi-ODE-general}
+\end{equation}
+
+Persamaan~\eqref{b42-eq:Nphi-ODE-general} mengandung dua fungsi yang belum diketahui: $f(r)$ dan $N(r)$. Kebebasan dalam memilih parameterisasi koordinat $r$ (\emph{gauge radial}) dimanfaatkan untuk menetapkan:
+\begin{equation}
+    f(r) = N(r). \label{b42-eq:gauge}
+\end{equation}
+Dengan pilihan ini, faktor $f/N$ di~\eqref{b42-eq:Nphi-ODE-general} menjadi 1:
+\begin{equation}
+    \left(\frac{r^2(N^\phi)'}{2}\right)' + \frac{r(N^\phi)'}{2} = 0. \label{b42-eq:Nphi-ODE}
+\end{equation}
+
+Hitung turunan pada suku pertama menggunakan aturan perkalian:
+\begin{align}
+    \left(\frac{r^2(N^\phi)'}{2}\right)' &= \frac{1}{2}\frac{d}{dr}\!\left[r^2(N^\phi)'\right] \nonumber\\[4pt]
+    &= \frac{1}{2}\!\left[2r(N^\phi)' + r^2(N^\phi)''\right] \nonumber\\[4pt]
+    &= r(N^\phi)' + \frac{r^2(N^\phi)''}{2}. \label{b42-eq:deriv-expand}
+\end{align}
+
+Substitusi ke~\eqref{b42-eq:Nphi-ODE}:
+\begin{align}
+    r(N^\phi)' + \frac{r^2(N^\phi)''}{2} + \frac{r(N^\phi)'}{2} &= 0, \nonumber\\[4pt]
+    \frac{3r(N^\phi)'}{2} + \frac{r^2(N^\phi)''}{2} &= 0.
+\end{align}
+
+Kalikan seluruh persamaan dengan $\frac{2}{r}$ (dengan $r \neq 0$):
+\begin{equation}
+    3(N^\phi)' + r(N^\phi)'' = 0. \label{b42-eq:Nphi-reduced}
+\end{equation}
+
+Perhatikan bahwa ruas kiri merupakan bagian dari turunan total berikut:
+\begin{equation}
+    \frac{d}{dr}\!\left(r^3(N^\phi)'\right) = 3r^2(N^\phi)' + r^3(N^\phi)'' = r^2\!\left[3(N^\phi)' + r(N^\phi)''\right].
+\end{equation}
+Membandingkan dengan~\eqref{b42-eq:Nphi-reduced}, ekspresi dalam kurung siku bernilai nol, sehingga:
+\begin{equation}
+    \frac{d}{dr}\!\left(r^3(N^\phi)'\right) = 0. \label{b42-eq:total-deriv}
+\end{equation}
+
+Persamaan~\eqref{b42-eq:total-deriv} langsung diintegralkan terhadap $r$:
+\begin{equation}
+    r^3(N^\phi)' = C_1 \qquad \Longrightarrow \qquad (N^\phi)' = \frac{C_1}{r^3}. \label{b42-eq:Nphi-prime-gen}
+\end{equation}
+
+Integralkan~\eqref{b42-eq:Nphi-prime-gen} sekali lagi terhadap $r$:
+\begin{align}
+    N^\phi(r) &= \int\frac{C_1}{r^3}\,dr = C_1\cdot\frac{r^{-2}}{-2} + C_2 = -\frac{C_1}{2r^2} + C_2. \label{b42-eq:Nphi-gen}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Syarat batas asimtotik}
+
+Pada $r \to \infty$, ruang-waktu harus menjadi \emph{locally} AdS$_3$ tanpa rotasi. Ini menuntut $N^\phi(\infty) = 0$. Dari~\eqref{b42-eq:Nphi-gen}:
+\begin{equation}
+    \lim_{r\to\infty}N^\phi(r) = C_2 = 0.
+\end{equation}
+
+Konstanta $C_1$ diidentifikasi sebagai \emph{momentum sudut} lubang hitam, $C_1 \equiv J$. Hasil akhir:
+\begin{align}
+    N^\phi(r) &= -\frac{J}{2r^2}, \label{b42-eq:Nphi-result}\\[6pt]
+    (N^\phi)' &= \frac{J}{r^3}. \label{b42-eq:Nphi-prime-result}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Komponen $dt \wedge dr$ dari $R^2$}
+
+Setelah $N^\phi(r)$ ditemukan, kini diekstraksi persamaan untuk $N(r)$ dari komponen $dt \wedge dr$ persamaan $R^2$ yang sama.
+
+\noindent Dari $d\omega^2$~\eqref{b42-eq:dw2}, komponen $dt \wedge dr$:
+\begin{equation}
+    d\omega^2\big|_{dt \wedge dr} = -(\omega^2_{\ t})'. \label{b42-eq:dw2-tr}
+\end{equation}
+
+\noindent Dari $\omega^0 \wedge \omega^1$, komponen $dt \wedge dr$:
+\begin{equation}
+    (\omega^0 \wedge \omega^1)\big|_{dt \wedge dr} = \omega^0_{\ t}\,\omega^1_{\ r}. \label{b42-eq:w0w1-tr}
+\end{equation}
+
+\noindent Gabungkan $R^2\big|_{dt \wedge dr} = d\omega^2 - \omega^0 \wedge \omega^1$:
+\begin{equation}
+    R^2\big|_{dt \wedge dr} = -(\omega^2_{\ t})' - \omega^0_{\ t}\,\omega^1_{\ r}. \label{b42-eq:R2-tr-lhs}
+\end{equation}
+
+Ruas kanan dari~\eqref{b42-eq:R2-rhs-explicit}, dengan gauge $f = N$:
+\begin{equation}
+    \frac{N}{f\ell^2} = \frac{1}{\ell^2}. \label{b42-eq:R2-tr-rhs}
+\end{equation}
+
+Persamaan lengkap:
+\begin{equation}
+    -(\omega^2_{\ t})' - \omega^0_{\ t}\,\omega^1_{\ r} = \frac{1}{\ell^2}. \label{b42-eq:R2-tr-full}
+\end{equation}
+
+Substitusi solusi $N^\phi = -J/(2r^2)$ dan $(N^\phi)' = J/r^3$ ke dalam ekspresi $\omega^0_{\ t}$~\eqref{b42-eq:w0t-final} dengan $f = N$:
+\begin{align}
+    \omega^0_{\ t} &= -\frac{Nr(N^\phi)'}{2} - NN^\phi \nonumber\\[6pt]
+    &= -\frac{Nr}{2}\cdot\frac{J}{r^3} - N\!\left(-\frac{J}{2r^2}\right) \nonumber\\[6pt]
+    &= -\frac{NJ}{2r^2} + \frac{NJ}{2r^2} \nonumber\\[6pt]
+    &= 0. \label{b42-eq:w0t-zero}
+\end{align}
+Kedua suku saling menghapus secara eksak. Oleh karena itu:
+\begin{equation}
+    \omega^0_{\ t}\cdot\omega^1_{\ r} = 0\cdot\omega^1_{\ r} = 0. \label{b42-eq:cross-zero}
+\end{equation}
+
+Dari~\eqref{b42-eq:w2t-final} dengan $f = N$:
+\begin{align}
+    \omega^2_{\ t} &= -NN' + \frac{r^2N^\phi(N^\phi)'}{2} \nonumber\\[6pt]
+    &= -NN' + \frac{r^2}{2}\cdot\left(-\frac{J}{2r^2}\right)\cdot\frac{J}{r^3} \nonumber\\[6pt]
+    &= -NN' + \frac{1}{2}\cdot\left(-\frac{J^2}{2r^3}\right) \nonumber\\[6pt]
+    &= -NN' - \frac{J^2}{4r^3}. \label{b42-eq:w2t-explicit}
+\end{align}
+
+Substitusi~\eqref{b42-eq:cross-zero} dan~\eqref{b42-eq:w2t-explicit} ke~\eqref{b42-eq:R2-tr-full}:
+\begin{equation}
+    -\frac{d}{dr}\!\left(-NN' - \frac{J^2}{4r^3}\right) = \frac{1}{\ell^2},
+\end{equation}
+\begin{equation}
+    \frac{d}{dr}\!\left(NN' + \frac{J^2}{4r^3}\right) = \frac{1}{\ell^2}. \label{b42-eq:master-ODE}
+\end{equation}
+
+Integralkan kedua ruas~\eqref{b42-eq:master-ODE} terhadap $r$:
+\begin{equation}
+    NN' + \frac{J^2}{4r^3} = \frac{r}{\ell^2} + C_3, \label{b42-eq:first-int}
+\end{equation}
+di mana $C_3$ adalah konstanta integrasi.
+
+Untuk ruang-waktu yang asimtotik AdS$_3$, fungsi $N^2(r)$ tidak boleh memiliki suku linear dalam $r$. Karena $NN' = \frac{1}{2}(N^2)'$, integrasi selanjutnya akan menghasilkan suku $C_3\,r$ pada $N^2$ jika $C_3 \neq 0$. Oleh karena itu:
+\begin{equation}
+    C_3 = 0.
+\end{equation}
+
+Persamaan~\eqref{b42-eq:first-int} menjadi:
+\begin{equation}
+    NN' = \frac{r}{\ell^2} - \frac{J^2}{4r^3}. \label{b42-eq:NNprime}
+\end{equation}
+
+Gunakan identitas $NN' = \frac{1}{2}\frac{d}{dr}(N^2)$:
+\begin{equation}
+    \frac{1}{2}\frac{d}{dr}(N^2) = \frac{r}{\ell^2} - \frac{J^2}{4r^3}.
+\end{equation}
+
+Integralkan ruas kiri dan ruas kanan secara terpisah:
+\begin{align}
+    \frac{1}{2}N^2 &= \int\frac{r}{\ell^2}\,dr + \int\left(-\frac{J^2}{4r^3}\right)dr + C_4 \nonumber\\[6pt]
+    &= \frac{r^2}{2\ell^2} + \left(-\frac{J^2}{4}\right)\cdot\frac{r^{-2}}{-2} + C_4 \nonumber\\[6pt]
+    &= \frac{r^2}{2\ell^2} + \frac{J^2}{8r^2} + C_4. \label{b42-eq:half-N2}
+\end{align}
+
+Kalikan dengan 2:
+\begin{equation}
+    N^2 = \frac{r^2}{\ell^2} + \frac{J^2}{4r^2} + 2C_4. \label{b42-eq:N2-with-const}
+\end{equation}
+
+Konstanta $2C_4$ diidentifikasi sebagai (negatif) parameter massa: $2C_4 \equiv -M$.
+\begin{equation}
+    N^2(r) = -M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2}. \label{b42-eq:N2-final}
+\end{equation}
+
+\subsection{Metrik Ruang-Waktu BTZ dan Kasus $J=0$}
+\label{b42-sec:metric}
+
+Substitusi $f = N$, $N^\phi$ dari~\eqref{b42-eq:Nphi-result}, dan $N^2$ dari~\eqref{b42-eq:N2-final} ke ansatz~\eqref{b42-eq:metric-ansatz}:
+\begin{equation}
+    ds^2 = N^2\,dt^2 - \frac{dr^2}{N^2} - r^2\!\left(d\phi + N^\phi\,dt\right)^2, \label{b42-eq:metric-before}
+\end{equation}
+di mana:
+\begin{equation}
+    N^2 = -M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2}, \qquad N^\phi = -\frac{J}{2r^2}.
+\end{equation}
+
+Bentuk yang belum diekspansi:
+\begin{equation}
+    ds^2 = \left(-M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2}\right)dt^2 - \frac{dr^2}{-M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2}} - r^2\!\left(d\phi - \frac{J}{2r^2}\,dt\right)^2. \label{b42-eq:metric-unexpanded}
+\end{equation}
+
+Ekspansi suku terakhir di~\eqref{b42-eq:metric-unexpanded}:
+\begin{align}
+    r^2\!\left(d\phi - \frac{J}{2r^2}\,dt\right)^2 &= r^2\!\left[(d\phi)^2 - 2\cdot d\phi\cdot\frac{J}{2r^2}\,dt + \left(\frac{J}{2r^2}\right)^2(dt)^2\right] \nonumber\\[6pt]
+    &= r^2\,d\phi^2 - \frac{2r^2 J}{2r^2}\,dt\,d\phi + \frac{r^2 J^2}{4r^4}\,dt^2 \nonumber\\[6pt]
+    &= r^2\,d\phi^2 - J\,dt\,d\phi + \frac{J^2}{4r^2}\,dt^2. \label{b42-eq:binomial}
+\end{align}
+
+Substitusi~\eqref{b42-eq:binomial} ke~\eqref{b42-eq:metric-unexpanded}:
+\begin{align}
+    ds^2 &= \left(-M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2}\right)dt^2 - \frac{dr^2}{N^2} - r^2\,d\phi^2 + J\,dt\,d\phi - \frac{J^2}{4r^2}\,dt^2 \nonumber\\[8pt]
+    &= \left(-M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2} - \frac{J^2}{4r^2}\right)dt^2 - \frac{dr^2}{N^2} - r^2\,d\phi^2 + J\,dt\,d\phi. \label{b42-eq:metric-cancel}
+\end{align}
+
+Perhatikan koefisien $dt^2$ pada~\eqref{b42-eq:metric-cancel}:
+\begin{equation}
+    -M + \frac{r^2}{\ell^2} + \cancel{\frac{J^2}{4r^2}} - \cancel{\frac{J^2}{4r^2}} = -M + \frac{r^2}{\ell^2}.
+\end{equation}
+Suku $+J^2/(4r^2)$ yang berasal dari $N^2$ di dalam $g_{tt}$ dilenyapkan secara sempurna oleh suku $-J^2/(4r^2)$ yang muncul dari ekspansi kuadrat binomial suku angular. Pembatalan ini menghasilkan komponen $g_{tt}$ yang hanya bergantung pada massa dan radius AdS, tanpa kontribusi langsung dari momentum sudut.
+
+Metrik akhir yang diperoleh:
+\begin{equation}
+    ds^2 = \left(-M + \frac{r^2}{\ell^2}\right)dt^2 - \frac{dr^2}{-M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2}} - r^2\,d\phi^2 + J\,dt\,d\phi. \label{b42-eq:BTZ}
+\end{equation}
+Ini adalah metrik lubang hitam BTZ berotasi (Ba\~{n}ados, Teitelboim, dan Zanelli, 1992), diturunkan sepenuhnya dari persamaan medan Einstein yang diperoleh melalui formalisme Chern-Simons dengan Ansatz Witten pada grup gauge $\mathrm{SO}(2,2)$.
+
+\vspace{0.5em}
+\noindent \textbf{Lokasi horizon}
+
+Horizon terletak di $g^{rr} = N^2(r) = 0$:
+\begin{equation}
+    -M + \frac{r^2}{\ell^2} + \frac{J^2}{4r^2} = 0.
+\end{equation}
+Kalikan dengan $r^2$:
+\begin{equation}
+    \frac{r^4}{\ell^2} - Mr^2 + \frac{J^2}{4} = 0.
+\end{equation}
+Ini merupakan persamaan kuadrat dalam $r^2$ dengan solusi:
+\begin{equation}
+    r_{\pm}^2 = \frac{M\ell^2}{2}\left(1 \pm \sqrt{1 - \left(\frac{J}{M\ell}\right)^2}\right), \label{b42-eq:horizons}
+\end{equation}
+di mana $r_+$ adalah horizon luar (\emph{event horizon}) dan $r_-$ adalah horizon dalam (\emph{inner horizon}). Solusi lubang hitam eksis jika dan hanya jika $|J| \leq M\ell$.
+
+\vspace{0.5em}
+\noindent \textbf{BTZ statik ($J = 0$)}
+
+Limit $J \to 0$ memberikan kasus khusus yang penting baik secara fisis maupun matematis: lubang hitam BTZ statik (tidak berotasi). Pada limit ini, fungsi \textit{shift} lenyap sepenuhnya,
+\begin{equation}\label{b42-eq:Nphi-zero}
+    N^\phi(r) = -\frac{J}{2r^2} \xrightarrow{J \to 0} 0,
+\end{equation}
+dan komponen $g_{t\phi} = -r^2 N^\phi$ ikut lenyap. Akibatnya, suku silang $J\,dt\,d\phi$ pada metrik~\eqref{b42-eq:BTZ} hilang, dan metrik menjadi sepenuhnya diagonal:
+\begin{equation}\label{b42-eq:BTZ-static}
+    ds^2 \Big|_{J=0} = \left(-M + \frac{r^2}{\ell^2}\right)dt^2 - \frac{dr^2}{-M + \dfrac{r^2}{\ell^2}} - r^2\,d\phi^2.
+\end{equation}
+Fungsi metrik $N^2$ kini sederhana: $N^2(r) = -M + r^2/\ell^2$.
+
+\noindent Konsekuensi langsung dari limit ini:
+\begin{enumerate}[label=\roman*.]
+    \item \textit{Hilangnya frame-dragging.} Tidak ada lagi penyeretan kerangka inersial di sekitar lubang hitam. Vektor Killing $\partial_t$ menjadi ortogonal terhadap $\partial_\phi$ di mana-mana, sehingga lubang hitam memiliki simetri waktu-balik $t \to -t$ secara penuh.
+    \item \textit{Horizon tunggal.} Dari~\eqref{b42-eq:horizons}, $r_-^2 \to 0$ dan hanya tersisa satu horizon peristiwa pada
+    \begin{equation}\label{b42-eq:horizon-J0}
+        r_+ = \ell\sqrt{M}.
+    \end{equation}
+    Lubang hitam BTZ statik dengan demikian memiliki struktur horizon yang lebih sederhana daripada kasus berotasi, mirip dengan lubang hitam Schwarzschild di empat dimensi yang juga memiliki horizon tunggal $r_s = 2GM$. Kasus ekstremal $|J| = M\ell$ dari kasus berotasi tidak memiliki padanan pada limit $J=0$.
+    \item \textit{Eksistensi solusi untuk semua $M > 0$.} Syarat $|J| \leq M\ell$ pada kasus berotasi tereduksi menjadi $M > 0$ saja: setiap nilai massa positif memberikan lubang hitam yang valid.
+    \item \textit{Limit vakum global.} Bila juga diambil $M \to 0$ (vakum tanpa lubang hitam), metrik mereduksi menjadi $ds^2 = (r^2/\ell^2)\,dt^2 - (\ell^2/r^2)\,dr^2 - r^2 d\phi^2$, yang merupakan bagian dari ruang anti-de Sitter AdS$_3$ dalam koordinat Poincar\'e. Sebaliknya, $M \to -1$ (dengan $J = 0$) memulihkan ruang AdS$_3$ global itu sendiri, yang menjadi alasan mengapa BTZ kadang disebut sebagai kuosien dari AdS$_3$ oleh isometri diskret \cite{banados1993, carlip1995btz}.
+\end{enumerate}
+
+
+\section{Persamaan Medan Einstein-Maxwell}
+\label{sec:b4-em-form}
+
+Solusi BTZ yang diperoleh merupakan solusi vakum: ruang-waktu tanpa materi. Untuk mempelajari lubang hitam bermuatan listrik, perlu ditambahkan medan elektromagnetik ke dalam teori. Medan elektromagnetik dimodelkan sebagai teori gauge $U(1)$, yang merupakan grup Lie Abelian berdimensi satu. Konstruksi lengkap dari teori gauge $U(1)$, mulai dari definisi grup, aljabar Lie $\mathfrak{u}(1)$, hingga kuat medan $F = dA$ dan identitas Bianchi $dF = 0$, diberikan pada Lampiran~\ref{app:u1-gauge}. Berikut dirangkum hasil-hasil yang digunakan secara langsung.
+
+Potensial gauge elektromagnetik adalah 1-form bernilai real $A = A_\mu\,dx^\mu$. Kuat medan (\textit{field strength}) didefinisikan sebagai turunan eksteriornya:
+\begin{equation}\label{em43-eq:kuat-medan-U1}
+    F = dA = \frac{1}{2}\,F_{\mu\nu}\,dx^\mu \wedge dx^\nu, \qquad F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu.
+\end{equation}
+Dalam basis dreibein:
+\begin{equation}\label{em43-eq:F-dreibein}
+    F = \frac{1}{2}\,F_{ab}\,e^a \wedge e^b, \qquad F_{ab} = e^\mu{}_a\,e^\nu{}_b\,F_{\mu\nu}.
+\end{equation}
+Kuat medan bersifat invarian gauge ($F' = d(A + d\lambda) = dA = F$, karena $d^2 = 0$) dan memenuhi identitas Bianchi:
+\begin{equation}\label{em43-eq:bianchi}
+    dF = d^2A = 0.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Aksi Einstein-Maxwell dan variasi aksi}
+
+\label{em43-sec:formulasi-aksi}
+
+Sistem yang ditinjau terdiri dari dua sektor: medan elektromagnetik yang direpresentasikan oleh grup gauge $U(1)$ dan gravitasi yang direpresentasikan oleh teori gauge Chern-Simons dengan grup $\mathrm{SO}(2,2)$. Kedua gauge bersifat independen: potensial elektromagnetik $A$ bernilai pada $\mathfrak{u}(1)$, sedangkan koneksi gravitasi $\mathcal{A}$ bernilai pada $\mathfrak{so}(2,2)$. Karena tidak adanya suku yang mengkopling keduanya secara langsung, aksi total merupakan jumlah langsung dari aksi masing-masing sektor.
+
+Seluruh perhitungan dilakukan pada manifold $\mathcal{M}$ berdimensi $2+1$ yang diasumsikan \emph{compact} dan \emph{without boundary} ($\partial\mathcal{M} = \varnothing$). Asumsi ini telah digunakan pada aksi Chern-Simons; hal yang sama berlaku pada aksi Maxwell, sehingga teorema Stokes dapat digunakan untuk menghilangkan suku batas pada kedua sektor.
+
+\vspace{0.5em}
+\noindent \textbf{Aksi Maxwell}
+
+Dengan formalisme $U(1)$ yang telah dibangun, dinamika medan elektromagnetik bebas-sumber pada ruang lengkung dideskripsikan oleh aksi Maxwell:
+\begin{equation}\label{em43-eq:aksi-maxwell}
+    S_{M}[A,\, e^{a}] = -\frac{1}{2} \int_{\mathcal{M}} F \wedge \star F.
+\end{equation}
+Aksi ini bergantung pada dua variabel secara bersamaan. Ketergantungan pertama terhadap potensial gauge $A$ masuk melalui kuat medan $F = dA$, yang hanya melibatkan turunan eksterior dan tidak memerlukan metrik. Ketergantungan kedua terhadap dreibein $e^{a}$ masuk melalui operator $\star$ yang memerlukan metrik. Perbedaan ini menghasilkan dua variasi: variasi terhadap $A$ yang hanya mengenai $F$, dan variasi terhadap $e^{a}$ yang hanya mengenai $\star$.
+
+\vspace{0.5em}
+\noindent \textbf{Aksi Chern-Simons}
+
+Gravitasi pada $2+1$ dimensi diformulasikan sebagai teori gauge Chern-Simons. Aksi Chern-Simons untuk koneksi gauge $\mathcal{A}$ bernilai pada $\mathfrak{so}(2,2)$ adalah:
+\begin{equation}\label{em43-eq:aksi-CS}
+    S_{\mathrm{CS}}[\mathcal{A}]
+    = \frac{k}{4\pi} \int_{\mathcal{M}}
+    \mathrm{Tr}\!\left(\mathcal{A} \wedge d\mathcal{A}
+    + \frac{2}{3}\, \mathcal{A} \wedge \mathcal{A}
+    \wedge \mathcal{A}\right).
+\end{equation}
+Ansatz Witten mengekspresikan koneksi gauge sebagai kombinasi linear dari koneksi spin dan dreibein. Dengan substitusi ansatz~\eqref{eq:ansatz-witten}, aksi Chern-Simons berubah dari koneksi gauge abstrak $\mathcal{A}$ menjadi pasangan variabel geometris:
+\begin{equation}\label{em43-eq:CS-geometris}
+    S_{\mathrm{CS}}[\mathcal{A}]
+    \;\longrightarrow\;
+    S_{\mathrm{CS}}[\omega^{a},\, e^{a}].
+\end{equation}
+Penurunan secara eksplisit dari variasi aksi ini serta dekomposisi kelengkungan $\mathcal{F}$ dalam basis generator $J_{a}$ dan $P_{a}$ telah dilakukan pada subbab sebelumnya.
+
+\vspace{0.5em}
+\noindent \textbf{Aksi total}
+
+\begin{align}
+    S_{\mathrm{tot}}
+    &= S_{\mathrm{CS}}[\omega^{a},\, e^{a}]
+    + S_{M}[A,\, e^{a}] \nonumber\\
+    &= \frac{k}{4\pi} \int_{\mathcal{M}}
+    \mathrm{Tr}\!\left(\mathcal{A} \wedge d\mathcal{A}
+    + \frac{2}{3}\, \mathcal{A} \wedge \mathcal{A}
+    \wedge \mathcal{A}\right) -\frac{1}{2} \int_{\mathcal{M}} F \wedge \star F. \label{em43-eq:aksi-total}
+\end{align}
+Terdapat tiga variabel medan independen: potensial gauge elektromagnetik $A$, koneksi spin $\omega^{a}$, dan dreibein $e^{a}$. Prinsip aksi stasioner ($\delta S_{\mathrm{tot}} = 0$) diterapkan terhadap ketiga variabel tersebut secara bergantian.
+
+\subsection{Variasi terhadap $A$}
+
+Variasikan aksi total terhadap $A$:
+\begin{equation}\label{em43-eq:varA-total}
+    \delta_{A} S_{\mathrm{tot}}
+    = \underbrace{\delta_{A} S_{\mathrm{CS}}}_{= 0}
+    + \delta_{A} S_{M} = 0.
+\end{equation}
+Suku $\delta_{A} S_{\mathrm{CS}}$ lenyap karena aksi Chern-Simons tidak memuat $A$. Tersisa $\delta_{A} S_{M} = 0$.
+Terapkan aturan Leibniz pada wedge product di dalam integran:
+\begin{equation}\label{em43-eq:varA-leibniz}
+    \delta_{A}(F \wedge \star F)
+    = (\delta_{A} F) \wedge \star F + F \wedge \delta_{A}(\star F).
+\end{equation}
+Operator Hodge $\star$ bergantung pada $e^{a}$, bukan pada $A$, sehingga $\delta_{A}(\star F) = \star(\delta_{A} F)$. Substitusikan ekspresi ini beserta $\delta_{A} F = d(\delta A)$:
+\begin{equation}\label{em43-eq:varA-two-terms}
+    \delta_{A} S_{M}
+    = -\frac{1}{2} \int_{\mathcal{M}}
+    \Big[d(\delta A) \wedge \star F
+    + F \wedge \star\!\big(d(\delta A)\big)\Big].
+\end{equation}
+Untuk dua $p$-form $\alpha$ dan $\beta$ pada manifold bermetrik, berlaku sifat simetri Hodge (persamaan~\eqref{eq:hodge-wedge-sym} pada Bab~2):
+\begin{equation}\label{em43-eq:hodge-sym}
+    \alpha \wedge \star\beta = \beta \wedge \star\alpha
+    \qquad (\deg\alpha = \deg\beta).
+\end{equation}
+Karena $F$ dan $d(\delta A)$ keduanya 2-form, pilih $\alpha = F$ dan $\beta = d(\delta A)$:
+\begin{equation}
+    F \wedge \star\!\big(d(\delta A)\big)
+    = d(\delta A) \wedge \star F.
+\end{equation}
+Suku kedua dalam~\eqref{em43-eq:varA-two-terms} ternyata identik dengan suku pertama. Substitusikan kembali:
+\begin{align}
+    \delta_{A} S_{M}
+    &= -\frac{1}{2} \int_{\mathcal{M}}
+    \Big[d(\delta A) \wedge \star F
+    + d(\delta A) \wedge \star F\Big] \nonumber \\
+    &= -\int_{\mathcal{M}} d(\delta A) \wedge \star F.
+    \label{em43-eq:varA-combined}
+\end{align}
+Gunakan aturan Leibniz tergraduasi (persamaan~\eqref{eq:graded-leibniz} pada Bab~2) dengan $\alpha = \delta A$ (1-form) dan $\beta = \star F$ (1-form di $2+1$ dimensi, karena $\star$ memetakan 2-form ke $(3-2) = 1$-form):
+\begin{equation}
+    d(\delta A \wedge \star F)
+    = d(\delta A) \wedge \star F
+    - \delta A \wedge d(\star F).
+\end{equation}
+Selesaikan untuk suku yang mengandung $d(\delta A)$ dan substitusikan ke~\eqref{em43-eq:varA-combined}:
+\begin{equation}
+    \delta_{A} S_{M}
+    = -\int_{\mathcal{M}} d(\delta A \wedge \star F)
+    - \int_{\mathcal{M}} \delta A \wedge d(\star F).
+\end{equation}
+Integral pertama lenyap oleh teorema Stokes, karena $\partial\mathcal{M} = \varnothing$:
+\begin{equation}
+    \int_{\mathcal{M}} d(\delta A \wedge \star F)
+    = \oint_{\partial\mathcal{M}} \delta A \wedge \star F = 0.
+\end{equation}
+Diperoleh:
+\begin{equation}\label{em43-eq:varA-final}
+    \delta_{A} S_{M}
+    = -\int_{\mathcal{M}} \delta A \wedge d(\star F) = 0.
+\end{equation}
+Karena $\delta A$ sembarang, integran harus lenyap di setiap titik, menghasilkan persamaan dinamik:
+\begin{equation}\label{em43-eq:maxwell-dinamik}
+    d(\star F) = 0.
+\end{equation}
+Persamaan ini mendeskripsikan dinamika medan elektromagnetik pada ruang lengkung. Bersama identitas Bianchi $dF = 0$ yang telah diturunkan secara independen pada persamaan~\eqref{em43-eq:bianchi}:
+\begin{equation}\label{em43-eq:eq-maxwell}
+    d F = 0, \qquad d(\star F) = 0.
+\end{equation}
+
+\subsection{Variasi terhadap Koneksi Spin $\omega^{a}$}
+\label{em43-sec:varomega}
+
+Variasikan aksi total terhadap koneksi spin $\omega^{a}$:
+\begin{equation}\label{em43-eq:varomega-total}
+    \delta_{\omega} S_{\mathrm{tot}}
+    = \delta_{\omega} S_{\mathrm{CS}}
+    + \underbrace{\delta_{\omega} S_{M}}_{= 0} = 0.
+\end{equation}
+Suku $\delta_{\omega} S_{M}$ lenyap karena aksi Maxwell tidak memuat $\omega^{a}$. Tersisa $\delta_{\omega} S_{\mathrm{CS}} = 0$.
+Variasi aksi Chern-Simons~\eqref{em43-eq:aksi-CS} terhadap koneksi gauge $\mathcal{A}$ secara umum menghasilkan (lihat persamaan~\eqref{eq:cs-variation} pada Bab~2):
+\begin{equation}\label{em43-eq:var-CS-umum}
+    \delta S_{\mathrm{CS}}
+    = \frac{k}{2\pi} \int_{\mathcal{M}}
+    \mathrm{Tr}\!\big(\delta\mathcal{A} \wedge \mathcal{F}\big),
+\end{equation}
+dengan $\mathcal{F} = d\mathcal{A} + \mathcal{A} \wedge \mathcal{A}$ adalah tensor kelengkungan 2-form.
+
+Dari ansatz Witten, variasinya adalah $\delta\mathcal{A} = \delta\omega^{a}\, J_{a} + \delta e^{a}\, P_{a}$. Kelengkungan $\mathcal{F}$, yang telah dievaluasi secara eksplisit menggunakan relasi komutasi aljabar Lie, terkelompok berdasarkan generator:
+\begin{equation}\label{em43-eq:F-witten}
+    \mathcal{F}
+    = \left(R^{a} + \frac{1}{\ell^{2}}\, \eta^{a}\right) J_{a}
+    + T^{a}\, P_{a}.
+\end{equation}
+Substitusikan $\delta\mathcal{A}$ dan~\eqref{em43-eq:F-witten} ke dalam~\eqref{em43-eq:var-CS-umum}. Ekspansi produk wedge memberikan:
+\begin{align}\label{em43-eq:trace-ekspansi}
+    \mathrm{Tr}\!\big(\delta\mathcal{A} \wedge \mathcal{F}\big)
+    &= \delta\omega^{a} \wedge \big(R^{b}
+    + \tfrac{1}{\ell^{2}}\,\eta^{b}\big)\,
+    \mathrm{Tr}(J_{a} J_{b})
+    + \delta\omega^{a} \wedge T^{b}\,
+    \mathrm{Tr}(J_{a} P_{b}) \nonumber \\[4pt]
+    &\quad + \delta e^{a} \wedge \big(R^{b}
+    + \tfrac{1}{\ell^{2}}\,\eta^{b}\big)\,
+    \mathrm{Tr}(P_{a} J_{b})
+    + \delta e^{a} \wedge T^{b}\,
+    \mathrm{Tr}(P_{a} P_{b}).
+\end{align}
+
+Bentuk bilinear invarian (\textit{trace}) pada aljabar $\mathfrak{so}(2,2)$ yang dipakai dalam formulasi Chern-Simons gravitasi bukanlah \textit{Killing form} standar, melainkan bentuk bilinear simetris invarian non-degenerate ``silang'' yang memasangkan generator rotasi $J_a$ dengan generator translasi $P_b$. Pemilihan ini ditentukan oleh syarat bahwa aksi Chern-Simons yang dihasilkan harus berbentuk Einstein-Palatini, bukan kombinasi linear yang menyertakan suku eksotik seperti $e^a \wedge T_a$. Konstruksi eksplisit bentuk bilinear ini dari pasangan $\langle M_{IJ}, M_{KL}\rangle = \tfrac{1}{2}\epsilon_{IJKL}$ pada $\mathbb{R}^{2,2}$ dan derivasi nilai-nilai konkretnya diberikan pada Lampiran \ref{app:bilinear-form}; hasilnya adalah:
+\begin{equation}\label{em43-eq:trace-rel}
+    \mathrm{Tr}(J_{a} P_{b}) = \mathrm{Tr}(P_{a} J_{b}) = \eta_{ab},
+    \qquad
+    \mathrm{Tr}(J_{a} J_{b}) = \mathrm{Tr}(P_{a} P_{b}) = 0.
+\end{equation}
+Suku pertama dan keempat dalam~\eqref{em43-eq:trace-ekspansi} lenyap karena $\mathrm{Tr}(JJ) = \mathrm{Tr}(PP) = 0$. Pada suku kedua dan ketiga, kontraksi $\eta_{ab}$ menurunkan indeks:
+\begin{align}
+    \delta\omega^{a} \wedge T^{b}\, \mathrm{Tr}(J_{a} P_{b})
+    &= \delta\omega^{a} \wedge T^{b}\, \eta_{ab}
+    = \delta\omega_{a} \wedge T^{a}, \nonumber \\[4pt]
+    \delta e^{a} \wedge \big(R^{b}
+    + \tfrac{1}{\ell^{2}}\,\eta^{b}\big)\, \mathrm{Tr}(P_{a} J_{b})
+    &= \delta e_{a} \wedge \big(R^{a}
+    + \tfrac{1}{\ell^{2}}\,\eta^{a}\big).
+\end{align}
+Substitusikan ke~\eqref{em43-eq:var-CS-umum}, diperoleh hasil variasi lengkap:
+\begin{equation}\label{em43-eq:var-CS-final}
+    \delta S_{\mathrm{CS}}
+    = \frac{k}{2\pi} \int_{\mathcal{M}}
+    \left[\delta\omega_{a} \wedge T^{a}
+    + \delta e_{a} \wedge \left(R^{a}
+    + \frac{1}{\ell^{2}}\, \eta^{a}\right)\right].
+\end{equation}
+Perhatikan bahwa hasil ini mengandung variasi kedua variabel geometris: $\delta\omega^{a}$ dan $\delta e^{a}$. Pada bagian ini hanya diekstrak persamaan dari $\delta\omega^{a}$; kontribusi $\delta e^{a}$ dikombinasikan dengan sektor Maxwell pada subbab variasi dreibein.
+
+Isolasi kontribusi dari $\delta\omega^{a}$ saja:
+\begin{equation}\label{em43-eq:var-omega-only}
+    \delta_{\omega} S_{\mathrm{CS}}
+    = \frac{k}{2\pi} \int_{\mathcal{M}}
+    \delta\omega_{a} \wedge T^{a} = 0.
+\end{equation}
+Karena $\delta\omega_{a}$ sembarang, integran harus lenyap di setiap titik:
+\begin{equation}\label{em43-eq:eq-torsion}
+    T^{a} = 0.
+\end{equation}
+
+\subsection{Variasi terhadap Dreibein $e^{a}$}
+\label{em43-sec:vare}
+
+Variasi terhadap dreibein menyatukan kedua sektor gravitasi dan materi ke dalam satu persamaan medan. Variasikan aksi total terhadap $e^{a}$:
+\begin{equation}\label{em43-eq:vare-total}
+    \delta_{e} S_{\mathrm{tot}}
+    = \delta_{e} S_{\mathrm{CS}}
+    + \delta_{e} S_{M} = 0.
+\end{equation}
+Kedua sektor berkontribusi karena $e^{a}$ muncul baik di $S_{\mathrm{CS}}$ (melalui ansatz Witten) maupun di $S_{M}$ (melalui operator Hodge). Kontribusi dari Chern-Simons telah dihitung pada persamaan~\eqref{em43-eq:var-CS-final}; isolasi suku $\delta e^{a}$ memberikan:
+\begin{equation}\label{em43-eq:var-e-CS}
+    \delta_{e} S_{\mathrm{CS}}
+    = \frac{k}{2\pi} \int_{\mathcal{M}}
+    \delta e_{a} \wedge \left(R^{a}
+    + \frac{1}{\ell^{2}}\, \eta^{a}\right).
+\end{equation}
+Sisa bagian ini berfokus pada perhitungan $\delta_{e} S_{M}$.
+Variasikan $S_{M} = -\frac{1}{2}\int F \wedge \star F$ terhadap $e^{a}$:
+\begin{equation}\label{em43-eq:var-e-SM-awal}
+    \delta_{e} S_{M}
+    = -\frac{1}{2} \int_{\mathcal{M}}
+    \Big[\underbrace{\delta_{e} F}_{= 0} \wedge \star F
+    + F \wedge \delta_{e}(\star F)\Big].
+\end{equation}
+Suku pertama lenyap karena $F = dA$ bersifat topologis: $d$ tidak memerlukan metrik, dan $A$ independen dari $e^{a}$, sehingga $\delta_{e} F = d(\delta_{e} A) = 0$. Tersisa:
+\begin{equation}\label{em43-eq:var-e-SM-reduced}
+    \delta_{e} S_{M}
+    = -\frac{1}{2} \int_{\mathcal{M}} F \wedge \delta_{e}(\star F).
+\end{equation}
+Seluruh respons aksi Maxwell terhadap perubahan geometri terlokalisasi pada variasi operator Hodge $\star$. Evaluasi $\delta_{e}(\star F)$ secara eksplisit dalam bentuk $\delta e^{a}$ dilakukan dalam beberapa tahap berikut.
+Kuat medan $F$ diekspansi dalam basis $e^{a} \wedge e^{b}$:
+\begin{equation}\label{em43-eq:F-ekspansi}
+    F = \frac{1}{2}\, F_{ab}\, e^{a} \wedge e^{b},
+    \quad F_{ab} = -F_{ba},
+\end{equation}
+dengan $F_{ab}$ adalah komponen-komponen skalar (0-form). Operator Hodge pada $2+1$ dimensi bekerja pada basis 2-form menurut aturan $\star(e^{a} \wedge e^{b}) = \varepsilon^{ab}{}_{c}\, e^{c}$. Karena $\star$ linear dan $F_{ab}$ skalar:
+\begin{equation}\label{em43-eq:starF-ekspansi}
+    \star F
+    = \frac{1}{2}\, F_{ab}\, \star(e^{a} \wedge e^{b})
+    = \frac{1}{2}\, F_{ab}\, \varepsilon^{ab}{}_{c}\, e^{c}.
+\end{equation}
+Simbol Levi-Civita $\varepsilon^{ab}{}_{c}$ adalah konstanta topologis yang tidak berubah di bawah variasi geometri ($\delta_{e}\, \varepsilon^{ab}{}_{c} = 0$). Terapkan $\delta_{e}$ pada~\eqref{em43-eq:starF-ekspansi}; aturan Leibniz hanya mengenai koefisien $F_{ab}$ dan basis $e^{c}$:
+\begin{equation}\label{em43-eq:persamaan-utama}
+    \delta_{e}(\star F)
+    = \underbrace{\frac{1}{2}\, (\delta_{e} F_{ab})\,
+    \varepsilon^{ab}{}_{c}\, e^{c}}_{\text{Suku 1}}
+    \;+\;
+    \underbrace{\frac{1}{2}\, F_{ab}\,
+    \varepsilon^{ab}{}_{c}\, \delta e^{c}}_{\text{Suku 2}}.
+\end{equation}
+Tujuan selanjutnya: mencari bentuk yang lebih kompak dari Suku~1 dan Suku~2 dengan menyatakannya dalam faktor $\delta e^a$ di depan.
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi Suku~1}
+
+Substitusi untuk Suku~1 dicari dengan memanfaatkan independensi kuat medan $F$ terhadap variasi geometri ($\delta_{e} F = 0$). Ekspansi eksplisit menggunakan aturan Leibniz menghasilkan:
+\begin{equation}\label{em43-eq:leibniz-F}
+    \frac{1}{2}\, (\delta_{e} F_{ab})\, e^{a} \wedge e^{b}
+    + \frac{1}{2}\, F_{ab}\, (\delta e^{a}) \wedge e^{b}
+    + \frac{1}{2}\, F_{ab}\, e^{a} \wedge (\delta e^{b})
+    = 0.
+\end{equation}
+Suku kedua dan ketiga pada~\eqref{em43-eq:leibniz-F} identik. Dengan menukar \emph{dummy indices} $a \leftrightarrow b$ pada suku ketiga, serta menerapkan sifat antisimetri $F_{ba} = -F_{ab}$ dan $e^{b} \wedge \delta e^{a} = -\delta e^{a} \wedge e^{b}$ (kedua tanda minus saling meniadakan), persamaan menyederhana menjadi:
+\begin{equation}\label{em43-eq:var-F-compact}
+    \frac{1}{2}\, (\delta_{e} F_{ab})\, e^{a} \wedge e^{b}
+    + F_{ab}\, (\delta e^{a}) \wedge e^{b} = 0.
+\end{equation}
+
+Untuk mereduksi suku kedua pada ruas kiri~\eqref{em43-eq:var-F-compact}, digunakan operator \textit{interior product} $\iota_{a}$ (didefinisikan pada Bab~2, persamaan~\eqref{eq:interior-def}). Operator ini memenuhi $\iota_{a} e^{b} = \delta_{a}^{b}$ dan aturan Leibniz tergraduasi (persamaan~\eqref{eq:interior-leibniz}). Kontraksi pada 2-form $F$ menghasilkan 1-form:
+\begin{align}
+    \iota_{a} F
+    &= \frac{1}{2}\, F_{cd}\, \iota_{a}(e^{c} \wedge e^{d}) \notag \\
+    &= \frac{1}{2}\, F_{cd}\, (\delta_{a}^{c}\, e^{d} - e^{c}\, \delta_{a}^{d}) \notag \\
+    &= \frac{1}{2}\, F_{ad}\, e^{d} - \frac{1}{2}\, F_{ca}\, e^{c} \notag \\
+    &= \frac{1}{2}\, F_{ab}\, e^{b} + \frac{1}{2}\, F_{ab}\, e^{b} = F_{ab}\, e^{b}. \label{em43-eq:interior-F}
+\end{align}
+Substitusi identitas~\eqref{em43-eq:interior-F} ke dalam suku kedua~\eqref{em43-eq:var-F-compact} lalu pindahruaskan:
+\begin{equation}\label{em43-eq:var-F-with-interior}
+    \frac{1}{2}\, (\delta_{e} F_{ab})\, e^{a} \wedge e^{b} = -\delta e^{a} \wedge \iota_{a} F.
+\end{equation}
+Kenakan operator Hodge $\star$ pada kedua ruas~\eqref{em43-eq:var-F-with-interior}. Koefisien $\frac{1}{2}(\delta_{e} F_{ab})$ adalah skalar yang lolos dari operasi $\star$:
+\begin{equation}\label{em43-eq:hodge-lhs}
+    \star\!\left(\frac{1}{2}\, (\delta_{e} F_{ab})\, e^{a} \wedge e^{b}\right)
+    = \frac{1}{2}\, (\delta_{e} F_{ab})\, \varepsilon^{ab}{}_{c}\, e^{c}.
+\end{equation}
+Bentuk~\eqref{em43-eq:hodge-lhs} persis identik dengan Suku~1 pada~\eqref{em43-eq:persamaan-utama}. Oleh karena itu:
+\begin{equation}\label{em43-eq:suku1-final}
+    \text{Suku 1} = -\star\!\big(\delta e^{a} \wedge \iota_{a} F\big).
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi Suku~2}
+
+Hitung $\iota_{c}(\star F)$ dari~\eqref{em43-eq:starF-ekspansi} menggunakan $\iota_{c} e^{d} = \delta_{c}^{d}$:
+\begin{equation}\label{em43-eq:interior-starF}
+    \iota_{c}(\star F)
+    = \frac{1}{2}\, F_{ab}\, \varepsilon^{ab}{}_{d}\, \delta_{c}^{d}
+    = \frac{1}{2}\, F_{ab}\, \varepsilon^{ab}{}_{c}.
+\end{equation}
+Hasil ini berderajat $1 - 1 = 0$: murni skalar (0-form). Suku~2 dari~\eqref{em43-eq:persamaan-utama} kemudian menjadi:
+\begin{equation}
+    \text{Suku 2}
+    = \frac{1}{2}\, F_{ab}\, \varepsilon^{ab}{}_{c}\, \delta e^{c}
+    = \big(\iota_{c}\star F\big) \cdot \delta e^{c}
+    = \delta e^{c} \wedge (\iota_{c}\star F).
+\end{equation}
+Ganti dummy $c \to a$:
+\begin{equation}\label{em43-eq:suku2-final}
+    \text{Suku 2} = \delta e^{a} \wedge (\iota_{a}\star F).
+\end{equation}
+Substitusikan~\eqref{em43-eq:suku1-final} dan~\eqref{em43-eq:suku2-final} ke dalam persamaan utama~\eqref{em43-eq:persamaan-utama}:
+\begin{equation}\label{em43-eq:hodge-var-identity}
+    \delta_{e}(\star F)
+    = -\star\!\big(\delta e^{a} \wedge \iota_{a} F\big)
+    + \delta e^{a} \wedge \big(\iota_{a}\star F\big).
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Faktorisasi $\delta e^a$}
+
+Substitusikan~\eqref{em43-eq:hodge-var-identity} ke~\eqref{em43-eq:var-e-SM-reduced} dan distribusikan $F$:
+\begin{equation}\label{em43-eq:I1-I2-def}
+    \delta_{e} S_{M}
+    = -\frac{1}{2} \int_{\mathcal{M}}
+    \bigg[\underbrace{-F \wedge \star\!\big(\delta e^{a}
+    \wedge \iota_{a} F\big)}_{\mathcal{I}_{1}}
+    + \underbrace{F \wedge \delta e^{a}
+    \wedge (\iota_{a}\star F)}_{\mathcal{I}_{2}}\bigg].
+\end{equation}
+Tujuannya adalah memanipulasi $\mathcal{I}_{1}$ dan $\mathcal{I}_{2}$ agar $\delta e^{a}$ berdiri di posisi paling kiri sebagai faktor pengali.
+Untuk $\mathcal{I}_{1}$: karena $F$ dan $(\delta e^{a} \wedge \iota_{a} F)$ keduanya 2-form, berlaku sifat simetri Hodge~\eqref{em43-eq:hodge-sym}:
+\begin{equation}\label{em43-eq:I1-result}
+    \mathcal{I}_{1}
+    = -\big(\delta e^{a} \wedge \iota_{a} F\big) \wedge \star F
+    = -\delta e^{a} \wedge \big(\iota_{a} F \wedge \star F\big).
+\end{equation}
+Untuk $\mathcal{I}_{2}$: pertukaran posisi antara 2-form $F$ dan 1-form $\delta e^{a}$ menghasilkan faktor $(-1)^{2 \times 1} = +1$, dan $\iota_{a}\star F$ merupakan 0-form (skalar) yang berkomutasi bebas:
+\begin{equation}\label{em43-eq:I2-result}
+    \mathcal{I}_{2}
+    = \delta e^{a} \wedge \big[F \wedge (\iota_{a}\star F)\big].
+\end{equation}
+
+Substitusikan~\eqref{em43-eq:I1-result} dan~\eqref{em43-eq:I2-result} kembali ke~\eqref{em43-eq:I1-I2-def}:
+\begin{equation}\label{em43-eq:var-e-SM-pre}
+    \delta_{e} S_{M}
+    = -\int_{\mathcal{M}} \delta e^{a} \wedge
+    \left\{-\frac{1}{2}\Big[\iota_{a} F \wedge \star F
+    - F \wedge (\iota_{a}\star F)\Big]\right\}.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Tensor energi-momentum elektromagnetik}
+
+Ekspresi di dalam kurung kurawal pada~\eqref{em43-eq:var-e-SM-pre} didefinisikan sebagai tensor energi-momentum elektromagnetik 2-form:
+\begin{equation}\label{em43-eq:EM-def}
+    \mathcal{T}_{a}
+    \equiv -\frac{1}{2}\Big[\iota_{a} F \wedge \star F
+    - F \wedge (\iota_{a}\star F)\Big].
+\end{equation}
+Dengan definisi ini, variasi aksi Maxwell terhadap dreibein menyederhana menjadi:
+\begin{equation}\label{em43-eq:var-e-SM-final}
+    \delta_{e} S_{M}
+    = -\int_{\mathcal{M}} \delta e^{a} \wedge \mathcal{T}_{a}.
+\end{equation}
+Gabungkan kontribusi dreibein dari kedua sektor,~\eqref{em43-eq:var-e-CS} dan~\eqref{em43-eq:var-e-SM-final}:
+\begin{equation}
+    \delta_{e} S_{\mathrm{tot}}
+    = \int_{\mathcal{M}} \delta e_{a} \wedge
+    \left[\frac{k}{2\pi}\left(R^{a}
+    + \frac{1}{\ell^{2}}\, \eta^{a}\right)
+    - \mathcal{T}^{a}\right] = 0.
+\end{equation}
+Karena $\delta e_{a}$ sembarang, integran lenyap di setiap titik. Definisikan $\kappa \equiv 2\pi/k$, sehingga diperoleh persamaan medan Einstein-Maxwell pada ruang AdS$_3$:
+\begin{equation}\label{em43-eq:eq-einstein}
+    R^{a} + \frac{1}{\ell^{2}}\, \eta^{a}
+    = \kappa\, \mathcal{T}^{a}.
+\end{equation}
+Ruas kiri mengandung kelengkungan $R^{a}$ yang dikoreksi oleh suku kosmologi ($\Lambda = -1/\ell^{2}$). Ruas kanan mendeskripsikan bagaimana medan elektromagnetik $F$ membengkokkan geometri ruang-waktu melalui tensor energi-momentum $\mathcal{T}^{a}$, dengan konstanta kopling $\kappa$ yang ditentukan oleh level Chern-Simons $k$.
+
+\section{Lubang Hitam Einstein-Maxwell pada 2+1 Dimensi}
+\label{sec:b4-maxwell}
+
+Persamaan medan Einstein-Maxwell telah diperoleh pada seksi sebelumnya. Langkah selanjutnya adalah menyelesaikan persamaan-persamaan tersebut secara eksplisit untuk ansatz stasioner--aksisimetris bermuatan. Bagian ini dimulai dengan menetapkan ansatz potensial gauge untuk ruang-waktu bermuatan--berotasi, kemudian menyelesaikan persamaan Maxwell $d({\star}F)=0$ secara eksak, yang memberikan kuat medan $F$ dan dual Hodge-nya sebagai fungsi muatan $Q$ dan geometri.
+
+Ansatz stasioner--aksisimetris dalam koordinat $(t, r, \phi)$:
+\begin{align}
+    e^0 &= N(r)\,dt, \label{mx45-eq:e0}\\
+    e^1 &= \frac{1}{f(r)}\,dr, \label{mx45-eq:e1}\\
+    e^2 &= r\,d\phi + r\,N^\phi(r)\,dt, \label{mx45-eq:e2}
+\end{align}
+dengan tiga fungsi radial yang belum ditentukan: $N(r)$ (fungsi \emph{lapse}), $f(r)$ (fungsi radial), dan $N^\phi(r)$ (fungsi \emph{shift} angular).
+
+Relasi invers (basis koordinat diekspresikan dalam basis frame):
+\begin{equation}
+    dt = \frac{e^0}{N}, \qquad
+    dr = f\,e^1, \qquad
+    d\phi = \frac{e^2}{r} - \frac{N^\phi}{N}\,e^0. \label{mx45-eq:inverse-dreibein}
+\end{equation}
+Untuk ruang-waktu stasioner--aksisimetris yang bermuatan listrik dan berotasi, ansatz gauge field yang paling umum adalah:
+\begin{equation}
+    A = A_t(r)\,dt + A_\phi(r)\,d\phi. \label{mx45-eq:gauge-ansatz}
+\end{equation}
+Dari ansatz~\eqref{mx45-eq:gauge-ansatz}:
+\begin{equation}
+    F = dA = A_t'\,dr \wedge dt + A_\phi'\,dr \wedge d\phi. \label{mx45-eq:F-coord}
+\end{equation}
+Setiap basis 2-form koordinat dikonversi ke basis frame menggunakan~\eqref{mx45-eq:inverse-dreibein}. Untuk $dr \wedge dt$:
+\begin{equation}
+    dr \wedge dt = f\,e^1 \wedge \frac{e^0}{N}
+    = \frac{f}{N}\,e^1 \wedge e^0
+    = -\frac{f}{N}\,e^0 \wedge e^1. \label{mx45-eq:dr-dt}
+\end{equation}
+
+\noindent Untuk $dr \wedge d\phi$:
+\begin{align}
+    dr \wedge d\phi &= f\,e^1 \wedge \left(\frac{e^2}{r} - \frac{N^\phi}{N}\,e^0\right) \nonumber\\[4pt]
+    &= \frac{f}{r}\,e^1 \wedge e^2 - \frac{fN^\phi}{N}\,\underbrace{e^1 \wedge e^0}_{= -e^0 \wedge e^1} \nonumber\\[4pt]
+    &= \frac{fN^\phi}{N}\,e^0 \wedge e^1 + \frac{f}{r}\,e^1 \wedge e^2. \label{mx45-eq:dr-dphi}
+\end{align}
+Substitusi~\eqref{mx45-eq:dr-dt} dan~\eqref{mx45-eq:dr-dphi} ke~\eqref{mx45-eq:F-coord}:
+\begin{align}
+    F &= A_t'\!\left(-\frac{f}{N}\right)e^0 \wedge e^1
+    + A_\phi'\!\left(\frac{fN^\phi}{N}\,e^0 \wedge e^1 + \frac{f}{r}\,e^1 \wedge e^2\right) \nonumber\\[6pt]
+    &= -\frac{f}{N}\!\left(A_t' - N^\phi A_\phi'\right)e^0 \wedge e^1
+    + \frac{f\,A_\phi'}{r}\,e^1 \wedge e^2.
+\end{align}
+Identifikasi komponen frame $F_{ab}$ dari dekomposisi $F = F_{01}\,e^0 \wedge e^1 + F_{02}\,e^0 \wedge e^2 + F_{12}\,e^1 \wedge e^2$:
+\begin{equation}
+    F_{01} = -\frac{f}{N}\!\left(A_t' - N^\phi A_\phi'\right), \qquad
+    F_{12} = \frac{f\,A_\phi'}{r}, \qquad
+    F_{02} = 0. \label{mx45-eq:F-components}
+\end{equation}
+
+\subsection{Hodge Dual}
+
+Dalam $2+1$ dimensi, Hodge dual dari 2-form menghasilkan 1-form dengan komponen:
+\begin{equation}
+    (*F)_c = \frac{1}{2}\,\varepsilon^{ab}_{\ \ \,c}\,F_{ab}. \label{mx45-eq:hodge-def}
+\end{equation}
+Karena $F_{02} = 0$, satu-satunya pasangan $(a,b)$ yang berkontribusi adalah $(0,1)$, $(1,0)$, $(1,2)$, dan $(2,1)$. Perhitungan komponen per komponen:
+
+\noindent Komponen $(*F)_0$: pasangan $(a,b) \in \{(1,2),\,(2,1)\}$. Komponen Levi-Civita:
+\begin{equation}
+    \varepsilon^{12}_{\ \ \,0} = \eta^{11}\eta^{22}\varepsilon_{120}
+    = (-1)(-1)(+1) = +1, \qquad
+    \varepsilon^{21}_{\ \ \,0} = -1.
+\end{equation}
+Substitusi ke~\eqref{mx45-eq:hodge-def}:
+\begin{align}
+    (*F)_0 &= \frac{1}{2}\!\left(\varepsilon^{12}_{\ \ \,0}\,F_{12}
+    + \varepsilon^{21}_{\ \ \,0}\,F_{21}\right)
+    = \frac{1}{2}\!\left((+1)\,F_{12} + (-1)(-F_{12})\right)
+    = F_{12}.
+\end{align}
+
+\noindent Komponen $(*F)_1$: pasangan $(a,b) \in \{(0,2),\,(2,0)\}$, yang keduanya melibatkan $F_{02} = -F_{20} = 0$:
+\begin{equation}
+    (*F)_1 = \frac{1}{2}\!\left(\varepsilon^{02}_{\ \ \,1}\,F_{02}
+    + \varepsilon^{20}_{\ \ \,1}\,F_{20}\right) = 0.
+\end{equation}
+
+\noindent Komponen $(*F)_2$: pasangan $(a,b) \in \{(0,1),\,(1,0)\}$. Komponen Levi-Civita:
+\begin{equation}
+    \varepsilon^{01}_{\ \ \,2} = \eta^{00}\eta^{11}\varepsilon_{012}
+    = (+1)(-1)(+1) = -1, \qquad
+    \varepsilon^{10}_{\ \ \,2} = +1.
+\end{equation}
+Substitusi:
+\begin{align}
+    (*F)_2 &= \frac{1}{2}\!\left(\varepsilon^{01}_{\ \ \,2}\,F_{01}
+    + \varepsilon^{10}_{\ \ \,2}\,F_{10}\right)
+    = \frac{1}{2}\!\left((-1)\,F_{01} + (+1)(-F_{01})\right)
+    = -F_{01}.
+\end{align}
+Dari ketiga komponen di atas, Hodge dual diekspresikan sebagai 1-form:
+\begin{equation}
+    *F = (*F)_c\,e^c = F_{12}\,e^0 + \underbrace{(*F)_1}_{=\,0}\,e^1 - F_{01}\,e^2,
+\end{equation}
+\begin{equation}
+    *F = F_{12}\,e^0 - F_{01}\,e^2. \label{mx45-eq:hodge-result}
+\end{equation}
+Perhatikan bahwa ${*F}$ tidak memiliki komponen $e^1$, konsekuensi langsung dari $F_{02} = 0$. Fakta ini akan menyebabkan lenyapnya komponen $e^0 \wedge e^2$ pada $d({*F})$ di bagian selanjutnya.
+
+\subsection{Penyelesaian Persamaan Maxwell: $d({*F}) = 0$}
+\label{mx45-sec:maxwell}
+
+Untuk 1-form $*F = F_{12}\,e^0 - F_{01}\,e^2$, turunan eksterior:
+\begin{equation}
+    d(*F) = dF_{12} \wedge e^0 + F_{12}\,de^0 - dF_{01} \wedge e^2 - F_{01}\,de^2. \label{mx45-eq:d-hodge-expanded}
+\end{equation}
+Karena $F_{01}$ dan $F_{12}$ hanya bergantung pada $r$, dan $dr = f\,e^1$:
+\begin{equation}
+    dF_{01} = F_{01}'\,dr = f\,F_{01}'\;e^1, \qquad dF_{12} = F_{12}'\,dr = f\,F_{12}'\;e^1. \label{mx45-eq:d-scalars}
+\end{equation}
+Sehingga:
+\begin{align}
+    dF_{12} \wedge e^0 &= f\,F_{12}'\;e^1 \wedge e^0 = -f\,F_{12}'\;e^0 \wedge e^1, \label{mx45-eq:dF12-e0}\\[4pt]
+    dF_{01} \wedge e^2 &= f\,F_{01}'\;e^1 \wedge e^2. \label{mx45-eq:dF01-e2}
+\end{align}
+Suku $de^0$ dan $de^2$ dieliminasi menggunakan kondisi bebas torsi $T^a = de^a + \varepsilon^a_{\ bc}\,\omega^b \wedge e^c = 0$:
+\begin{align}
+    de^0 &= -\omega^1 \wedge e^2 + \omega^2 \wedge e^1, \label{mx45-eq:de0}\\[4pt]
+    de^2 &= \omega^0 \wedge e^1 - \omega^1 \wedge e^0. \label{mx45-eq:de2}
+\end{align}
+Untuk mengekspresikan $de^0$ dan $de^2$ dalam basis frame, koneksi spin terlebih dahulu ditulis dalam basis frame. Dari hasil penyelesaian $T^a = 0$ (yang identik dengan kasus vakum), komponen bersisa dalam basis koordinat:
+\begin{equation}
+    \omega^0 = \omega^0_{\ t}\,dt + \omega^0_{\ \phi}\,d\phi, \qquad
+    \omega^1 = \omega^1_{\ r}\,dr, \qquad
+    \omega^2 = \omega^2_{\ t}\,dt + \omega^2_{\ \phi}\,d\phi.
+\end{equation}
+Konversi ke basis frame menggunakan~\eqref{mx45-eq:inverse-dreibein}. Untuk $\omega^1$, langsung karena $dr = f\,e^1$:
+\begin{equation}
+    \omega^1 = f\,\omega^1_{\ r}\;e^1. \label{mx45-eq:w1-frame}
+\end{equation}
+
+\noindent Untuk $\omega^0$, substitusi $dt = e^0/N$ dan $d\phi = e^2/r - (N^\phi/N)\,e^0$:
+\begin{align}
+    \omega^0 &= \omega^0_{\ t}\cdot\frac{e^0}{N} + \omega^0_{\ \phi}\cdot\left(\frac{e^2}{r} - \frac{N^\phi}{N}\,e^0\right) \nonumber\\[4pt]
+    &= \underbrace{\frac{\omega^0_{\ t} - \omega^0_{\ \phi}\,N^\phi}{N}}_{\displaystyle \hat\omega^0_{\ 0}}\;e^0
+    + \underbrace{\frac{\omega^0_{\ \phi}}{r}}_{\displaystyle \hat\omega^0_{\ 2}}\;e^2. \label{mx45-eq:w0-frame}
+\end{align}
+
+\noindent Untuk $\omega^2$, prosedur yang sama:
+\begin{equation}
+    \omega^2 = \underbrace{\frac{\omega^2_{\ t} - \omega^2_{\ \phi}\,N^\phi}{N}}_{\displaystyle \hat\omega^2_{\ 0}}\;e^0
+    + \underbrace{\frac{\omega^2_{\ \phi}}{r}}_{\displaystyle \hat\omega^2_{\ 2}}\;e^2. \label{mx45-eq:w2-frame}
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi $de^0$ dalam basis frame}
+
+Dari~\eqref{mx45-eq:de0}: $de^0 = -\omega^1 \wedge e^2 + \omega^2 \wedge e^1$. Suku pertama:
+\begin{equation}
+    -\omega^1 \wedge e^2 = -(f\,\omega^1_{\ r}\;e^1) \wedge e^2 = -f\,\omega^1_{\ r}\;e^1 \wedge e^2.
+\end{equation}
+
+\noindent Suku kedua:
+\begin{align}
+    \omega^2 \wedge e^1 &= \left(\hat\omega^2_{\ 0}\;e^0 + \hat\omega^2_{\ 2}\;e^2\right) \wedge e^1 \nonumber\\[4pt]
+    &= \hat\omega^2_{\ 0}\;e^0 \wedge e^1 + \hat\omega^2_{\ 2}\;\underbrace{e^2 \wedge e^1}_{= -e^1 \wedge e^2} \nonumber\\[4pt]
+    &= \hat\omega^2_{\ 0}\;e^0 \wedge e^1 - \hat\omega^2_{\ 2}\;e^1 \wedge e^2.
+\end{align}
+
+\noindent Didapat:
+\begin{equation}
+    de^0 = \hat\omega^2_{\ 0}\;e^0 \wedge e^1 + \left(-f\,\omega^1_{\ r} - \hat\omega^2_{\ 2}\right)\;e^1 \wedge e^2. \label{mx45-eq:de0-frame}
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Evaluasi $de^2$ dalam basis frame}
+
+Dari~\eqref{mx45-eq:de2}: $de^2 = \omega^0 \wedge e^1 - \omega^1 \wedge e^0$. Suku pertama:
+\begin{align}
+    \omega^0 \wedge e^1 &= \left(\hat\omega^0_{\ 0}\;e^0 + \hat\omega^0_{\ 2}\;e^2\right) \wedge e^1 \nonumber\\[4pt]
+    &= \hat\omega^0_{\ 0}\;e^0 \wedge e^1 - \hat\omega^0_{\ 2}\;e^1 \wedge e^2.
+\end{align}
+
+\noindent Suku kedua:
+\begin{align}
+    -\omega^1 \wedge e^0 &= -(f\,\omega^1_{\ r}\;e^1) \wedge e^0
+    = -f\,\omega^1_{\ r}\;\underbrace{e^1 \wedge e^0}_{= -e^0 \wedge e^1}
+    = f\,\omega^1_{\ r}\;e^0 \wedge e^1.
+\end{align}
+
+\noindent Didapat:
+\begin{equation}
+    de^2 = \left(\hat\omega^0_{\ 0} + f\,\omega^1_{\ r}\right)\;e^0 \wedge e^1 - \hat\omega^0_{\ 2}\;e^1 \wedge e^2. \label{mx45-eq:de2-frame}
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Pengelompokan $d(*F)$}
+
+Substitusi~\eqref{mx45-eq:dF12-e0},~\eqref{mx45-eq:de0-frame},~\eqref{mx45-eq:dF01-e2}, dan~\eqref{mx45-eq:de2-frame} ke~\eqref{mx45-eq:d-hodge-expanded}:
+\begin{align}
+    d(*F)
+    &= \Big[-fF_{12}' + F_{12}\,\hat\omega^2_{\ 0}
+    - F_{01}\!\left(\hat\omega^0_{\ 0} + f\omega^1_{\ r}\right)\Big]\;e^0 \wedge e^1 \nonumber\\[6pt]
+    &\quad + \Big[-F_{12}\!\left(f\omega^1_{\ r} + \hat\omega^2_{\ 2}\right)
+    - fF_{01}' + F_{01}\,\hat\omega^0_{\ 2}\Big]\;e^1 \wedge e^2.
+    \label{mx45-eq:d-hodge-grouped}
+\end{align}
+Tidak ada suku yang menghasilkan $e^0 \wedge e^2$, konsekuensi langsung dari $(*F)_1 = 0$.
+
+Karena $e^0 \wedge e^1$ dan $e^1 \wedge e^2$ independen linear, persamaan $d({*F}) = 0$ menuntut setiap koefisien lenyap secara terpisah:
+\begin{align}
+    -fF_{12}' + F_{12}\,\hat\omega^2_{\ 0}
+    - F_{01}\!\left(\hat\omega^0_{\ 0} + f\omega^1_{\ r}\right) &= 0,
+    \label{mx45-eq:maxwell-01}\\[8pt]
+    -F_{12}\!\left(f\omega^1_{\ r} + \hat\omega^2_{\ 2}\right)
+    - fF_{01}' + F_{01}\,\hat\omega^0_{\ 2} &= 0.
+    \label{mx45-eq:maxwell-12}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Substitusi komponen koneksi spin}
+
+Substitusi bentuk umum koneksi spin (hasil dari $T^a = 0$, berlaku untuk \emph{sebarang} $f$, $N$, $N^\phi$):
+\begin{equation}
+    \omega^0_{\ t} = -\frac{fr(N^\phi)'}{2} - fN^\phi, \quad
+    \omega^0_{\ \phi} = -f, \quad
+    \omega^1_{\ r} = -\frac{r(N^\phi)'}{2N},
+\end{equation}
+\begin{equation}
+    \omega^2_{\ t} = -fN' + \frac{fr^2N^\phi(N^\phi)'}{2N}, \quad
+    \omega^2_{\ \phi} = \frac{fr^2(N^\phi)'}{2N}.
+\end{equation}
+
+Komponen frame (dari~\eqref{mx45-eq:w0-frame}--\eqref{mx45-eq:w2-frame}):
+\begin{align}
+    \hat\omega^0_{\ 0} &= \frac{\omega^0_{\ t} - \omega^0_{\ \phi}N^\phi}{N}
+    = \frac{-\frac{fr(N^\phi)'}{2} - \cancel{fN^\phi} + \cancel{fN^\phi}}{N}
+    = -\frac{fr(N^\phi)'}{2N}, \label{mx45-eq:hat-w00}\\[6pt]
+    \hat\omega^0_{\ 2} &= \frac{\omega^0_{\ \phi}}{r} = -\frac{f}{r}, \label{mx45-eq:hat-w02}\\[6pt]
+    \hat\omega^2_{\ 0} &= \frac{\omega^2_{\ t} - \omega^2_{\ \phi}N^\phi}{N}
+    = \frac{-fN' + \cancel{\frac{fr^2N^\phi(N^\phi)'}{2N}} - \cancel{\frac{fr^2(N^\phi)'N^\phi}{2N}}}{N}
+    = -\frac{fN'}{N}, \label{mx45-eq:hat-w20}\\[6pt]
+    \hat\omega^2_{\ 2} &= \frac{\omega^2_{\ \phi}}{r} = \frac{fr(N^\phi)'}{2N}, \label{mx45-eq:hat-w22}\\[6pt]
+    f\omega^1_{\ r} &= -\frac{fr(N^\phi)'}{2N}. \label{mx45-eq:fw1r}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Penyelesaian dari koefisien $e^1 \wedge e^2$}
+
+Substitusi~\eqref{mx45-eq:hat-w22},~\eqref{mx45-eq:fw1r}, dan~\eqref{mx45-eq:hat-w02} ke~\eqref{mx45-eq:maxwell-12}:
+\begin{equation}
+    -F_{12}\!\left(\underbrace{-\frac{fr(N^\phi)'}{2N} + \frac{fr(N^\phi)'}{2N}}_{= \; 0}\right)
+    - fF_{01}' + F_{01}\!\left(-\frac{f}{r}\right) = 0.
+\end{equation}
+
+Dua suku pertama saling menghapus secara eksak. Pembatalan ini berlaku untuk \emph{sebarang} $f(r)$, $N(r)$, $N^\phi(r)$, karena $f\omega^1_{\ r} + \hat\omega^2_{\ 2} = 0$ merupakan konsekuensi struktural dari relasi $\omega^2_{\ \phi} = -fr\,\omega^1_{\ r}$ yang berasal dari persamaan torsi. Tersisa:
+\begin{equation}
+    -fF_{01}' - \frac{f}{r}\,F_{01} = 0.
+\end{equation}
+Karena $f \neq 0$ di luar horizon, bagi seluruh persamaan dengan $-f$:
+\begin{equation}
+    F_{01}' + \frac{F_{01}}{r} = 0.
+\end{equation}
+Kenali ruas kiri sebagai turunan total dari $(rF_{01})/r$:
+\begin{equation}
+    \frac{1}{r}\,\frac{d}{dr}(r\,F_{01})
+    = \frac{1}{r}\!\left(F_{01} + r\,F_{01}'\right)
+    = F_{01}' + \frac{F_{01}}{r} = 0.
+\end{equation}
+Kalikan dengan $r \neq 0$:
+\begin{equation}
+    \frac{d}{dr}(r\,F_{01}) = 0.
+\end{equation}
+
+Integralkan, dengan identifikasi konstanta sebagai $-Q$ (muatan listrik):
+\begin{equation}
+    F_{01} = -\frac{Q}{r}. \label{mx45-eq:F01-solution}
+\end{equation}
+Hasil ini bersifat universal: tidak bergantung pada $N$, $f$, $N^\phi$, maupun $F_{12}$.
+
+\vspace{0.5em}
+\noindent \textbf{Penyelesaian dari koefisien $e^0 \wedge e^1$}
+
+Substitusi~\eqref{mx45-eq:hat-w20},~\eqref{mx45-eq:hat-w00}, dan~\eqref{mx45-eq:fw1r} ke~\eqref{mx45-eq:maxwell-01}:
+\begin{equation}
+    -fF_{12}' + F_{12}\!\left(-\frac{fN'}{N}\right)
+    - F_{01}\!\left(-\frac{fr(N^\phi)'}{2N} - \frac{fr(N^\phi)'}{2N}\right) = 0.
+\end{equation}
+
+Evaluasi suku ketiga, jumlahkan argumen dalam kurung:
+\begin{equation}
+    -\frac{fr(N^\phi)'}{2N} - \frac{fr(N^\phi)'}{2N}
+    = -\frac{fr(N^\phi)'}{N},
+\end{equation}
+sehingga:
+\begin{equation}
+    -fF_{12}' - \frac{fN'}{N}\,F_{12}
+    + \frac{f}{N}\,F_{01}\,r(N^\phi)' = 0.
+\end{equation}
+Karena $f \neq 0$, bagi seluruh persamaan dengan $-f$ lalu kalikan dengan $N$:
+\begin{equation}
+    NF_{12}' + N'F_{12} - F_{01}\,r(N^\phi)' = 0.
+\end{equation}
+Kenali dua suku pertama sebagai turunan total:
+\begin{equation}
+    NF_{12}' + N'F_{12} = \frac{d}{dr}(NF_{12}).
+\end{equation}
+Persamaan menjadi:
+\begin{equation}
+    \frac{d}{dr}(NF_{12}) = F_{01}\,r(N^\phi)'.
+\end{equation}
+Substitusi $F_{01} = -Q/r$ dari~\eqref{mx45-eq:F01-solution}:
+\begin{equation}
+    \frac{d}{dr}(NF_{12}) = -\frac{Q}{r}\cdot r(N^\phi)' = -Q(N^\phi)'.
+\end{equation}
+Perhatikan bahwa ruas kanan juga merupakan turunan total: $-Q(N^\phi)' = \frac{d}{dr}(-QN^\phi)$. Sehingga:
+\begin{equation}
+    \frac{d}{dr}(NF_{12}) = \frac{d}{dr}(-QN^\phi).
+\end{equation}
+Integralkan kedua ruas terhadap $r$:
+\begin{equation}
+    NF_{12} = -QN^\phi + C, \label{mx45-eq:NF12-integrated}
+\end{equation}
+di mana $C$ adalah konstanta integrasi. Penentuan $C$: pada $r \to \infty$, ruang-waktu harus menjadi asimtotik AdS$_3$ tanpa rotasi dan tanpa medan magnetik. Ini menuntut $N^\phi(\infty) = 0$ dan $F_{12}(\infty) = 0$. Evaluasi~\eqref{mx45-eq:NF12-integrated} pada limit ini:
+\begin{equation}
+    \underbrace{N(\infty)\cdot F_{12}(\infty)}_{= \; 0}
+    = -Q\!\underbrace{\,N^\phi(\infty)\,}_{= \; 0} + C
+    \qquad\Longrightarrow\qquad C = 0.
+\end{equation}
+
+Dengan $C = 0$, persamaan~\eqref{mx45-eq:NF12-integrated} menjadi $NF_{12} = -QN^\phi$:
+\begin{equation}
+    F_{12} = -\frac{QN^\phi}{N}. \label{mx45-eq:F12-solution}
+\end{equation}
+Hasil ini bersifat universal, berlaku untuk sebarang $N(r)$, $f(r)$, dan $N^\phi(r)$, karena diturunkan dari persamaan Maxwell saja tanpa menggunakan persamaan kurvatur. Komponen $F_{12}$ lenyap jika $N^\phi = 0$ (tanpa rotasi) atau $Q = 0$ (tanpa muatan), mengkonfirmasi bahwa ia merupakan efek kopel antara muatan dan \emph{frame-dragging}.
+
+\subsection{Kuat Medan dan Hodge Dual}
+
+Dari dekomposisi~\eqref{mx45-eq:F-components}, substitusi $F_{01} = -Q/r$ dari~\eqref{mx45-eq:F01-solution} dan $F_{12} = -QN^\phi/N$ dari~\eqref{mx45-eq:F12-solution}:
+\begin{equation}
+    F = -\frac{Q}{r}\;e^0 \wedge e^1
+    - \frac{QN^\phi}{N}\;e^1 \wedge e^2. \label{mx45-eq:F-final}
+\end{equation}
+
+Dari Hodge dual~\eqref{mx45-eq:hodge-result}, ${*F} = F_{12}\,e^0 - F_{01}\,e^2$:
+\begin{equation}
+    *F = -\frac{QN^\phi}{N}\;e^0 + \frac{Q}{r}\;e^2. \label{mx45-eq:hodge-final}
+\end{equation}
+
+Seluruh informasi elektromagnetik dikodekan dalam satu parameter $Q$ (muatan listrik) dan fungsi-fungsi geometri $N(r)$, $N^\phi(r)$ yang akan ditentukan oleh persamaan kurvatur. Pada limit tanpa rotasi ($N^\phi = 0$), kedua ekspresi mereduksi menjadi $F = -(Q/r)\,e^0 \wedge e^1$ dan ${*F} = (Q/r)\,e^2$, medan listrik radial murni tanpa komponen magnetik.
+
+
+\paragraph{Tensor Energi-Momentum Elektromagnetik}
+\label{sec:b4-emtensor}
+
+\noindent
+
+Setelah kuat medan diketahui, sumber gravitasi dihitung. Tensor energi-momentum 2-form $\mathcal{T}^a$ diturunkan melalui variasi aksi Maxwell terhadap dreibein (telah dilakukan pada subbab variasi terhadap dreibein), dievaluasi komponen demi komponen menggunakan interior product (didefinisikan pada Bab~2, persamaan~\eqref{eq:interior-def}; pembuktian aturan Leibniz tergraduasi pada Lampiran~\ref{app:proof-interior-leibniz}), lalu disubstitusi dengan solusi Maxwell.
+
+Tensor energi-momentum 2-form $\tau_a$ didefinisikan melalui variasi aksi Maxwell~\eqref{em43-eq:aksi-maxwell} terhadap dreibein:
+\begin{equation}
+    \delta_e S_M = \int \tau_a \wedge \delta e^a.
+\end{equation}
+Kuat medan $F = dA$ tidak bergantung pada dreibein; satu-satunya dependensi pada $e^a$ masuk melalui operator Hodge $*$. Variasi ini menghasilkan formula (lihat persamaan~\eqref{em43-eq:EM-def}):
+\begin{equation}
+    \tau_a = -\frac{1}{2}\Big[i_a F \wedge {*F} - F \wedge (i_a\,{*F})\Big], \label{mx45-eq:EM-def}
+\end{equation}
+di mana $i_a$ adalah interior product dengan $i_a(e^b) = \delta^b_a$. Energi-momentum yang masuk ke persamaan gravitasi~\eqref{em43-eq:eq-einstein}:\label{mx45-eq:einstein-charged}
+\begin{equation}
+    \mathcal{T}^a = \eta^{ab}\,\tau_b. \label{mx45-eq:T-raised}
+\end{equation}
+Dari~\eqref{mx45-eq:F-final} dan~\eqref{mx45-eq:hodge-final}, dihitung seluruh interior product yang dibutuhkan. Gunakan aturan Leibniz tergraduasi~\eqref{eq:interior-leibniz}.
+
+\noindent Untuk $a = 0$:
+\begin{align}
+    i_0(F_{01}\,e^0 \wedge e^1) &= F_{01}\!\left[\underbrace{(i_0\,e^0)}_{=1}\wedge e^1 + (-1)^1\,e^0 \wedge\underbrace{(i_0\,e^1)}_{=0}\right] = F_{01}\,e^1, \\[4pt]
+    i_0(F_{12}\,e^1 \wedge e^2) &= F_{12}\!\left[\underbrace{(i_0\,e^1)}_{=0}\wedge e^2 + (-1)^1\,e^1 \wedge\underbrace{(i_0\,e^2)}_{=0}\right] = 0.
+\end{align}
+\begin{equation}
+    i_0 F = F_{01}\,e^1.
+\end{equation}
+
+\noindent Untuk $a = 1$:
+\begin{align}
+    i_1(F_{01}\,e^0 \wedge e^1) &= F_{01}\!\left[\underbrace{(i_1\,e^0)}_{=0}\wedge e^1 - e^0 \wedge\underbrace{(i_1\,e^1)}_{=1}\right] = -F_{01}\,e^0, \\[4pt]
+    i_1(F_{12}\,e^1 \wedge e^2) &= F_{12}\!\left[\underbrace{(i_1\,e^1)}_{=1}\wedge e^2 - e^1 \wedge\underbrace{(i_1\,e^2)}_{=0}\right] = F_{12}\,e^2.
+\end{align}
+\begin{equation}
+    i_1 F = -F_{01}\,e^0 + F_{12}\,e^2.
+\end{equation}
+
+\noindent Untuk $a = 2$:
+\begin{align}
+    i_2(F_{01}\,e^0 \wedge e^1) &= F_{01}\!\left[\underbrace{(i_2\,e^0)}_{=0}\wedge e^1 - e^0 \wedge\underbrace{(i_2\,e^1)}_{=0}\right] = 0, \\[4pt]
+    i_2(F_{12}\,e^1 \wedge e^2) &= F_{12}\!\left[\underbrace{(i_2\,e^1)}_{=0}\wedge e^2 - e^1 \wedge\underbrace{(i_2\,e^2)}_{=1}\right] = -F_{12}\,e^1.
+\end{align}
+\begin{equation}
+    i_2 F = -F_{12}\,e^1.
+\end{equation}
+
+Dari ${*F} = F_{12}\,e^0 - F_{01}\,e^2$ (sebuah 1-form, sehingga interior product menghasilkan skalar):
+\begin{align}
+    i_0({*F}) &= F_{12}\,\underbrace{(i_0\,e^0)}_{=1} - F_{01}\,\underbrace{(i_0\,e^2)}_{=0} = F_{12}, \\[4pt]
+    i_1({*F}) &= F_{12}\,\underbrace{(i_1\,e^0)}_{=0} - F_{01}\,\underbrace{(i_1\,e^2)}_{=0} = 0, \\[4pt]
+    i_2({*F}) &= F_{12}\,\underbrace{(i_2\,e^0)}_{=0} - F_{01}\,\underbrace{(i_2\,e^2)}_{=1} = -F_{01}.
+\end{align}
+
+Dengan seluruh $i_a F$ dan $i_a(*F)$ di tangan, ketiga komponen $\tau_a$ dihitung satu per satu dengan mensubstitusikan hasil-hasil di atas ke definisi~\eqref{mx45-eq:EM-def}.
+
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $\tau_0$}
+
+Dari~\eqref{mx45-eq:EM-def}:
+\begin{equation}
+    \tau_0 = -\frac{1}{2}\Big[i_0 F \wedge {*F} - F \wedge (i_0\,{*F})\Big].
+\end{equation}
+Suku I: $i_0 F \wedge {*F}$:
+\begin{align}
+    i_0 F \wedge {*F} &= (F_{01}\,e^1) \wedge (F_{12}\,e^0 - F_{01}\,e^2) \nonumber\\[4pt]
+    &= F_{01}F_{12}\;\underbrace{e^1 \wedge e^0}_{= -e^0 \wedge e^1} - F_{01}^2\;e^1 \wedge e^2 \nonumber\\[4pt]
+    &= -F_{01}F_{12}\;e^0 \wedge e^1 - F_{01}^2\;e^1 \wedge e^2.
+\end{align}
+Suku II: $F \wedge (i_0\,{*F})$. Karena $i_0({*F}) = F_{12}$ adalah skalar:
+\begin{align}
+    F \wedge (i_0\,{*F}) &= F_{12}\!\left(F_{01}\,e^0 \wedge e^1 + F_{12}\,e^1 \wedge e^2\right) \nonumber\\[4pt]
+    &= F_{01}F_{12}\;e^0 \wedge e^1 + F_{12}^2\;e^1 \wedge e^2.
+\end{align}
+Selisih:
+\begin{align}
+    i_0 F \wedge {*F} - F \wedge (i_0\,{*F}) &= -2F_{01}F_{12}\;e^0 \wedge e^1 - (F_{01}^2 + F_{12}^2)\;e^1 \wedge e^2.
+\end{align}
+Kalikan dengan $-\frac{1}{2}$:
+\begin{equation}
+    \tau_0 = F_{01}F_{12}\;e^0 \wedge e^1 + \frac{1}{2}(F_{01}^2 + F_{12}^2)\;e^1 \wedge e^2. \label{mx45-eq:tau0}
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $\tau_1$}
+
+\begin{equation}
+    \tau_1 = -\frac{1}{2}\Big[i_1 F \wedge {*F} - F \wedge (i_1\,{*F})\Big].
+\end{equation}
+Suku I: $i_1 F \wedge {*F}$:
+\begin{align}
+    i_1 F \wedge {*F} &= (-F_{01}\,e^0 + F_{12}\,e^2) \wedge (F_{12}\,e^0 - F_{01}\,e^2) \nonumber\\[4pt]
+    &= -F_{01}F_{12}\;\underbrace{e^0 \wedge e^0}_{= 0}
+    + F_{01}^2\;e^0 \wedge e^2
+    + F_{12}^2\;\underbrace{e^2 \wedge e^0}_{= -e^0 \wedge e^2}
+    - F_{12}F_{01}\;\underbrace{e^2 \wedge e^2}_{= 0} \nonumber\\[4pt]
+    &= (F_{01}^2 - F_{12}^2)\;e^0 \wedge e^2.
+\end{align}
+
+Suku II: $F \wedge (i_1\,{*F})$. Karena $i_1({*F}) = 0$:
+\begin{equation}
+    F \wedge (i_1\,{*F}) = 0.
+\end{equation}
+
+Kalikan dengan $-\frac{1}{2}$:
+\begin{equation}
+    \tau_1 = \frac{1}{2}(F_{12}^2 - F_{01}^2)\;e^0 \wedge e^2. \label{mx45-eq:tau1}
+\end{equation}
+Lenyapnya suku II disebabkan oleh ${*F}$ yang tidak memiliki komponen $e^1$: $(*F)_1 = 0$.
+
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $\tau_2$}
+
+\begin{equation}
+    \tau_2 = -\frac{1}{2}\Big[i_2 F \wedge {*F} - F \wedge (i_2\,{*F})\Big].
+\end{equation}
+
+Suku I: $i_2 F \wedge {*F}$:
+\begin{align}
+    i_2 F \wedge {*F} &= (-F_{12}\,e^1) \wedge (F_{12}\,e^0 - F_{01}\,e^2) \nonumber\\[4pt]
+    &= -F_{12}^2\;\underbrace{e^1 \wedge e^0}_{= -e^0 \wedge e^1}
+    + F_{12}F_{01}\;e^1 \wedge e^2 \nonumber\\[4pt]
+    &= F_{12}^2\;e^0 \wedge e^1 + F_{12}F_{01}\;e^1 \wedge e^2.
+\end{align}
+
+Suku II: $F \wedge (i_2\,{*F})$. Karena $i_2({*F}) = -F_{01}$ adalah skalar:
+\begin{align}
+    F \wedge (i_2\,{*F}) &= (-F_{01})\!\left(F_{01}\,e^0 \wedge e^1 + F_{12}\,e^1 \wedge e^2\right) \nonumber\\[4pt]
+    &= -F_{01}^2\;e^0 \wedge e^1 - F_{01}F_{12}\;e^1 \wedge e^2.
+\end{align}
+
+Selisih:
+\begin{align}
+    i_2 F \wedge {*F} - F \wedge (i_2\,{*F}) &= (F_{01}^2 + F_{12}^2)\;e^0 \wedge e^1 + 2F_{12}F_{01}\;e^1 \wedge e^2.
+\end{align}
+
+Kalikan dengan $-\frac{1}{2}$:
+\begin{equation}
+    \tau_2 = -\frac{1}{2}(F_{01}^2 + F_{12}^2)\;e^0 \wedge e^1 - F_{12}F_{01}\;e^1 \wedge e^2. \label{mx45-eq:tau2}
+\end{equation}
+
+\noindent\textbf{Konversi $\mathcal{T}^a = \eta^{ab}\,\tau_b$.}\\[2pt]
+Dengan $\eta^{ab} = \mathrm{diag}(+1,-1,-1)$:
+\begin{align}
+    \mathcal{T}^0 &= (+1)\,\tau_0 = F_{01}F_{12}\;e^0 \wedge e^1 + \frac{1}{2}(F_{01}^2 + F_{12}^2)\;e^1 \wedge e^2, \label{mx45-eq:T0-frame}\\[8pt]
+    \mathcal{T}^1 &= (-1)\,\tau_1 = \frac{1}{2}(F_{01}^2 - F_{12}^2)\;e^0 \wedge e^2, \label{mx45-eq:T1-frame}\\[8pt]
+    \mathcal{T}^2 &= (-1)\,\tau_2 = \frac{1}{2}(F_{01}^2 + F_{12}^2)\;e^0 \wedge e^1 + F_{12}F_{01}\;e^1 \wedge e^2. \label{mx45-eq:T2-frame}
+\end{align}
+
+\vspace{0.5em}
+\noindent \textbf{Substitusi solusi Maxwell}
+
+Substitusi $F_{01} = -Q/r$ dan $F_{12} = -QN^\phi/N$:
+\begin{align}
+    F_{01}^2 &= \frac{Q^2}{r^2}, \\[4pt]
+    F_{12}^2 &= \frac{Q^2(N^\phi)^2}{N^2}, \\[4pt]
+    F_{01}F_{12} &= \left(-\frac{Q}{r}\right)\!\left(-\frac{QN^\phi}{N}\right) = \frac{Q^2 N^\phi}{Nr}, \\[4pt]
+    F_{01}^2 + F_{12}^2 &= Q^2\!\left(\frac{1}{r^2} + \frac{(N^\phi)^2}{N^2}\right), \\[4pt]
+    F_{01}^2 - F_{12}^2 &= Q^2\!\left(\frac{1}{r^2} - \frac{(N^\phi)^2}{N^2}\right).
+\end{align}
+
+Tensor energi-momentum elektromagnetik dalam bentuk akhir:
+\begin{align}
+    \mathcal{T}^0 &= \frac{Q^2 N^\phi}{Nr}\;e^0 \wedge e^1
+    + \frac{Q^2}{2}\!\left(\frac{1}{r^2} + \frac{(N^\phi)^2}{N^2}\right)e^1 \wedge e^2, \label{mx45-eq:T0-final}\\[8pt]
+    \mathcal{T}^1 &= \frac{Q^2}{2}\!\left(\frac{1}{r^2} - \frac{(N^\phi)^2}{N^2}\right)e^0 \wedge e^2, \label{mx45-eq:T1-final}\\[8pt]
+    \mathcal{T}^2 &= \frac{Q^2}{2}\!\left(\frac{1}{r^2} + \frac{(N^\phi)^2}{N^2}\right)e^0 \wedge e^1
+    + \frac{Q^2 N^\phi}{Nr}\;e^1 \wedge e^2. \label{mx45-eq:T2-final}
+\end{align}
+
+
+\subsection{Kendala Eksistensi BTZ Bermuatan dan Berotasi}
+\label{sec:b4-kendala}
+
+Persamaan medan Einstein dengan sumber~\eqref{em43-eq:eq-einstein}\label{mx45-eq:einstein-charged} memuat volume 2-form $\eta^a = \tfrac{1}{2}\varepsilon^a{}_{bc}\,e^b \wedge e^c$. Dengan komponen $\varepsilon^a{}_{bc}$ pada signatur $(+,-,-)$ yang telah dihitung pada persamaan~\eqref{b42-eq:eps0}--\eqref{b42-eq:eps2}, dan dengan cara yang sama seperti ruas kanan persamaan kelengkungan (faktor $\tfrac{1}{2}$ dilenyapkan oleh antisimetri), diperoleh:
+\begin{equation}\label{ng47-eq:eta-summary}
+    \eta^0 = e^1 \wedge e^2, \qquad
+    \eta^1 = e^0 \wedge e^2, \qquad
+    \eta^2 = -\,e^0 \wedge e^1.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Kelengkungan 2-form $R^a$ untuk ansatz bermuatan--berotasi}
+
+Strategi pembuktian kendala adalah menghitung kelengkungan $R^a$ untuk ansatz BTZ paling umum (memuat baik $N^\phi \neq 0$ maupun $Q \neq 0$), lalu memasukkannya ke persamaan Einstein bersumber dan mencari kontradiksi. Koneksi spin yang digunakan adalah hasil dari kondisi bebas torsi pada persamaan~\eqref{b42-eq:omega0-full}--\eqref{b42-eq:omega2-full}, dengan gauge radial $f = N$ tetap dipakai.
+
+Dari dreibein invers (dengan $f = N$), basis 2-form koordinat dinyatakan dalam basis frame:
+\begin{align}
+    dr \wedge dt &= -\,e^0 \wedge e^1, \label{ng47-eq:drdt}\\[3pt]
+    dr \wedge d\phi &= N^\phi\,e^0 \wedge e^1 + \frac{N}{r}\,e^1 \wedge e^2, \label{ng47-eq:drdphi}\\[3pt]
+    dt \wedge d\phi &= \frac{1}{Nr}\,e^0 \wedge e^2. \label{ng47-eq:dtdphi}
+\end{align}
+Sebagai contoh penurunan~\eqref{ng47-eq:drdphi}: dengan $dr = N\,e^1$ dan $d\phi = e^2/r - (N^\phi/N)\,e^0$,
+\begin{equation}
+    dr \wedge d\phi = N\,e^1 \wedge\!\left(\frac{e^2}{r} - \frac{N^\phi}{N}\,e^0\right)
+    = \frac{N}{r}\,e^1 \wedge e^2 - N^\phi\,\underbrace{e^1 \wedge e^0}_{=-e^0 \wedge e^1}
+    = N^\phi\,e^0 \wedge e^1 + \frac{N}{r}\,e^1 \wedge e^2.
+\end{equation}
+
+Dengan relasi konversi basis~\eqref{ng47-eq:drdt}--\eqref{ng47-eq:dtdphi} di tangan, kelengkungan $R^a$ dihitung dari definisi~\eqref{b42-eq:curvature-def} menggunakan koneksi spin~\eqref{b42-eq:omega0-full}--\eqref{b42-eq:omega2-full}. Karena tujuannya adalah membandingkan komponen yang bersesuaian dari persamaan $a = 0$ dan $a = 1$, cukup diekstraksi komponen $e^1 \wedge e^2$ dari $R^0$ dan komponen $e^0 \wedge e^2$ dari $R^1$; komponen $R^2$ dihitung untuk kelengkapan.
+
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $R^0$}
+
+Dari definisi $R^0 = d\omega^0 + \omega^1 \wedge \omega^2$. Turunan eksterior dan produk wedge dalam basis koordinat memberikan:
+\begin{equation}
+    R^0 = \big[(\omega^0{}_t)' + \omega^1{}_r\,\omega^2{}_t\big]\,dr \wedge dt
+    + \big[(\omega^0{}_\phi)' + \omega^1{}_r\,\omega^2{}_\phi\big]\,dr \wedge d\phi.
+\end{equation}
+Komponen $e^1 \wedge e^2$ hanya berasal dari suku $dr \wedge d\phi$ (lihat~\eqref{ng47-eq:drdphi}):
+\begin{equation}
+    R^0\big|_{e^1 \wedge e^2} = \frac{N}{r}\big[(\omega^0{}_\phi)' + \omega^1{}_r\,\omega^2{}_\phi\big].
+\end{equation}
+Substitusi $\omega^0{}_\phi = -N$, $\omega^1{}_r = -r(N^\phi)'/(2N)$, dan $\omega^2{}_\phi = r^2(N^\phi)'/2$ (dengan $f = N$):
+\begin{align}
+    (\omega^0{}_\phi)' + \omega^1{}_r\,\omega^2{}_\phi
+    &= -N' + \left(-\frac{r(N^\phi)'}{2N}\right)\!\left(\frac{r^2(N^\phi)'}{2}\right) \nonumber\\[4pt]
+    &= -N' - \frac{r^3[(N^\phi)']^2}{4N},
+\end{align}
+sehingga:
+\begin{equation}\label{ng47-eq:R0-12}
+    R^0\big|_{e^1 \wedge e^2} = -\frac{NN'}{r} - \frac{r^2[(N^\phi)']^2}{4}.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Perhitungan $R^1$}
+
+Dari $R^1 = d\omega^1 + \omega^0 \wedge \omega^2$. Telah ditunjukkan pada~\eqref{b42-eq:dw1} bahwa $d\omega^1 = 0$, sehingga $R^1 = \omega^0 \wedge \omega^2$:
+\begin{equation}
+    \omega^0 \wedge \omega^2 = (\omega^0{}_t\,\omega^2{}_\phi - \omega^0{}_\phi\,\omega^2{}_t)\,dt \wedge d\phi.
+\end{equation}
+Evaluasi kedua hasil-kali:
+\begin{align}
+    \omega^0{}_t\,\omega^2{}_\phi
+    &= \left(-\frac{Nr(N^\phi)'}{2} - NN^\phi\right)\!\left(\frac{r^2(N^\phi)'}{2}\right)
+    = -\frac{Nr^3[(N^\phi)']^2}{4} - \frac{Nr^2N^\phi(N^\phi)'}{2}, \\[4pt]
+    -\omega^0{}_\phi\,\omega^2{}_t
+    &= -(-N)\!\left(-NN' + \frac{r^2N^\phi(N^\phi)'}{2}\right)
+    = -N^2N' + \frac{Nr^2N^\phi(N^\phi)'}{2}.
+\end{align}
+Jumlahkan; suku $\frac{Nr^2N^\phi(N^\phi)'}{2}$ saling menghapus:
+\begin{equation}
+    \omega^0{}_t\,\omega^2{}_\phi - \omega^0{}_\phi\,\omega^2{}_t
+    = -N^2N' - \frac{Nr^3[(N^\phi)']^2}{4}.
+\end{equation}
+Konversi $dt \wedge d\phi = \frac{1}{Nr}\,e^0 \wedge e^2$ dari~\eqref{ng47-eq:dtdphi}:
+\begin{equation}\label{ng47-eq:R1-02}
+    R^1\big|_{e^0 \wedge e^2} = -\frac{NN'}{r} - \frac{r^2[(N^\phi)']^2}{4}.
+\end{equation}
+Membandingkan~\eqref{ng47-eq:R0-12} dan~\eqref{ng47-eq:R1-02}:
+\begin{equation}\label{ng47-eq:R-equal}
+    R^0\big|_{e^1 \wedge e^2} = R^1\big|_{e^0 \wedge e^2}.
+\end{equation}
+Kesamaan ini berlaku untuk sembarang fungsi $N(r)$ dan $N^\phi(r)$; ia merupakan konsekuensi murni geometris dari ansatz dreibein BTZ, bukan dari pemilihan solusi tertentu.
+
+\paragraph{Kontradiksi}
+
+\noindent
+
+Substitusikan kelengkungan~\eqref{ng47-eq:R0-12},~\eqref{ng47-eq:R1-02}, volume~\eqref{ng47-eq:eta-summary}, dan tensor energi-momentum~\eqref{mx45-eq:T0-final}--\eqref{mx45-eq:T2-final} ke persamaan Einstein bersumber $R^a + \frac{1}{\ell^2}\eta^a = \kappa\,\mathcal{T}^a$.
+Komponen $e^1 \wedge e^2$ dari persamaan $a = 0$:
+\begin{equation}\label{ng47-eq:E0}
+    -\frac{NN'}{r} - \frac{r^2[(N^\phi)']^2}{4} + \frac{1}{\ell^2}
+    = \frac{\kappa Q^2}{2r^2} + \frac{\kappa Q^2(N^\phi)^2}{2N^2}.
+\end{equation}
+
+\noindent Komponen $e^0 \wedge e^2$ dari persamaan $a = 1$:
+\begin{equation}\label{ng47-eq:E1}
+    -\frac{NN'}{r} - \frac{r^2[(N^\phi)']^2}{4} + \frac{1}{\ell^2}
+    = \frac{\kappa Q^2}{2r^2} - \frac{\kappa Q^2(N^\phi)^2}{2N^2}.
+\end{equation}
+Ruas kiri kedua persamaan identik sebagai konsekuensi langsung dari kesamaan struktural~\eqref{ng47-eq:R-equal}, dan suku kosmologis $1/\ell^2$ sama persis. Maka ruas kanannya wajib sama:
+\begin{equation}
+    \frac{\kappa Q^2}{2r^2} + \frac{\kappa Q^2(N^\phi)^2}{2N^2}
+    = \frac{\kappa Q^2}{2r^2} - \frac{\kappa Q^2(N^\phi)^2}{2N^2}.
+\end{equation}
+Suku $\kappa Q^2/(2r^2)$ saling meniadakan, menyisakan:
+\begin{equation}
+    \frac{\kappa Q^2(N^\phi)^2}{N^2} = 0.
+\end{equation}
+Karena konstanta kopling $\kappa > 0$ dan $N^2 \neq 0$ di luar horizon, satu-satunya kemungkinan:
+\begin{equation}\label{ng47-eq:kendala-result}
+    Q = 0 \qquad \text{atau} \qquad N^\phi = 0.
+\end{equation}
+
+Akar fisis dari kendala~\eqref{ng47-eq:kendala-result} terletak pada ketidakcocokan antara simetri geometri dan simetri sumber. Ansatz dreibein BTZ memaksa kelengkungan pada komponen $e^1 \wedge e^2$ dan $e^0 \wedge e^2$ menjadi identik~\eqref{ng47-eq:R-equal}, terlepas dari bentuk $N(r)$ dan $N^\phi(r)$. Namun tensor energi-momentum merespons secara asimetris: $\mathcal{T}^0|_{e^1 \wedge e^2}$ memuat suku $+Q^2(N^\phi)^2/(2N^2)$, sedangkan $\mathcal{T}^1|_{e^0 \wedge e^2}$ memuat suku yang sama dengan tanda berlawanan. Satu-satunya cara agar ruas kanan yang asimetris dapat memenuhi ruas kiri yang simetris adalah melenyapkan suku pembeda tersebut, yakni $Q = 0$ atau $N^\phi = 0$. Dengan kata lain, tidak ada solusi BTZ yang sekaligus bermuatan dan berotasi dalam teori Einstein-Maxwell murni $2+1$ dimensi dengan ansatz ini. Kesimpulan ini konsisten dengan hasil literatur \cite{clement1996, kubiznak2024}.
+
+\subsection{Solusi Lubang Hitam BTZ Statik Bermuatan}
+\label{sec:b4-static}
+
+Karena temuan kendala menutup kemungkinan solusi bermuatan--berotasi, kasus bermuatan yang konsisten haruslah statik. Bagian ini menyelesaikannya secara penuh: fungsi metrik dengan suku logaritmik khas $2+1$ dimensi, potensial gauge, dan analisis horizon peristiwa transendental.
+
+Konsekuensi dari temuan kendala~\eqref{ng47-eq:kendala-result} adalah bahwa satu-satunya solusi bermuatan yang konsisten ($Q \neq 0$) harus statik, yaitu $N^\phi = 0$. Dengan $N^\phi = 0$, tensor energi-momentum~\eqref{mx45-eq:T0-final}--\eqref{mx45-eq:T2-final} menyederhana drastis. Suku-suku yang mengandung $N^\phi$ lenyap dan $F_{12} = -QN^\phi/N \to 0$, sehingga:
+\begin{equation}\label{ng47-eq:T-static}
+    \mathcal{T}^0 = \frac{Q^2}{2r^2}\,e^1 \wedge e^2, \qquad
+    \mathcal{T}^1 = \frac{Q^2}{2r^2}\,e^0 \wedge e^2, \qquad
+    \mathcal{T}^2 = \frac{Q^2}{2r^2}\,e^0 \wedge e^1.
+\end{equation}
+Koneksi spin~\eqref{b42-eq:omega0-full}--\eqref{b42-eq:omega2-full} dengan $N^\phi = 0$, $(N^\phi)' = 0$, dan $f = N$ juga menyederhana:
+\begin{equation}\label{ng47-eq:omega-static}
+    \omega^0 = -N\,d\phi, \qquad \omega^1 = 0, \qquad \omega^2 = -NN'\,dt.
+\end{equation}
+Karena $\omega^1 = 0$, perhitungan kelengkungan menjadi langsung. Untuk $R^0 = d\omega^0 + \omega^1 \wedge \omega^2$: suku kedua lenyap, dan dengan $dr \wedge d\phi = (N/r)\,e^1 \wedge e^2$ (kasus $N^\phi = 0$ pada~\eqref{ng47-eq:drdphi}):
+\begin{equation}\label{ng47-eq:R0-static}
+    R^0 = d(-N\,d\phi) = -N'\,dr \wedge d\phi = -\frac{NN'}{r}\,e^1 \wedge e^2.
+\end{equation}
+
+\noindent Untuk $R^1 = d\omega^1 + \omega^0 \wedge \omega^2$: suku pertama lenyap, dan dengan $dt \wedge d\phi = \frac{1}{Nr}\,e^0 \wedge e^2$:
+\begin{equation}\label{ng47-eq:R1-static}
+    R^1 = (-N\,d\phi) \wedge (-NN'\,dt) = N^2N'\,d\phi \wedge dt = -N^2N'\,dt \wedge d\phi = -\frac{NN'}{r}\,e^0 \wedge e^2.
+\end{equation}
+
+\noindent Untuk $R^2 = d\omega^2 - \omega^0 \wedge \omega^1$: suku kedua lenyap, dan dengan $dr \wedge dt = -e^0 \wedge e^1$:
+\begin{equation}\label{ng47-eq:R2-static}
+    R^2 = d(-NN'\,dt) = -(NN')'\,dr \wedge dt = (NN')'\,e^0 \wedge e^1.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Substitusi ke persamaan Einstein bersumber}
+
+Persamaan $a = 0$ (komponen $e^1 \wedge e^2$), menggunakan $\eta^0 = e^1 \wedge e^2$:
+\begin{equation}
+    -\frac{NN'}{r} + \frac{1}{\ell^2} = \frac{\kappa Q^2}{2r^2}.
+\end{equation}
+Persamaan $a = 1$ (komponen $e^0 \wedge e^2$, dengan $\eta^1 = e^0 \wedge e^2$) menghasilkan bentuk yang \emph{identik}, konsisten dengan kesamaan $R^0|_{e^1\wedge e^2} = R^1|_{e^0\wedge e^2}$ dan kini ruas kanan pun simetris karena $N^\phi = 0$. Gunakan identitas $NN' = \frac{1}{2}(N^2)'$:
+\begin{equation}\label{ng47-eq:static-ODE}
+    \frac{(N^2)'}{2r} = \frac{1}{\ell^2} - \frac{\kappa Q^2}{2r^2}
+    \qquad\Longrightarrow\qquad
+    (N^2)' = \frac{2r}{\ell^2} - \frac{\kappa Q^2}{r}.
+\end{equation}
+Persamaan $a = 2$: dari $\eta^2 = -e^0 \wedge e^1$ dan $\mathcal{T}^2 = \frac{Q^2}{2r^2}e^0 \wedge e^1$, diperoleh $(NN')' - \frac{1}{\ell^2} = \frac{\kappa Q^2}{2r^2}$, yang persis merupakan turunan terhadap $r$ dari~\eqref{ng47-eq:static-ODE}; tidak ada informasi baru maupun kontradiksi.
+Integralkan~\eqref{ng47-eq:static-ODE} terhadap $r$:
+\begin{equation}
+    N^2 = \int\!\left(\frac{2r}{\ell^2} - \frac{\kappa Q^2}{r}\right)dr
+    = \frac{r^2}{\ell^2} - \kappa Q^2\ln r + \text{konstanta}.
+\end{equation}
+Tuliskan konstanta sebagai $\kappa Q^2\ln r_0 - M$ (dengan $r_0$ skala referensi sebarang dan $M$ parameter massa):
+\begin{equation}\label{ng47-eq:N2-charged}
+    N^2(r) = -M + \frac{r^2}{\ell^2} - \kappa Q^2\ln\!\left(\frac{r}{r_0}\right).
+\end{equation}
+Substitusi $N^2$ dan $N^\phi = 0$, $f = N$ ke ansatz metrik~\eqref{b42-eq:metric-ansatz}:
+\begin{equation}\label{ng47-eq:metric-charged}
+    ds^2 = \left(-M + \frac{r^2}{\ell^2} - \kappa Q^2\ln\frac{r}{r_0}\right)dt^2
+    - \frac{dr^2}{-M + \dfrac{r^2}{\ell^2} - \kappa Q^2\ln\dfrac{r}{r_0}}
+    - r^2\,d\phi^2.
+\end{equation}
+Potensial sumber titik di dua dimensi ruang tumbuh secara logaritmik, berbeda dari perilaku $1/r$ pada empat dimensi \cite{cataldo1996, clement1993, garcia2017exact}.
+
+\vspace{0.5em}
+\noindent \textbf{Potensial gauge}
+
+Dari solusi Maxwell~\eqref{mx45-eq:F-final} dengan $N^\phi = 0$: $F_{01} = -Q/r$ dan $F_{12} = 0$, sehingga $F = -(Q/r)\,e^0 \wedge e^1 = -(Q/r)\,N\,dt \wedge (dr/N) = -(Q/r)\,dt \wedge dr$. Rekonstruksi potensial dari $F = dA$ dengan $A = A_t(r)\,dt$:
+\begin{equation}
+    F = dA = A_t'\,dr \wedge dt = -A_t'\,dt \wedge dr
+    \qquad\Longrightarrow\qquad
+    A_t' = \frac{Q}{r},
+\end{equation}
+yang terintegralkan menjadi $A_t = Q\ln(r/r_0)$ (konstanta integrasi diserap ke $r_0$):
+\begin{equation}\label{ng47-eq:gauge-static}
+    A = Q\ln\!\left(\frac{r}{r_0}\right)dt.
+\end{equation}
+
+\vspace{0.5em}
+\noindent \textbf{Cakrawala peristiwa}
+
+Berbeda dari kasus berotasi yang horizonnya ditentukan oleh persamaan kuadrat dalam $r^2$ (lihat~\eqref{b42-eq:horizons}), horizon solusi statik bermuatan ditentukan oleh lenyapnya fungsi \emph{lapse}, $N^2(r_+) = 0$:
+\begin{equation}\label{ng47-eq:horizon-condition}
+    \frac{r_+^2}{\ell^2} - M - \kappa Q^2\ln\!\left(\frac{r_+}{r_0}\right) = 0.
+\end{equation}
+Persamaan ini bersifat \emph{transendental}, mencampur suku polinomial $r_+^2$ dengan suku logaritmik, sehingga tidak memiliki solusi tertutup dalam fungsi elementer. Struktur horizonnya dianalisis melalui perilaku $N^2(r)$. Untuk $\kappa, Q^2 > 0$: pada $r \to 0^+$, suku $-\kappa Q^2\ln(r/r_0) \to +\infty$ sehingga $N^2 \to +\infty$; pada $r \to \infty$, suku $r^2/\ell^2$ mendominasi sehingga $N^2 \to +\infty$ pula. Karena $N^2$ positif di kedua ujung dan kontinu, ia memiliki minimum tunggal di antaranya.
+
+Dari $\frac{dN^2}{dr} = \frac{2r}{\ell^2} - \frac{\kappa Q^2}{r} = 0$:
+\begin{equation}\label{ng47-eq:rmin}
+    r_{\min}^2 = \frac{\kappa Q^2\ell^2}{2},
+\end{equation}
+dengan nilai minimum:
+\begin{equation}\label{ng47-eq:N2min}
+    N^2_{\min} = -M + \frac{\kappa Q^2}{2} - \kappa Q^2\ln\!\left(\frac{r_{\min}}{r_0}\right).
+\end{equation}
+
+Syarat eksistensi horizon bergantung pada tanda $N^2_{\min}$:
+\begin{enumerate}[label=\roman*.]
+    \item $N^2_{\min} < 0$: terdapat dua akar $r_- < r_+$ (horizon dalam dan horizon peristiwa).
+    \item $N^2_{\min} = 0$: kedua horizon berimpit (lubang hitam \emph{ekstremal}).
+    \item $N^2_{\min} > 0$: tidak ada horizon (singularitas telanjang).
+\end{enumerate}
+Horizon peristiwa $r_+$ adalah akar terbesar dari~\eqref{ng47-eq:horizon-condition}, yang secara umum dihitung secara numerik.

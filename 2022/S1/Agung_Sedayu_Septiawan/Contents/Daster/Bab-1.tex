@@ -1,0 +1,69 @@
+\chapter{Pendahuluan}
+
+\section{Latar Belakang}
+
+Salah satu masalah paling fundamental dalam fisika teoretis adalah bagaimana menyatukan teori gravitasi Einstein dengan mekanika kuantum. Relativitas umum mendeskripsikan gravitasi sebagai manifestasi kelengkungan \textit{manifold} ruang-waktu akibat distribusi energi dan momentum materi, dan teori ini telah lulus berbagai uji eksperimen selama lebih dari satu abad. Namun, ketika aksi Einstein-Hilbert dikuantisasi secara perturbatif dengan metode standar teori medan kuantum, teori yang dihasilkan tidak dapat direnormalisasi. Pada satu loop, gravitasi murni masih berperilaku khusus karena suku divergen yang muncul berbentuk topologis dan dapat diserap \cite{tHooft1974}. Pada dua loop, sudah ditunjukkan secara eksplisit bahwa muncul \textit{counter-term} yang tidak dapat diserap ke dalam parameter aksi \cite{goroff1986}. Akibatnya, gravitasi Einstein kehilangan daya prediktif perturbatif pada skala energi Planck, sehingga dibutuhkan kerangka teoretis baru untuk merumuskan gravitasi kuantum yang konsisten.
+
+Dari berbagai pendekatan yang telah dikembangkan untuk merespons persoalan tersebut, mulai dari teori string \cite{greenschwarzwitten1987} hingga gravitasi kuantum loop \cite{rovellismolin1990, ashtekar1986new}, terdapat satu benang merah konseptual yang relevan bagi penelitian ini: pergeseran dari variabel metrik ke variabel koneksi gauge terbukti membuka jalan menuju formulasi gravitasi yang lebih tertangani secara matematis. Secara bersamaan, strategi mempelajari gravitasi pada dimensi ruang-waktu yang lebih rendah juga terbukti produktif, karena persoalan teknis menjadi lebih sederhana tanpa kehilangan struktur fisis yang esensial \cite{deser1984three, carlip1998quantum}. Kedua strategi ini, reformulasi dalam variabel koneksi dan reduksi dimensi, bertemu secara natural pada gravitasi $2+1$ dimensi dalam formalisme Chern-Simons.
+
+Gravitasi Einstein dalam $2+1$ dimensi memiliki sifat yang sangat khas dan sudah lama digunakan sebagai laboratorium teoretis untuk gravitasi kuantum. Dalam ruang-waktu tiga dimensi ini, persamaan medan di luar sumber materi memaksa geometri untuk selalu datar (tanpa konstanta kosmologi) atau berkelengkungan konstan (dengan konstanta kosmologi tak-nol). Konsekuensinya, teori ini tidak memiliki derajat kebebasan lokal yang propagatif: tidak ada graviton dalam $2+1$ dimensi. Seluruh konten dinamisnya berada pada tingkat global dan topologis, sehingga gravitasi $2+1$ dimensi menjadi sistem yang dapat diselesaikan secara eksak sekaligus tempat uji yang lebih sederhana untuk berbagai program gravitasi kuantum.
+
+Terobosan dalam memanfaatkan karakteristik unik ini dirintis oleh Ach\'ucarro dan Townsend \cite{achucarro1986} serta diformulasikan secara lengkap oleh Witten \cite{witten1988}. Mereka menunjukkan bahwa teori gravitasi dalam $2+1$ dimensi dengan konstanta kosmologi negatif ekuivalen secara eksak dengan teori gauge Chern-Simons. Melalui konstruksi yang dikenal sebagai \textit{ansatz Witten}, variabel-variabel geometris ruang-waktu, yaitu koneksi spin dan dreibein, disatukan menjadi satu koneksi gauge tunggal berbasis aljabar Lie $\mathfrak{so}(2,2)$, yang merupakan aljabar isometri dari ruang anti-de Sitter tiga dimensi (AdS$_3$). Keunggulan formulasi ini bersifat ganda. Pertama, teori Chern-Simons adalah teori medan topologis murni \cite{witten1989jones}: aksinya tidak memerlukan metrik latar, persamaan geraknya bersifat aljabar pada koneksi, dan teori ini dapat dikuantisasi secara eksak pada manifold tertutup. Dengan demikian, ekuivalensi Einstein--Chern-Simons memberi akses langsung kepada teknik kuantisasi yang sudah mapan untuk teori gauge topologis. Kedua, reformulasi ini mengungkap asal-usul sifat topologis gravitasi $2+1$ dimensi: ketiadaan derajat kebebasan lokal bukan sekadar kebetulan aljabar dari struktur tensor Riemann di tiga dimensi, melainkan konsekuensi langsung dari kenyataan bahwa gravitasi $2+1$ dimensi memang sebuah teori topologis.
+
+Aplikasi paling menonjol dari kerangka ini adalah lubang hitam BTZ yang ditemukan oleh Ba\~nados, Teitelboim, dan Zanelli pada tahun 1992 \cite{banados1992, banados1993}. Penemuan ini sempat tak terduga karena umumnya dianggap mustahil bahwa teori tanpa derajat kebebasan lokal dapat memiliki solusi lubang hitam. BTZ adalah solusi asimtotik-AdS$_3$ yang dikarakterisasi oleh massa dan momentum sudut, lengkap dengan horizon peristiwa, entropi Bekenstein-Hawking, serta termodinamika yang dapat dihitung secara penuh \cite{carlip1995btz}. Seluruh sifat global lubang hitam ini muncul dari struktur topologis koneksi gauge, yang mengkonfirmasi bahwa kerangka Chern-Simons-Witten cukup kaya untuk memuat fisika lubang hitam yang non-trivial.
+
+Langkah berikutnya dari kasus vakum adalah penambahan medan elektromagnetik sebagai sumber materi, yang menghasilkan teori Einstein-Maxwell di $2+1$ dimensi. Berbagai bentuk solusi lubang hitam pada teori ini telah dipelajari selama beberapa dekade \cite{clement1993, cataldo1996, clement1996, martinez2000, garcia2017exact, kubiznak2024, maeda2024}. Namun, sebagian besar studi tersebut bekerja dalam formalisme metrik konvensional; formulasi yang secara eksplisit membangun persamaan medan Einstein-Maxwell dalam bahasa Chern-Simons-Witten, termasuk penurunan tensor energi-momentum dalam notasi dreibein dan analisis konsistensinya, belum dilakukan secara sistematis. Penelitian ini mengisi celah tersebut dengan memformulasikan persamaan medan Einstein-Maxwell di $2+1$ dimensi secara lengkap dalam kerangka Chern-Simons-Witten yang telah dibangun, lalu menerapkannya pada ansatz lubang hitam BTZ untuk menurunkan solusinya.
+
+\section{Rumusan Masalah}
+\noindent Berdasarkan latar belakang yang telah diuraikan, rumusan masalah dalam penelitian ini adalah sebagai berikut:
+\begin{enumerate}[label=\arabic*.]
+    \item Bagaimana persamaan medan gravitasi Einstein di $2+1$ dimensi dengan konstanta kosmologi negatif diperoleh dari aksi Chern-Simons pada grup gauge $\mathrm{SO}(2,2)$ melalui ansatz Witten?
+    \item Bagaimana solusi lubang hitam BTZ berotasi diturunkan secara analitik dari persamaan medan tersebut dalam formalisme \textit{dreibein}, dan apa karakteristik solusi pada limit khusus $J = 0$?
+    \item Bagaimana penambahan medan elektromagnetik sebagai sumber materi memodifikasi persamaan medan, dan jenis lubang hitam apa saja yang konsisten dengan teori Einstein-Maxwell murni di $2+1$ dimensi pada ansatz BTZ standar?
+\end{enumerate}
+
+\section{Tujuan Penelitian}
+\noindent Tujuan yang ingin dicapai dari penelitian ini adalah:
+\begin{enumerate}[label=\arabic*.]
+    \item Menurunkan secara eksplisit ekuivalensi gravitasi Einstein dengan konstanta kosmologi negatif dan teori Chern-Simons $\mathrm{SO}(2,2)$ di $2+1$ dimensi melalui ansatz Witten, beserta konstruksi lengkap aljabar Lie $\mathfrak{so}(2,2)$ dari prinsip pertama.
+    \item Memperoleh solusi lubang hitam BTZ dari persamaan medan yang telah diturunkan dan menganalisis limit tanpa rotasinya ($J = 0$).
+    \item Memperluas formalisme ke sektor Einstein-Maxwell, menyelidiki struktur ruang solusi lubang hitam bermuatan pada ansatz BTZ standar, dan menurunkan solusi-solusi yang konsisten secara penuh.
+\end{enumerate}
+
+\section{Batasan Masalah}
+\noindent Penelitian ini dibatasi pada:
+\begin{enumerate}[label=\arabic*.]
+    \item Dimensi ruang-waktu $2+1$ dengan konstanta kosmologi negatif ($\Lambda < 0$), sehingga geometri latar bersifat asimtotik anti-de Sitter (AdS$_3$).
+    \item Formalisme orde pertama (\textit{dreibein}/Palatini) dengan ansatz metrik stasioner-aksisimetris BTZ, yaitu $g_{\phi\phi} = r^2$.
+    \item Teori Einstein-Maxwell murni untuk sektor bermuatan, tanpa medan skalar (\textit{dilaton}), elektrodinamika nonlinear (Born-Infeld), maupun suku Chern-Simons elektromagnetik tambahan.
+    \item Grup gauge $\mathrm{SO}(2,2)$ untuk konstruksi ekuivalensi Chern-Simons, dengan koneksi tunggal $\mathcal{A} = \omega^a J_a + e^a P_a$ tanpa dekomposisi kiral ke $\mathrm{SO}(2,1) \times \mathrm{SO}(2,1)$ di dalam derivasi utama.
+\end{enumerate}
+
+\section{Manfaat Penelitian}
+Penelitian ini memberikan kontribusi pada pemahaman struktur gravitasi tiga dimensi dan solusi lubang hitamnya. Penurunan ekuivalensi Einstein-Chern-Simons yang disajikan secara bertahap dari prinsip pertama menyediakan referensi pedagogis yang lengkap dan dapat direproduksi, sehingga dapat dimanfaatkan sebagai bahan ajar untuk topik teori gauge gravitasi. Analisis sistematis terhadap ruang solusi Einstein-Maxwell pada ansatz BTZ standar memperjelas batas kevalidan formalisme yang umum digunakan, serta dapat menjadi titik tolak bagi penelitian lanjutan terhadap modifikasi teori seperti elektrodinamika nonlinear, kopling dilaton, maupun suku Chern-Simons elektromagnetik yang berpotensi memperluas ruang solusi.
+
+\section{Kebaruan Penelitian}
+\noindent Kebaruan yang ditawarkan oleh penelitian ini terletak pada tiga aspek berikut:
+\begin{enumerate}[label=\arabic*.]
+    \item Ekuivalensi gravitasi Einstein dan teori Chern-Simons diturunkan secara eksplisit menggunakan koneksi gauge tunggal $\mathrm{SO}(2,2)$ tanpa melakukan dekomposisi kiral ke $\mathrm{SO}(2,1) \times \mathrm{SO}(2,1)$. Pendekatan ini berbeda dari literatur standar~\cite{witten1988, achucarro1986} yang umumnya langsung bekerja dalam dua koneksi kiral terpisah, dan memiliki keuntungan bahwa satu persamaan medan $\mathcal{F} = 0$ langsung mereproduksi seluruh persamaan gravitasi tanpa perlu merekonstruksi kembali variabel dreibein dan koneksi spin dari kombinasi koneksi kiral.
+    \item Seluruh struktur aljabar Lie $\mathfrak{so}(2,2)$, mulai dari konstruksi generator kovarian $M_{IJ}$, relasi komutasi umum, identifikasi generator gravitasi $J_a$ dan $P_a$, hingga bentuk bilinear invarian, dikonstruksi dari prinsip pertama secara bertahap mulai dari grup ortogonal berdimensi rendah, bukan dinyatakan sebagai hasil jadi.
+    \item Persamaan medan Einstein-Maxwell diformulasikan secara lengkap dalam formalisme dreibein dan diselesaikan pada ansatz BTZ standar. Analisis ini mengungkap kendala struktural bahwa solusi lubang hitam yang memuat baik muatan listrik ($Q \neq 0$) maupun momentum sudut ($N^\phi \neq 0$) secara simultan tidak konsisten pada ansatz tersebut, sehingga hanya kasus statis bermuatan atau berotasi tanpa muatan yang diperbolehkan.
+\end{enumerate}
+
+\section{Sistematika Penulisan}
+Tugas akhir ini disusun dalam lima bab dengan sistematika sebagai berikut:
+
+\vspace{0.5em}
+\noindent\textbf{Bab~I} memuat latar belakang masalah, rumusan masalah, tujuan, batasan, manfaat, kebaruan penelitian, serta sistematika penulisan.
+
+\vspace{0.3em}
+\noindent\textbf{Bab~II} membahas landasan matematika dan fisika yang diperlukan, meliputi geometri diferensial pada \textit{manifold}, kalkulus eksterior, formalisme vielbein dan struktur Cartan, aksi gravitasi Einstein dalam formulasi metrik maupun orde pertama (Einstein-Palatini), serta teori gauge dan konstruksi aksi Chern-Simons.
+
+\vspace{0.3em}
+\noindent\textbf{Bab~III} memaparkan metode penelitian yang digunakan, meliputi tahapan-tahapan penelitian dan diagram alir penyelesaian masalah.
+
+\vspace{0.3em}
+\noindent\textbf{Bab~IV} menyajikan hasil utama penelitian, yaitu pembuktian ekuivalensi Einstein-Chern-Simons, penurunan solusi lubang hitam BTZ berotasi dan statik, serta formulasi persamaan medan Einstein-Maxwell beserta analisis solusinya.
+
+\vspace{0.3em}
+\noindent\textbf{Bab~V} merangkum kesimpulan dari hasil-hasil penelitian dan menyajikan saran untuk penelitian lanjutan.
