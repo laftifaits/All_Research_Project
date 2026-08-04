@@ -1,0 +1,67 @@
+\babel@toc {bahasai}{}\relax 
+\contentsline {chapter}{Halaman Judul}{i}{}%
+\contentsline {chapter}{Lembar Pengesahan}{vi}{}%
+\contentsline {chapter}{Lembar Orisinalitas}{viii}{}%
+\contentsline {chapter}{Abstrak}{ix}{}%
+\contentsline {chapter}{Abstract}{xi}{}%
+\contentsline {chapter}{Kata Pengantar}{xiii}{}%
+\contentsline {chapter}{Daftar Isi}{xv}{}%
+\contentsline {chapter}{Daftar Gambar}{xvii}{}%
+\contentsline {chapter}{Daftar Tabel}{xix}{}%
+\contentsline {chapter}{\numberline {1}Pendahuluan}{1}{}%
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{}%
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{3}{}%
+\contentsline {section}{\numberline {1.3}Tujuan Penelitian}{3}{}%
+\contentsline {section}{\numberline {1.4}Batasan Masalah}{3}{}%
+\contentsline {section}{\numberline {1.5}Manfaat Penelitian}{4}{}%
+\contentsline {section}{\numberline {1.6}Sistematika Penelitian}{4}{}%
+\contentsline {chapter}{\numberline {2}Studi Literatur}{5}{}%
+\contentsline {section}{\numberline {2.1}Qubit}{5}{}%
+\contentsline {subsection}{\numberline {2.1.1}Representasi Bola Bloch}{6}{}%
+\contentsline {subsection}{\numberline {2.1.2}Keadaan Dua Qubit}{8}{}%
+\contentsline {subsection}{\numberline {2.1.3}Keadaan Tiga Qubit}{8}{}%
+\contentsline {subsection}{\numberline {2.1.4}Keadaan n-Qubit}{9}{}%
+\contentsline {section}{\numberline {2.2}Keterbelitan}{10}{}%
+\contentsline {subsection}{\numberline {2.2.1}Keterbelitan Keadaan Dua Qubit}{10}{}%
+\contentsline {subsubsection}{Keadaan Terpisah}{10}{}%
+\contentsline {subsubsection}{Keadaan Terbelit}{10}{}%
+\contentsline {subsection}{\numberline {2.2.2}Keterbelitan Keadaan Tiga Qubit}{11}{}%
+\contentsline {subsubsection}{Keadaan Terpisah Sempurna}{11}{}%
+\contentsline {subsubsection}{Keadaan Terbelit Sempurna}{12}{}%
+\contentsline {subsubsection}{Keadaan Terbelit Sebagian}{12}{}%
+\contentsline {section}{\numberline {2.3}Kelas Keterbelitan Kuantum Tiga Qubit}{13}{}%
+\contentsline {subsection}{\numberline {2.3.1}Kelas Greenberger–Horne–Zeilinger (GHZ)}{13}{}%
+\contentsline {subsection}{\numberline {2.3.2}Kelas W}{14}{}%
+\contentsline {section}{\numberline {2.4}Matriks Kerapatan}{15}{}%
+\contentsline {subsection}{\numberline {2.4.1}Keadaan Murni dan Keadaan Campuran}{15}{}%
+\contentsline {subsection}{\numberline {2.4.2}Matriks Kerapatan Tereduksi}{16}{}%
+\contentsline {subsubsection}{Matriks Kerapatan Tereduksi Dua Qubit}{16}{}%
+\contentsline {subsubsection}{Matriks Kerapatan Tereduksi Tiga Qubit}{18}{}%
+\contentsline {subsubsection}{Matriks Kerapatan Tereduksi Tunggal}{18}{}%
+\contentsline {subsubsection}{Matriks Kerapatan Tereduksi Ganda}{19}{}%
+\contentsline {subsubsection}{Keadaan Terpisah Sempurna}{20}{}%
+\contentsline {subsubsection}{Keadaan Gabungan}{21}{}%
+\contentsline {section}{\numberline {2.5}Matriks Koefisien}{24}{}%
+\contentsline {section}{\numberline {2.6}Ukuran Keterbelitan}{25}{}%
+\contentsline {subsection}{\numberline {2.6.1}Ukuran Keterbelitan Dua Qubit}{25}{}%
+\contentsline {subsubsection}{Ukuran Keterbelitan Dua Qubit untuk Keadaan Murni}{25}{}%
+\contentsline {subsubsection}{Ukuran Keterbelitan Dua Qubit untuk Keadaan Campuran}{29}{}%
+\contentsline {subsection}{\numberline {2.6.2}Ukuran Keterbelitan Tiga Qubit}{36}{}%
+\contentsline {chapter}{\numberline {3}Metodologi}{43}{}%
+\contentsline {section}{\numberline {3.1}Metode Penelitian}{43}{}%
+\contentsline {section}{\numberline {3.2}Diagram Alir}{43}{}%
+\contentsline {chapter}{\numberline {4}Matriks Koefisien}{45}{}%
+\contentsline {section}{\numberline {4.1}Keadaan Dua Qubit}{45}{}%
+\contentsline {section}{\numberline {4.2}Keadaan Tiga Qubit}{51}{}%
+\contentsline {subsection}{\numberline {4.2.1}Matriks Koefisien Kunci Belakang}{52}{}%
+\contentsline {subsection}{\numberline {4.2.2}Matriks Koefisien Kunci Tengah}{53}{}%
+\contentsline {subsection}{\numberline {4.2.3}Matriks Koefisien Kunci Depan}{54}{}%
+\contentsline {chapter}{\numberline {5}Penutup}{67}{}%
+\contentsline {section}{\numberline {5.1}Kesimpulan}{67}{}%
+\contentsline {section}{\numberline {5.2}Saran}{67}{}%
+\contentsline {chapter}{Daftar Pustaka}{69}{}%
+\contentsline {chapter}{Daftar Pustaka}{69}{}%
+\contentsline {chapter}{Lampiran \numberline {A}Matriks Koefisien Kunci Belakang}{75}{}%
+\contentsline {chapter}{Lampiran \numberline {B}Matriks Koefisien Kunci Tengah}{77}{}%
+\contentsline {chapter}{Lampiran \numberline {C}Matriks Koefisien Kunci Depan}{79}{}%
+\contentsline {chapter}{Biodata Penulis}{83}{}%

@@ -1,0 +1,1412 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.6)  23 JUN 2026 10:40
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**LAMPIRAN-A.tex
+(./LAMPIRAN-A.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+! Undefined control sequence.
+l.1 \chapter
+            {Ukuran Keterbelitan (\textit{Entanglement Measure})$E(\rho)$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{U
+              kuran Keterbelitan (\textit{Entanglement Measure})$E(\rho)$}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no U in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no ) in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+! Undefined control sequence.
+l.2 \section
+            {Concurrence}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]
+ []
+
+
+Overfull \hbox (15.98323pt too wide) in paragraph at lines 1--3
+\OT1/cmr/m/it/10 En-
+ []
+
+
+Overfull \hbox (17.63321pt too wide) in paragraph at lines 1--3
+\OT1/cmr/m/it/10 tan-
+ []
+
+
+Overfull \hbox (15.3332pt too wide) in paragraph at lines 1--3
+\OT1/cmr/m/it/10 gle-
+ []
+
+
+Overfull \hbox (21.72208pt too wide) in paragraph at lines 1--3
+\OT1/cmr/m/it/10 ment
+ []
+
+
+Overfull \hbox (21.74428pt too wide) in paragraph at lines 1--3
+\OT1/cmr/m/it/10 Mea-
+ []
+
+
+Overfull \hbox (39.41862pt too wide) in paragraph at lines 1--3
+\OT1/cmr/m/it/10 sure$\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\O
+T1/cmr/m/n/10 )$
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 1
+     . $E(\rho)=0$
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--5
+[]
+ []
+
+
+Overfull \hbox (31.46178pt too wide) in paragraph at lines 4--5
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/10 0$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 2
+     . $E(\rho)>0$
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+[]
+ []
+
+
+Overfull \hbox (31.46178pt too wide) in paragraph at lines 6--7
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OML/c
+mm/m/it/10 >
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 6--7
+\OT1/cmr/m/n/10 0$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 3
+     . $E(\rho)\geq\sum_{i}p_iE(\rho_i)$
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--9
+[]
+ []
+
+
+Overfull \hbox (31.46178pt too wide) in paragraph at lines 8--9
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z\OT1/cmr/m/n/10 ) \OMS/c
+msy/m/n/10 ^^U
+ []
+
+
+Overfull \hbox (48.14758pt too wide) in paragraph at lines 8--9
+[][] \OML/cmm/m/it/10 p[]E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Z[]\OT1/cmr/m/n/1
+0 )$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 T
+      erdapat beberapa ukuran keterbelitan,
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no , in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 10--11
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 1
+      . Bennet dkk. PRA 53, 2046 (1996)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no ) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 12--13
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 U
+      ntuk \textit{pure state},
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--15
+[]
+ []
+
+
+Overfull \hbox (18.78319pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 pure
+ []
+
+
+Overfull \hbox (20.44429pt too wide) in paragraph at lines 14--15
+\OT1/cmr/m/it/10 state 
+ []
+
+
+! LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 	\begin{aligned}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.18 		&
+        =-\mathrm{Tr}\rho_{A}\log_2\rho_{A}=-\mathrm{Tr}\rho_{B}\log_2\rho_{...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.19 		&
+        =\sum_{i}-\lambda_i\log\lambda_i
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{equation} on input line 15 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 	\end{aligned}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (246.18588pt too wide) detected at line 21
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10  \OT1/cmr/m/n/10 ) = \OMS/c
+msy/m/n/10 ^^@[]\OML/cmm/m/it/10 ^^Z[] [][] ^^Z[] \OT1/cmr/m/n/10 = \OMS/cmsy/m
+/n/10 ^^@[]\OML/cmm/m/it/10 ^^Z[] [][] ^^Z[][]  \OT1/cmr/m/n/10 = [] \OMS/cmsy/
+m/n/10 ^^@\OML/cmm/m/it/10 ^^U[] [] ^^U[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 d
+      i mana $\lambda_i$ adalah nilai eigen dari $\rho_{A}$.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 23--24
+[]
+ []
+
+
+Overfull \hbox (9.16264pt too wide) in paragraph at lines 23--24
+\OML/cmm/m/it/10 ^^U[]$
+ []
+
+
+Overfull \hbox (11.68407pt too wide) in paragraph at lines 23--24
+\OML/cmm/m/it/10 ^^Z[]$ 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 C
+      ontoh keadaan Bell:
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no : in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 25--26
+[]
+ []
+
+! Undefined control sequence.
+l.27 	\ket
+          {\psi}=\frac{1}{\sqrt{2}}(\ket{01}+\ket{10})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 	\ket{\psi}=\frac{1}{\sqrt{2}}(\ket
+                                        {01}+\ket{10})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 	\ket{\psi}=\frac{1}{\sqrt{2}}(\ket{01}+\ket
+                                                 {10})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (71.49495pt too wide) detected at line 28
+\OML/cmm/m/it/10   \OT1/cmr/m/n/10 = []([] + [])
+ []
+
+
+! LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 	\begin{aligned}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.32 		&
+        =\ket{\psi}\bra{\psi}\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.32 		&=\ket
+             {\psi}\bra{\psi}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.32 		&=\ket{\psi}\bra
+                       {\psi}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.33 		&
+        =\frac{1}{2}(\ket{01})\bra{01}+\ket{01})\bra{10}+\ket{10})\bra{01}+\...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.33 		&=\frac{1}{2}(\ket
+                         {01})\bra{01}+\ket{01})\bra{10}+\ket{10})\bra{01}+\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 		&=\frac{1}{2}(\ket{01})\bra
+                                  {01}+\ket{01})\bra{10}+\ket{10})\bra{01}+\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 		&=\frac{1}{2}(\ket{01})\bra{01}+\ket
+                                           {01})\bra{10}+\ket{10})\bra{01}+\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 ...frac{1}{2}(\ket{01})\bra{01}+\ket{01})\bra
+                                                  {10}+\ket{10})\bra{01}+\ke...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 ...}(\ket{01})\bra{01}+\ket{01})\bra{10}+\ket
+                                                  {10})\bra{01}+\ket{10})\br...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 ...})\bra{01}+\ket{01})\bra{10}+\ket{10})\bra
+                                                  {01}+\ket{10})\bra{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 ...}+\ket{01})\bra{10}+\ket{10})\bra{01}+\ket
+                                                  {10})\bra{10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 ...})\bra{10}+\ket{10})\bra{01}+\ket{10})\bra
+                                                  {10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{equation} on input line 29 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 	\end{aligned}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (175.76015pt too wide) detected at line 35
+\OML/cmm/m/it/10 ^^Z \OT1/cmr/m/n/10 = \OML/cmm/m/it/10   []  \OT1/cmr/m/n/10 =
+ []([])[] + [])[] + [])[] + [])[]
+ []
+
+
+! LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 	\begin{aligned}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.39 		&
+        =I\otimes\bra{0}\rho I\otimes\ket{0} +I\otimes\bra{1}\rho_1I\otimes\...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.39 		&=I\otimes\bra
+                     {0}\rho I\otimes\ket{0} +I\otimes\bra{1}\rho_1I\otimes\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.39 		&=I\otimes\bra{0}\rho I\otimes\ket
+                                         {0} +I\otimes\bra{1}\rho_1I\otimes\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.39 ...s\bra{0}\rho I\otimes\ket{0} +I\otimes\bra
+                                                  {1}\rho_1I\otimes\ket{1}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.39 ...\ket{0} +I\otimes\bra{1}\rho_1I\otimes\ket
+                                                  {1}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.40 		&
+        =\frac{1}{2}(\ket{1}\bra{1}+\ket{0}\bra{0})\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.40 		&=\frac{1}{2}(\ket
+                         {1}\bra{1}+\ket{0}\bra{0})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.40 		&=\frac{1}{2}(\ket{1}\bra
+                                {1}+\ket{0}\bra{0})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.40 		&=\frac{1}{2}(\ket{1}\bra{1}+\ket
+                                        {0}\bra{0})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.40 		&=\frac{1}{2}(\ket{1}\bra{1}+\ket{0}\bra
+                                               {0})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.41 		&
+        =
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.43 			\frac
+             {1}{2}&0\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.43 			\frac
+             {1}{2}&0\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.43 			\frac
+             {1}{2}&0\\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+I'm guessing that you meant to end an alignment here.
+
+! Misplaced \cr.
+<inserted text> \cr 
+                    
+l.43 			\frac
+             {1}{2}&0\\
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.43 			\frac
+             {1}{2}&0\\
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 24 strings out of 467537
+ 537 string characters out of 5423705
+ 435733 words of memory out of 5000000
+ 29028 multiletter control sequences out of 15000+600000
+ 628067 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,10n,20p,132b,102s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+!  ==> Fatal error occurred, no output PDF file produced!

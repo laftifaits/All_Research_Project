@@ -1,0 +1,188 @@
+\documentclass[12pt,a4paper]{book}
+%\usepackage{arabtex}
+%\usepackage[utf8]{inputenc}
+
+%ini yg bikin salah.
+%\usepackage{utf8}
+
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{amsmath}
+\usepackage{slashed}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{arabtex}
+%\setcode{utf8}
+\usepackage[left=4cm, right=3.00cm, top=3.5cm, bottom=3.00cm]{geometry}
+\usepackage{tocbibind}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage[table]{xcolor}
+\usepackage{mathtools}
+\usepackage[titletoc]{appendix}
+\usepackage{listings}
+\usepackage{xcolor}
+%\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[bahasai]{babel}
+\usepackage[nosectionbib]{apacite}
+\usepackage{subfigure} 
+\usepackage{indentfirst}
+\usepackage{background}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{cancel}
+\usepackage[export]{adjustbox}
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\abovetopsep}{4pt}
+\usepackage{braket}
+%\usepackage{arydshln}
+\usepackage{soul}
+\usepackage{wrapfig}
+
+%\setcode{utf8}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\usepackage{eso-pic}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\usepackage{caption}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+\usepackage{etoolbox}
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+\addto{\captionsbahasa}{\renewcommand{\bibname}{Daftar Pustaka}}
+
+\begin{document}
+	\begin{titlepage}
+		\input{./Bahan/cover.tex}
+	\end{titlepage}
+	\pagebreak
+	
+\backgroundsetup{scale=1, angle=0, opacity=1,firstpage=false, contents ={}}
+	
+	\newpage
+	\thispagestyle{empty}
+		\begin{center}
+		\topskip0pt
+		\vspace*{\fill}
+		\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+		\vspace*{\fill}
+	\end{center}
+	\pagebreak
+	
+	\pagenumbering{roman}
+	\addcontentsline{toc}{chapter}{Halaman Judul}
+	\include{./Bahan/halamanjudul}
+	
+	
+	\addcontentsline{toc}{chapter}{Lembar Pengesahan}
+	\include{./Bahan/lembarpengesahan}
+	
+%	\cleardoublepage
+%	\addcontentsline{toc}{chapter}{Lembar Pengesahan}
+%	\include{./Bahan/lembarpengesahan}
+%	\includepdf[pages=-, pagecommand={}]{pengesahanproposal.pdf}
+%	\cleardoublepage
+	
+	\addcontentsline{toc}{chapter}{Lembar Orisinalitas}
+	\include{./Bahan/lembarorisinalitas_fix}
+
+%	\includepdf[scale=0.8]{LembarPengesahan.pdf}
+	
+	\addcontentsline{toc}{chapter}{Abstrak}
+	\include{./Bahan/abstrakFIX}
+	
+	\addcontentsline{toc}{chapter}{Abstract}
+	\include{./Bahan/abstractFIX}
+	
+	\addcontentsline{toc}{chapter}{Kata Pengantar}
+	\include{./Bahan/katapengantar}
+	
+	\tableofcontents
+	\newpage
+	%\begin{center}
+	%	Halaman ini sengaja dikosongkan
+	%\end{center}
+	\listoffigures
+	
+	\newpage
+	\thispagestyle{empty}
+	\begin{center}
+		\topskip0pt
+		\vspace*{\fill}
+		\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+		\vspace*{\fill}
+	\end{center}
+	\pagebreak
+	
+	\listoftables
+	
+	\newpage
+	\thispagestyle{empty}
+	\begin{center}
+		\topskip0pt
+		\vspace*{\fill}
+		\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+		\vspace*{\fill}
+	\end{center}
+	\pagebreak
+	
+	\pagenumbering{arabic}
+	\include{./Bahan/BAB-1FIX}
+	\include{./Bahan/BAB-2FIX}
+	\include{./Bahan/BAB-3FIX}
+	\include{./Bahan/BAB-4}
+	\include{./Bahan/BAB-5}
+
+\renewcommand{\bibname}{Daftar Pustaka}   
+\addcontentsline{toc}{chapter}{Daftar Pustaka}	
+\bibliographystyle{apacite}
+\bibliography{daftarpustaka.bib}
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+	\topskip0pt
+	\vspace*{\fill}
+	\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+	\vspace*{\fill}
+\end{center}
+\pagebreak
+	
+\begin{appendices}
+		\include{./Bahan/LAMPIRAN-A}
+		\include{./Bahan/LAMPIRAN-B}
+%		\include{./Bahan/LAMPIRAN-C}
+%		\include{./Bahan/LAMPIRAN-D}
+\end{appendices}
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\vspace*{\fill}
+\pagebreak
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Biodata Penulis}
+\include{./Bahan/biodatapenulis}
+\eject
+\end{document}

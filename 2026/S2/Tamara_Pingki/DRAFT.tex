@@ -1,0 +1,6399 @@
+\chapter{Ukuran Keterbelitan}
+\section{Konkurensi}
+\begin{enumerate}
+	\item $E(\rho)=0$
+	\item $E(\rho)>0$
+	\item $E(\rho)\geq\sum_{i}p_iE(\rho_i)$
+\end{enumerate}
+
+Terdapat beberapa ukuran keterbelitan:
+\begin{enumerate}
+	\item Pada artikel yang ditulis oleh Bennett \textit{et al.} \cite{Bennett1996}, dijelaskan bahwa pasangan qubit yang berada dalam keadaan terbelit sebagian dapat dikonversi menjadi keadaan terbelit maksimal melalui operasi lokal dan komunikasi klasik (\textit{Local Operations and Classical Communication}, LOCC). Konsep yang dikenal sebagai \textit{entanglement concentration} tersebut menunjukkan bahwa keterbelitan dapat dipandang sebagai suatu sumber daya yang dapat dimanipulasi dan diukur dalam pemrosesan informasi kuantum.
+	
+	\textbf{Untuk \textit{pure state}}:
+	\begin{equation}
+		\begin{aligned}
+			E(\psi)
+			&=-\mathrm{Tr}\rho_{A}\log_2\rho_{A}=-\mathrm{Tr}\rho_{B}\log_2\rho_{B}\\
+			&=\sum_{i}-\lambda_i\log\lambda_i
+		\end{aligned}
+	\end{equation}
+	
+	di mana $\lambda_i$ adalah nilai eigen dari $\rho_{A}$.
+	
+	Contoh keadaan Bell:
+	\begin{equation}
+		\ket{\psi}=\frac{1}{\sqrt{2}}(\ket{01}+\ket{10})
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=\ket{\psi}\bra{\psi}\\
+			&=\frac{1}{2}(\ket{01})\bra{01}+\ket{01})\bra{10}+\ket{10})\bra{01}+\ket{10})\bra{10}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			\rho_A
+			&=I\otimes\bra{0}\rho I\otimes\ket{0} +I\otimes\bra{1}\rho_1I\otimes\ket{1}\\
+			&=\frac{1}{2}(\ket{1}\bra{1}+\ket{0}\bra{0})\\
+			&=
+			\begin{pmatrix}
+				\frac{1}{2}&0\\
+				0&\frac{1}{2}
+			\end{pmatrix}\\
+			&=\rho_{B}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			|\rho_{A}-I\lambda|
+			&=
+			\begin{bmatrix}
+				\frac{1}{2}-\lambda&0\\
+				0&\frac{1}{2}-\lambda
+			\end{bmatrix}\\
+			&=(\frac{1}{2}-\lambda)^2\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	sehingga diperoleh $\lambda_1=\lambda_2=\frac{1}{2}$
+	dan
+	\begin{equation}
+		\begin{aligned}
+			E(\psi)
+			&=-\frac{1}{2}\log_2\frac{1}{2}-\frac{1}{2}\log_2\frac{1}{2}\\
+			&=\frac{1}{2}\log2+\frac{1}{2}\log2\\
+			&=1
+		\end{aligned}
+	\end{equation}
+	
+	di mana hasil tersebut maksimal.
+	
+	\item Sedangkan pada artikel yang ditulis oleh Coffman, Kundu, dan Wootters \cite{coffman2000distributed}, dijelaskan bahwa keterbelitan dalam sistem multipartit tidak dapat didistribusikan secara bebas di antara seluruh subsistem. Penelitian tersebut memperkenalkan konsep monogami keterbelitan (\textit{monogamy of entanglement}) melalui besaran \textit{tangle} dan \textit{three-tangle}, yang memungkinkan pengukuran serta karakterisasi keterbelitan pada sistem tiga qubit. Hasil ini menjadi dasar penting dalam klasifikasi dan analisis keterbelitan multipartit.
+	
+	Untuk \textit{pure state}:
+	\begin{equation}
+		C_{AB}=2\sqrt{\det\rho_{A}}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			\det\rho_{A}
+			&=
+			\begin{bmatrix}
+				\frac{1}{2}&0\\
+				0&\frac{1}{2}
+			\end{bmatrix}\\
+			&=\frac{1}{4}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		C_{AB}=2\sqrt{\frac{1}{4}}=1
+	\end{equation}
+	
+	Jika diketahui:
+	\begin{equation}
+		\ket{\psi}=\frac{1}{2}(\ket{00}+\ket{01}+\ket{10}+\ket{11})
+	\end{equation}
+	
+	maka
+	\begin{equation}
+		\ket{\tilde{\psi}}=\frac{1}{2}(-\ket{11}+\ket{10}+\ket{01}-\ket{00})
+	\end{equation}
+	
+	sehingga
+	\begin{equation}
+		\langle\psi|\tilde{\psi}\rangle=1
+	\end{equation}
+	
+	dan $E(1)=1$
+	
+	Jika diketahui:
+	\begin{equation}
+		\ket{\psi}=0,1\ket{00}+0,5\ket{01}+0,5\ket{10}+0,7\ket{11}
+	\end{equation}
+	
+	maka
+	\begin{equation}
+		\begin{aligned}
+			\rho_A
+			&=I\otimes\bra{0}\rho I\otimes\ket{0} +I\otimes\bra{1}\rho_1I\otimes\ket{1}\\
+			&=0,1^2\ket{0}\bra{0}+0,25\ket{1}\bra{1}+0,05\ket{0}\bra{1}+0,05\ket{1}\bra{0}+0,25\ket{0}\bra{0}\\
+			&+0,49\ket{1}\bra{1}+0,35\ket{0}\bra{1}+0,35\ket{1}\bra{0}\\
+			&=0,26^2\ket{0}\bra{0}+0,4\ket{0}\bra{1}+0,4\ket{1}\bra{0}+0,74\ket{1}\bra{1}\\
+			&=
+			\begin{pmatrix}
+				0,26&0,4\\
+				0,4&0,74
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\det\rho_{A}=\frac{26\times74}{10^4}-0,16=\frac{1924-1600}{10^4}=\frac{324}{10^4}
+	\end{equation}
+	
+	dan
+	\begin{equation}
+		C_{AB}=2\sqrt{\frac{324}{10^4}}=\frac{2}{10}\sqrt{3,24}
+	\end{equation}
+	
+	Hasil-hasil dari contoh kasus di atas untuk \textit{pure state}, lalu bagaimana dengan \textit{mixed state}?
+\end{enumerate}
+
+
+\textbf{Untuk \textit{mixed state}}:
+\begin{equation}
+	C_{AB} = \max \{ \lambda_1 - \lambda_2 - \lambda_3 - \lambda_4 \; 0 \}
+\end{equation}  
+
+$\lambda_1, \lambda_2, \lambda_3, \lambda_4$ adalah nilai eigen  dari $\rho_{AB}\tilde{\rho}_{AB}$
+
+\textbf{Contoh 1:}  
+\begin{equation}
+	\rho_1 = \ket{B_1}\bra{B_1}
+\end{equation}
+\begin{equation}
+	\rho_2 = \ket{B_3}\bra{B_3}
+\end{equation}
+
+\begin{equation}
+	\rho = \frac{3}{4}\rho_1 + \frac{1}{4}\rho_2
+\end{equation}
+
+dengan
+
+\begin{equation}
+	\rho_1 = \frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&1\\
+		0&0&0&0\\
+		0&0&0&0\\
+		1&0&0&1
+	\end{pmatrix}
+\end{equation}
+
+dan
+
+\begin{equation}
+	\rho_2 = \frac{1}{2}
+	\begin{pmatrix}
+		0&0&0&0\\
+		0&1&1&0\\
+		0&1&1&0\\
+		0&0&0&0
+	\end{pmatrix}
+\end{equation}
+
+maka:  
+
+\begin{equation}
+	\rho = \frac{1}{2}
+	\begin{pmatrix}
+		\frac{3}{4}&0&0&\frac{3}{4}\\
+		0&\frac{1}{4}&\frac{1}{4}&0\\
+		0&\frac{1}{4}&\frac{1}{4}&0\\
+		\frac{3}{4}&0&0&\frac{3}{4}
+	\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\tilde{\rho} 
+		&= (\sigma_y \otimes \sigma_y) \rho (\sigma_y \otimes \sigma_y)\\
+		&= \frac{1}{2}
+		\begin{pmatrix}
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0 \\
+			0 & 1 & 0 & 0 \\
+			-1 & 0 & 0 & 0
+		\end{pmatrix}
+		\begin{pmatrix}
+			\frac{3}{4} & 0 & 0 & 0 \\
+			0 & \frac{1}{4} & \frac{1}{4} & 0 \\
+			0 & \frac{1}{4} & \frac{1}{14} & 0 \\
+			\frac{3}{4} & 0 & 0 & \frac{3}{4}
+		\end{pmatrix}
+		\begin{pmatrix}
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0 \\
+			0 & 1 & 0 & 0 \\
+			-1 & 0 & 0 & 0
+		\end{pmatrix}\\
+		&= \frac{1}{2}
+		\begin{pmatrix}
+			\frac{3}{4}&0&0&\frac{3}{4}\\
+			0&\frac{1}{4}&\frac{1}{4}&0\\
+			0&\frac{1}{4}&\frac{1}{4}&0\\
+			\frac{3}{4}&0&0&\frac{3}{4}
+		\end{pmatrix}\\
+		&=\rho
+	\end{aligned}
+\end{equation}
+
+dan
+
+\begin{equation}
+	\rho \tilde{\rho}=\frac{1}{4}
+	\begin{pmatrix}
+		\frac{18}{16}&0&0&\frac{18}{16}\\
+		0&\frac{2}{16}&\frac{2}{16}&0\\
+		0&\frac{2}{16}&\frac{2}{16}&0\\
+		\frac{18}{16}&0&0&\frac{18}{16}
+	\end{pmatrix}
+	=\frac{1}{32}
+	\begin{pmatrix}
+		9&0&0&9\\
+		0&1&1&0\\
+		0&1&1&0\\
+		9&0&0&9
+	\end{pmatrix}
+\end{equation}
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=a_{11}a_{22}a_{33}a_{44}-a_{11}a_{23}a_{32}a_{44}+a_{14}a_{23}a_{32}a_{41}-a_{14}a_{22}a_{33}a_{41}\\
+		&=a_{11}a_{44}(a_{22}a_{33}-a_{23}a_{32})+a_{14}a_{41}(a_{23}a_{32}-a_{22}a_{33})\\
+		&=(a_{11}a_{44}-a_{14}a_{41})(a_{22}a_{33}-a_{23}a_{32})\\
+		&=[(\frac{9}{32}-\lambda)^2-(\frac{9}{32})^2][(\frac{1}{32}-\lambda)^2-(\frac{1}{32})^2]\\
+		&=[\lambda(\lambda-\frac{9}{16})][\lambda(\lambda-\frac{1}{16})]\\
+		&=(\lambda-\frac{9}{16})(\lambda-\frac{1}{16})\lambda^2\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+sehingga $\lambda_1=\frac{9}{16}$, $\lambda_2=\frac{1}{16}$, dan $\lambda_3=\lambda_4=0$. Maka
+
+\begin{equation}
+	C_{AB}=max[\frac{9}{16}-\frac{1}{16}-0-0,0]=\frac{1}{2}
+\end{equation}
+
+\textbf{Contoh 2:}
+\begin{equation}
+	\rho_1 = \ket{B_1}\bra{B_1}
+\end{equation}
+\begin{equation}
+	\rho_2 = \ket{B_2}\bra{B_2}
+\end{equation}
+
+\begin{equation}
+	\rho = \frac{5}{6}\rho_1 + \frac{1}{6}\rho_2
+\end{equation}
+
+dengan
+
+\begin{equation}
+	\rho_1 = \frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&1\\
+		0&0&0&0\\
+		0&0&0&0\\
+		1&0&0&1
+	\end{pmatrix}
+\end{equation}
+
+dan
+
+\begin{equation}
+	\rho_2 = \frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&-1\\
+		0&0&0&0\\
+		0&0&0&0\\
+		-1&0&0&1
+	\end{pmatrix}
+\end{equation}
+
+maka:  
+
+\begin{equation}
+	\rho =\frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&\frac{2}{3}\\
+		0&0&0&0\\
+		0&0&0&0\\
+		\frac{2}{3}&0&0&1
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+
+maka
+
+\begin{equation}
+	\rho \tilde{\rho}=\frac{1}{4}
+	\begin{pmatrix}
+		1+\frac{4}{9}&0&0&2(\frac{2}{3})\\
+		0&0&0&0\\
+		0&0&0&0\\
+		2(\frac{2}{3})&0&0&1+\frac{4}{9}
+	\end{pmatrix}
+	=\frac{1}{4}
+	\begin{pmatrix}
+		\frac{13}{9}&0&0&\frac{12}{9}\\
+		0&0&0&0\\
+		0&0&0&0\\
+		\frac{12}{9}&0&0&\frac{13}{9}
+	\end{pmatrix}
+\end{equation}
+
+dan
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=a_{11}a_{22}a_{33}a_{44}-a_{14}a_{22}a_{33}a_{41}\\
+		&=a_{22}a_{33}(a_{11}a_{44}-a_{14}a_{41})\\
+		&=[(\frac{13}{36}-\lambda)^2-(\frac{12}{36})^2]\lambda^2\\
+		&=\lambda^2-\frac{26}{36}\lambda+\frac{13^2-12^2}{36^2}\\
+		&=\lambda^2-\frac{26}{36}\lambda+\frac{25}{36^2}\\
+		&=(\lambda-\frac{25}{36})(\lambda-\frac{1}{36})\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+sehingga $\lambda_1=\frac{25}{36}$ dan $\lambda_2=\frac{1}{36}$. Maka
+
+\begin{equation}
+	C_{AB}=max[\frac{25}{36}-\frac{1}{36}-0-0,0]=\frac{24}{36}=\frac{2}{3}
+\end{equation}
+
+\textbf{Contoh 3}
+\begin{equation}
+	\rho = \frac{2}{3}\rho_1 + \frac{1}{6}\rho_2
+	+\frac{1}{6}\rho_3\\
+	=\frac{1}{2}
+	\begin{pmatrix}
+		\frac{5}{6}&0&0&\frac{1}{2}\\
+		0&\frac{1}{6}&\frac{1}{6}&0\\
+		0&\frac{1}{6}&\frac{1}{6}&0\\
+		\frac{1}{2}&0&0&\frac{5}{6}
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+
+maka 
+
+\begin{equation}
+	\rho \tilde{\rho} =\frac{1}{4}
+	\begin{pmatrix}
+		\frac{34}{36}&0&0&\frac{5}{6}\\
+		0&\frac{1}{18}&\frac{1}{18}&0\\
+		0&\frac{1}{18}&\frac{1}{18}&0\\
+		\frac{5}{6}&0&0&\frac{34}{36}
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=a_{11}a_{22}a_{33}a_{44}-a_{11}a_{23}a_{32}a_{44}+a_{14}a_{23}a_{32}a_{41}-a_{14}a_{22}a_{33}a_{41}\\
+		&=(a_{11}a_{44}-a_{14}a_{41})(a_{22}a_{33}-a_{23}a_{32})\\
+		&=[(\frac{17}{72}-\lambda)^2-\frac{25}{36\times16}][(\frac{1}{72}-\lambda)^2-\frac{1}{72^2}]\\
+		&=[\lambda^2-\frac{17}{36}\lambda+\frac{17^2}{72^2}-\frac{25}{36\times16}]\lambda[\lambda-\frac{1}{36}]\\
+		&=(\lambda-\frac{4}{9})(\lambda-\frac{1}{36})(\lambda-\frac{1}{36})\lambda\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+sehingga $\lambda_1=\frac{4}{9}$, $\lambda_2=\lambda_3=\frac{1}{36}$, dan $
+\lambda_4=0$. Maka
+
+\begin{equation}
+	C_{AB}=max[\frac{4}{9}-\frac{1}{36}-\frac{1}{36}-0,0]=\frac{14}{36}=\frac{7}{18}
+\end{equation}
+
+\textbf{Contoh 4}
+\begin{equation}
+	\rho = \frac{2}{3}\rho_1 + \frac{1}{12}\rho_2
+	+\frac{1}{6}\rho_3+\frac{1}{12}\rho_4\\
+	=\frac{1}{24}
+	\begin{pmatrix}
+		9&0&0&7\\
+		0&3&1&0\\
+		0&1&3&0\\
+		7&0&0&9
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+
+maka 
+
+\begin{equation}
+	\rho \tilde{\rho} =\frac{1}{24^2}
+	\begin{pmatrix}
+		130&0&0&126\\
+		0&10&6&0\\
+		0&6&10&0\\
+		126&0&0&130
+	\end{pmatrix}
+\end{equation}
+
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=(a_{11}a_{44}-a_{14}a_{41})(a_{22}a_{33}-a_{23}a_{32})\\
+		&=[(\frac{130}{24^2}-\lambda)^2-\frac{126^2}{24^4}][(\frac{10}{24^2}-\lambda)^2-\frac{6^2}{24^4}]\\
+		&=[\lambda^2-\frac{260}{24^2}\lambda+\frac{130^2}{24^4}-\frac{126^2}{24^4}][\lambda^2-\frac{20}{24^2}\lambda+\frac{8^2}{24^4}]\\
+		&=[\lambda^2-\frac{260}{24^2}\lambda+\frac{32^2}{24^4}][\lambda^2-\frac{20}{24^2}\lambda+\frac{8^2}{24^4}]\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\lambda_{1,3}
+		&=\frac{260}{2\times24^2}\pm\frac{1}{2\times24^2}\sqrt{4\times130^2-4\times32^2}\\
+		&=\frac{130}{24^2}\pm\frac{126}{24^2}\\
+		&=\frac{256}{24^2}; \frac{4}{24^2}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\lambda_{2,4}
+		&=\frac{20}{2\times24^2}\pm\frac{2}{2\times24^2}\sqrt{10^2-8^2}\\
+		&=\frac{10}{24^2}\pm\frac{6}{24^2}\\
+		&=\frac{16}{24^2}; \frac{4}{24^2}
+	\end{aligned}
+\end{equation}
+
+sehingga $\lambda_1=\frac{256}{24^2}$, $\lambda_2=\frac{16}{24^2}$, dan $
+\lambda_3=\lambda_4=\frac{4}{24^2}$. Maka
+
+\begin{equation}
+	C_{AB}=\frac{1}{144}(64-4-1-1)=\frac{58}{144}=\frac{29}{72}
+\end{equation}
+
+\textbf{Contoh 5}
+\begin{equation}
+	\rho = \frac{1}{2}\rho_1 + \frac{1}{4}\rho_2
+	+\frac{1}{6}\rho_3+\frac{1}{12}\rho_4\\
+	=\frac{1}{24}
+	\begin{pmatrix}
+		9&0&0&3\\
+		0&3&1&0\\
+		0&1&3&0\\
+		3&0&0&9
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+
+maka 
+
+\begin{equation}
+	\rho \tilde{\rho} =\frac{1}{24^2}
+	\begin{pmatrix}
+		90&0&0&54\\
+		0&10&6&0\\
+		0&6&10&0\\
+		54&0&0&90
+	\end{pmatrix}
+\end{equation}
+
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=(a_{11}a_{44}-a_{14}a_{41})(a_{22}a_{33}-a_{23}a_{32})\\
+		&=[(\frac{90}{24^2}-\lambda)^2-\frac{54^2}{24^4}][(\frac{10}{24^2}-\lambda)^2-\frac{6^2}{24^4}]\\
+		&=[\lambda^2-\frac{180}{24^2}\lambda+\frac{72^2}{24^4}][\lambda^2-\frac{20}{24^2}\lambda+\frac{8^2}{24^4}]\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\lambda_{1,2}
+		&=\frac{180}{2\times24^2}\pm\frac{2}{2\times24^2}\sqrt{90^2-72^2}\\
+		&=\frac{90}{24^2}\pm\frac{54}{24^2}\\
+		&=\frac{144}{24^2}; \frac{36}{24^2}\\
+		&=(\frac{12}{24})^2; (\frac{6}{24})^2\\
+		&=\frac{1}{4}; \frac{1}{16}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\lambda_{3,4}
+		&=\frac{20}{2\times24^2}\pm\frac{2}{2\times24^2}\sqrt{10^2-8^2}\\
+		&=\frac{10}{24^2}\pm\frac{6}{24^2}\\
+		&=\frac{16}{24^2}; \frac{4}{24^2}\\
+		&=(\frac{4}{24})^2; (\frac{2}{24})^2\\
+		&=\frac{1}{36}; \frac{1}{144}
+	\end{aligned}
+\end{equation}
+
+sehingga $\lambda_1=\frac{1}{4}$, $\lambda_2=\frac{1}{16}$, $\lambda_3=\frac{1}{36}$, dan $\lambda_4=\frac{1}{144}$. Maka
+
+\begin{equation}
+	C_{AB}=\frac{1}{144}(36-9-4-1)=\frac{22}{144}=\frac{11}{72}
+\end{equation}
+
+\subsection{Perumusan Umum}
+\begin{enumerate}
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+(1-x)\rho_2\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				1&0&0&2x-1\\
+				0&0&0&0\\
+				0&0&0&0\\
+				2x-1&0&0&1
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				1+(2x-1)^2&0&0&2(2x-1)\\
+				0&0&0&0\\
+				0&0&0&0\\
+				2(2x-1)&0&0&1+(2x-1)^2
+			\end{pmatrix}\\
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2-4x+4x^2&0&0&2(2x-1)\\
+				0&0&0&0\\
+				0&0&0&0\\
+				2(2x-1)&0&0&2-4x+4x^2
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(x^2-x+\frac{1}{2}-\lambda)^2-\frac{(2x-1)^2}{4}]\lambda^2\\
+			&=\lambda^2-2(\frac{1}{2}-x+x^2)\lambda+(\frac{1}{2}-x+x^2)^2-\frac{(1-4x-4x^2)}{4}\\
+			&+(\frac{1}{4}+x^2+x^4-x+x^2-2x^3)\\
+			&=\lambda^2-2(\frac{1}{2}-x+x^2)\lambda+x^2(1-2x+x^2)\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{1,2}
+			&=(\frac{1}{2}-x+x^2)\pm\frac{2}{2}\sqrt{(\frac{1}{2}-x+x^2)^2-(x^2-2x^3+x^4)}\\
+			&=(\frac{1}{2}-x+x^2)\pm\frac{2}{2}\sqrt{(\frac{1}{4}+x^2+x^4-x+x^2-2x^3)-(x^2-2x^3+x^4)}\\
+			&=(\frac{1}{2}-x+x^2)\pm\frac{1}{2}\sqrt{1-4x+4x^2}\\
+			&=(\frac{1}{2}-x+x^2)\pm\frac{1}{2}\sqrt{(1-2x)^2}\\
+			&=(\frac{1}{2}-x+x^2)\pm(\frac{1}{2}-x)\\
+			&=x^2; 1-2x+x^2\\
+			&=x^2; (1-x)^2
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x^2$, $\lambda_2=(1-x)^2$, dan $\lambda_3=\lambda_4=0$.
+	
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+(1-x)\rho_4\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				x&0&0&x\\
+				0&(1-x)&(x-1)&0\\
+				0&(x-1)&(1-x)&0\\
+				x&0&0&x
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2x^2&0&0&2x^2\\
+				0&2(1-x)^2&-2(1-x)^2&0\\
+				0&-2(1-x)^2&2(1-x)^2&0\\
+				2x^2&0&0&2x^2
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	Maka
+	
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(\frac{x^2}{2}-\lambda)^2-\frac{x^4}{4}][(\frac{(1-x)^2}{2}-\lambda)^2-\frac{(1-x)^4}{4}]\\
+			&=[\lambda^2-x^2\lambda][\lambda^2-(1-x)^2\lambda]\\
+			&=(\lambda-x^2)(\lambda-(1-x)^2)\lambda^2\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x^2$, $\lambda_2=(1-x)^2$, dan $\lambda_3=\lambda_4=0$.
+	
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+y\rho_2+(1-x-y)\rho_3\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				x+y&0&0&x-y\\
+				0&1-x-y&1-x-y&0\\
+				0&1-x-y&1-x-y&0\\
+				x-y&0&0&x+y
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				(x+y)^2+(x-y)^2&0&0&2(x^2-y^2)\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				2(x^2-y^2)&0&0&(x+y)^2+(x-y)^2
+			\end{pmatrix}\\
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2(x^2+y^2)&0&0&2(x^2-y^2)\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				2(x^2-y^2)&0&0&2(x^2+y^2)
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	Maka
+	
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(\frac{x^2+y^2}{2}-\lambda)^2-\frac{(x^2-y^2)^2}{4}][(\frac{(1-x-y)^2}{2}-\lambda)^2-\frac{(1-x-y)^4}{4}]\\
+			&=[\lambda^2-(x^2+y^2)\lambda+\frac{(x^2+y^2)^2-(x^2-y^2)^2}{4}][\lambda-(1-x-y)^2]\lambda\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{1,2}
+			&=\frac{x^2+y^2}{2}\pm\frac{1}{2}\sqrt{(x^2+y^2)^2-((x^2+y^2)^2-(x^2-y^2)^2)}\\
+			&=\frac{x^2+y^2}{2}\pm\frac{x^2-y^2}{2}\\
+			&=x^2; y^2
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x^2$, $\lambda_2=y^2$, $\lambda_3=(1-x-y)^2$, dan $\lambda_4=0$.
+	
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+y\rho_2+(1-x-y-z)\rho_3+z\rho_4\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				x+y&0&0&x-y\\
+				0&1-x-y&1-x-y-2z&0\\
+				0&1-x-y-2z&1-x-y&0\\
+				x-y&0&0&x+y
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2(x^2+y^2)&0&0&2(x^2-y^2)\\
+				0&(1-x-y)^2+(1-x-y-2z)^2&2(1-x-y)(1-x-y-2z)&0\\
+				0&2(1-x-y)(1-x-y-2z)&(1-x-y)^2+(1-x-y-2z)^2&0\\
+				2(x^2-y^2)&0&0&2(x^2+y^2)
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	Maka
+	
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(\frac{x^2+y^2}{2}-\lambda)^2-\frac{(x^2-y^2)^2}{4}][(\frac{(1-x-y)^2+(1-x-y-2z)^2}{4}-\lambda)^2\\
+			&-\frac{(1-x-y)^2(1-x-y-2z)^2}{4}]\\
+			&=[(\frac{x^2+y^2}{2}-\lambda)^2-\frac{(x^2-y^2)^2}{4}][\lambda^2-\frac{(1-x-y)^2+(1-x-y-2z)^2}{2}\lambda\\
+			&+(\frac{(1-x-y)^2+(1-x-y-2z)^2}{4})^2-\frac{(1-x-y)^2(1-x-y-2z)^2}{4}]\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{1,2}
+			&=\frac{x^2+y^2}{2}\pm\frac{1}{2}\sqrt{(x^2+y^2)^2-((x^2+y^2)^2-(x^2-y^2)^2)}\\
+			&=\frac{x^2+y^2}{2}\pm\frac{x^2-y^2}{2}\\
+			&=x^2; y^2
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{3,4}
+			&=\frac{(1-x-y)^2+(1-x-y-2z)^2}{4}\pm\frac{1}{2}\sqrt{(1-x-y)^2(1-x-y-2z)^2}\\
+			&=\frac{(1-x-y)^2+(1-x-y-2z)^2}{4}\pm\frac{2{(1-x-y)(1-x-y-2z)}}{4}\\
+			&=(\frac{(1-x-y)+(1-x-y-2z)}{2})^2; (\frac{(1-x-y)-(1-x-y-2z)}{2})^2\\
+			&=(1-x-y-z)^2; z^2
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x^2$, $\lambda_2=y^2$, $\lambda_3=z^2$, dan $\lambda_4=(1-x-y-z)^2$.
+\end{enumerate}
+
+
+
+\subsection{Studi Kasus}
+\begin{enumerate}
+	\item Jika $
+	\ket{\psi_1}=0,1\ket{00}+0,5\ket{01}+0,5\ket{10}+0,7\ket{11}$
+	
+	maka
+	
+	\begin{equation}
+		\rho_1=\frac{1}{100}(\ket{00}+5\ket{01}+5\ket{10}+7\ket{11})(\bra{00}+5\bra{01}+5\bra{10}+7\bra{11})
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			\rho_A
+			&=I\otimes\bra{0}\rho_1I\otimes\ket{0} +I\otimes\bra{1}\rho_1I\otimes\ket{1}\\
+			&=\frac{1}{100}(\ket{0}+5\ket{1})(\bra{0}+5\bra{1})+\frac{1}{100}(5\ket{0}+7\ket{1})(5\bra{0}+7\bra{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				26&40\\
+				40&74
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho_B
+			&=\bra{0}\rho_1I\otimes\ket{0}\otimes I +\bra{1}\rho_1I\otimes\ket{1}\otimes I\\
+			&=\frac{1}{100}(\ket{0}+5\ket{1})(\bra{0}+5\bra{1})+\frac{1}{100}(5\ket{0}+7\ket{1})(5\bra{0}+7\bra{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				26&40\\
+				40&74
+			\end{pmatrix}\\
+			&=\rho_A
+		\end{aligned}
+	\end{equation}
+	
+	maka jelas $\det\rho_A=\det\rho_B$
+	
+	\item Jika $
+	\ket{\psi_2}=0,7\ket{00}+0,5\ket{01}+0,5\ket{10}+0,1\ket{11}$
+	
+	maka
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho_A
+			&=\frac{1}{100}(7\ket{0}+5\ket{1})(7\bra{0}+5\bra{1})+\frac{1}{100}(5\ket{0}+\ket{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				74&40\\
+				40&26
+			\end{pmatrix}\\
+			&=\rho_B
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\det\rho_{A}=0,74\times0,26-0,16=0,00324
+	\end{equation}
+	
+	diperoleh $\rho_{A1}\neq\rho_{A2}$ tetapi $\det\rho_{A1}=\det\rho_{A2}$.
+	
+	\item Jika $
+	\ket{\psi_3}=0,5\ket{00}+0,1\ket{01}+0,7\ket{10}+0,5\ket{11}$
+	
+	maka
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho_A
+			&=\frac{1}{100}(5\ket{0}+7\ket{1})(5\bra{0}+7\bra{1})+\frac{1}{100}(\ket{0}+5\ket{1})(\bra{0}+5\bra{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				26&40\\
+				40&74
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho_B
+			&=\frac{1}{100}(5\ket{0}+\ket{1})(5\bra{0}+\bra{1})+\frac{1}{100}(7\ket{0}+5\ket{1})(7\bra{0}+5\bra{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				74&40\\
+				40&26
+			\end{pmatrix}\\
+			&\neq\rho_A
+		\end{aligned}
+	\end{equation}
+	
+	tetapi $\det\rho_A=\det\rho_B=0,0324$
+	
+	\item Jika $
+	\ket{\psi_4}=0,1\ket{00}+0,5\ket{01}+0,7\ket{10}+0,5\ket{11}$
+	maka
+	\begin{equation}
+		\begin{aligned}
+			\rho_A
+			&=\frac{1}{100}(\ket{0}+7\ket{1})(\bra{0}+7\bra{1})+\frac{1}{100}(5\ket{0}+5\ket{1})(5\bra{0}+5\bra{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				26&32\\
+				32&74
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\det\rho_{A}=0,1924-0,1024=0,09
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho_B
+			&=\frac{1}{100}(\ket{0}+5\ket{1})(\bra{0}+5\bra{1})+\frac{1}{100}(7\ket{0}+5\ket{1})(7\bra{0}+5\bra{1})\\
+			&=\frac{1}{100}
+			\begin{pmatrix}
+				50&40\\
+				40&50
+			\end{pmatrix}\\
+			&\neq\rho_A
+		\end{aligned}
+	\end{equation}
+	
+	tetapi $\det\rho_B=0,25-0,16=0,09=\det\rho_A$
+\end{enumerate}
+
+\textbf{Kesimpulan, untuk setiap kasus secara umum $\rho_{A}\neq\rho_{B}$, tetapi $\det\rho_A=\det\rho_B$, buktinya:}
+
+\subsection{Keadaan Dua Qubit}
+\begin{equation}
+	|\psi\rangle = \sum_{i j} c_{i j} | i j \rangle
+\end{equation}
+
+\begin{equation}
+	\rho = \sum_{i j} \sum_{k l} c_{i j} c^{*}_{k l} | i j \rangle \langle k l |
+\end{equation}
+
+Maka
+
+\begin{equation}
+	\rho_A
+	= \sum_{i k} \sum_{m} c_{i m} c^{*}_{k m} | i \rangle \langle k |
+	= \begin{pmatrix}
+		\sum_m |c_{0m}|^2 & \sum_m c_{0m} c^{*}_{1m} \\
+		\sum_n c_{1n} c^{*}_{0n} & \sum_n |c_{1n}|^2
+	\end{pmatrix}
+\end{equation}
+
+dan determinan
+\begin{equation}
+	\begin{aligned}
+		\det \rho_A
+		&= \sum_{m n} |c_{0m}|^2 |c_{1n}|^2
+		- \sum_{m n} c_{0m} c_{1n} c^{*}_{1m} c^{*}_{0n}\\
+		&= (|c_{00}|^2 + |c_{01}|^2)(|c_{10}|^2 + |c_{11}|^2) - c_{00} c_{10} c^{*}_{10} c^{*}_{00} - c_{00} c_{11} c^{*}_{10} c^{*}_{01}\\
+		&- c_{01} c_{10} c^{*}_{11} c^{*}_{00} - c_{01} c_{11} c^{*}_{11} c^{*}_{01}\\
+		&= |c_{00}|^2 |c_{10}|^2
+		+ |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		+ |c_{01}|^2 |c_{11}|^2- |c_{00}|^2 |c_{10}|^2\\
+		&- c_{00} c_{11} c^{*}_{10} c^{*}_{01}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}- |c_{01}|^2 |c_{11}|^2\\
+		&= |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		- c_{00} c_{11} c^{*}_{10} c^{*}_{01}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}
+	\end{aligned}
+\end{equation}
+
+Sedangkan
+\begin{equation}
+	\rho_B
+	= \sum_{j l} \sum_m c_{m j} c^{*}_{m l} | j \rangle \langle l |
+	= \begin{pmatrix}
+		\sum_m |c_{m0}|^2 & \sum_m c_{m0} c^{*}_{m1} \\
+		\sum_n c_{n1} c^{*}_{n0} & \sum_n |c_{n1}|^2
+	\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\det \rho_B
+		&= \sum_m |c_{m0}|^2 \sum_n |c_{n1}|^2
+		- \left( \sum_m c_{m0} c^{*}_{m1} \right)
+		\left( \sum_n c_{n1} c^{*}_{n0} \right)\\
+		&= (|c_{00}|^2 + |c_{10}|^2)(|c_{01}|^2 + |c_{11}|^2)
+		- (c_{00} c^{*}_{01} + c_{10} c^{*}_{11})
+		(c_{01} c^{*}_{00} + c_{11} c^{*}_{10})\\
+		&= |c_{00}|^2 |c_{01}|^2
+		+ |c_{00}|^2 |c_{11}|^2
+		+ |c_{10}|^2 |c_{01}|^2
+		+ |c_{10}|^2 |c_{11}|^2- |c_{00}|^2 |c_{01}|^2\\
+		&- c_{00} c_{11} c^{*}_{01} c^{*}_{10}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}- |c_{10}|^2 |c_{11}|^2\\
+		&= |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		- c_{00} c_{11} c^{*}_{01} c^{*}_{10}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}\\
+		&= \det \rho_A
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\det \rho_A
+		&= |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		- c_{00} c_{11} c^{*}_{01} c^{*}_{10}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}\\
+		&=c_{00} c_{11} c^{*}_{00} c^{*}_{11}
+		+ c_{01} c_{10} c^{*}_{01} c^{*}_{10}-c_{00} c_{11} c^{*}_{01} c^{*}_{10}-c^{*}_{00} c^{*}_{11}c_{01} c_{10} \\
+		&= c_{00}c_{11}(c^{*}_{00} c^{*}_{11} - c^{*}_{01} c^{*}_{10})+c_{01}c_{10}(c^{*}_{01} c^{*}_{10} - c^{*}_{00} c^{*}_{11})\\
+		&= (c_{00} c_{11} - c_{01} c_{10})
+		(c^{*}_{00} c^{*}_{11} - c^{*}_{01} c^{*}_{10})\\
+		&= (c_{00} c_{11} - c_{01} c_{10})
+		(c_{00} c_{11} - c_{01} c_{10})^{*}\\
+		&= \det |c| (\det |c|)^{*}\\
+		&= |\det c|^2
+	\end{aligned}
+\end{equation}
+
+Sekarang kembali ke $\mathrm{Tr}\,\rho \tilde{\rho}$
+
+\begin{equation}
+	|\psi\rangle
+	= c_{00}|00\rangle + c_{01}|01\rangle
+	+ c_{10}|10\rangle + c_{11}|11\rangle
+\end{equation}
+
+maka
+
+\begin{equation}
+	\begin{aligned}
+		|\tilde{\psi}\rangle
+		&= (\sigma_y \otimes \sigma_y)|\psi\rangle^{*}\\
+		&= -c^{*}_{00}|11\rangle
+		+ c^{*}_{01}|10\rangle
+		+ c^{*}_{10}|01\rangle
+		- c^{*}_{11}|00\rangle\\
+		&= -c^{*}_{11}|00\rangle
+		+ c^{*}_{10}|01\rangle
+		+ c^{*}_{01}|10\rangle
+		- c^{*}_{00}|11\rangle
+	\end{aligned}
+\end{equation}
+
+dan
+
+\begin{equation}
+	\begin{aligned}
+		\langle \psi | \tilde{\psi} \rangle
+		&= -c^{*}_{00} c^{*}_{11}
+		+ c^{*}_{01} c^{*}_{10}
+		+ c^{*}_{10} c^{*}_{01}
+		- c^{*}_{11} c^{*}_{00}\\
+		&= 2 (c_{01} c_{10} - c_{00} c_{11})^{*}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\rho \tilde{\rho}
+		&= |\psi\rangle \langle\psi| \tilde{\psi}\rangle \langle\tilde{\psi}|\\
+		&= -2 (c_{00} c_{11} - c_{01} c_{10})^{*}
+		|\psi\rangle \langle\tilde{\psi}|
+	\end{aligned}
+\end{equation}
+
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho \tilde{\rho}
+		&= \sum_{p q} \langle p q | \rho \tilde{\rho} | p q \rangle\\
+		&= -2(c_{00}c_{11}-c_{01}c_{10})^{*} \sum_{p q} \langle p q \ket{\psi}\bra{\psi} p q \rangle\\
+		&=-2(c_{00} c_{11} - c_{01} c_{10})^{*}(-c_{00}c_{11}+c_{01}c_{10}+c_{10}c_{01}-c_{11}c_{00})\\
+		&=-2(c_{00} c_{11} - c_{01} c_{10})^{*} {-2(c_{00} c_{11} - c_{01} c_{10})}\\
+		&= 4 (c_{00} c_{11} - c_{01} c_{10})
+		(c_{00} c_{11} - c_{01} c_{10})^{*}\\
+		&= 4 \det c (\det c)^{*}\\
+		&= 4 |\det c|^2\\
+		&= 4 \det \rho_A
+	\end{aligned}
+\end{equation}
+
+\subsection{Keadaan Tiga Qubit}
+\begin{equation}
+	|\psi\rangle
+	= \sum_{i j k} c_{i j k} | i j k \rangle
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\rho
+		&= |\psi\rangle \langle \psi| \\
+		&= \sum_{i j k} \sum_{p q r}
+		c_{i j k} c^{*}_{p q r}
+		| i j k \rangle \langle p q r |
+	\end{aligned}
+\end{equation}
+
+dan
+\begin{equation}
+	\begin{aligned}
+		\rho_{AB}
+		&= \sum_m I \otimes I \otimes \langle m 
+		\, |\psi\rangle \langle \psi | \,
+		I \otimes I \otimes | m \rangle \\
+		&= \sum_{i j} \sum_{k l}\sum_m
+		c_{i j m} c^{*}_{k l m}
+		| i j \rangle \langle k l |
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\rho^{*}_{AB}
+	= \sum_{i j} \sum_{k l} \sum_m
+	c^{*}_{i j m} c_{k l m}
+	| i j \rangle \langle k l |
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\tilde{\rho}_{AB}
+		&= (\sigma_y \otimes \sigma_y)\,
+		\rho^{*}_{AB}\,
+		(\sigma_y \otimes \sigma_y) \\
+		&= \sum_m
+		\Big(
+		- c^{*}_{11m} |00\rangle
+		+ c^{*}_{10m} |01\rangle
+		+ c^{*}_{01m} |10\rangle
+		- c^{*}_{00m} |11\rangle
+		\Big) \\
+		&\quad \times
+		\Big(
+		- c_{11m} \langle 00|
+		+ c_{10m} \langle 01|
+		+ c_{01m} \langle 10|
+		- c_{00m} \langle 11|
+		\Big)
+	\end{aligned}
+\end{equation}
+
+maka
+\begin{equation}
+	\begin{aligned}
+		\rho_{AB} \tilde{\rho}_{AB}
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)
+		\left(
+		c^{*}_{00m} \langle 00|
+		+ c^{*}_{01m} \langle 01|
+		+ c^{*}_{10m} \langle 10|
+		+ c^{*}_{11m} \langle 11|
+		\right) \\
+		&\quad \times
+		\left(
+		- c^{*}_{11n} |00\rangle
+		+ c^{*}_{10n} |01\rangle
+		+ c^{*}_{01n} |10\rangle
+		- c^{*}_{00n} |11\rangle
+		\right) \\
+		&\quad \times
+		\left(
+		- c_{11n} \langle 00|
+		+ c_{10n} \langle 01|
+		+ c_{01n} \langle 10|
+		- c_{00n} \langle 11|
+		\right)\\
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)
+		\left(
+		- c^{*}_{00m} c^{*}_{11n}
+		+ c^{*}_{01m} c^{*}_{10n}
+		+ c^{*}_{10m} c^{*}_{01n}
+		- c^{*}_{11m} c^{*}_{00n}
+		\right) \\
+		&\quad \times
+		\left(
+		- c_{11n} \langle 00|
+		+ c_{10n} \langle 01|
+		+ c_{01n} \langle 10|
+		- c_{00n} \langle 11|
+		\right)\\
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)^{*}_{mn}
+		\left(
+		c_{00m} \ket{00}
+		+ c_{01m} \ket{01}
+		+ c_{10m} \ket{10}
+		- c_{11m} \ket{11}
+		\right) \\
+		&\quad \times
+		\left(
+		- c_{11n} \langle 00|
+		+ c_{10n} \langle 01|
+		+ c_{01n} \langle 10|
+		- c_{00n} \langle 11|
+		\right)
+	\end{aligned}
+\end{equation}
+
+dan
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}
+		&= \sum_{i j}
+		\langle i j |
+		\rho_{AB} \tilde{\rho}_{AB}
+		| i j \rangle \\
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)^{*}_{mn}
+		\left(
+		- c_{00m} c_{11n}
+		+ c_{01m} c_{10n}
+		+ c_{10m} c_{01n}
+		- c_{11m} c_{00n}
+		\right) \\
+		&= (-c^{*}_{000} c^{*}_{110}
+		+ c^{*}_{010} c^{*}_{100}
+		+ c^{*}_{100} c^{*}_{010}
+		- c^{*}_{110} c^{*}_{000})
+		(-c_{000} c_{110}
+		+ c_{010} c_{100}
+		+ c_{100} c_{010}
+		- c_{110} c_{000}) \\
+		&\quad + (-c^{*}_{000} c^{*}_{111}
+		+ c^{*}_{010} c^{*}_{101}
+		+ c^{*}_{100} c^{*}_{011}
+		- c^{*}_{110} c^{*}_{001})
+		(-c_{000} c_{111}
+		+ c_{010} c_{101}
+		+ c_{100} c_{011}
+		- c_{110} c_{001}) \\
+		&\quad + (-c^{*}_{001} c^{*}_{110}
+		+ c^{*}_{011} c^{*}_{100}
+		+ c^{*}_{101} c^{*}_{010}
+		- c^{*}_{111} c^{*}_{000})
+		(-c_{001} c_{110}
+		+ c_{011} c_{100}
+		+ c_{101} c_{010}
+		- c_{111} c_{000}) \\
+		&\quad + (-c^{*}_{001} c^{*}_{111}
+		+ c^{*}_{011} c^{*}_{101}
+		+ c^{*}_{101} c^{*}_{011}
+		- c^{*}_{111} c^{*}_{001})
+		(-c_{001} c_{111}
+		+ c_{011} c_{101}
+		+ c_{101} c_{011}
+		- c_{111} c_{001})\\
+		&= 4 (c^{*}_{000} c^{*}_{110}
+		- c^{*}_{010} c^{*}_{100})
+		(c_{000} c_{110}
+		- c_{010} c_{100}) \\
+		&\quad + (2 (-c_{000} c_{111}
+		+ c_{010} c_{101}
+		+ c_{100} c_{011}
+		- c_{110} c_{001})) \\
+		&\qquad \times
+		(-c^{*}_{000} c^{*}_{111}
+		+ c^{*}_{010} c^{*}_{101}
+		+ c^{*}_{100} c^{*}_{011}
+		- c^{*}_{110} c^{*}_{001}) \\
+		&\quad + 4 (c^{*}_{001} c^{*}_{111}
+		- c^{*}_{011} c^{*}_{101})
+		(c_{001} c_{111}
+		- c_{011} c_{101})\\
+		&= 4 |c_{AB0}^{*}| |c_{AB0}|+ 4 \det c_{AB1} \det c_{AB1}^{*}+2(-(-c_{000}c_{111}-c_{010}c_{101})\\
+		&-(-c_{001}c_{110}-c_{011}c_{100}))(-(-c^{*}_{000} c^{*}_{111}-c^{*}_{010} c^{*}_{101})-(c_{001}c_{110}-c_{011}c_{100}))\\
+		&= 4 |\det c_{AB0}|^2
+		+ 4 |\det c_{AB1}|^2
+		+ 2 (\det c_{AB0}^1 + \det c_{AB1}^0)(\det c^{*1}_{AB0} + \det c^{*0}_{AB1})
+	\end{aligned}
+\end{equation}
+
+\section{Penerapan Matriks Koefisien pada Keadaan GHZ}
+\subsection{$\ket{GHZ}=\frac{1}{\sqrt{2}}(\ket{000}+\ket{111})$}
+dengan $c_{000}=c_{111}=\frac{1}{\sqrt{2}}$ dan $c_{001}=c_{010}=c_{100}=c_{011}=c_{101}=c_{110}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{2}} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = 0$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & \frac{1}{\sqrt{2}}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{2}} & 0 \\
+		0 & \frac{1}{\sqrt{2}}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = \frac{1}{2}$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\begin{aligned}
+		&\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4 |\det c_{AB0}|^2+ 4 |\det c_{AB1}|^2+ 2 (\det c_{AB0}^1 + \det c_{AB1}^0)(\det c^{*1}_{AB0} + \det c^{*0}_{AB1})\\
+		&=0+0+2(\frac{1}{2})(\frac{1}{2})\\
+		&=\frac{1}{2}
+	\end{aligned}
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{2}} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = 0$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & \frac{1}{\sqrt{2}}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{2}} & 0 \\
+		0 & \frac{1}{\sqrt{2}}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = \frac{1}{2}$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\frac{1}{2}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{2}} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = 0$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & \frac{1}{\sqrt{2}}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{2}} & 0 \\
+		0 & \frac{1}{\sqrt{2}}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = \frac{1}{2}$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=2(\frac{1}{2})(\frac{1}{2})=\frac{1}{2}
+\end{equation}
+
+\subsection{$\ket{GHZ}=\cos\theta\,\ket{000} + \sin\theta\,\ket{111}$}
+dengan $c_{000}=\cos\theta$, $c_{111}=sin\theta$, dan $c_{001}=c_{010}=c_{100}=c_{011}=c_{101}=c_{110}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = 0$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=\frac{\sin^2 2\theta}{2}	
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = 0$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\frac{\sin^2 2\theta}{2}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = 0$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=\frac{\sin^2 2\theta}{2}
+\end{equation}
+
+\section{Penerapan Matriks Koefisien pada Keadaan W dan Keadaan Lain}
+\subsection{ $\ket{W}=\frac{1}{\sqrt{3}}(\ket{001}+\ket{010}+\ket{100})$}
+dengan $c_{001}=c_{010}=c_{100}=\frac{1}{\sqrt{3}}$ dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{\sqrt{3}} \\
+		\frac{1}{\sqrt{3}} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = -\frac{1}{3}$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{3}} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{\sqrt{3}} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = 0$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{3}} & 0 \\
+		\frac{1}{\sqrt{3}} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{1}{3})^2=4(\frac{1}{9})=\frac{4}{9}
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{\sqrt{3}} \\
+		\frac{1}{\sqrt{3}} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = -\frac{1}{3}$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{3}} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{\sqrt{3}} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = 0$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{3}} & 0 \\
+		\frac{1}{\sqrt{3}} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\frac{4}{9}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{\sqrt{3}} \\
+		\frac{1}{\sqrt{3}} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = -\frac{1}{3}$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{3}} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{\sqrt{3}} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = 0$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{\sqrt{3}} & 0 \\
+		\frac{1}{\sqrt{3}} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=\frac{4}{9}
+\end{equation}
+
+\subsection{ $\ket{W}=\sin\theta\cos\varphi\ket{001}+\sin\theta\sin\varphi\ket{010}+\cos\theta\ket{100}$}
+dengan $c_{001}=\sin\theta\cos\varphi$, $=c_{010}\sin\theta\sin\varphi$, $c_{100}=\cos\theta$, dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \sin\theta\sin\varphi \\
+		\cos\theta & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = \sin\theta\cos\theta\cos\varphi$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\sin\theta\cos\varphi & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \sin\theta\sin\varphi \\
+		0 & \sin\theta
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\sin\theta\cos\varphi & 0 \\
+		\cos\theta & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi	
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \sin\theta\cos\varphi \\
+		\cos\theta & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = \sin\theta\cos\theta\cos\varphi$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\sin\theta\sin\varphi & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \sin\theta\cos\varphi \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = 0$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\sin\theta\sin\varphi & 0 \\
+		\cos\theta & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \sin\theta\cos\varphi \\
+		\sin\theta\sin\varphi & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = \sin^2\theta\sin\varphi\cos\varphi$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \sin\theta\cos\varphi \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = 0$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\cos\theta & 0 \\
+		\sin\theta\sin\varphi & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi
+\end{equation}
+
+\subsection{$\ket{W}=\frac{1}{\sqrt{3}}(\ket{001}+\ket{010}+\ket{100})$}
+dengan $\cos\theta=\frac{1}{\sqrt{3}}$, $\sin\theta=\sqrt{\frac{2}{3}}$, dan $\sin\varphi=\cos\varphi=\frac{1}{\sqrt{2}}=\pi/4$
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{2}{3})(\frac{1}{3})(\frac{1}{2})=\frac{4}{9}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{2}{3})(\frac{1}{3})(\frac{1}{2})=\frac{4}{9}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{4}{9})(\frac{1}{2})(\frac{1}{2})=\frac{4}{9}
+\end{equation}
+
+\subsection{$\ket{W}=\frac{1}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+dengan $\cos\theta=\frac{2}{3}$, $\sin\theta={\frac{\sqrt{5}}{3}}$, $\cos\varphi=\frac{1}{\sqrt{5}}$, dan $\sin\varphi=\frac{2}{\sqrt{5}}$
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{4}{5})=\frac{64}{81}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{1}{5})=\frac{16}{81}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{25}{81})(\frac{4}{5})(\frac{1}{5})=\frac{16}{81}
+\end{equation}
+
+\subsection{ $\ket{\psi}=\frac{1}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+dengan $c_{001}=\frac{1}{3}$, $c_{010}=c_{100}=\frac{2}{3}$, dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = -\frac{4}{9}$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = 0$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{3} & 0 \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{4}{9})^2=\frac{64}{81}
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{3} \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = -\frac{2}{9}$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = 0$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4|\det c_{A0C}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{3} \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = -\frac{2}{9}$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = 0$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4|\det c_{0BC}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+\end{equation}
+
+\subsection{ $\ket{W}=\frac{2}{3}\ket{001}+\frac{1}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+dengan $\cos\theta=\frac{2}{3}$, $\sin\theta=\frac{\sqrt{5}}{3}$, $\cos\varphi=\frac{2}{\sqrt{5}}$, dan $\sin\varphi=\frac{1}{\sqrt{5}}$
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{1}{5})=\frac{16}{81}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{4}{5})=\frac{64}{81}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{25}{81})(\frac{1}{5})(\frac{4}{5})=\frac{16}{81}
+\end{equation}
+
+\subsection{ $\ket{W}=\frac{2}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{1}{3}\ket{100}$}
+dengan $\cos\theta=\frac{1}{3}$, $\sin\theta=\frac{2\sqrt{2}}{3}$, dan $\cos\varphi=\sin\varphi=\frac{1}{\sqrt{2}}$
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{8}{9})(\frac{1}{9})(\frac{1}{2})=\frac{16}{81}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{8}{9})(\frac{1}{9})(\frac{1}{2})=\frac{16}{81}
+\end{equation}
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{8}{9})^2(\frac{1}{2})(\frac{1}{2})=\frac{64}{81}
+\end{equation}
+
+\subsection{ $\ket{W}=\frac{2}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{1}{3}\ket{100}$}
+dengan $c_{001}=c_{010}=\frac{2}{3}$, $c_{100}=\frac{1}{3}$ dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		\frac{1}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = -\frac{2}{9}$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = 0$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		\frac{1}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		\frac{1}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = -\frac{2}{9}$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = 0$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		\frac{1}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4|\det c_{A0C}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = -\frac{4}{9}$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = 0$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{3} & 0 \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4|\det c_{0BC}|^2=4(-\frac{4}{9})^2=\frac{64}{81}
+\end{equation}
+
+\subsection{ $\ket{W}=\frac{2}{3}\ket{001}+\frac{1}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+dengan $c_{001}=c_{100}=\frac{2}{3}$, $c_{010}=\frac{1}{3}$ dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{3} \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = -\frac{2}{9}$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = 0$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = -\frac{4}{9}$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = 0$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{3} & 0 \\
+		\frac{2}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4|\det c_{A0C}|^2=4(-\frac{4}{9})^2=\frac{64}{81}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		\frac{1}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = -\frac{2}{9}$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{2}{3} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = 0$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{2}{3} & 0 \\
+		\frac{1}{3} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4|\det c_{0BC}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+\end{equation}
+
+\subsection{ $\ket{W}=\frac{1}{2}(\ket{000}-\ket{010}+\ket{101}-\ket{111})$}
+dengan $c_{000}=-c_{010}=c_{101}=-c_{111}=\frac{1}{2}$ dan $c_{001}=c_{100}=c_{011}=c_{110}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & -\frac{1}{2} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = 0$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		\frac{1}{2} & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & -\frac{1}{2} \\
+		\frac{1}{2} & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = 0$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$
+Maka
+
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=0
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		0 & \frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = \frac{1}{4}$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		-\frac{1}{2} & 0 \\
+		0 & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = \frac{1}{4}$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		0 & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = -\frac{1}{4}$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		-\frac{1}{2} & 0 \\
+		0 & \frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = -\frac{1}{4}$.
+
+Maka
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}
+		&=4|\det c_{A0C}|^2+4|\det c_{A1C}|^2+2(\det c_{A1C}^0+ \det c_{A0C}^1)(\det c^{*0}_{A1C} + \det c^{*1}_{A0C})\\
+		&=4(\frac{1}{4})^2+4(\frac{1}{4})^2+2(-\frac{1}{4}-\frac{1}{4})(-\frac{1}{4}-\frac{1}{4})\\
+		&=\frac{1}{4}+\frac{1}{4}+2(-\frac{1}{2})(-\frac{1}{2})\\
+		&=1
+	\end{aligned}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		-\frac{1}{2} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = 0$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{2} \\
+		0 & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		0 & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = -\frac{1}{4}$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & \frac{1}{2} \\
+		-\frac{1}{2} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = \frac{1}{4}$.
+
+Maka
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}
+		&=4|\det c_{0BC}|^2+4|\det c_{1BC}|^2+2(\det c_{1BC}^0+ \det c_{0BC}^1)(\det c^{*0}_{1BC} + \det c^{*1}_{0BC})\\
+		&=4(0)+4(0)+2(-\frac{1}{4}+\frac{1}{4})(-\frac{1}{4}+\frac{1}{4})\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+\subsection{ $\ket{\psi}=\frac{1}{2}(\ket{000}+\ket{001}+\ket{100}-\ket{101})$}
+dengan $c_{000}=-c_{001}=c_{100}=-c_{101}=\frac{1}{2}$ dan $c_{010}=c_{111}=c_{011}=c_{110}=0$.
+
+Untuk $\rho_{AB}$, maka
+\begin{equation}
+	c_{AB0}=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		\frac{1}{2} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0} = 0$
+
+\begin{equation}
+	c_{AB1}=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		-\frac{1}{2} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1} = 0$
+
+\begin{equation}
+	c_{AB1}^0=
+	\begin{pmatrix}
+		c_{000} & c_{010} \\
+		c_{101} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		-\frac{1}{2} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB1}^0 = 0$
+
+\begin{equation}
+	c_{AB0}^1=
+	\begin{pmatrix}
+		c_{001} & c_{011} \\
+		c_{100} & c_{110}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & 0 \\
+		\frac{1}{2} & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{AB0}^1 = 0$.
+
+Maka
+\begin{equation}
+	\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=0
+\end{equation}
+
+Untuk $\rho_{AC}$, maka
+\begin{equation}
+	c_{A0C}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & \frac{1}{2} \\
+		\frac{1}{2} & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C} = -\frac{1}{2}$
+
+\begin{equation}
+	c_{A1C}=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C} = 0$
+
+\begin{equation}
+	c_{A1C}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & \frac{1}{2} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A1C}^0 = 0$
+
+\begin{equation}
+	c_{A0C}^1=
+	\begin{pmatrix}
+		c_{010} & c_{011} \\
+		c_{100} & c_{101}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		0 & 0 \\
+		\frac{1}{2} & -\frac{1}{2}
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{A0C}^1 = 0$.
+
+Maka
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}
+		&=4|\det c_{A0C}|^2\\
+		&=4(-\frac{1}{2})^2\\
+		&=4\frac{1}{4}\\
+		&=1
+	\end{aligned}
+\end{equation}
+
+Untuk $\rho_{BC}$, maka
+\begin{equation}
+	c_{0BC}=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & \frac{1}{2} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC} = 0$
+
+\begin{equation}
+	c_{1BC}=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & -\frac{1}{2} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC} = 0$
+
+\begin{equation}
+	c_{1BC}^0=
+	\begin{pmatrix}
+		c_{000} & c_{001} \\
+		c_{110} & c_{111}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & \frac{1}{2} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{1BC}^0 = 0$
+
+\begin{equation}
+	c_{0BC}^1=
+	\begin{pmatrix}
+		c_{100} & c_{101} \\
+		c_{010} & c_{011}
+	\end{pmatrix}=
+	\begin{pmatrix}
+		\frac{1}{2} & -\frac{1}{2} \\
+		0 & 0
+	\end{pmatrix}
+\end{equation}
+
+sehingga $\det c_{0BC}^1 = \frac{1}{4}$.
+
+Maka
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}
+		&=4|\det c_{0BC}|^2+4|\det c_{1BC}|^2+2(\det c_{1BC}^0+ \det c_{0BC}^1)(\det c^{*0}_{1BC} + \det c^{*1}_{0BC})\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+\section{Diskusi}
+Hasil perhitungan ukuran keterbelitan memungkinkan penentuan kelas keterbelitan suatu keadaan kuantum secara lebih mudah dan sistematis. Secara umum, keadaan tiga qubit dapat diklasifikasikan ke dalam beberapa kelas, yaitu keadaan terpisah sepenuhnya (\textit{fully separable}), keadaan bisepartit (\textit{biseparable}), dan keadaan keterbelitan tripartit sejati (\textit{genuine tripartite entanglement}). Keadaan \textit{fully separable} merupakan keadaan yang tidak memiliki keterbelitan sama sekali, sehingga seluruh qubit dapat dinyatakan sebagai hasil kali tensor dari masing-masing subsistem. Pada keadaan ini, nilai ukuran keterbelitan, seperti \textit{concurrence} maupun \textit{three-tangle}, bernilai nol. Sebaliknya, keadaan \textit{biseparable} menunjukkan adanya keterbelitan yang hanya melibatkan dua qubit, sedangkan qubit lainnya tidak terbelit dengan pasangan tersebut.
+
+Sementara itu, keadaan \textit{genuine tripartite entanglement} merupakan bentuk keterbelitan yang melibatkan ketiga qubit secara bersamaan sehingga tidak dapat direduksi menjadi keterbelitan antar pasangan qubit saja. Salah satu contoh penting dari kelas ini adalah keadaan Greenberger--Horne--Zeilinger (GHZ). Keadaan GHZ merepresentasikan keterbelitan global yang melibatkan seluruh qubit dalam sistem. Karakteristik utama dari keadaan GHZ adalah bahwa keterbelitan akan hilang sepenuhnya apabila salah satu qubit dihilangkan atau dilakukan operasi \textit{partial trace} terhadap salah satu subsistem. Akibatnya, dua qubit yang tersisa berada dalam keadaan campuran (\textit{mixed state}) yang tidak lagi menunjukkan adanya keterbelitan. Dengan kata lain, keberadaan keterbelitan pada keadaan GHZ sangat bergantung pada partisipasi ketiga qubit secara simultan. Secara umum, kelas GHZ mencakup seluruh keadaan tiga qubit yang dapat ditransformasikan ke dalam bentuk GHZ melalui operasi lokal stokastik dan komunikasi klasik (\textit{Stochastic Local Operations and Classical Communication}, SLOCC). Namun, keadaan-keadaan dalam kelas GHZ tidak dapat diubah menjadi keadaan dalam kelas W hanya dengan menggunakan operasi SLOCC tanpa bantuan sumber daya keterbelitan tambahan. Hal ini menunjukkan bahwa kelas GHZ dan kelas W merupakan dua kelas keterbelitan yang berbeda dan tidak ekuivalen.
+
+Berbeda dengan keadaan GHZ, keadaan W memiliki sifat yang lebih tangguh (\textit{robust}) terhadap kehilangan qubit. Pada keadaan W, apabila salah satu qubit diukur atau dihilangkan dari sistem, dua qubit yang tersisa masih mempertahankan sebagian keterbelitannya. Dengan demikian, korelasi kuantum pada keadaan W tidak sepenuhnya bergantung pada keberadaan seluruh qubit dalam sistem. Sifat inilah yang menjadikan kelas W lebih tahan terhadap proses dekoherensi maupun kehilangan partikel dibandingkan kelas GHZ, sehingga keadaan W berpotensi lebih sesuai untuk implementasi pada sistem kuantum nyata yang rentan terhadap gangguan lingkungan. Sehingga bisa dikatakan jika $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}, \mathrm{Tr}\,\rho_{AC} \tilde{\rho}_{AC}, \mathrm{Tr}\,\rho_{BC} \tilde{\rho}_{BC}$ memiliki nilai yang sama (di antara 0 dan 1) maka distribusi korelasi kuantum bersifat simetris terhadap ketiga pasangan qubit, tidak ada pasangan qubit yang lebih dominan dibandingkan pasangan lainnya, dan keterbelitan (atau korelasi kuantum) tersebar secara merata di seluruh sistem. Keadaan seperti ini sering dijumpai pada keadaan yang memiliki simetri pertukaran qubit, misalnya keadaan W. Sedangkan jika $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}=0, \mathrm{Tr}\,\rho_{AC} \tilde{\rho}_{AC}=1, dan \mathrm{Tr}\,\rho_{BC} \tilde{\rho}_{BC}=0$ maka pasangan AB tidak memiliki korelasi kuantum,
+pasangan BC tidak memiliki korelasi kuantum, dan
+hanya pasangan AC yang memiliki korelasi maksimum. Keadaan seperti ini termasuk \textit{biseparable} karena hanya dua qubit yang saling terbelit.
+
+
+%\newpage
+%\thispagestyle{empty}
+%\begin{center}
+%	\topskip0pt
+%	\vspace*{\fill}
+%	\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+%	\vspace*{\fill}
+%\end{center}
+%\pagebreak
+
+
+
+
+
+
+\subsection{Konkurensi}
+\par
+Konkurensi diperkenalkan sebagai ukuran keterbelitan yang bersifat operasional dan secara eksplisit dapat dihitung untuk sistem dua qubit. Konkurensi merupakan ukuran keterbelitan yang terdefinisi dengan baik \cite{Wootters1998}. Misalkan $\rho_{AB}$ adalah matriks kerapatan yang mendeskripsikan suatu keadaan dua qubit. Maka matriks kerapatan dengan pembalikan spin $\tilde{\rho}_{AB}$ didefinisikan sebagai
+\begin{equation}
+	\tilde{\rho}_{AB} = (\sigma_y \otimes \sigma_y)\rho_{AB}^*(\sigma_y \otimes \sigma_y) \label{rhotilde}
+\end{equation}
+di mana tanda $^*$ menyatakan sekawan kompleks dalam basis standar $\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\}$; dan $\sigma_y$ adalah matriks Pauli yang diberikan sebagai
+\begin{equation}
+	\sigma_y =
+	\begin{pmatrix}
+		0 & -i \\
+		i & 0
+	\end{pmatrix}
+\end{equation}
+
+Konkurensi untuk keadaan murni yang dituliskan oleh \cite{coffman2000distributed} didefinisikan sebagai
+\begin{equation}
+	C_{AB}=2\sqrt{\det\rho_{A}}
+\end{equation}
+Jika diketahui:
+\begin{equation}
+	\ket{\psi}=0,1\ket{00}+0,5\ket{01}+0,5\ket{10}+0,7\ket{11}
+\end{equation}
+
+maka
+\begin{equation}
+	\begin{aligned}
+		\rho_A
+		&=I\otimes\bra{0}\rho I\otimes\ket{0} +I\otimes\bra{1}\rho_1I\otimes\ket{1}\\
+		&=0,1^2\ket{0}\bra{0}+0,25\ket{1}\bra{1}+0,05\ket{0}\bra{1}+0,05\ket{1}\bra{0}+0,25\ket{0}\bra{0}\\
+		&+0,49\ket{1}\bra{1}+0,35\ket{0}\bra{1}+0,35\ket{1}\bra{0}\\
+		&=0,26^2\ket{0}\bra{0}+0,4\ket{0}\bra{1}+0,4\ket{1}\bra{0}+0,74\ket{1}\bra{1}\\
+		&=
+		\begin{pmatrix}
+			0,26&0,4\\
+			0,4&0,74
+		\end{pmatrix}
+	\end{aligned}
+\end{equation}
+\begin{equation}
+	\det\rho_{A}=\frac{26\times74}{10^4}-0,16=\frac{1924-1600}{10^4}=\frac{324}{10^4}
+\end{equation}
+
+dan
+\begin{equation}
+	C_{AB}=2\sqrt{\frac{324}{10^4}}=\frac{2}{10}\sqrt{3,24}
+\end{equation}
+
+Sedangkan konkurensi untuk keadaan campuran didefinisikan sebagai
+\begin{equation*}
+	C_{AB} = \text{max}(0, \sqrt{\lambda_1} - \sqrt{\lambda_2} - \sqrt{\lambda_3} - \sqrt{\lambda_4}) \label{konkurensi}
+\end{equation*}
+dengan $\sqrt{\lambda_1}\geq \sqrt{\lambda_2}\geq \sqrt{\lambda_3} \geq  \sqrt{\lambda_4}$ dan $\lambda_i$ adalah nilai eigen dari matriks $R = \rho \tilde{\rho}$. Ambil pada kasus keadaan murni yang diketahui nilai $\rho = \ket{\psi}\bra{\psi}$ dan $\tilde{\rho} = \ket{\tilde{\psi}}\bra{\tilde{\psi}}$, maka nilai $\lambda_i$
+\begin{align*}
+	R = (\ket{\psi}\bra{\psi})(\ket{\tilde{\psi}}\bra{\tilde{\psi}}) = \ket{\psi} \underbrace{\langle{\psi} |{\tilde{\psi}}\rangle}_{\text{skalar}} \bra{\tilde{\psi}} = \langle{\psi} |{\tilde{\psi}}\rangle \ket{\psi} \bra{\tilde{\psi}} 
+\end{align*}
+kalikan matriks $R$ diatas dengan $\ket{\psi}$ sehingga
+\begin{align*}
+	R\ket{\psi} & = \langle{\psi} |{\tilde{\psi}}\rangle \ket{\psi} \underbrace{\langle{\tilde{\psi}}| {\psi}\rangle}_{=(\langle{\psi} |{\tilde{\psi}}\rangle)^*}\\
+	R\ket{\psi} & = \left|\langle{\psi} |{\tilde{\psi}}\rangle\right|^2  \ket{\psi} \\
+\end{align*}
+Jelas pada persamaan diatas memiliki satu nilai eigen yaitu $\left|\langle{\psi} |{\tilde{\psi}}\rangle\right|^2$ sehingga konkurensinya bisa ditulis dalam bentuk 
+\begin{align*}
+	C_{AB} &= \text{max}(0,\sqrt{\left|\langle{\psi} |{\tilde{\psi}}\rangle\right|^2}-0-0-0)\\
+	C_{AB} &= \left|\langle{\psi} |{\tilde{\psi}}\rangle\right|
+\end{align*}
+Jika diambil $\ket{\psi}$ dari keadaan dua qubit, dan $\ket{\tilde{\psi}} = \sigma_y \otimes \sigma_y \ket{\psi^*}$.
+\[ \psi = a\ket{00} + b\ket{01} + c\ket{10} + d\ket{11} = \begin{bmatrix}
+	a \\ b \\ c \\ d    
+\end{bmatrix}\]
+maka nilai $\ket{\tilde{\psi}}$ adalah
+\begin{equation*}
+	\ket{\tilde{\psi}} = \sigma_y \otimes \sigma_y \begin{bmatrix}
+		a \\ b \\ c \\ d    \end{bmatrix} = \begin{bmatrix}-d \\ c \\ b \\ -a    
+	\end{bmatrix}
+\end{equation*}
+Sehingga nilai $\langle{\psi} |{\tilde{\psi}}\rangle$ adalah
+\begin{equation*}
+	\langle{\psi} |{\tilde{\psi}}\rangle = \begin{bmatrix}
+		a & b & c & d    
+	\end{bmatrix} \begin{bmatrix}-d \\ c \\ b \\ -a    
+	\end{bmatrix} = -ad + bc + cb - da = 2(bc - ad)
+\end{equation*}
+\begin{equation*}
+	C_{AB} = 2|ad - bc|
+\end{equation*}
+Contoh perhitungan konkurensi untuk keadaan campuran adalah sebagai berikut.
+
+\textbf{Contoh 1:} 
+Diberikan 
+\begin{equation}
+	\rho_1 = \ket{B_1}\bra{B_1}
+\end{equation}
+dan
+\begin{equation}
+	\rho_2 = \ket{B_3}\bra{B_3}
+\end{equation}
+dan
+\begin{equation}
+	\rho = \frac{3}{4}\rho_1 + \frac{1}{4}\rho_2
+\end{equation}
+dengan
+
+\begin{equation}
+	\rho_1 = \frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&1\\
+		0&0&0&0\\
+		0&0&0&0\\
+		1&0&0&1
+	\end{pmatrix}
+\end{equation}
+dan
+
+\begin{equation}
+	\rho_2 = \frac{1}{2}
+	\begin{pmatrix}
+		0&0&0&0\\
+		0&1&1&0\\
+		0&1&1&0\\
+		0&0&0&0
+	\end{pmatrix}
+\end{equation}
+maka:  
+
+\begin{equation}
+	\rho = \frac{1}{2}
+	\begin{pmatrix}
+		\frac{3}{4}&0&0&\frac{3}{4}\\
+		0&\frac{1}{4}&\frac{1}{4}&0\\
+		0&\frac{1}{4}&\frac{1}{4}&0\\
+		\frac{3}{4}&0&0&\frac{3}{4}
+	\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\tilde{\rho} 
+		&= (\sigma_y \otimes \sigma_y) \rho (\sigma_y \otimes \sigma_y)\\
+		&= \frac{1}{2}
+		\begin{pmatrix}
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0 \\
+			0 & 1 & 0 & 0 \\
+			-1 & 0 & 0 & 0
+		\end{pmatrix}
+		\begin{pmatrix}
+			\frac{3}{4} & 0 & 0 & 0 \\
+			0 & \frac{1}{4} & \frac{1}{4} & 0 \\
+			0 & \frac{1}{4} & \frac{1}{14} & 0 \\
+			\frac{3}{4} & 0 & 0 & \frac{3}{4}
+		\end{pmatrix}
+		\begin{pmatrix}
+			0 & 0 & 0 & -1 \\
+			0 & 0 & 1 & 0 \\
+			0 & 1 & 0 & 0 \\
+			-1 & 0 & 0 & 0
+		\end{pmatrix}\\
+		&= \frac{1}{2}
+		\begin{pmatrix}
+			\frac{3}{4}&0&0&\frac{3}{4}\\
+			0&\frac{1}{4}&\frac{1}{4}&0\\
+			0&\frac{1}{4}&\frac{1}{4}&0\\
+			\frac{3}{4}&0&0&\frac{3}{4}
+		\end{pmatrix}\\
+		&=\rho
+	\end{aligned}
+\end{equation}
+dan
+
+\begin{equation}
+	\rho \tilde{\rho}=\frac{1}{4}
+	\begin{pmatrix}
+		\frac{18}{16}&0&0&\frac{18}{16}\\
+		0&\frac{2}{16}&\frac{2}{16}&0\\
+		0&\frac{2}{16}&\frac{2}{16}&0\\
+		\frac{18}{16}&0&0&\frac{18}{16}
+	\end{pmatrix}
+	=\frac{1}{32}
+	\begin{pmatrix}
+		9&0&0&9\\
+		0&1&1&0\\
+		0&1&1&0\\
+		9&0&0&9
+	\end{pmatrix}
+\end{equation}
+Jika $\rho \tilde{\rho}$ dituliskan dalam bentuk aljabar sebagai berikut
+\begin{equation}
+	\rho \tilde{\rho}=
+	\begin{pmatrix}
+		a_{11}&a_{12}&a_{13}&a_{14}\\
+		a_{21}&a_{22}&a_{23}&a_{24}\\
+		a_{31}&a_{32}&a_{33}&a_{34}\\
+		a_{41}&a_{42}&a_{43}&a_{44}
+	\end{pmatrix}
+\end{equation}
+maka
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=(a_{11}-\lambda)(a_{22}-\lambda)(a_{33}-\lambda)(a_{44}-\lambda)
+		+(a_{11}-\lambda)a_{23}a_{34}a_{42}
+		+(a_{11}-\lambda)a_{24}a_{32}a_{43}
+		\nonumber\\
+		&
+		+a_{12}a_{21}a_{34}a_{43}
+		+a_{12}a_{23}a_{31}a_{44}
+		+a_{12}a_{24}(a_{33}-\lambda)a_{41}
+		\nonumber\\
+		&
+		+a_{13}a_{21}a_{32}a_{44}
+		+a_{13}(a_{22}-\lambda)a_{34}a_{41}
+		+a_{13}a_{24}a_{31}a_{42}
+		\nonumber\\
+		&
+		+a_{14}a_{21}(a_{33}-\lambda)a_{42}
+		+a_{14}(a_{22}-\lambda)a_{31}a_{43}
+		+a_{14}a_{23}a_{32}a_{41}
+		\nonumber\\
+		&
+		-(a_{11}-\lambda)(a_{22}-\lambda)a_{34}a_{43}
+		-(a_{11}-\lambda)a_{23}a_{32}(a_{44}-\lambda)
+		-(a_{11}-\lambda)a_{24}(a_{33}-\lambda)a_{42}
+		\nonumber\\
+		&
+		-a_{12}a_{21}(a_{33}-\lambda)(a_{44}-\lambda)
+		-a_{12}a_{23}a_{34}a_{41}
+		-a_{12}a_{24}a_{31}a_{43}
+		\nonumber\\
+		&
+		-a_{13}a_{21}a_{34}a_{42}
+		-a_{13}(a_{22}-\lambda)a_{31}(a_{44}-\lambda)
+		-a_{13}a_{24}a_{32}a_{41}
+		\nonumber\\
+		&
+		-a_{14}a_{21}a_{32}a_{43}
+		-a_{14}(a_{22}-\lambda)(a_{33}-\lambda)a_{41}
+		-a_{14}a_{23}a_{31}a_{42}
+	\end{aligned}
+\end{equation}
+Dari 24 suku yang tertulis dalam determinan tersebut, hanya ada 4 suku yang tidak nol, yaitu
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=(a_{11}-\lambda)(a_{22}-\lambda)(a_{33}-\lambda)(a_{44}-\lambda)-(a_{11}-\lambda)a_{23}a_{32}(a_{44}-\lambda)\\
+		&+a_{14}a_{23}a_{32}a_{41}-a_{14}(a_{22}-\lambda)(a_{33}-\lambda)a_{41}\\
+		&=(a_{11}-\lambda)(a_{44}-\lambda)((a_{22}-\lambda)(a_{33}-\lambda)-a_{23}a_{32})\\
+		&+a_{14}a_{41}(a_{23}a_{32}-(a_{22}-\lambda)(a_{33}-\lambda))\\
+		&=((a_{11}-\lambda)(a_{44}-\lambda)-a_{14}a_{41})((a_{22}-\lambda)(a_{33}-\lambda)-a_{23}a_{32})\\
+		&=[(\frac{9}{32}-\lambda)^2-(\frac{9}{32})^2][(\frac{1}{32}-\lambda)^2-(\frac{1}{32})^2]\\
+		&=[\lambda(\lambda-\frac{9}{16})][\lambda(\lambda-\frac{1}{16})]\\
+		&=(\lambda-\frac{9}{16})(\lambda-\frac{1}{16})\lambda^2\\
+		&=0
+	\end{aligned}
+\end{equation}
+sehingga $\lambda_1=\frac{9}{16}$, $\lambda_2=\frac{1}{16}$, dan $\lambda_3=\lambda_4=0$. Maka
+\begin{equation}
+	C_{AB}=max[\frac{3}{4}-\frac{1}{4}-0-0,0]=\frac{1}{2}
+\end{equation}
+
+\textbf{Contoh 2:}
+Diberikan
+\begin{equation}
+	\rho_1 = \ket{B_1}\bra{B_1}
+\end{equation}
+dan
+\begin{equation}
+	\rho_2 = \ket{B_2}\bra{B_2}
+\end{equation}
+Maka
+\begin{equation}
+	\rho = \frac{5}{6}\rho_1 + \frac{1}{6}\rho_2
+\end{equation}
+dengan
+
+\begin{equation}
+	\rho_1 = \frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&1\\
+		0&0&0&0\\
+		0&0&0&0\\
+		1&0&0&1
+	\end{pmatrix}
+\end{equation}
+dan
+
+\begin{equation}
+	\rho_2 = \frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&-1\\
+		0&0&0&0\\
+		0&0&0&0\\
+		-1&0&0&1
+	\end{pmatrix}
+\end{equation}
+maka:  
+
+\begin{equation}
+	\rho =\frac{1}{2}
+	\begin{pmatrix}
+		1&0&0&\frac{2}{3}\\
+		0&0&0&0\\
+		0&0&0&0\\
+		\frac{2}{3}&0&0&1
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+maka
+
+\begin{equation}
+	\rho \tilde{\rho}=\frac{1}{4}
+	\begin{pmatrix}
+		1+\frac{4}{9}&0&0&2(\frac{2}{3})\\
+		0&0&0&0\\
+		0&0&0&0\\
+		2(\frac{2}{3})&0&0&1+\frac{4}{9}
+	\end{pmatrix}
+	=\frac{1}{4}
+	\begin{pmatrix}
+		\frac{13}{9}&0&0&\frac{12}{9}\\
+		0&0&0&0\\
+		0&0&0&0\\
+		\frac{12}{9}&0&0&\frac{13}{9}
+	\end{pmatrix}
+\end{equation}
+dan
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=(a_{11}-\lambda)(a_{22}-\lambda)(a_{33}-\lambda)(a_{44}-\lambda)-a_{14}(a_{22}-\lambda)(a_{33}-\lambda)a_{41}\\
+		&=(a_{22}-\lambda)(a_{33}-\lambda)((a_{11}-\lambda)(a_{44}-\lambda)-a_{14}a_{41})\\
+		&=[(\frac{13}{36}-\lambda)^2-(\frac{12}{36})^2]\lambda^2\\
+		&=\lambda^2-\frac{26}{36}\lambda+\frac{13^2-12^2}{36^2}\\
+		&=\lambda^2-\frac{26}{36}\lambda+\frac{25}{36^2}\\
+		&=(\lambda-\frac{25}{36})(\lambda-\frac{1}{36})\\
+		&=0
+	\end{aligned}
+\end{equation}
+sehingga $\lambda_1=\frac{25}{36}$ dan $\lambda_2=\frac{1}{36}$. Maka
+
+\begin{equation}
+	C_{AB}=max[\frac{5}{6}-\frac{1}{6}-0-0,0]=\frac{2}{3}
+\end{equation}
+
+\textbf{Contoh 3}
+Diberikan
+\begin{equation}
+	\rho = \frac{2}{3}\rho_1 + \frac{1}{6}\rho_2
+	+\frac{1}{6}\rho_3\\
+	=\frac{1}{2}
+	\begin{pmatrix}
+		\frac{5}{6}&0&0&\frac{1}{2}\\
+		0&\frac{1}{6}&\frac{1}{6}&0\\
+		0&\frac{1}{6}&\frac{1}{6}&0\\
+		\frac{1}{2}&0&0&\frac{5}{6}
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+maka 
+
+\begin{equation}
+	\rho \tilde{\rho} =\frac{1}{4}
+	\begin{pmatrix}
+		\frac{34}{36}&0&0&\frac{5}{6}\\
+		0&\frac{1}{18}&\frac{1}{18}&0\\
+		0&\frac{1}{18}&\frac{1}{18}&0\\
+		\frac{5}{6}&0&0&\frac{34}{36}
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=(a_{11}-\lambda)(a_{22}-\lambda)(a_{33}-\lambda)(a_{44}-\lambda)-(a_{11}-\lambda)a_{23}a_{32}(a_{44}-\lambda)\\
+		&+a_{14}a_{23}a_{32}a_{41}-a_{14}(a_{22}-\lambda)(a_{33}-\lambda)a_{41}\\
+		&=((a_{11}-\lambda)(a_{44}-\lambda)-a_{14}a_{41})((a_{22}-\lambda)(a_{33}-\lambda)-a_{23}a_{32})\\
+		&=[(\frac{17}{72}-\lambda)^2-\frac{25}{36\times16}][(\frac{1}{72}-\lambda)^2-\frac{1}{72^2}]\\
+		&=[\lambda^2-\frac{17}{36}\lambda+\frac{17^2}{72^2}-\frac{25}{36\times16}]\lambda[\lambda-\frac{1}{36}]\\
+		&=(\lambda-\frac{4}{9})(\lambda-\frac{1}{36})(\lambda-\frac{1}{36})\lambda\\
+		&=0
+	\end{aligned}
+\end{equation}
+sehingga $\lambda_1=\frac{4}{9}$, $\lambda_2=\lambda_3=\frac{1}{36}$, dan $
+\lambda_4=0$. Maka
+
+\begin{equation}
+	C_{AB}=max[\frac{2}{3}-\frac{1}{6}-\frac{1}{6}-0,0]=\frac{1}{3}
+\end{equation}
+
+\textbf{Contoh 4}
+Diberikan
+\begin{equation}
+	\rho = \frac{2}{3}\rho_1 + \frac{1}{12}\rho_2
+	+\frac{1}{6}\rho_3+\frac{1}{12}\rho_4\\
+	=\frac{1}{24}
+	\begin{pmatrix}
+		9&0&0&7\\
+		0&3&1&0\\
+		0&1&3&0\\
+		7&0&0&9
+	\end{pmatrix}\\
+	=\tilde{\rho}
+\end{equation}
+maka 
+
+\begin{equation}
+	\rho \tilde{\rho} =\frac{1}{24^2}
+	\begin{pmatrix}
+		130&0&0&126\\
+		0&10&6&0\\
+		0&6&10&0\\
+		126&0&0&130
+	\end{pmatrix}
+\end{equation}
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		|\rho \tilde{\rho}-I\lambda|
+		&=((a_{11}-\lambda)(a_{44}-\lambda)-a_{14}a_{41})((a_{22}-\lambda)(a_{33}-\lambda)-a_{23}a_{32})\\
+		&=[(\frac{130}{24^2}-\lambda)^2-\frac{126^2}{24^4}][(\frac{10}{24^2}-\lambda)^2-\frac{6^2}{24^4}]\\
+		&=[\lambda^2-\frac{260}{24^2}\lambda+\frac{130^2}{24^4}-\frac{126^2}{24^4}][\lambda^2-\frac{20}{24^2}\lambda+\frac{8^2}{24^4}]\\
+		&=[\lambda^2-\frac{260}{24^2}\lambda+\frac{32^2}{24^4}][\lambda^2-\frac{20}{24^2}\lambda+\frac{8^2}{24^4}]\\
+		&=0
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\lambda_{1,3}
+		&=\frac{260}{2\times24^2}\pm\frac{1}{2\times24^2}\sqrt{4\times130^2-4\times32^2}\\
+		&=\frac{130}{24^2}\pm\frac{126}{24^2}\\
+		&=\frac{256}{24^2}; \frac{4}{24^2}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\lambda_{2,4}
+		&=\frac{20}{2\times24^2}\pm\frac{2}{2\times24^2}\sqrt{10^2-8^2}\\
+		&=\frac{10}{24^2}\pm\frac{6}{24^2}\\
+		&=\frac{16}{24^2}; \frac{4}{24^2}
+	\end{aligned}
+\end{equation}
+sehingga $\lambda_1=\frac{256}{24^2}$, $\lambda_2=\frac{16}{24^2}$, dan $
+\lambda_3=\lambda_4=\frac{4}{24^2}$. Maka
+
+\begin{equation}
+	C_{AB}=\frac{1}{12}(8-2-1-1)=\frac{1}{3}
+\end{equation}
+
+\par
+Terdapat beberapa formulasi alternatif konkurensi untuk keadaan kuantum bipartit \cite{horodecki2009quantum,Aggarwal2021}. Pendekatan-pendekatan ini dapat mengarah pada generalisasi yang berbeda untuk sistem multipartit \cite{Li2024,Zhu2020}. Generalisasi ini menawarkan wawasan tentang berbagai aspek keterikatan, misalnya,
+bagaimana subsistem yang berbeda saling terbelit satu sama lain, atau bagaimana keterikatan didistribusikan dalam satu subsistem \cite{Cornelio2013}.
+
+\subsection{Kekusutan}
+\par
+Kekusutan atau biasa disebut dengan \textit{three tangle} adalah sebuah konsep dalam fisika kuantum yang digunakan untuk mengukur tingkat keterbelitan antara tiga partikel kuantum \cite{amico2008entanglement, eltschka2014quantum}. Kekusutan sendiri didefinisikan sebagai kuadrat dari konkurensi sehingga untuk 2 qubit, kekusutan adalah
+\begin{equation*}
+	\tau = C^2 = 4|ad - bc|^2
+\end{equation*}
+Untuk menghitung kekusutan pada sistem tiga qubit, perlu dipahami keterbelitan antara satu partikel dengan subsistem lainnya melalui skema partisi sistem $AB|C$. Dalam skema ini, sistem tiga-qubit diperlakukan sebagai sistem bipartit, di mana subsistem $C$ dianggap terpisah dari blok gabungan $AB$. Melalui proses \textit{partial trace}, diperoleh matriks densitas tereduksi $\rho_C = \mathrm{Tr}_{AB}(\rho)$ dan $\rho_{AB} = \mathrm{Tr}_{C}(\rho)$ \cite{Wootters1998, rungta2001universal}. Untuk sistem murni bipartit, spektrum eigen dari matriks densitas tereduksi pada kedua subsistem memiliki kesamaan pada nilai eigen tak nol sebagai konsekuensi dari struktur dekomposisi Schmidt. Hal ini merupakan sifat umum dari keadaan murni pada sistem bipartit \cite{osborne2006general}. Untuk sistem tiga qubit yang dipartisi, jumlah eigenvalue tak nol dari reduced density matrix dibatasi oleh rank Schmidt, sehingga dalam kasus ini hanya terdapat dua nilai eigen tak nol, yaitu $\lambda_1$ dan $\lambda_2$.
+
+Besarnya keterbelitan antara partikel $A$ dengan blok $B$  dapat diukur melalui determinan matriks densitasnya. Secara matematis, hubungan antara struktur nilai eigen matriks densitas dengan nilai kekusutan ($\tau$) dinyatakan sebagai berikut:
+\begin{align*}
+	\tau_{AB} &= (\lambda_1^{AB} - \lambda_2^{AB})^2\\
+	& =(\lambda_1^{AB})^2 + (\lambda_2^{AB})^2 - 2 \lambda_1^{AB} \lambda_2^{AB}
+\end{align*}
+dimana $(\lambda_1^{AB})^2 + (\lambda_2^{AB})^2 = \text{Tr}(\rho_{AB} \tilde{\rho}_{AB})$
+\begin{equation*}
+	\tau_{AB} =  \text{Tr}(\rho_{AB} \tilde{\rho}_{AB}) - 2 \lambda_1^{AB} \lambda_2^{AB}
+\end{equation*}
+Untuk menghitung nilai $\text{Tr}(\rho_{AB} \tilde{\rho}_{AB})$, perlu diketahui nilai $\rho_{AB}$ dan $\tilde{\rho}_{AB}$ dengan bantuan
+matriks pauli dimana bentuk matriks densitas ini bisa dinyatakn dalam matriks pauli
+\begin{equation}
+	\rho_{AB} = \frac{1}{4} \left( I \otimes I + \sum_{i=1}^3 a_i (\sigma_i \otimes I) + \sum_{j=1}^3 b_j (I \otimes \sigma_j) + \sum_{i,j=1}^3 c_{ij} (\sigma_i \otimes \sigma_j) \right)
+\end{equation}
+di mana $a_i = \text{Tr}(\rho_{AB}(\sigma_i \otimes I))$, $b_j = \text{Tr}(\rho_{AB}(I \otimes \sigma_j))$, dan $c_{ij} = \text{Tr}(\rho_{AB}(\sigma_i \otimes \sigma_j))$.
+Untuk menyederhanakan penulisan, kita definisikan suku-suku tersebut sebagai operator berikut:
+\begin{align*}
+	A &= \sum_{i=1}^3 a_i (\sigma_i \otimes I) \quad \text{: Polarisasi qubit A (Vektor Bloch A)} \\
+	B &= \sum_{j=1}^3 b_j (I \otimes \sigma_j) \quad \text{: Polarisasi qubit B (Vektor Bloch B)} \\
+	C &= \sum_{i,j=1}^3 c_{ij} (\sigma_i \otimes \sigma_j) \quad \text{: Korelasi antar qubit A dan B}
+\end{align*}
+Pemisalan ini memisahkan kontribusi individual dari masing-masing partikel ($A$ dan $B$) dengan korelasi kolektif di antara keduanya ($C$).
+Untuk menghitung $\text{Tr}(\rho_{AB}^2)$, kita gunakan sifat $\text{Tr}(\sigma_i \sigma_j) = 2\delta_{ij}$ dan $\text{Tr}(\sigma_i) = 0$:
+\begin{align*}
+	\text{Tr}(\rho_{AB}^2) &= \frac{1}{16} \text{Tr} \left[ \left( I \otimes I + \sum a_i (\sigma_i \otimes I) + \sum b_j (I \otimes \sigma_j) + \sum c_{ij} (\sigma_i \otimes \sigma_j) \right)^2 \right] \\
+	&= \frac{1}{16} \left[ \text{Tr}(I \otimes I) + \sum a_i^2 \text{Tr}(\sigma_i^2 \otimes I) + \sum b_j^2 \text{Tr}(I \otimes \sigma_j^2) + \sum c_{ij}^2 \text{Tr}(\sigma_i^2 \otimes \sigma_j^2) \right] \\
+	&= \frac{1}{16} \left[ 4 + 4 \sum a_i^2 + 4 \sum b_j^2 + 4 \sum c_{ij}^2 \right] \\
+	&= \frac{1}{4} \left( 1 + \sum_{i=1}^3 a_i^2 + \sum_{j=1}^3 b_j^2 + \sum_{i,j=1}^3 c_{ij}^2 \right)
+\end{align*}
+
+Selanjutnya, untuk matriks densitas ter-spin-flip $\tilde{\rho}_{AB}$:
+\begin{equation*}
+	\tilde{\rho}_{AB} = (\sigma_y \otimes \sigma_y) \rho_{AB}^* (\sigma_y \otimes \sigma_y)
+\end{equation*}
+Dengan memperhatikan sifat $\sigma_y \sigma_i^* \sigma_y = -\sigma_i$ untuk $i=1,2,3$ dan $\sigma_y I \sigma_y = I$, maka:
+\begin{equation*}
+	\tilde{\rho}_{AB} = \frac{1}{4} \left( I \otimes I - \sum_{i=1}^3 a_i (\sigma_i \otimes I) - \sum_{j=1}^3 b_j (I \otimes \sigma_j) + \sum_{i,j=1}^3 c_{ij} (\sigma_i \otimes \sigma_j) \right)
+\end{equation*}
+
+Maka nilai $\text{Tr}(\rho_{AB} \tilde{\rho}_{AB})$ adalah:
+\begin{align*}
+	\text{Tr}(\rho_{AB} \tilde{\rho}_{AB}) &= \frac{1}{16} \text{Tr} \left( I \otimes I + \sum_{i=1}^3 a_i (\sigma_i \otimes I) + \sum_{j=1}^3 b_j (I \otimes \sigma_j) + \sum_{i,j=1}^3 c_{ij} (\sigma_i \otimes \sigma_j) \right)\\
+	&\left( I \otimes I - \sum_{i=1}^3 a_i (\sigma_i \otimes I) - \sum_{j=1}^3 b_j (I \otimes \sigma_j) + \sum_{i,j=1}^3 c_{ij} (\sigma_i \otimes \sigma_j)\right) \\
+	&= \frac{1}{16} \text{Tr} \left[ I - A^2 - B^2 + C^2 + (\text{suku silang}) \right] \\
+	&= \frac{1}{16} \left[ \text{Tr}(I) - \text{Tr}(A^2) - \text{Tr}(B^2) + \text{Tr}(C^2) \right]
+\end{align*}
+Suku silang seperti $AB$, $AC$, $BC$, serta suku tunggal $A, B, C$ memiliki nilai trace nol karena sifat dasar matriks Pauli $\text{Tr}(\sigma_i) = 0$. Sebagai contoh, untuk suku silang $AB$:
+\begin{align*}
+	\text{Tr}(AB) &= \text{Tr} \left[ \left( \sum_i a_i \sigma_i \otimes I \right) \left( \sum_j b_j I \otimes \sigma_j \right) \right] \\
+	&= \sum_{i,j} a_i b_j \text{Tr}(\sigma_i \otimes \sigma_j) \\
+	&= \sum_{i,j} a_i b_j \text{Tr}(\sigma_i) \text{Tr}(\sigma_j) = 0
+\end{align*}
+Hal yang sama berlaku untuk suku silang lainnya (misalnya $\text{Tr}(AC) \propto \text{Tr}(\sigma_i^2) \text{Tr}(\sigma_j) = 0$ jika $j \neq 0$). Oleh karena itu, hanya suku-suku kuadrat dan identitas yang memberikan kontribusi tak-nol:
+\begin{align*}
+	\text{Tr}(\rho_{AB} \tilde{\rho}_{AB}) &= \frac{1}{16} \left[ 4 - 4 \sum a_i^2 - 4 \sum b_j^2 + 4 \sum c_{ij}^2 \right] \\
+	&= \frac{1}{4} \left( 1 - \sum_{i=1}^3 a_i^2 - \sum_{j=1}^3 b_j^2 + \sum_{i,j=1}^3 c_{ij}^2 \right)
+\end{align*}
+
+Sehingga selisih trace tersebut adalah:
+\begin{align*}
+	\text{Tr}(\rho_{AB}^2) - \text{Tr}(\rho_{AB} \tilde{\rho}_{AB}) &= \frac{1}{2} \left( \sum_{i=1}^3 a_i^2 + \sum_{j=1}^3 b_j^2 \right)
+\end{align*}
+
+Selanjutnya kita dapat menghubungkan nilai kuadrat komponen polarisasi ini dengan determinan masing-masing matriks densitas satu qubit. Untuk sistem satu qubit (matriks densitas terduksi $\rho_A$ dan $\rho_B$):
+\begin{align*}
+	\rho_A &= \text{Tr}_B(\rho_{AB}) = \frac{1}{2} (I + \vec{a} \cdot \vec{\sigma}) \\
+	\det(\rho_A) &= \frac{1}{4}(1 - \sum a_i^2) \implies \sum a_i^2 = 1 - 4\det(\rho_A)
+\end{align*}
+Hal serupa berlaku untuk qubit B, sehingga $\sum b_j^2 = 1 - 4\det(\rho_B)$.
+
+Di sisi lain, karena sistem tiga partikel berada dalam keadaan murni, maka melalui dekomposisi Schmidt, matriks densitas terduksi $\rho_{AB}$ dan $\rho_C$ memiliki nilai eigen tak-nol yang identik. Hal ini berimplikasi pada kesamaan nilai trace kuadratnya:
+\begin{equation*}
+	\text{Tr}(\rho_{AB}^2) = \text{Tr}(\rho_C^2)
+\end{equation*}
+Sama halnya dengan qubit A dan B, kita dapat menulis $\text{Tr}(\rho_C^2)$ dalam determinan $\rho_C$:
+\begin{equation*}
+	\text{Tr}(\rho_C^2) = \frac{1}{2}(1 + \sum c_k^2) = \frac{1}{2}(1 + [1 - 4\det(\rho_C)]) = 1 - 2\det(\rho_C)
+\end{equation*}
+
+Dengan mensubstitusikan semua hubungan ini kembali ke perhitungan selisih trace, kita dapat menyatakan $\text{Tr}(\rho_{AB} \tilde{\rho}_{AB})$ dalam bentuk determinan ketiga qubit:
+\begin{align*}
+	\text{Tr}(\rho_{AB} \tilde{\rho}_{AB}) &= \text{Tr}(\rho_{AB}^2) - \frac{1}{2} \left( \sum a_i^2 + \sum b_j^2 \right) \\
+	&= (1 - 2\det \rho_C) - \frac{1}{2} [ (1 - 4\det \rho_A) + (1 - 4\det \rho_B) ] \\
+	&= 1 - 2\det \rho_C - [ 1 - 2(\det \rho_A + \det \rho_B) ] \\
+	&= 2 ( \det \rho_A + \det \rho_B - \det \rho_C )
+\end{align*}
+sehingga nilai $\tau_{AB}$ diatas sebelumnya adalah
+\begin{equation*}
+	\tau_{AB} = 2 ( \det \rho_A + \det \rho_B - \det \rho_C )-2\lambda_1^{AB}\lambda_2^{AB}
+\end{equation*}
+begitu juga untuk perhitungan $\tau_{AC}$ 
+\begin{align*}
+	\text{Tr}\rho_{AC}\tilde{\rho}_{AC} = 2( \det \rho_A + \det \rho_C - \det \rho_B)
+\end{align*}
+sehingga 
+\begin{equation*}
+	\tau_{AC} = 2( \det \rho_A + \det \rho_C - \det \rho_B) - 2\lambda_1^{AC}\lambda_2^{AC}
+\end{equation*}
+Berdasarkan ketidaksamaan Coffman-Kundu-Wootters (CKW) \cite{coffman2000distributed}, kekusutan $\tau_{ABC}$ didefinisikan sebagai selisih antara kekusutan satu-terhadap-sisanya dengan jumlah kekusutan antar pasangan:
+\begin{equation*}
+	\tau_{ABC} = \tau_{A(BC)} - \tau_{AB} - \tau_{AC}
+\end{equation*}
+Dengan menggunakan hubungan $\tau_{A(BC)} = 4 \det \rho_A$, kita substitusikan nilai $\tau_{AB}$ dan $\tau_{AC}$ yang telah diperoleh:
+\begin{align*}
+	\tau_{ABC} &= 4 \det \rho_A - \left[ 2 ( \det \rho_A + \det \rho_B - \det \rho_C ) - 2\lambda_1^{AB}\lambda_2^{AB} \right] \\
+	&\quad - \left[ 2 ( \det \rho_A + \det \rho_C - \det \rho_B ) - 2\lambda_1^{AC}\lambda_2^{AC} \right] \\
+	&= 4 \det \rho_A - 2 \det \rho_A - 2 \det \rho_B + 2 \det \rho_C + 2\lambda_1^{AB}\lambda_2^{AB} \\
+	&\quad - 2 \det \rho_A - 2 \det \rho_C + 2 \det \rho_B + 2\lambda_1^{AC}\lambda_2^{AC} \\
+	&= (4 - 2 - 2) \det \rho_A + (-2 + 2) \det \rho_B + (2 - 2) \det \rho_C + 2\lambda_1^{AB}\lambda_2^{AB} + 2\lambda_1^{AC}\lambda_2^{AC} \\
+	&= 2\lambda_1^{AB}\lambda_2^{AB} + 2\lambda_1^{AC}\lambda_2^{AC}
+\end{align*}
+Jika kita asumsikan kontribusi produk nilai eigen pasangan adalah identik ($\lambda_1^{AB}\lambda_2^{AB} = \lambda_1^{AC}\lambda_2^{AC} = \lambda_1\lambda_2$), maka kita mendapatkan bentuk akhir kekusutan:
+\begin{equation*}
+	\tau_{ABC} = 4 \lambda_1 \lambda_2
+\end{equation*}
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{DRAFT BAB 4 (GAJADI)}
+\chapter{Matriks Koefisien}
+\section{Konkurensi}
+\par
+Pada subsubbab 2.6.1 yang membahas terkait konkurensi, terdapat empat contoh perhitungan konkurensi dari keadaan campuran yang berbeda. Dari perhitungan keempat contoh tersebut kita dapat menuliskan persamaan umum dengan memanfaatkan matriks koefisien sehingga dapat memudahkan perhitungan dengan koefisien yang berbeda pada keadaan $\rho$ yang sama.
+\begin{enumerate}
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+(1-x)\rho_2\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				1&0&0&2x-1\\
+				0&0&0&0\\
+				0&0&0&0\\
+				2x-1&0&0&1
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				1+(2x-1)^2&0&0&2(2x-1)\\
+				0&0&0&0\\
+				0&0&0&0\\
+				2(2x-1)&0&0&1+(2x-1)^2
+			\end{pmatrix}\\
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2-4x+4x^2&0&0&2(2x-1)\\
+				0&0&0&0\\
+				0&0&0&0\\
+				2(2x-1)&0&0&2-4x+4x^2
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(x^2-x+\frac{1}{2}-\lambda)^2-\frac{(2x-1)^2}{4}]\lambda^2\\
+			&=\lambda^2-2(\frac{1}{2}-x+x^2)\lambda+(\frac{1}{2}-x+x^2)^2-\frac{(1-4x-4x^2)}{4}\\
+			&+(\frac{1}{4}+x^2+x^4-x+x^2-2x^3)\\
+			&=\lambda^2-2(\frac{1}{2}-x+x^2)\lambda+x^2(1-2x+x^2)\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{1,2}
+			&=(\frac{1}{2}-x+x^2)\pm\frac{2}{2}\sqrt{(\frac{1}{2}-x+x^2)^2-(x^2-2x^3+x^4)}\\
+			&=(\frac{1}{2}-x+x^2)\pm\frac{2}{2}\sqrt{(\frac{1}{4}+x^2+x^4-x+x^2-2x^3)-(x^2-2x^3+x^4)}\\
+			&=(\frac{1}{2}-x+x^2)\pm\frac{1}{2}\sqrt{1-4x+4x^2}\\
+			&=(\frac{1}{2}-x+x^2)\pm\frac{1}{2}\sqrt{(1-2x)^2}\\
+			&=(\frac{1}{2}-x+x^2)\pm(\frac{1}{2}-x)\\
+			&=x^2; 1-2x+x^2\\
+			&=x^2; (1-x)^2
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x$, $\lambda_2=(1-x)$, dan $\lambda_3=\lambda_4=0$.
+	
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+(1-x)\rho_4\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				x&0&0&x\\
+				0&(1-x)&(x-1)&0\\
+				0&(x-1)&(1-x)&0\\
+				x&0&0&x
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2x^2&0&0&2x^2\\
+				0&2(1-x)^2&-2(1-x)^2&0\\
+				0&-2(1-x)^2&2(1-x)^2&0\\
+				2x^2&0&0&2x^2
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	Maka
+	
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(\frac{x^2}{2}-\lambda)^2-\frac{x^4}{4}][(\frac{(1-x)^2}{2}-\lambda)^2-\frac{(1-x)^4}{4}]\\
+			&=[\lambda^2-x^2\lambda][\lambda^2-(1-x)^2\lambda]\\
+			&=(\lambda-x^2)(\lambda-(1-x)^2)\lambda^2\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x$, $\lambda_2=(1-x)$, dan $\lambda_3=\lambda_4=0$.
+	
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+y\rho_2+(1-x-y)\rho_3\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				x+y&0&0&x-y\\
+				0&1-x-y&1-x-y&0\\
+				0&1-x-y&1-x-y&0\\
+				x-y&0&0&x+y
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				(x+y)^2+(x-y)^2&0&0&2(x^2-y^2)\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				2(x^2-y^2)&0&0&(x+y)^2+(x-y)^2
+			\end{pmatrix}\\
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2(x^2+y^2)&0&0&2(x^2-y^2)\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				0&2(1-x-y)^2&2(1-x-y)^2&0\\
+				2(x^2-y^2)&0&0&2(x^2+y^2)
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	Maka
+	
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(\frac{x^2+y^2}{2}-\lambda)^2-\frac{(x^2-y^2)^2}{4}][(\frac{(1-x-y)^2}{2}-\lambda)^2-\frac{(1-x-y)^4}{4}]\\
+			&=[\lambda^2-(x^2+y^2)\lambda+\frac{(x^2+y^2)^2-(x^2-y^2)^2}{4}][\lambda-(1-x-y)^2]\lambda\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{1,2}
+			&=\frac{x^2+y^2}{2}\pm\frac{1}{2}\sqrt{(x^2+y^2)^2-((x^2+y^2)^2-(x^2-y^2)^2)}\\
+			&=\frac{x^2+y^2}{2}\pm\frac{x^2-y^2}{2}\\
+			&=x^2; y^2
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x$, $\lambda_2=y$, $\lambda_3=(1-x-y)$, dan $\lambda_4=0$.
+	
+	\item Jika
+	\begin{equation}
+		\begin{aligned}
+			\rho
+			&=x\rho_1+y\rho_2+(1-x-y-z)\rho_3+z\rho_4\\
+			&=\frac{1}{2}
+			\begin{pmatrix}
+				x+y&0&0&x-y\\
+				0&1-x-y&1-x-y-2z&0\\
+				0&1-x-y-2z&1-x-y&0\\
+				x-y&0&0&x+y
+			\end{pmatrix}\\
+			&=\tilde{\rho}
+		\end{aligned}
+	\end{equation}
+	
+	dan
+	
+	\begin{equation}
+		\begin{aligned}
+			\rho \tilde{\rho}
+			&=\frac{1}{4}
+			\begin{pmatrix}
+				2(x^2+y^2)&0&0&2(x^2-y^2)\\
+				0&(1-x-y)^2+(1-x-y-2z)^2&2(1-x-y)(1-x-y-2z)&0\\
+				0&2(1-x-y)(1-x-y-2z)&(1-x-y)^2+(1-x-y-2z)^2&0\\
+				2(x^2-y^2)&0&0&2(x^2+y^2)
+			\end{pmatrix}
+		\end{aligned}
+	\end{equation}
+	
+	Maka
+	
+	\begin{equation}
+		\begin{aligned}
+			|\rho \tilde{\rho}-I\lambda|
+			&=[(\frac{x^2+y^2}{2}-\lambda)^2-\frac{(x^2-y^2)^2}{4}][(\frac{(1-x-y)^2+(1-x-y-2z)^2}{4}-\lambda)^2\\
+			&-\frac{(1-x-y)^2(1-x-y-2z)^2}{4}]\\
+			&=[(\frac{x^2+y^2}{2}-\lambda)^2-\frac{(x^2-y^2)^2}{4}][\lambda^2-\frac{(1-x-y)^2+(1-x-y-2z)^2}{2}\lambda\\
+			&+(\frac{(1-x-y)^2+(1-x-y-2z)^2}{4})^2-\frac{(1-x-y)^2(1-x-y-2z)^2}{4}]\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{1,2}
+			&=\frac{x^2+y^2}{2}\pm\frac{1}{2}\sqrt{(x^2+y^2)^2-((x^2+y^2)^2-(x^2-y^2)^2)}\\
+			&=\frac{x^2+y^2}{2}\pm\frac{x^2-y^2}{2}\\
+			&=x^2; y^2
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+		\begin{aligned}
+			\lambda_{3,4}
+			&=\frac{(1-x-y)^2+(1-x-y-2z)^2}{4}\pm\frac{1}{2}\sqrt{(1-x-y)^2(1-x-y-2z)^2}\\
+			&=\frac{(1-x-y)^2+(1-x-y-2z)^2}{4}\pm\frac{2{(1-x-y)(1-x-y-2z)}}{4}\\
+			&=(\frac{(1-x-y)+(1-x-y-2z)}{2})^2; (\frac{(1-x-y)-(1-x-y-2z)}{2})^2\\
+			&=(1-x-y-z)^2; z^2
+		\end{aligned}
+	\end{equation}
+	
+	sehingga $\lambda_1=x$, $\lambda_2=y$, $\lambda_3=z$, dan $\lambda_4=(1-x-y-z)$.
+\end{enumerate}
+
+\section{Trace Matriks $\rho_i\tilde{\rho}_i$}
+\par
+Salah satu besaran yang sering muncul dalam teori keterbelitan dua qubit adalah operator
+\begin{equation}
+	\mathrm{Tr}(\rho\tilde{\rho}),
+\end{equation}
+dengan $\rho$ merupakan matriks densitas suatu sistem dua qubit, sedangkan $\tilde{\rho}$ merupakan matriks densitas hasil transformasi pembalikan spin yang didefinisikan pada persamaan (\ref{rhotilde}). Transformasi pembalikan spin dapat dipandang sebagai operasi yang membalik orientasi spin setiap qubit sekaligus mengambil konjugat kompleks keadaan kuantum. Operasi ini memainkan peranan penting dalam pengukuran keterbelitan karena menghasilkan pasangan keadaan yang dibandingkan dengan keadaan semula \cite{Wootters1998}.
+
+Selanjutnya dibentuk matriks
+\begin{equation}
+	R=\rho\tilde{\rho}.
+\end{equation}
+Matriks $R$ bukan merupakan matriks densitas karena pada umumnya tidak memenuhi syarat Hermitian maupun memiliki jejak satu. Akan tetapi, matriks ini mempunyai nilai eigen real dan tidak negatif sehingga dapat digunakan untuk mendefinisikan ukuran keterbelitan berupa konkurensi \cite{Hill1997,Wootters1998}. Besaran
+\begin{equation}
+	\mathrm{Tr}(\rho\tilde{\rho})
+	=\mathrm{Tr}(R)
+\end{equation}
+merupakan jejak dari matriks $R$, yaitu jumlah seluruh elemen diagonalnya. Berdasarkan sifat jejak matriks, besaran tersebut sama dengan jumlah seluruh nilai eigen matriks $R$, yaitu
+\begin{equation}
+	\mathrm{Tr}(\rho\tilde{\rho})
+	=\lambda_1+\lambda_2+\lambda_3+\lambda_4,
+\end{equation}
+dengan $\lambda_i$ merupakan nilai eigen dari matriks $\rho\tilde{\rho}$.
+
+Perlu diperhatikan bahwa $\mathrm{Tr}(\rho\tilde{\rho})$ bukan merupakan ukuran keterbelitan. Nilai tersebut hanya memberikan informasi mengenai jumlah seluruh nilai eigen matriks $R$. Dua keadaan kuantum yang berbeda dapat memiliki nilai $\mathrm{Tr}(\rho\tilde{\rho})$ yang sama, tetapi memiliki tingkat keterbelitan yang berbeda. Ukuran keterbelitan yang sesungguhnya diberikan oleh konkurensi, yang didefinisikan oleh persamaan (\ref{konkurensi})
+dengan
+\begin{equation}
+	\lambda_1\ge\lambda_2\ge\lambda_3\ge\lambda_4
+\end{equation}
+merupakan nilai eigen matriks $\rho\tilde{\rho}$ yang telah diurutkan dari terbesar hingga terkecil \cite{Wootters1998}. Persamaan tersebut menunjukkan bahwa konkurensi tidak bergantung pada nilai $\mathrm{Tr}(\rho\tilde{\rho})$ saja, melainkan bergantung pada distribusi seluruh nilai eigen matriks $\rho\tilde{\rho}$. Oleh karena itu, mengetahui hanya nilai
+\begin{equation}
+	\mathrm{Tr}(\rho\tilde{\rho})
+\end{equation}
+tidak cukup untuk menentukan nilai konkurensi. Yang diperlukan adalah seluruh spektrum nilai eigen matriks $\rho\tilde{\rho}$.
+
+Dengan demikian dapat disimpulkan bahwa $\mathrm{Tr}(\rho\tilde{\rho})$ hanyalah sebuah besaran matematis yang menyatakan jumlah nilai eigen matriks $\rho\tilde{\rho}$, sedangkan ukuran keterbelitan dua qubit ditentukan oleh kombinasi nonlinier akar dari seluruh nilai eigen tersebut melalui rumus konkurensi. Berikut kita lakukan perhitungan untuk menentukan nilai $\mathrm{Tr}(\rho\tilde{\rho})$ dengan menggunakan matriks koefisien pada keadaan dua dan tiga qubit.
+\subsection{Keadaan Dua Qubit}
+\par
+Keadaan umum dua qubit dituliskan sebagai
+\begin{equation}
+	|\psi\rangle = \sum_{i j} c_{i j} | i j \rangle
+\end{equation}
+maka matriks kerapatannya dapat ditulis sebagai
+\begin{equation}
+	\rho = \sum_{i j} \sum_{k l} c_{i j} c^{*}_{k l} | i j \rangle \langle k l |
+\end{equation}
+Sehingga
+\begin{equation}
+	\rho_A
+	= \sum_{i k} \sum_{m} c_{i m} c^{*}_{k m} | i \rangle \langle k |
+	= \begin{pmatrix}
+		\sum_m |c_{0m}|^2 & \sum_m c_{0m} c^{*}_{1m} \\
+		\sum_n c_{1n} c^{*}_{0n} & \sum_n |c_{1n}|^2
+	\end{pmatrix}
+\end{equation}
+dan determinan
+\begin{equation}
+	\begin{aligned}
+		\det \rho_A
+		&= \sum_{m n} |c_{0m}|^2 |c_{1n}|^2
+		- \sum_{m n} c_{0m} c_{1n} c^{*}_{1m} c^{*}_{0n}\\
+		&= (|c_{00}|^2 + |c_{01}|^2)(|c_{10}|^2 + |c_{11}|^2) - c_{00} c_{10} c^{*}_{10} c^{*}_{00} - c_{00} c_{11} c^{*}_{10} c^{*}_{01}\\
+		&- c_{01} c_{10} c^{*}_{11} c^{*}_{00} - c_{01} c_{11} c^{*}_{11} c^{*}_{01}\\
+		&= |c_{00}|^2 |c_{10}|^2
+		+ |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		+ |c_{01}|^2 |c_{11}|^2- |c_{00}|^2 |c_{10}|^2\\
+		&- c_{00} c_{11} c^{*}_{10} c^{*}_{01}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}- |c_{01}|^2 |c_{11}|^2\\
+		&= |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		- c_{00} c_{11} c^{*}_{10} c^{*}_{01}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}
+	\end{aligned}
+\end{equation}
+Sedangkan
+\begin{equation}
+	\rho_B
+	= \sum_{j l} \sum_m c_{m j} c^{*}_{m l} | j \rangle \langle l |
+	= \begin{pmatrix}
+		\sum_m |c_{m0}|^2 & \sum_m c_{m0} c^{*}_{m1} \\
+		\sum_n c_{n1} c^{*}_{n0} & \sum_n |c_{n1}|^2
+	\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\det \rho_B
+		&= \sum_m |c_{m0}|^2 \sum_n |c_{n1}|^2
+		- \left( \sum_m c_{m0} c^{*}_{m1} \right)
+		\left( \sum_n c_{n1} c^{*}_{n0} \right)\\
+		&= (|c_{00}|^2 + |c_{10}|^2)(|c_{01}|^2 + |c_{11}|^2)
+		- (c_{00} c^{*}_{01} + c_{10} c^{*}_{11})
+		(c_{01} c^{*}_{00} + c_{11} c^{*}_{10})\\
+		&= |c_{00}|^2 |c_{01}|^2
+		+ |c_{00}|^2 |c_{11}|^2
+		+ |c_{10}|^2 |c_{01}|^2
+		+ |c_{10}|^2 |c_{11}|^2- |c_{00}|^2 |c_{01}|^2\\
+		&- c_{00} c_{11} c^{*}_{01} c^{*}_{10}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}- |c_{10}|^2 |c_{11}|^2\\
+		&= |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		- c_{00} c_{11} c^{*}_{01} c^{*}_{10}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}\\
+		&= \det \rho_A
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\det \rho_A
+		&= |c_{00}|^2 |c_{11}|^2
+		+ |c_{01}|^2 |c_{10}|^2
+		- c_{00} c_{11} c^{*}_{01} c^{*}_{10}
+		- c^{*}_{00} c^{*}_{11} c_{01} c_{10}\\
+		&=c_{00} c_{11} c^{*}_{00} c^{*}_{11}
+		+ c_{01} c_{10} c^{*}_{01} c^{*}_{10}-c_{00} c_{11} c^{*}_{01} c^{*}_{10}-c^{*}_{00} c^{*}_{11}c_{01} c_{10} \\
+		&= c_{00}c_{11}(c^{*}_{00} c^{*}_{11} - c^{*}_{01} c^{*}_{10})+c_{01}c_{10}(c^{*}_{01} c^{*}_{10} - c^{*}_{00} c^{*}_{11})\\
+		&= (c_{00} c_{11} - c_{01} c_{10})
+		(c^{*}_{00} c^{*}_{11} - c^{*}_{01} c^{*}_{10})\\
+		&= (c_{00} c_{11} - c_{01} c_{10})
+		(c_{00} c_{11} - c_{01} c_{10})^{*}\\
+		&= \det |c| (\det |c|)^{*}\\
+		&= |\det c|^2
+	\end{aligned}
+\end{equation}
+Sekarang kembali ke $\mathrm{Tr}\,\rho \tilde{\rho}$
+
+\begin{equation}
+	|\psi\rangle
+	= c_{00}|00\rangle + c_{01}|01\rangle
+	+ c_{10}|10\rangle + c_{11}|11\rangle
+\end{equation}
+maka
+
+\begin{equation}
+	\begin{aligned}
+		|\tilde{\psi}\rangle
+		&= (\sigma_y \otimes \sigma_y)|\psi\rangle^{*}\\
+		&= -c^{*}_{00}|11\rangle
+		+ c^{*}_{01}|10\rangle
+		+ c^{*}_{10}|01\rangle
+		- c^{*}_{11}|00\rangle\\
+		&= -c^{*}_{11}|00\rangle
+		+ c^{*}_{10}|01\rangle
+		+ c^{*}_{01}|10\rangle
+		- c^{*}_{00}|11\rangle
+	\end{aligned}
+\end{equation}
+dan
+
+\begin{equation}
+	\begin{aligned}
+		\langle \psi | \tilde{\psi} \rangle
+		&= -c^{*}_{00} c^{*}_{11}
+		+ c^{*}_{01} c^{*}_{10}
+		+ c^{*}_{10} c^{*}_{01}
+		- c^{*}_{11} c^{*}_{00}\\
+		&= 2 (c_{01} c_{10} - c_{00} c_{11})^{*}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\rho \tilde{\rho}
+		&= |\psi\rangle \langle\psi| \tilde{\psi}\rangle \langle\tilde{\psi}|\\
+		&= -2 (c_{00} c_{11} - c_{01} c_{10})^{*}
+		|\psi\rangle \langle\tilde{\psi}|
+	\end{aligned}
+\end{equation}
+Maka
+
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho \tilde{\rho}
+		&= \sum_{p q} \langle p q | \rho \tilde{\rho} | p q \rangle\\
+		&= -2(c_{00}c_{11}-c_{01}c_{10})^{*} \sum_{p q} \langle p q \ket{\psi}\bra{\psi} p q \rangle\\
+		&=-2(c_{00} c_{11} - c_{01} c_{10})^{*}(-c_{00}c_{11}+c_{01}c_{10}+c_{10}c_{01}-c_{11}c_{00})\\
+		&=-2(c_{00} c_{11} - c_{01} c_{10})^{*} {-2(c_{00} c_{11} - c_{01} c_{10})}\\
+		&= 4 (c_{00} c_{11} - c_{01} c_{10})
+		(c_{00} c_{11} - c_{01} c_{10})^{*}\\
+		&= 4 \det c (\det c)^{*}\\
+		&= 4 |\det c|^2\\
+		&= 4 \det \rho_A
+	\end{aligned}
+\end{equation}
+
+\subsection{Keadaan Tiga Qubit}
+
+Keadaan umum dua qubit dituliskan sebagai
+\begin{equation}
+	|\psi\rangle
+	= \sum_{i j k} c_{i j k} | i j k \rangle
+\end{equation}
+maka
+\begin{equation}
+	\begin{aligned}
+		\rho
+		&= |\psi\rangle \langle \psi| \\
+		&= \sum_{i j k} \sum_{p q r}
+		c_{i j k} c^{*}_{p q r}
+		| i j k \rangle \langle p q r |
+	\end{aligned}
+\end{equation}
+dan
+\begin{equation}
+	\begin{aligned}
+		\rho_{AB}
+		&= \sum_m I \otimes I \otimes \langle m 
+		\, |\psi\rangle \langle \psi | \,
+		I \otimes I \otimes | m \rangle \\
+		&= \sum_{i j} \sum_{k l}\sum_m
+		c_{i j m} c^{*}_{k l m}
+		| i j \rangle \langle k l |
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\rho^{*}_{AB}
+	= \sum_{i j} \sum_{k l} \sum_m
+	c^{*}_{i j m} c_{k l m}
+	| i j \rangle \langle k l |
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		\tilde{\rho}_{AB}
+		&= (\sigma_y \otimes \sigma_y)\,
+		\rho^{*}_{AB}\,
+		(\sigma_y \otimes \sigma_y) \\
+		&= \sum_m
+		\Big(
+		- c^{*}_{11m} |00\rangle
+		+ c^{*}_{10m} |01\rangle
+		+ c^{*}_{01m} |10\rangle
+		- c^{*}_{00m} |11\rangle
+		\Big) \\
+		&\quad \times
+		\Big(
+		- c_{11m} \langle 00|
+		+ c_{10m} \langle 01|
+		+ c_{01m} \langle 10|
+		- c_{00m} \langle 11|
+		\Big)
+	\end{aligned}
+\end{equation}
+maka
+\begin{equation}
+	\begin{aligned}
+		\rho_{AB} \tilde{\rho}_{AB}
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)
+		\left(
+		c^{*}_{00m} \langle 00|
+		+ c^{*}_{01m} \langle 01|
+		+ c^{*}_{10m} \langle 10|
+		+ c^{*}_{11m} \langle 11|
+		\right) \\
+		&\quad \times
+		\left(
+		- c^{*}_{11n} |00\rangle
+		+ c^{*}_{10n} |01\rangle
+		+ c^{*}_{01n} |10\rangle
+		- c^{*}_{00n} |11\rangle
+		\right) \\
+		&\quad \times
+		\left(
+		- c_{11n} \langle 00|
+		+ c_{10n} \langle 01|
+		+ c_{01n} \langle 10|
+		- c_{00n} \langle 11|
+		\right)\\
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)
+		\left(
+		- c^{*}_{00m} c^{*}_{11n}
+		+ c^{*}_{01m} c^{*}_{10n}
+		+ c^{*}_{10m} c^{*}_{01n}
+		- c^{*}_{11m} c^{*}_{00n}
+		\right) \\
+		&\quad \times
+		\left(
+		- c_{11n} \langle 00|
+		+ c_{10n} \langle 01|
+		+ c_{01n} \langle 10|
+		- c_{00n} \langle 11|
+		\right)\\
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)^{*}_{mn}
+		\left(
+		c_{00m} \ket{00}
+		+ c_{01m} \ket{01}
+		+ c_{10m} \ket{10}
+		- c_{11m} \ket{11}
+		\right) \\
+		&\quad \times
+		\left(
+		- c_{11n} \langle 00|
+		+ c_{10n} \langle 01|
+		+ c_{01n} \langle 10|
+		- c_{00n} \langle 11|
+		\right)
+	\end{aligned}
+\end{equation}
+dan
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}
+		&= \sum_{i j}
+		\langle i j |
+		\rho_{AB} \tilde{\rho}_{AB}
+		| i j \rangle \\
+		&= \sum_{m n}
+		\left(
+		\sum_{i j} c_{i j m} | i j \rangle
+		\right)^{*}_{mn}
+		\left(
+		- c_{00m} c_{11n}
+		+ c_{01m} c_{10n}
+		+ c_{10m} c_{01n}
+		- c_{11m} c_{00n}
+		\right) \\
+		&= (-c^{*}_{000} c^{*}_{110}
+		+ c^{*}_{010} c^{*}_{100}
+		+ c^{*}_{100} c^{*}_{010}
+		- c^{*}_{110} c^{*}_{000})
+		(-c_{000} c_{110}
+		+ c_{010} c_{100}
+		+ c_{100} c_{010}
+		- c_{110} c_{000}) \\
+		&\quad + (-c^{*}_{000} c^{*}_{111}
+		+ c^{*}_{010} c^{*}_{101}
+		+ c^{*}_{100} c^{*}_{011}
+		- c^{*}_{110} c^{*}_{001})
+		(-c_{000} c_{111}
+		+ c_{010} c_{101}
+		+ c_{100} c_{011}
+		- c_{110} c_{001}) \\
+		&\quad + (-c^{*}_{001} c^{*}_{110}
+		+ c^{*}_{011} c^{*}_{100}
+		+ c^{*}_{101} c^{*}_{010}
+		- c^{*}_{111} c^{*}_{000})
+		(-c_{001} c_{110}
+		+ c_{011} c_{100}
+		+ c_{101} c_{010}
+		- c_{111} c_{000}) \\
+		&\quad + (-c^{*}_{001} c^{*}_{111}
+		+ c^{*}_{011} c^{*}_{101}
+		+ c^{*}_{101} c^{*}_{011}
+		- c^{*}_{111} c^{*}_{001})
+		(-c_{001} c_{111}
+		+ c_{011} c_{101}
+		+ c_{101} c_{011}
+		- c_{111} c_{001})\\
+		&= 4 (c^{*}_{000} c^{*}_{110}
+		- c^{*}_{010} c^{*}_{100})
+		(c_{000} c_{110}
+		- c_{010} c_{100}) \\
+		&\quad + (2 (-c_{000} c_{111}
+		+ c_{010} c_{101}
+		+ c_{100} c_{011}
+		- c_{110} c_{001})) \\
+		&\qquad \times
+		(-c^{*}_{000} c^{*}_{111}
+		+ c^{*}_{010} c^{*}_{101}
+		+ c^{*}_{100} c^{*}_{011}
+		- c^{*}_{110} c^{*}_{001}) \\
+		&\quad + 4 (c^{*}_{001} c^{*}_{111}
+		- c^{*}_{011} c^{*}_{101})
+		(c_{001} c_{111}
+		- c_{011} c_{101})\\
+		&= 4 |c_{AB0}^{*}| |c_{AB0}|+ 4 \det c_{AB1} \det c_{AB1}^{*}+2(-(-c_{000}c_{111}-c_{010}c_{101})\\
+		&-(-c_{001}c_{110}-c_{011}c_{100}))(-(-c^{*}_{000} c^{*}_{111}-c^{*}_{010} c^{*}_{101})-(c_{001}c_{110}-c_{011}c_{100}))\\
+		&= 4 |\det c_{AB0}|^2
+		+ 4 |\det c_{AB1}|^2
+		+ 2 (\det c_{AB0}^1 + \det c_{AB1}^0)(\det c^{*1}_{AB0} + \det c^{*0}_{AB1})
+	\end{aligned}
+\end{equation}
+
+\subsection{Perhitungan Trace Matriks $\rho_i\tilde{\rho}_i$ pada Kelas GHZ dan W}
+\begin{enumerate}	
+	\item {$\ket{GHZ_{00}^+}=\frac{1}{\sqrt{2}}(\ket{000}+\ket{111})$}
+	dengan $c_{000}=c_{111}=\frac{1}{\sqrt{2}}$ dan $c_{001}=c_{010}=c_{100}=c_{011}=c_{101}=c_{110}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{2}} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = 0$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & \frac{1}{\sqrt{2}}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{2}} & 0 \\
+			0 & \frac{1}{\sqrt{2}}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = \frac{1}{2}$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\begin{aligned}
+			&\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4 |\det c_{AB0}|^2+ 4 |\det c_{AB1}|^2+ 2 (\det c_{AB0}^1 + \det c_{AB1}^0)(\det c^{*1}_{AB0} + \det c^{*0}_{AB1})\\
+			&=0+0+2(\frac{1}{2})(\frac{1}{2})\\
+			&=\frac{1}{2}
+		\end{aligned}
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{2}} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = 0$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & \frac{1}{\sqrt{2}}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{2}} & 0 \\
+			0 & \frac{1}{\sqrt{2}}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = \frac{1}{2}$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\frac{1}{2}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{2}} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & \frac{1}{\sqrt{2}}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{2}} & 0 \\
+			0 & \frac{1}{\sqrt{2}}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = \frac{1}{2}$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=2(\frac{1}{2})(\frac{1}{2})=\frac{1}{2}
+	\end{equation}
+	
+	\item {$\ket{GHZ}=\cos\theta\,\ket{000} + \sin\theta\,\ket{111}$}
+	dengan $c_{000}=\cos\theta$, $c_{111}=sin\theta$, dan $c_{001}=c_{010}=c_{100}=c_{011}=c_{101}=c_{110}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = 0$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=\frac{\sin^2 2\theta}{2}	
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = 0$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\frac{\sin^2 2\theta}{2}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=\frac{\sin^2 2\theta}{2}
+	\end{equation}
+	
+	\item { $\ket{W_1}=\frac{1}{\sqrt{3}}(\ket{001}+\ket{010}+\ket{100})$}
+	dengan $c_{001}=c_{010}=c_{100}=\frac{1}{\sqrt{3}}$ dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{\sqrt{3}} \\
+			\frac{1}{\sqrt{3}} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = -\frac{1}{3}$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{3}} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{\sqrt{3}} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = 0$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{3}} & 0 \\
+			\frac{1}{\sqrt{3}} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{1}{3})^2=4(\frac{1}{9})=\frac{4}{9}
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{\sqrt{3}} \\
+			\frac{1}{\sqrt{3}} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = -\frac{1}{3}$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{3}} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{\sqrt{3}} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = 0$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{3}} & 0 \\
+			\frac{1}{\sqrt{3}} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\frac{4}{9}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{\sqrt{3}} \\
+			\frac{1}{\sqrt{3}} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = -\frac{1}{3}$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{3}} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{\sqrt{3}} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = 0$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{\sqrt{3}} & 0 \\
+			\frac{1}{\sqrt{3}} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=\frac{4}{9}
+	\end{equation}
+	
+	\item { $\ket{W}=\sin\theta\cos\varphi\ket{001}+\sin\theta\sin\varphi\ket{010}+\cos\theta\ket{100}$}
+	dengan $c_{001}=\sin\theta\cos\varphi$, $=c_{010}\sin\theta\sin\varphi$, $c_{100}=\cos\theta$, dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \sin\theta\sin\varphi \\
+			\cos\theta & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = \sin\theta\cos\theta\cos\varphi$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\sin\theta\cos\varphi & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \sin\theta\sin\varphi \\
+			0 & \sin\theta
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = \sin\theta \cos\theta = \frac{1}{2}\sin(2\theta)$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\sin\theta\cos\varphi & 0 \\
+			\cos\theta & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi	
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \sin\theta\cos\varphi \\
+			\cos\theta & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = \sin\theta\cos\theta\cos\varphi$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\sin\theta\sin\varphi & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \sin\theta\cos\varphi \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = 0$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\sin\theta\sin\varphi & 0 \\
+			\cos\theta & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \sin\theta\cos\varphi \\
+			\sin\theta\sin\varphi & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = \sin^2\theta\sin\varphi\cos\varphi$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \sin\theta\cos\varphi \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = 0$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\cos\theta & 0 \\
+			\sin\theta\sin\varphi & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi
+	\end{equation}
+	
+	\item {$\ket{W_1}=\frac{1}{\sqrt{3}}(\ket{001}+\ket{010}+\ket{100})$}
+	dengan $\cos\theta=\frac{1}{\sqrt{3}}$, $\sin\theta=\sqrt{\frac{2}{3}}$, dan $\sin\varphi=\cos\varphi=\frac{1}{\sqrt{2}}=\pi/4$
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{2}{3})(\frac{1}{3})(\frac{1}{2})=\frac{4}{9}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{2}{3})(\frac{1}{3})(\frac{1}{2})=\frac{4}{9}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{4}{9})(\frac{1}{2})(\frac{1}{2})=\frac{4}{9}
+	\end{equation}
+	
+	\item {$\ket{W}=\frac{1}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+	dengan $\cos\theta=\frac{2}{3}$, $\sin\theta={\frac{\sqrt{5}}{3}}$, $\cos\varphi=\frac{1}{\sqrt{5}}$, dan $\sin\varphi=\frac{2}{\sqrt{5}}$
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{4}{5})=\frac{64}{81}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{1}{5})=\frac{16}{81}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{25}{81})(\frac{4}{5})(\frac{1}{5})=\frac{16}{81}
+	\end{equation}
+	
+	\item { $\ket{\psi}=\frac{1}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+	dengan $c_{001}=\frac{1}{3}$, $c_{010}=c_{100}=\frac{2}{3}$, dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = -\frac{4}{9}$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = 0$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{3} & 0 \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{4}{9})^2=\frac{64}{81}
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{3} \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = -\frac{2}{9}$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = 0$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4|\det c_{A0C}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{3} \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = -\frac{2}{9}$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = 0$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4|\det c_{0BC}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+	\end{equation}
+	
+	\item { $\ket{W}=\frac{2}{3}\ket{001}+\frac{1}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+	dengan $\cos\theta=\frac{2}{3}$, $\sin\theta=\frac{\sqrt{5}}{3}$, $\cos\varphi=\frac{2}{\sqrt{5}}$, dan $\sin\varphi=\frac{1}{\sqrt{5}}$
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{1}{5})=\frac{16}{81}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{5}{9})(\frac{4}{9})(\frac{4}{5})=\frac{64}{81}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{25}{81})(\frac{1}{5})(\frac{4}{5})=\frac{16}{81}
+	\end{equation}
+	
+	\item { $\ket{W}=\frac{2}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{1}{3}\ket{100}$}
+	dengan $\cos\theta=\frac{1}{3}$, $\sin\theta=\frac{2\sqrt{2}}{3}$, dan $\cos\varphi=\sin\varphi=\frac{1}{\sqrt{2}}$
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4\sin^2\theta \cos^2\theta \sin^2\varphi=4(\frac{8}{9})(\frac{1}{9})(\frac{1}{2})=\frac{16}{81}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4\sin^2\theta \cos^2\theta \cos^2\varphi=4(\frac{8}{9})(\frac{1}{9})(\frac{1}{2})=\frac{16}{81}
+	\end{equation}
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4\sin^4\theta \sin^2\varphi\cos^2\varphi=4(\frac{8}{9})^2(\frac{1}{2})(\frac{1}{2})=\frac{64}{81}
+	\end{equation}
+	
+	\item { $\ket{W}=\frac{2}{3}\ket{001}+\frac{2}{3}\ket{010}+\frac{1}{3}\ket{100}$}
+	dengan $c_{001}=c_{010}=\frac{2}{3}$, $c_{100}=\frac{1}{3}$ dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			\frac{1}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = -\frac{2}{9}$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = 0$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			\frac{1}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			\frac{1}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = -\frac{2}{9}$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = 0$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			\frac{1}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4|\det c_{A0C}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = -\frac{4}{9}$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = 0$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{3} & 0 \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4|\det c_{0BC}|^2=4(-\frac{4}{9})^2=\frac{64}{81}
+	\end{equation}
+	
+	\item { $\ket{W}=\frac{2}{3}\ket{001}+\frac{1}{3}\ket{010}+\frac{2}{3}\ket{100}$}
+	dengan $c_{001}=c_{100}=\frac{2}{3}$, $c_{010}=\frac{1}{3}$ dan $c_{000}=c_{011}=c_{101}=c_{110}=c_{111}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{3} \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = -\frac{2}{9}$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = 0$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = -\frac{4}{9}$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = 0$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{3} & 0 \\
+			\frac{2}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=4|\det c_{A0C}|^2=4(-\frac{4}{9})^2=\frac{64}{81}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			\frac{1}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = -\frac{2}{9}$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{2}{3} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = 0$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{2}{3} & 0 \\
+			\frac{1}{3} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=4|\det c_{0BC}|^2=4(-\frac{2}{9})^2=\frac{16}{81}
+	\end{equation}
+	
+	\item { $\ket{W}=\frac{1}{2}(\ket{000}-\ket{010}+\ket{101}-\ket{111})$}
+	dengan $c_{000}=-c_{010}=c_{101}=-c_{111}=\frac{1}{2}$ dan $c_{001}=c_{100}=c_{011}=c_{110}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & -\frac{1}{2} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = 0$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			\frac{1}{2} & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & -\frac{1}{2} \\
+			\frac{1}{2} & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = 0$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$
+	Maka
+	
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=4|\det c_{AB0}|^2=0
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			0 & \frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = \frac{1}{4}$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			-\frac{1}{2} & 0 \\
+			0 & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = \frac{1}{4}$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			0 & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = -\frac{1}{4}$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			-\frac{1}{2} & 0 \\
+			0 & \frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = -\frac{1}{4}$.
+	
+	Maka
+	\begin{equation}
+		\begin{aligned}
+			\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}
+			&=4|\det c_{A0C}|^2+4|\det c_{A1C}|^2+2(\det c_{A1C}^0+ \det c_{A0C}^1)(\det c^{*0}_{A1C} + \det c^{*1}_{A0C})\\
+			&=4(\frac{1}{4})^2+4(\frac{1}{4})^2+2(-\frac{1}{4}-\frac{1}{4})(-\frac{1}{4}-\frac{1}{4})\\
+			&=\frac{1}{4}+\frac{1}{4}+2(-\frac{1}{2})(-\frac{1}{2})\\
+			&=1
+		\end{aligned}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			-\frac{1}{2} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{2} \\
+			0 & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			0 & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = -\frac{1}{4}$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & \frac{1}{2} \\
+			-\frac{1}{2} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = \frac{1}{4}$.
+	
+	Maka
+	\begin{equation}
+		\begin{aligned}
+			\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}
+			&=4|\det c_{0BC}|^2+4|\det c_{1BC}|^2+2(\det c_{1BC}^0+ \det c_{0BC}^1)(\det c^{*0}_{1BC} + \det c^{*1}_{0BC})\\
+			&=4(0)+4(0)+2(-\frac{1}{4}+\frac{1}{4})(-\frac{1}{4}+\frac{1}{4})\\
+			&=0
+		\end{aligned}
+	\end{equation}
+	
+	\item { $\ket{\psi}=\frac{1}{2}(\ket{000}+\ket{001}+\ket{100}-\ket{101})$}
+	dengan $c_{000}=-c_{001}=c_{100}=-c_{101}=\frac{1}{2}$ dan $c_{010}=c_{111}=c_{011}=c_{110}=0$.
+	
+	Untuk $\rho_{AB}$, maka
+	\begin{equation}
+		c_{AB0}=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			\frac{1}{2} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0} = 0$
+	
+	\begin{equation}
+		c_{AB1}=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			-\frac{1}{2} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1} = 0$
+	
+	\begin{equation}
+		c_{AB1}^0=
+		\begin{pmatrix}
+			c_{000} & c_{010} \\
+			c_{101} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			-\frac{1}{2} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB1}^0 = 0$
+	
+	\begin{equation}
+		c_{AB0}^1=
+		\begin{pmatrix}
+			c_{001} & c_{011} \\
+			c_{100} & c_{110}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & 0 \\
+			\frac{1}{2} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{AB0}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=0
+	\end{equation}
+	
+	Untuk $\rho_{AC}$, maka
+	\begin{equation}
+		c_{A0C}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & \frac{1}{2} \\
+			\frac{1}{2} & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C} = -\frac{1}{2}$
+	
+	\begin{equation}
+		c_{A1C}=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C} = 0$
+	
+	\begin{equation}
+		c_{A1C}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & \frac{1}{2} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A1C}^0 = 0$
+	
+	\begin{equation}
+		c_{A0C}^1=
+		\begin{pmatrix}
+			c_{010} & c_{011} \\
+			c_{100} & c_{101}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 & 0 \\
+			\frac{1}{2} & -\frac{1}{2}
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{A0C}^1 = 0$.
+	
+	Maka
+	\begin{equation}
+		\begin{aligned}
+			\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}
+			&=4|\det c_{A0C}|^2\\
+			&=4(-\frac{1}{2})^2\\
+			&=4\frac{1}{4}\\
+			&=1
+		\end{aligned}
+	\end{equation}
+	
+	Untuk $\rho_{BC}$, maka
+	\begin{equation}
+		c_{0BC}=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & \frac{1}{2} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & -\frac{1}{2} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC} = 0$
+	
+	\begin{equation}
+		c_{1BC}^0=
+		\begin{pmatrix}
+			c_{000} & c_{001} \\
+			c_{110} & c_{111}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & \frac{1}{2} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{1BC}^0 = 0$
+	
+	\begin{equation}
+		c_{0BC}^1=
+		\begin{pmatrix}
+			c_{100} & c_{101} \\
+			c_{010} & c_{011}
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\frac{1}{2} & -\frac{1}{2} \\
+			0 & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	sehingga $\det c_{0BC}^1 = \frac{1}{4}$.
+	
+	Maka
+	\begin{equation}
+		\begin{aligned}
+			\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}
+			&=4|\det c_{0BC}|^2+4|\det c_{1BC}|^2+2(\det c_{1BC}^0+ \det c_{0BC}^1)(\det c^{*0}_{1BC} + \det c^{*1}_{0BC})\\
+			&=0
+		\end{aligned}
+	\end{equation}
+\end{enumerate}
+
+\section{Diskusi}
+Hasil perhitungan ukuran keterbelitan memungkinkan penentuan kelas keterbelitan suatu keadaan kuantum secara lebih mudah dan sistematis. Secara umum, keadaan tiga qubit dapat diklasifikasikan ke dalam beberapa kelas, yaitu keadaan terpisah sepenuhnya (\textit{fully separable}), keadaan bisepartit (\textit{biseparable}), dan keadaan keterbelitan tripartit sejati (\textit{genuine tripartite entanglement}). Keadaan terpisah sepenuhnya merupakan keadaan yang tidak memiliki keterbelitan sama sekali, sehingga seluruh qubit dapat dinyatakan sebagai hasil kali tensor dari masing-masing subsistem. Pada keadaan ini, nilai ukuran keterbelitan, seperti konkurensi maupun 3-tangle, bernilai nol. Sebaliknya, keadaan bisepartit menunjukkan adanya keterbelitan yang hanya melibatkan dua qubit, sedangkan qubit lainnya tidak terbelit dengan pasangan tersebut.
+
+Sementara itu, keadaan keadaan keterbelitan tripartit sejati merupakan bentuk keterbelitan yang melibatkan ketiga qubit secara bersamaan sehingga tidak dapat direduksi menjadi keterbelitan antar pasangan qubit saja. Salah satu contoh penting dari kelas ini adalah keadaan Greenberger--Horne--Zeilinger (GHZ). Keadaan GHZ merepresentasikan keterbelitan global yang melibatkan seluruh qubit dalam sistem. Karakteristik utama dari keadaan GHZ adalah bahwa keterbelitan akan hilang sepenuhnya apabila salah satu qubit dihilangkan atau dilakukan operasi \textit{partial trace} terhadap salah satu subsistem. Akibatnya, dua qubit yang tersisa berada dalam keadaan campuran yang tidak lagi menunjukkan adanya keterbelitan. Dengan kata lain, keberadaan keterbelitan pada keadaan GHZ sangat bergantung pada partisipasi ketiga qubit secara simultan. Secara umum, kelas GHZ mencakup seluruh keadaan tiga qubit yang dapat ditransformasikan ke dalam bentuk GHZ melalui operasi lokal stokastik dan komunikasi klasik (SLOCC). Namun, keadaan-keadaan dalam kelas GHZ tidak dapat diubah menjadi keadaan dalam kelas W hanya dengan menggunakan operasi SLOCC tanpa bantuan sumber daya keterbelitan tambahan. Hal ini menunjukkan bahwa kelas GHZ dan kelas W merupakan dua kelas keterbelitan yang berbeda dan tidak ekuivalen.
+
+Berbeda dengan keadaan GHZ, keadaan W memiliki sifat yang lebih tangguh terhadap kehilangan qubit. Pada keadaan W, apabila salah satu qubit diukur atau dihilangkan dari sistem, dua qubit yang tersisa masih mempertahankan sebagian keterbelitannya. Dengan demikian, korelasi kuantum pada keadaan W tidak sepenuhnya bergantung pada keberadaan seluruh qubit dalam sistem. Sifat inilah yang menjadikan kelas W lebih tahan terhadap proses dekoherensi maupun kehilangan partikel dibandingkan kelas GHZ, sehingga keadaan W berpotensi lebih sesuai untuk implementasi pada sistem kuantum nyata yang rentan terhadap gangguan lingkungan. Sehingga bisa dikatakan jika $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}, \mathrm{Tr}\,\rho_{AC} \tilde{\rho}_{AC}, \mathrm{Tr}\,\rho_{BC} \tilde{\rho}_{BC}$ memiliki nilai yang sama (di antara 0 dan 1) maka distribusi korelasi kuantum bersifat simetris terhadap ketiga pasangan qubit, tidak ada pasangan qubit yang lebih dominan dibandingkan pasangan lainnya, dan keterbelitan (atau korelasi kuantum) tersebar secara merata di seluruh sistem. Keadaan seperti ini sering dijumpai pada keadaan yang memiliki simetri pertukaran qubit, misalnya keadaan W. Sedangkan jika $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}=0, \mathrm{Tr}\,\rho_{AC} \tilde{\rho}_{AC}=1, dan \mathrm{Tr}\,\rho_{BC} \tilde{\rho}_{BC}=0$ maka pasangan AB tidak memiliki korelasi kuantum,
+pasangan BC tidak memiliki korelasi kuantum, dan
+hanya pasangan AC yang memiliki korelasi maksimum. Keadaan seperti ini termasuk \textit{biseparable} karena hanya dua qubit yang saling terbelit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\par
+Keadaan
+\begin{equation*}
+	\ket{\psi}=c_{00}\ket{00}+c_{01}\ket{01}+c_{10}\ket{10}+c_{11}\ket{11}
+\end{equation*}
+dapat dicari pembalikan spin-nya, yaitu
+\begin{equation}
+	\begin{aligned}
+		|\tilde{\psi}\rangle
+		&= (\sigma_y \otimes \sigma_y)|\psi\rangle^{*}\\
+		&= -c^{*}_{00}|11\rangle
+		+ c^{*}_{01}|10\rangle
+		+ c^{*}_{10}|01\rangle
+		- c^{*}_{11}|00\rangle\\
+		&= -c^{*}_{11}|00\rangle
+		+ c^{*}_{10}|01\rangle
+		+ c^{*}_{01}|10\rangle
+		- c^{*}_{00}|11\rangle
+	\end{aligned}
+\end{equation}
+dan jika
+\begin{equation}
+	\begin{aligned}
+		\langle \psi | \tilde{\psi} \rangle
+		&= -c^{*}_{00} c^{*}_{11}
+		+ c^{*}_{01} c^{*}_{10}
+		+ c^{*}_{10} c^{*}_{01}
+		- c^{*}_{11} c^{*}_{00}\\
+		&= 2 (c_{01} c_{10} - c_{00} c_{11})^{*}
+	\end{aligned}
+\end{equation}
+maka
+\begin{equation}
+	\begin{aligned}
+		\rho \tilde{\rho}
+		&= |\psi\rangle \langle\psi| \tilde{\psi}\rangle \langle\tilde{\psi}|\\
+		&= -2 (c_{00} c_{11} - c_{01} c_{10})^{*}
+		|\psi\rangle \langle\tilde{\psi}|.
+	\end{aligned}
+\end{equation}
+Sehingga dapat ditulis bahwa
+\begin{equation}
+	\begin{aligned}
+		\mathrm{Tr}\,\rho \tilde{\rho}
+		&= \sum_{p q} \langle p q | \rho \tilde{\rho} | p q \rangle\\
+		&= -2(c_{00}c_{11}-c_{01}c_{10})^{*} \sum_{p q} \langle p q \ket{\psi}\bra{\psi} p q \rangle\\
+		&=-2(c_{00} c_{11} - c_{01} c_{10})^{*}(-c_{00}c_{11}+c_{01}c_{10}+c_{10}c_{01}-c_{11}c_{00})\\
+		&=-2(c_{00} c_{11} - c_{01} c_{10})^{*} {-2(c_{00} c_{11} - c_{01} c_{10})}\\
+		&= 4 (c_{00} c_{11} - c_{01} c_{10})
+		(c_{00} c_{11} - c_{01} c_{10})^{*}\\
+		&= 4 \det c (\det c)^{*}\\
+		&= 4 |\det c|^2\\
+		&= 4 \det \rho_A.
+	\end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+Untuk menelaah derajat keterbelitan, tinjau keadaan umum dua qubit berikut.
+\begin{equation}
+	\ket{\psi(\alpha,\beta,\gamma)}=\sin\alpha\ket{00}+\cos\alpha\sin\beta\ket{01}+\cos\alpha\cos\beta\sin\gamma\ket{10}+\cos\alpha\cos\beta\cos\gamma\ket{11}
+\end{equation}
+dengan
+\begin{equation*}
+	c_{00}=\sin\alpha,
+\end{equation*}
+\begin{equation*}
+	c_{01}=\cos\alpha\sin\beta,
+\end{equation*}
+\begin{equation*}
+	c_{10}=\cos\alpha\cos\beta\sin\gamma,
+\end{equation*}
+dan
+\begin{equation*}
+	c_{11=}\cos\alpha\cos\beta\cos\gamma.
+\end{equation*}
+Maka keadaan dua qubit terdahulu
+\begin{enumerate}
+	\item Keadaan:
+	\begin{equation}
+		\ket{\phi_1}=\frac{1}{\sqrt{2}}(\ket{00}+\ket{11})=\ket{\phi(\frac{\pi}{4},0,0)} \label{keadaan1,2qubit}
+	\end{equation}
+	
+	\item Keadaan:
+	\begin{equation}
+		\ket{\phi_2}=\frac{1}{\sqrt{2}}(\ket{01}+\ket{10})=\ket{\phi(0,\frac{\pi}{4},\frac{\pi}{2})} \label{keadaan2,2qubit}
+	\end{equation}
+	
+	\item Keadaan:
+	\begin{equation}
+		\ket{\phi_3}=0,6\ket{00}+0,8\ket{11}=\ket{\phi_3(37^{\circ},0,0)} \label{keadaan3,2qubit}
+	\end{equation}
+	di mana untuk
+	\begin{equation*}
+		c_{00}=\sin\alpha=0,6
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\alpha=\arcsin(0,6)=37^{\circ}
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\alpha=\pm 0,8.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{01}=0,8\sin\beta=0
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\beta=0
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\beta=1.
+	\end{equation*}
+	Serta untuk
+	\begin{equation*}
+		c_{10}=0,8(1)\sin\gamma=0
+	\end{equation*}
+	maka diperoleh
+	\begin{equation*}
+		\gamma=0.
+	\end{equation*}
+	
+	\item Keadaan:
+	\begin{equation}
+		\ket{\phi_4}=\frac{1}{2}(\ket{00}+\ket{01}+\ket{10}+\ket{11}) \label{keadaan4,2qubit}
+	\end{equation}
+	di mana untuk
+	\begin{equation*}
+		c_{00}=\sin\alpha=\frac{1}{2}
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\alpha=\arcsin(0,5)
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\alpha=\sqrt{\frac{3}{4}}.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{01}=\sqrt{\frac{3}{4}}\sin\beta=\frac{1}{2}
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\beta=\arcsin(\frac{1}{\sqrt{3}})
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\beta=\sqrt{\frac{2}{3}}.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{10}=\sqrt{\frac{3}{4}}\sqrt{\frac{2}{3}}\sin\gamma=\frac{1}{2}
+	\end{equation*}
+	maka dapat diperoleh
+	\begin{equation*}
+		\cos\gamma=\pm\frac{1}{\sqrt{2}}.
+	\end{equation*}
+	Serta
+	\begin{equation*}
+		c_{11}=\sqrt{\frac{3}{4}}\sqrt{\frac{2}{3}}(\frac{1}{\sqrt{2}})=\frac{1}{2}.
+	\end{equation*}
+	
+	\item Keadaan:
+	\begin{equation}
+		\ket{\phi_5}=\frac{1}{2}(\ket{00}+\ket{01}+\ket{10}-\ket{11}) \label{keadaan5,2qubit}
+	\end{equation}
+	di mana untuk
+	\begin{equation*}
+		c_{00}=\sin\alpha=\frac{1}{2}
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\alpha=\arcsin(0,5)
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\alpha=\sqrt{\frac{3}{4}}.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{01}=\sqrt{\frac{3}{4}}\sin\beta=\frac{1}{2}
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\beta=\arcsin(\frac{1}{\sqrt{3}})
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\beta=\sqrt{\frac{2}{3}}.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{10}=\sqrt{\frac{3}{4}}\sqrt{\frac{2}{3}}\sin\gamma=\frac{1}{2}
+	\end{equation*}
+	maka dapat diperoleh
+	\begin{equation*}
+		\cos\gamma=\pm\frac{1}{\sqrt{2}}.
+	\end{equation*}
+	Serta untuk
+	\begin{equation*}
+		c_{11}=\sqrt{\frac{3}{4}}\sqrt{\frac{2}{3}}(-\frac{1}{\sqrt{2}})=-\frac{1}{2}
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\cos\gamma=-\frac{1}{\sqrt{2}}
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\gamma=\frac{3\pi}{4}.
+	\end{equation*}
+	
+	\item Keadaan:
+	\begin{equation}
+		\ket{\phi_6}=0,1\ket{00}+0,5\ket{01}+0,5\ket{10}+0,7\ket{11} \label{keadaan6,2qubit}
+	\end{equation}
+	di mana untuk
+	\begin{equation*}
+		c_{00}=\sin\alpha=0,1
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\alpha=\arcsin(0,1)
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\alpha=\sqrt{0,99}.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{01}=\sqrt{0,99}\sin\beta=0,5
+	\end{equation*}
+	maka
+	\begin{equation*}
+		\beta=\arcsin(\frac{0,5}{\sqrt{0,99}})
+	\end{equation*}
+	dan dapat diperoleh
+	\begin{equation*}
+		\cos\beta=\sqrt{\frac{0,74}{0,99}}.
+	\end{equation*}
+	Sedangkan untuk
+	\begin{equation*}
+		c_{10}=\sqrt{0,99}\sqrt{\frac{0,74}{0,99}}\sin\gamma=0,5
+	\end{equation*}
+	maka dapat diperoleh
+	\begin{equation*}
+		\cos\gamma=\sqrt{\frac{0,49}{0,74}}.
+	\end{equation*}
+	Serta
+	\begin{equation}
+		c_{11}=\sqrt{0,99}\sqrt{\frac{0,74}{0,99}}\sqrt{\frac{0,49}{0,74}}=\sqrt{0,49}=0,7.
+	\end{equation}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\par
+Hasil perhitungan ukuran keterbelitan memungkinkan penentuan kelas keterbelitan suatu keadaan kuantum secara lebih mudah dan sistematis. Secara umum, keadaan tiga qubit dapat diklasifikasikan ke dalam beberapa kelas, yaitu keadaan terpisah sepenuhnya (\textit{fully separable}), keadaan bisepartit (\textit{biseparable}), dan keadaan keterbelitan tripartit sejati (\textit{genuine tripartite entanglement}). Keadaan terpisah sepenuhnya merupakan keadaan yang tidak memiliki keterbelitan sama sekali, sehingga seluruh qubit dapat dinyatakan sebagai hasil kali tensor dari masing-masing subsistem. Pada keadaan ini, nilai ukuran keterbelitan, seperti konkurensi maupun 3-tangle, bernilai nol. Sebaliknya, keadaan bisepartit menunjukkan adanya keterbelitan yang hanya melibatkan dua qubit, sedangkan qubit lainnya tidak terbelit dengan pasangan tersebut.
+
+Dari hasil perhitungan di atas, bisa dikatakan jika $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}, \mathrm{Tr}\,\rho_{AC} \tilde{\rho}_{AC}$, dan $\mathrm{Tr}\,\rho_{BC} \tilde{\rho}_{BC}$ memiliki nilai yang sama (di antara 0 dan 1) maka distribusi korelasi kuantum bersifat simetris terhadap ketiga pasangan qubit, tidak ada pasangan qubit yang lebih dominan dibandingkan pasangan lainnya, dan keterbelitan (atau korelasi kuantum) tersebar secara merata di seluruh sistem. Keadaan seperti ini sering dijumpai pada keadaan yang memiliki simetri pertukaran qubit, misalnya keadaan W. Sedangkan jika $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}=0, \mathrm{Tr}\,\rho_{AC} \tilde{\rho}_{AC}=1, dan \mathrm{Tr}\,\rho_{BC} \tilde{\rho}_{BC}=0$ maka pasangan AB tidak memiliki korelasi kuantum,
+pasangan BC tidak memiliki korelasi kuantum, dan
+hanya pasangan AC yang memiliki korelasi maksimum. Keadaan seperti ini termasuk \textit{biseparable} karena hanya dua qubit yang saling terbelit.
+
+%\newpage
+%\thispagestyle{empty}
+%\begin{center}
+%	\topskip0pt
+%	\vspace*{\fill}
+%	\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+%	\vspace*{\fill}
+%\end{center}
+%\pagebreak

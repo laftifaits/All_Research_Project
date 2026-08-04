@@ -1,0 +1,64 @@
+\chapter{Pendahuluan}
+\section{Latar Belakang}
+\par
+Perkembangan pesat teknologi kuantum dalam beberapa dekade terakhir telah membuka peluang baru dalam berbagai bidang, seperti komputasi kuantum, komunikasi kuantum, kriptografi kuantum, simulasi kuantum, serta pemrosesan informasi kuantum secara umum. Dibandingkan dengan sistem komputasi klasik, sistem kuantum menawarkan kemampuan komputasi yang jauh lebih unggul untuk menyelesaikan permasalahan tertentu, misalnya faktorisasi bilangan besar dan pencarian basis data, melalui pemanfaatan fenomena mekanika kuantum seperti superposisi dan keterbelitan kuantum (\textit{quantum entanglement}) \cite{nielsen2010quantum}. Di antara berbagai fenomena kuantum tersebut, keterbelitan kuantum merupakan sumber daya fundamental yang berperan penting dalam hampir seluruh protokol informasi kuantum modern \cite{horodecki2009quantum}.
+\par
+Keterbelitan kuantum menggambarkan adanya korelasi nonklasik antara dua atau lebih subsistem kuantum sehingga keadaan keseluruhan sistem tidak dapat dinyatakan sebagai hasil kali langsung dari keadaan masing-masing subsistem. Sifat unik ini memungkinkan terlaksananya berbagai protokol penting, seperti teleportasi kuantum, \textit{dense coding}, distribusi kunci kuantum, serta komputasi kuantum berbasis gerbang (\textit{quantum gate computation}) \cite{bennett_1993,Bennett1992}. Oleh karena itu, karakterisasi dan klasifikasi keterbelitan menjadi aspek yang sangat penting untuk menentukan sejauh mana suatu keadaan kuantum dapat dimanfaatkan sebagai sumber daya dalam berbagai aplikasi teknologi kuantum.
+\par
+Meskipun klasifikasi keterbelitan pada sistem bipartit relatif telah dipahami dengan baik, permasalahan tersebut menjadi jauh lebih kompleks ketika diperluas ke sistem multipartit. Kompleksitas ini muncul karena jumlah kemungkinan konfigurasi keterbelitan meningkat secara eksponensial seiring bertambahnya jumlah partikel kuantum yang terlibat \cite{horodecki2009quantum}. Pada sistem tiga kubit, misalnya, terdapat dua kelas keterbelitan sejati (\textit{genuine multipartite entanglement}) yang secara fisik tidak ekuivalen di bawah operasi lokal stokastik dan komunikasi klasik (\textit{Stochastic Local Operations and Classical Communication} atau SLOCC), yaitu kelas Greenberger--Horne--Zeilinger (GHZ) dan kelas W \cite{dur2000three}. Kedua kelas tersebut memiliki sifat fisik yang berbeda. Keadaan GHZ menunjukkan keterbelitan global yang sangat kuat, tetapi mudah rusak ketika salah satu partikel hilang, sedangkan keadaan W memiliki ketahanan yang lebih baik terhadap kehilangan partikel meskipun tingkat keterbelitannya berbeda \cite{dur2000three}. Perbedaan karakteristik ini menuntut adanya metode klasifikasi yang mampu mengidentifikasi kelas keterbelitan secara cepat, akurat, dan efisien.
+\par
+Sejumlah metode telah dikembangkan untuk mengidentifikasi dan mengukur keterbelitan, di antaranya melalui tomografi keadaan kuantum, ukuran keterbelitan (\textit{entanglement measures}), saksi keterbelitan (\textit{entanglement witness}), serta penggunaan invarian aljabar \cite{Guhne2009}. Namun, metode tomografi kuantum konvensional memerlukan jumlah pengukuran yang meningkat secara eksponensial terhadap jumlah kubit sehingga implementasinya menjadi tidak efisien untuk sistem multipartit dengan dimensi yang besar \cite{Paris2004}. Selain itu, proses rekonstruksi matriks densitas dari hasil pengukuran juga membutuhkan sumber daya komputasi yang cukup besar. Oleh karena itu, diperlukan suatu pendekatan alternatif yang lebih sederhana secara matematis, tetapi tetap mampu mempertahankan akurasi dalam proses klasifikasi keterbelitan \cite{Quek2021,Howland2014}.
+\par
+Salah satu pendekatan yang banyak dikembangkan adalah representasi keadaan kuantum melalui matriks koefisien \cite{Chen2013,nielsen2010quantum}. Dalam pendekatan ini, amplitudo keadaan kuantum dipetakan ke dalam suatu struktur matriks tertentu sehingga informasi mengenai keterbelitan dapat diekstraksi menggunakan konsep-konsep aljabar linier, seperti \textit{rank}, determinan, \textit{trace}, dan invarian polinomial \cite{Li2012,Luque2003}. Pendekatan tersebut memiliki keunggulan karena memungkinkan identifikasi sifat keterbelitan secara langsung dari struktur matematis keadaan kuantum tanpa harus melakukan rekonstruksi penuh terhadap matriks densitas sistem.
+\par
+Beberapa penelitian sebelumnya menunjukkan bahwa \textit{rank} matriks koefisien dapat digunakan untuk mengklasifikasikan keadaan multipartit di bawah transformasi SLOCC \cite{Li2012}. Selain itu, berbagai invarian polinomial yang dibangun dari matriks koefisien juga terbukti mampu membedakan kelas-kelas keterbelitan yang tidak ekuivalen \cite{Luque2003}. Meskipun demikian, kajian mengenai formulasi matriks koefisien yang secara khusus diterapkan pada sistem dua dan tiga kubit masih perlu dikembangkan lebih lanjut, terutama dalam rangka memperoleh prosedur klasifikasi yang lebih sederhana dan mudah diimplementasikan secara analitik.
+\par
+Berdasarkan uraian tersebut, penelitian ini bertujuan untuk merumuskan suatu kerangka teoritis berbasis formulasi matriks koefisien guna mengklasifikasikan kelas keterbelitan pada sistem dua dan tiga kubit. Melalui pemetaan koefisien keadaan kuantum ke dalam bentuk matriks tertentu, diharapkan sifat keterbelitan, baik keadaan \textit{separable}, keterbelitan parsial, maupun keterbelitan maksimal, dapat diidentifikasi secara sistematis menggunakan parameter-parameter aljabar linier yang bersifat invarian terhadap transformasi unitari lokal. Hasil penelitian ini diharapkan dapat memberikan kontribusi dalam pengembangan metode karakterisasi keadaan kuantum yang lebih efisien, sekaligus mendukung implementasi protokol komunikasi dan komputasi kuantum yang semakin kompleks di masa mendatang.
+
+\section{Rumusan Masalah}
+Berdasarkan latar belakang yang telah diuraikan, maka rumusan masalah dalam penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+    \item Bagaimana membangun formulasi matriks koefisien yang dapat digunakan untuk merepresentasikan keadaan kuantum dua dan tiga qubit?
+    \item Bagaimana penggunaan matriks koefisien tersebut dalam menentukan ukuran keterbelitan serta membedakan karakteristik keterbelitan pada berbagai keadaan kuantum, seperti keadaan GHZ, keadaan W, dan keadaan kuantum lainnya?
+\end{enumerate}
+
+\section{Tujuan Penelitian}
+Adapun tujuan dari penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+    \item Mengkaji dan merumuskan formulasi matriks koefisien yang dapat digunakan untuk merepresentasikan keadaan kuantum dua dan tiga qubit.
+    \item Menerapan formulasi matriks koefisien dalam menentukan ukuran keterbelitan serta membedakan karakteristik keterbelitan pada berbagai keadaan kuantum, seperti keadaan GHZ, keadaan W, dan keadaan kuantum lainnya.
+\end{enumerate}
+
+\section{Batasan Masalah}
+Agar pembahasan dalam penelitian ini lebih terarah dan terfokus, maka batasan masalah yang digunakan adalah sebagai berikut:
+\begin{enumerate}
+    \item Sistem kuantum yang dikaji dibatasi pada sistem dua dan tiga qubit.
+    \item Pendekatan yang digunakan bersifat teoretis dan analitis, tanpa melibatkan simulasi numerik maupun verifikasi eksperimental.
+\end{enumerate}
+
+\section{Manfaat Penelitian}
+Manfaat yang diharapkan dari penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+    \item Memberikan pemahaman teoretis yang lebih mendalam mengenai formulasi matriks dan ukuran keterbelitan pada sistem dua dan tiga qubit.
+    \item Menjadi referensi akademik dalam kajian keterbelitan kuantum, di mana diantaranya terkait klasifikasi keadaan GHZ dan W.
+    \item Memberikan kontribusi konseptual bagi pengembangan studi lanjutan di bidang fisika kuantum teoretis dan informasi kuantum.
+\end{enumerate}
+
+\section{Sistematika Penelitian}
+Sistematika penulisan tesis ini disusun sebagai berikut:
+\begin{itemize}
+    \item \textbf{Bab 1 Pendahuluan} berisi latar belakang penelitian, rumusan masalah, tujuan penelitian, batasan masalah, manfaat penelitian, serta sistematika penulisan.
+    \item \textbf{Bab 2 Studi Litaratur} memuat konsep dasar terkait qubit, keterbelitan, klasifikasi keterbelitan, serta teori-teori pendukung yang relevan dengan penelitian.
+    \item \textbf{Bab 3 Metodologi} menjelaskan pendekatan teoretis/metodologi penelitian yang digunakan dan langkah/diagram alir yang diterapkan dalam penelitian.
+    \item \textbf{Bab 4 Hasil dan Pembahasan} menyajikan hasil analisis formulasi matriks dan ukuran keterbelitan pada sistem dua dan tiga qubit.
+    \item \textbf{Bab 5 Kesimpulan dan Saran} berisi kesimpulan yang diperoleh dari penelitian serta saran untuk pengembangan penelitian selanjutnya.
+\end{itemize}
+
+
+%\newpage
+%\begin{center}
+%	\topskip0pt
+%	\vspace*{\fill}
+%	\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+%	\vspace*{\fill}
+%\end{center}

@@ -1,0 +1,24 @@
+\chapter{Penutup}
+\section{Kesimpulan}
+\begin{enumerate}
+	\item Formulasi matriks koefisien untuk dua qubit adalah $\det \rho_A = \det \rho_B = |\det C|^2$, di mana nanti nilai eigennya akan digunakan untuk menghitung $E(\psi)=-\lambda_1\log_2\lambda_1-\lambda_2\log_2\lambda_2$ sebagai nilai keterbelitan suatu keadaan. Sedangkan untuk tiga qubit diperoleh bahwa $\mathrm{Tr}\,\rho_{AB} \tilde{\rho}_{AB}= 4 |\det C_{AB0}|^2 + 4 |\det C_{AB1}|^2 + 2 (\det C_{AB0}^1 + \det C_{AB1}^0)(\det C^{*1}_{AB0} + \det C^{*0}_{AB1})$.
+	\item Hasil dari $\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}$ dari keadaan GHZ pasti bernilai sama, artinya setiap pasangan qubit memiliki kontribusi kekusutan dua qubit yang sama. Dengan kata lain, pada keadaan GHZ, distribusi kekusutan bersifat simetris terhadap pertukaran qubit, sehingga tidak ada pasangan qubit yang lebih dominan atau lebih lemah tingkat kekusutannya dibandingkan pasangan lainnya.
+	\item Sedangkan hasil $\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}$ dari keadaan W juga pasti bernilai sama, berapapun nilai $\theta$ dan $\varphi$, yang artinya keterbelitan pada keadaan W terdistribusi secara simetris di antara ketiga pasangan qubit AB, AC, dan BC. Tidak terdapat satu pasangan qubit tertentu yang memiliki sifat keterbelitan yang lebih dominan dibandingkan pasangan lainnya apabila parameter keadaan dipilih sedemikian rupa sehingga keadaan tetap berada dalam kelas W. Sedangkan jika hasil dari $\mathrm{Tr}\,\rho_{AB}\tilde{\rho}_{AB}=0$, $\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}=1$, dan $\mathrm{Tr}\,\rho_{BC}\tilde{\rho}_{BC}=0$ membuktikan bahwa $\mathrm{Tr}\,\rho_{ij}\tilde{\rho}_{ij}$ hanya akan memiliki nilai jika terdapat keterbelitan diantara dua keadaan. Karena hanya A dengan C yang terbelit, maka hanya $\mathrm{Tr}\,\rho_{AC}\tilde{\rho}_{AC}$ yang memiliki nilai.
+\end{enumerate}
+\section{Saran}
+Pengerjaan untuk tesis ini masih dapat diperluas seperti:
+\begin{enumerate}
+	\item Pengembangan algoritma identifikasi kelas keterbelitan berdasarkan dekomposisi matriks.
+	\item Validasi efektivitas formulasi melalui simulasi numerik pada berbagai variasi keadaan kuantum.
+	\item Analisis matriks koefisien untuk 4 qubit dan seterusnya.
+\end{enumerate}
+
+%\newpage
+%\thispagestyle{empty}
+%\begin{center}
+%	\topskip0pt
+%	\vspace*{\fill}
+%	\textit{\textbf{"Halaman ini sengaja dikosongkan"}}
+%	\vspace*{\fill}
+%\end{center}
+%\pagebreak

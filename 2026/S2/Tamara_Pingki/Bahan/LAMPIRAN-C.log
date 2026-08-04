@@ -1,0 +1,815 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.1.6)  17 JUL 2026 18:38
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**LAMPIRAN-C.tex
+(./LAMPIRAN-C.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+! Undefined control sequence.
+l.1 \chapter
+            {Matriks Koefisien Kunci Depan}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{M
+              atriks Koefisien Kunci Depan}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no K in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no h in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]
+ []
+
+
+Overfull \hbox (48.53044pt too wide) in paragraph at lines 1--3
+[] \OML/cmm/m/it/10 ^^Z[][]$
+ []
+
+
+! LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 	\begin{aligned}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.6 		&
+       = \sum_{j k}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.10 		&
+        = \sum_{m n}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.15 		&
+        \times[\bra{00}(c_{0m0} \ket{00}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.15 		&\times[\bra
+                   {00}(c_{0m0} \ket{00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.15 		&\times[\bra{00}(c_{0m0} \ket
+                                    {00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.16 		+ c_{0m1} \ket
+                     {01}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.17 		+ c_{1m0} \ket
+                     {10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.18 		- c_{1m1} \ket
+                     {11})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.19 		&
+        (- c_{1n1} \langle 00|
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.22 		- c_{0n0} \langle 11)\ket
+                                {00}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.23 		&
+        +\bra{01}(c_{0m0} \ket{00}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.23 		&+\bra
+             {01}(c_{0m0} \ket{00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.23 		&+\bra{01}(c_{0m0} \ket
+                              {00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.24 		+ c_{0m1} \ket
+                     {01}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 		+ c_{1m0} \ket
+                     {10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.26 		- c_{1m1} \ket
+                     {11})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.27 		&
+        (- c_{1n1} \langle 00|
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.30 		- c_{0n0} \langle 11)\ket
+                                {01}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.31 		&
+        +\bra{10}(c_{0m0} \ket{00}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.31 		&+\bra
+             {10}(c_{0m0} \ket{00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.31 		&+\bra{10}(c_{0m0} \ket
+                              {00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.32 		+ c_{0m1} \ket
+                     {01}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.33 		+ c_{1m0} \ket
+                     {10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.34 		- c_{1m1} \ket
+                     {11})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.35 		&
+        (- c_{1n1} \langle 00|
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.38 		- c_{0n0} \langle 11)\ket
+                                {10}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.39 		&
+        +\bra{11}(c_{0m0} \ket{00}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.39 		&+\bra
+             {11}(c_{0m0} \ket{00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.39 		&+\bra{11}(c_{0m0} \ket
+                              {00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.40 		+ c_{0m1} \ket
+                     {01}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.41 		+ c_{1m0} \ket
+                     {10}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 		- c_{1m1} \ket
+                     {11})\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.43 		&
+        (- c_{1n1} \langle 00|
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.46 		- c_{0n0} \langle 11)\ket
+                                {11}]\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.47 		&
+        = (-c^{*}_{000} c^{*}_{110}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.51 		&
+        (-c_{000} c_{110}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.55 		&
+        \quad + (-c^{*}_{000} c^{*}_{111}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.59 		&
+        (-c_{000} c_{111}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.63 		&
+        \quad + (-c^{*}_{001} c^{*}_{110}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.67 		&
+        (-c_{001} c_{110}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.71 		&
+        \quad + (-c^{*}_{001} c^{*}_{111}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.75 		&
+        (-c_{001} c_{111}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.79 		&
+        = 4 (c^{*}_{000} c^{*}_{101}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.83 		&
+        \quad + (2 (-c_{000} c_{111}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.87 		&
+        \qquad \times
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.92 		&
+        \quad + 4 (c^{*}_{010} c^{*}_{111}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.96 		&
+        = 4 |C_{A0C}^{*}| |C_{A0C}|+ 4 \det C_{A1C} \det C_{A1C}^{*}+2(-(-c_...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.97 		&
+        -(-c_{100}c_{011}-c_{101}c_{010}))(-(-c^{*}_{000} c^{*}_{111}-c^{*}_...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.98 		&
+        = 4 |\det C_{0BC}|^2
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{equation} on input line 3 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 	\end{aligned}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (4859.90936pt too wide) detected at line 102
+[] \OML/cmm/m/it/10 ^^Z[][] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 h\OML/cmm/m/it
+/10 jk\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 ^^Z[][]\OMS/cmsy/m/n/10 j\OML/cmm/m/it
+/10 jk\OMS/cmsy/m/n/10 i[]  \OT1/cmr/m/n/10 = [](\OMS/cmsy/m/n/10 ^^@\OML/cmm/m
+/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/
+cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 
+)[]  \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 c[][] \OT1/cmr/m
+/n/10 + \OML/cmm/m/it/10 c[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[][] \OMS/cm
+sy/m/n/10 ^^@ \OML/cmm/m/it/10 c[][]\OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\O
+ML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 00\OMS/cmsy/m/n/10 j \OT1/c
+mr/m/n/10 + \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 01\OMS/cmsy/m
+/n/10 j \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10
+ 10\OMS/cmsy/m/n/10 j ^^@ \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10
+ 11)[][]  + [](\OML/cmm/m/it/10 c[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[][] 
+\OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[][] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 
+c[][]\OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]\OMS/cmsy/m/n
+/10 h\OT1/cmr/m/n/10 00\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[
+]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 01\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 + \OML/
+cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 10\OMS/cmsy/m/n/10 j ^^@ \OML/
+cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 11)[][]  + [](\OML/cmm/m/it/10
+ c[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it
+/10 c[][] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[][]\OT1/cmr/m/n/10 )[] (\OMS/
+cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 00\OMS/cms
+y/m/n/10 j \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n
+/10 01\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10
+ h\OT1/cmr/m/n/10 10\OMS/cmsy/m/n/10 j ^^@ \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10
+ h\OT1/cmr/m/n/10 11)[][]  + [](\OML/cmm/m/it/10 c[][] \OT1/cmr/m/n/10 + \OML/c
+mm/m/it/10 c[][] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[][] \OMS/cmsy/m/n/10 ^^@ 
+\OML/cmm/m/it/10 c[][]\OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10
+ c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 00\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 + \O
+ML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 01\OMS/cmsy/m/n/10 j \OT1/c
+mr/m/n/10 + \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 10\OMS/cmsy/m
+/n/10 j ^^@ \OML/cmm/m/it/10 c[]\OMS/cmsy/m/n/10 h\OT1/cmr/m/n/10 11)[]][]  = (
+\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 
+c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/
+m/it/10 c[]c[]\OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] 
+\OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[
+]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]   + (\OMS/
+cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[
+] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/
+10 c[]c[]\OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/
+cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] 
+\OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]   + (\OMS/cmsy/
+m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OT
+1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[
+]c[]\OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m
+/n/10 + \OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/
+cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]   + (\OMS/cmsy/m/n/1
+0 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OT1/cmr
+/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\
+OT1/cmr/m/n/10 )[] (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10
+ + \OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/
+m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]  = 4(\OML/cmm/m/it/10 c[]
+c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it
+/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]   + 
+(2(\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/
+10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/c
+mm/m/it/10 c[]c[]\OT1/cmr/m/n/10 ))[]   \OMS/cmsy/m/n/10 ^^B \OT1/cmr/m/n/10 (\
+OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c
+[]c[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m
+/it/10 c[]c[]\OT1/cmr/m/n/10 )[]   + 4(\OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10
+ ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 c[]c[] \OMS/cmsy
+/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]  = 4\OMS/cmsy/m/n/10 j\O
+ML/cmm/m/it/10 C[]\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 C[]\OMS/cmsy/m/n/10 j \OT
+1/cmr/m/n/10 + 4 [] \OML/cmm/m/it/10 C[] [] C[] \OT1/cmr/m/n/10 + 2(\OMS/cmsy/m
+/n/10 ^^@\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OMS/cmsy
+/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 )[]  \OMS/cmsy/m/n/10 ^^@ \O
+T1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@
+ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 ))(\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 
+(\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
+/10 c[]c[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 (\OML/cmm/m/it
+/10 c[]c[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]c[]\OT1/cmr/m/n/10 ))[]  = 
+4\OMS/cmsy/m/n/10 j [] \OML/cmm/m/it/10 C[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10
+ + 4\OMS/cmsy/m/n/10 j [] \OML/cmm/m/it/10 C[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n
+/10 + 2([] \OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 C[]\OT1/c
+mr/m/n/10 )([] \OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 + [] \OML/cmm/m/it/10 C[]\O
+T1/cmr/m/n/10 )
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \newpage
+              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \begin{center}
+                    
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 106--106
+[] 
+ []
+
+
+Overfull \hbox (51.8106pt too wide) in paragraph at lines 109--111
+ \OT1/cmr/bx/it/10 "Halaman 
+ []
+
+
+Overfull \hbox (13.611pt too wide) in paragraph at lines 109--111
+ \OT1/cmr/bx/it/10 ini 
+ []
+
+
+Overfull \hbox (20.8359pt too wide) in paragraph at lines 109--111
+ \OT1/cmr/bx/it/10 sen- 
+ []
+
+
+Overfull \hbox (20.69977pt too wide) in paragraph at lines 109--111
+ \OT1/cmr/bx/it/10 gaja 
+ []
+
+
+Overfull \hbox (67.24097pt too wide) in paragraph at lines 109--111
+ \OT1/cmr/bx/it/10 dikosongkan" 
+ []
+
+)
+! Emergency stop.
+<*> LAMPIRAN-C.tex
+                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 32 strings out of 467537
+ 676 string characters out of 5423705
+ 445733 words of memory out of 5000000
+ 29033 multiletter control sequences out of 15000+600000
+ 628426 words of font info for 42 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 22i,5n,22p,165b,163s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,1329 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Ac{\'i}n%
+\ \protect \BOthers {.}}{%
+Ac{\'i}n%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2000}}%
+}]{%
+acin2001classification}
+\APACinsertmetastar {%
+acin2001classification}%
+\begin{APACrefauthors}%
+Ac{\'i}n, A.%
+, Andrianov, A.%
+, Costa, L.%
+, Jan{\'e}, R.%
+, Latorre, J\BPBI I.%
+\BCBL {}\ \BBA {} Tarrach, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Generalized Schmidt Decomposition and Classification of
+  Three-Qubit States} {Generalized schmidt decomposition and classification of
+  three-qubit states}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{85}{7}{1560--1563}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevLett.85.1560} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ac{\'i}n%
+, Bru{\ss}%
+, Lewenstein%
+\BCBL {}\ \BBA {} Sanpera%
+}{%
+Ac{\'i}n%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2001}}%
+}]{%
+Acin2001}
+\APACinsertmetastar {%
+Acin2001}%
+\begin{APACrefauthors}%
+Ac{\'i}n, A.%
+, Bru{\ss}, D.%
+, Lewenstein, M.%
+\BCBL {}\ \BBA {} Sanpera, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2001}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Classification of Mixed Three-Qubit States}
+  {Classification of mixed three-qubit states}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{87}{4}{040401}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevLett.87.040401} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Aggarwal%
+}{%
+Aggarwal%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+aggarwal2025classification}
+\APACinsertmetastar {%
+aggarwal2025classification}%
+\begin{APACrefauthors}%
+Aggarwal, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Classification of three-qubit genuine entangled states
+  using concurrence fill} {Classification of three-qubit genuine entangled
+  states using concurrence fill}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv:2506.16935 [quant-ph]}{}{}{}.
+\newblock
+\APACrefnote{arXiv preprint}
+\newblock
+\begin{APACrefDOI} \doi{10.48550/arXiv.2506.16935} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Aggarwal%
+\ \BBA {} Adhikari%
+}{%
+Aggarwal%
+\ \BBA {} Adhikari%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+Aggarwal2021}
+\APACinsertmetastar {%
+Aggarwal2021}%
+\begin{APACrefauthors}%
+Aggarwal, S.%
+\BCBT {}\ \BBA {} Adhikari, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Witness operator provides better estimate of the lower
+  bound of concurrence of bipartite bound entangled states in $d_1 \otimes
+  d_2$-dimensional system} {Witness operator provides better estimate of the
+  lower bound of concurrence of bipartite bound entangled states in $d_1
+  \otimes d_2$-dimensional system}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Quantum Information Processing}{20}{}{83}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s11128-021-03190-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Barnett%
+}{%
+Barnett%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+barnett2009quantum}
+\APACinsertmetastar {%
+barnett2009quantum}%
+\begin{APACrefauthors}%
+Barnett, S\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2009}.
+\newblock
+\APACrefbtitle {Quantum Information} {Quantum information}.
+\newblock
+\APACaddressPublisher{Oxford}{Oxford University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bastin%
+\ \protect \BOthers {.}}{%
+Bastin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+bastin2009multipartite}
+\APACinsertmetastar {%
+bastin2009multipartite}%
+\begin{APACrefauthors}%
+Bastin, T.%
+, Krins, S.%
+, Mathonet, P.%
+, Godefroid, M.%
+, Lamata, L.%
+\BCBL {}\ \BBA {} Solano, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multipartite entanglement in symmetric quantum states}
+  {Multipartite entanglement in symmetric quantum states}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{103}{7}{070503}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bengtsson%
+\ \BBA {} {\.Z}yczkowski%
+}{%
+Bengtsson%
+\ \BBA {} {\.Z}yczkowski%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+bengtsson2017geometry}
+\APACinsertmetastar {%
+bengtsson2017geometry}%
+\begin{APACrefauthors}%
+Bengtsson, I.%
+\BCBT {}\ \BBA {} {\.Z}yczkowski, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2017}.
+\newblock
+\APACrefbtitle {Geometry of Quantum States} {Geometry of quantum states}\
+  (\PrintOrdinal{2nd}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/9780511624568} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bennett%
+, Bernstein%
+, Popescu%
+\BCBL {}\ \BBA {} Schumacher%
+}{%
+Bennett%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1996}}%
+}]{%
+Bennett1996}
+\APACinsertmetastar {%
+Bennett1996}%
+\begin{APACrefauthors}%
+Bennett, C\BPBI H.%
+, Bernstein, H\BPBI J.%
+, Popescu, S.%
+\BCBL {}\ \BBA {} Schumacher, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Concentrating Partial Entanglement by Local Operations}
+  {Concentrating partial entanglement by local operations}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{53}{4}{2046--2052}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.53.2046} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bennett%
+\ \protect \BOthers {.}}{%
+Bennett%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1993}}%
+}]{%
+bennett_1993}
+\APACinsertmetastar {%
+bennett_1993}%
+\begin{APACrefauthors}%
+Bennett, C\BPBI H.%
+, Brassard, G.%
+, Cr{\'e}peau, C.%
+, Jozsa, R.%
+, Peres, A.%
+\BCBL {}\ \BBA {} Wootters, W\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Teleporting an unknown quantum state via dual classical
+  and Einstein--Podolsky--Rosen channels} {Teleporting an unknown quantum state
+  via dual classical and einstein--podolsky--rosen channels}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{70}{13}{1895--1899}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bennett%
+\ \BBA {} Wiesner%
+}{%
+Bennett%
+\ \BBA {} Wiesner%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+Bennett1992}
+\APACinsertmetastar {%
+Bennett1992}%
+\begin{APACrefauthors}%
+Bennett, C\BPBI H.%
+\BCBT {}\ \BBA {} Wiesner, S\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Communication via one- and two-particle operators on
+  Einstein-Podolsky-Rosen states} {Communication via one- and two-particle
+  operators on einstein-podolsky-rosen states}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{69}{20}{2881--2884}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevLett.69.2881} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Blumel%
+}{%
+Blumel%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+Blumel}
+\APACinsertmetastar {%
+Blumel}%
+\begin{APACrefauthors}%
+Blumel, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Foundations of Quantum Mechanics :From Photons to Quantum
+  Computers} {Foundations of quantum mechanics :from photons to quantum
+  computers}.
+\newblock
+\APACaddressPublisher{}{Jones \& Bartlett Learning}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Braginsky%
+\ \BBA {} Khalili%
+}{%
+Braginsky%
+\ \BBA {} Khalili%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+braginskii2013entanglement}
+\APACinsertmetastar {%
+braginskii2013entanglement}%
+\begin{APACrefauthors}%
+Braginsky, V\BPBI B.%
+\BCBT {}\ \BBA {} Khalili, F\BPBI Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Entanglement structure in multipartite quantum systems}
+  {Entanglement structure in multipartite quantum systems}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Reviews of Modern Physics}{85}{2}{565--623}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chen%
+, Yu%
+\BCBL {}\ \BBA {} Chen%
+}{%
+Chen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Chen2013}
+\APACinsertmetastar {%
+Chen2013}%
+\begin{APACrefauthors}%
+Chen, L.%
+, Yu, L.%
+\BCBL {}\ \BBA {} Chen, Y\BHBI X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Criteria of SLOCC Equivalence for Multipartite Quantum
+  States} {Criteria of slocc equivalence for multipartite quantum
+  states}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{87}{6}{062326}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.87.062326} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Coffman%
+, Kundu%
+\BCBL {}\ \BBA {} Wootters%
+}{%
+Coffman%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2000}}%
+}]{%
+coffman2000distributed}
+\APACinsertmetastar {%
+coffman2000distributed}%
+\begin{APACrefauthors}%
+Coffman, V.%
+, Kundu, J.%
+\BCBL {}\ \BBA {} Wootters, W\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Distributed entanglement} {Distributed
+  entanglement}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{61}{052306}{1--6}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.61.052306} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Collin%
+\ \protect \BOthers {.}}{%
+Collin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+esteve2004quantum}
+\APACinsertmetastar {%
+esteve2004quantum}%
+\begin{APACrefauthors}%
+Collin, E.%
+, Ithier, G.%
+, Aassime, A.%
+, Joyez, P.%
+, Vion, D.%
+\BCBL {}\ \BBA {} Esteve, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {NMR-like Control of a Quantum Bit Superconducting
+  Circuit} {Nmr-like control of a quantum bit superconducting circuit}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{93}{157005}{1--4}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevLett.93.157005} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Cornelio%
+}{%
+Cornelio%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Cornelio2013}
+\APACinsertmetastar {%
+Cornelio2013}%
+\begin{APACrefauthors}%
+Cornelio, M\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Multipartite entanglement from entanglement witnesses}
+  {Multipartite entanglement from entanglement witnesses}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{87}{}{032330}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.87.032330} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Desurvire%
+}{%
+Desurvire%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+Desurvire2009}
+\APACinsertmetastar {%
+Desurvire2009}%
+\begin{APACrefauthors}%
+Desurvire, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2009}.
+\newblock
+\APACrefbtitle {Classical and Quantum Information Theory: An Introduction for
+  the Telecom Scientist} {Classical and quantum information theory: An
+  introduction for the telecom scientist}.
+\newblock
+\APACaddressPublisher{Cambridge}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/CBO9780511803758} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dirac%
+}{%
+Dirac%
+}{%
+{\protect \APACyear {1981}}%
+}]{%
+dirac1981principles}
+\APACinsertmetastar {%
+dirac1981principles}%
+\begin{APACrefauthors}%
+Dirac, P\BPBI A\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1981}.
+\newblock
+\APACrefbtitle {The Principles of Quantum Mechanics} {The principles of quantum
+  mechanics}\ (\PrintOrdinal{4th}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Oxford University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+D\"ur%
+, Vidal%
+\BCBL {}\ \BBA {} Cirac%
+}{%
+D\"ur%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2000}}%
+}]{%
+dur2000three}
+\APACinsertmetastar {%
+dur2000three}%
+\begin{APACrefauthors}%
+D\"ur, W.%
+, Vidal, G.%
+\BCBL {}\ \BBA {} Cirac, J\BPBI I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Three qubits can be entangled in two inequivalent ways}
+  {Three qubits can be entangled in two inequivalent ways}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{62}{062314}{1--7}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.62.062314} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Greenberger%
+, Horne%
+\BCBL {}\ \BBA {} Zeilinger%
+}{%
+Greenberger%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1989}}%
+}]{%
+ghz1989}
+\APACinsertmetastar {%
+ghz1989}%
+\begin{APACrefauthors}%
+Greenberger, D\BPBI M.%
+, Horne, M\BPBI A.%
+\BCBL {}\ \BBA {} Zeilinger, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Going beyond Bell's theorem} {Going beyond bell's
+  theorem}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bell's Theorem, Quantum Theory and Conceptions of the
+  Universe}{}{}{69--72}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+G{"u}hne%
+\ \BBA {} T{'o}th%
+}{%
+G{"u}hne%
+\ \BBA {} T{'o}th%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+Guhne2009}
+\APACinsertmetastar {%
+Guhne2009}%
+\begin{APACrefauthors}%
+G{"u}hne, O.%
+\BCBT {}\ \BBA {} T{'o}th, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Entanglement detection} {Entanglement detection}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physics Reports}{474}{1--6}{1--75}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.physrep.2009.02.004} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hill%
+\ \BBA {} Wootters%
+}{%
+Hill%
+\ \BBA {} Wootters%
+}{%
+{\protect \APACyear {1997}}%
+}]{%
+Hill1997}
+\APACinsertmetastar {%
+Hill1997}%
+\begin{APACrefauthors}%
+Hill, S.%
+\BCBT {}\ \BBA {} Wootters, W\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1997}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Entanglement of a Pair of Quantum Bits} {Entanglement of
+  a pair of quantum bits}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{78}{26}{5022--5025}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevLett.78.5022} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Horodecki%
+, Horodecki%
+, Horodecki%
+\BCBL {}\ \BBA {} Horodecki%
+}{%
+Horodecki%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2009}}%
+}]{%
+horodecki2009quantum}
+\APACinsertmetastar {%
+horodecki2009quantum}%
+\begin{APACrefauthors}%
+Horodecki, R.%
+, Horodecki, P.%
+, Horodecki, M.%
+\BCBL {}\ \BBA {} Horodecki, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Quantum entanglement} {Quantum entanglement}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Reviews of Modern Physics}{81}{2}{865--942}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/RevModPhys.81.865} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Howland%
+, Lum%
+\BCBL {}\ \BBA {} Howell%
+}{%
+Howland%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+Howland2014}
+\APACinsertmetastar {%
+Howland2014}%
+\begin{APACrefauthors}%
+Howland, G\BPBI A.%
+, Lum, D\BPBI J.%
+\BCBL {}\ \BBA {} Howell, J\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reconstructing high-dimensional two-photon entangled
+  states via compressive sensing} {Reconstructing high-dimensional two-photon
+  entangled states via compressive sensing}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Scientific Reports}{4}{}{5065}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/srep05065} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kok%
+\ \protect \BOthers {.}}{%
+Kok%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+kok2007linear}
+\APACinsertmetastar {%
+kok2007linear}%
+\begin{APACrefauthors}%
+Kok, P.%
+, Munro, W\BPBI J.%
+, Nemoto, K.%
+, Ralph, T\BPBI C.%
+, Dowling, J\BPBI P.%
+\BCBL {}\ \BBA {} Milburn, G\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+\APACrefbtitle {Linear optical quantum computing with photonic qubits} {Linear
+  optical quantum computing with photonic qubits}\ (\BVOL~79)\ (\BNUM~1).
+\newblock
+\begin{APACrefDOI} \doi{10.1103/RevModPhys.79.135} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lay%
+, Lay%
+\BCBL {}\ \BBA {} McDonald%
+}{%
+Lay%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+lay2016linear}
+\APACinsertmetastar {%
+lay2016linear}%
+\begin{APACrefauthors}%
+Lay, D\BPBI C.%
+, Lay, S\BPBI R.%
+\BCBL {}\ \BBA {} McDonald, J\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {Linear Algebra and Its Applications} {Linear algebra and its
+  applications}\ (\PrintOrdinal{5}\ \BEd).
+\newblock
+\APACaddressPublisher{Boston}{Pearson}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+D.~Li%
+\ \BBA {} Li%
+}{%
+D.~Li%
+\ \BBA {} Li%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Li2012}
+\APACinsertmetastar {%
+Li2012}%
+\begin{APACrefauthors}%
+Li, D.%
+\BCBT {}\ \BBA {} Li, X.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Classification of general n-qubit states under
+  stochastic local operations and classical communication in terms of the rank
+  of coefficient matrix} {Classification of general n-qubit states under
+  stochastic local operations and classical communication in terms of the rank
+  of coefficient matrix}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{86}{4}{042332}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.86.042332} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+H.~Li%
+, Gao%
+\BCBL {}\ \BBA {} Yan%
+}{%
+H.~Li%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+Li2024}
+\APACinsertmetastar {%
+Li2024}%
+\begin{APACrefauthors}%
+Li, H.%
+, Gao, T.%
+\BCBL {}\ \BBA {} Yan, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Parametrized multipartite entanglement measures}
+  {Parametrized multipartite entanglement measures}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{109}{}{012213}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.109.012213} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Luque%
+\ \BBA {} Thibon%
+}{%
+Luque%
+\ \BBA {} Thibon%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+Luque2003}
+\APACinsertmetastar {%
+Luque2003}%
+\begin{APACrefauthors}%
+Luque, J\BHBI G.%
+\BCBT {}\ \BBA {} Thibon, J\BHBI Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Polynomial invariants of four qubits} {Polynomial
+  invariants of four qubits}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{67}{4}{042303}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.67.042303} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Meoijuan~Lu%
+}{%
+Meoijuan~Lu%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+Meoijuan}
+\APACinsertmetastar {%
+Meoijuan}%
+\begin{APACrefauthors}%
+Meoijuan~Lu, J\BPBI R\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2025}.
+\newblock
+\APACrefbtitle {Quantum Science and Yijing Theory} {Quantum science and yijing
+  theory}.
+\newblock
+\APACaddressPublisher{}{Cambridge Scholars Publishing}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mermin%
+}{%
+Mermin%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+mermin2007quantum}
+\APACinsertmetastar {%
+mermin2007quantum}%
+\begin{APACrefauthors}%
+Mermin, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2007}.
+\newblock
+\APACrefbtitle {Quantum Computer Science: An Introduction} {Quantum computer
+  science: An introduction}.
+\newblock
+\APACaddressPublisher{Cambridge}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nakahara%
+\ \BBA {} Ohmi%
+}{%
+Nakahara%
+\ \BBA {} Ohmi%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+nakahara2008quantum}
+\APACinsertmetastar {%
+nakahara2008quantum}%
+\begin{APACrefauthors}%
+Nakahara, M.%
+\BCBT {}\ \BBA {} Ohmi, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2008}.
+\newblock
+\APACrefbtitle {Quantum Computing: From Linear Algebra to Physical
+  Realizations} {Quantum computing: From linear algebra to physical
+  realizations}.
+\newblock
+\APACaddressPublisher{Boca Raton}{CRC Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nielsen%
+\ \BBA {} Chuang%
+}{%
+Nielsen%
+\ \BBA {} Chuang%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+nielsen2010quantum}
+\APACinsertmetastar {%
+nielsen2010quantum}%
+\begin{APACrefauthors}%
+Nielsen, M\BPBI A.%
+\BCBT {}\ \BBA {} Chuang, I\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Quantum Computation and Quantum Information} {Quantum
+  computation and quantum information}\ (\PrintOrdinal{10th Anniversary
+  Edition}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/CBO9780511976667} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Paris%
+\ \BBA {} {\v R}eh{'a}{\v c}ek%
+}{%
+Paris%
+\ \BBA {} {\v R}eh{'a}{\v c}ek%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+Paris2004}
+\APACinsertmetastar {%
+Paris2004}%
+\begin{APACrefauthors}%
+Paris, M\BPBI G\BPBI A.%
+\BCBT {}\ \BBA {} {\v R}eh{'a}{\v c}ek, J.%
+\end{APACrefauthors}%
+\ (\BEDS).
+\unskip\
+\newblock
+\APACrefYear{2004}.
+\newblock
+\APACrefbtitle {Quantum State Estimation} {Quantum state estimation}\
+  (\BVOL~649).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pathak%
+}{%
+Pathak%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+pathak2013elements}
+\APACinsertmetastar {%
+pathak2013elements}%
+\begin{APACrefauthors}%
+Pathak, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Elements of quantum computation and quantum communication}
+  {Elements of quantum computation and quantum communication}.
+\newblock
+\APACaddressPublisher{}{CRC Press Boca Raton}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Preskill%
+}{%
+Preskill%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+preskill_notes}
+\APACinsertmetastar {%
+preskill_notes}%
+\begin{APACrefauthors}%
+Preskill, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1998}.
+\newblock
+\APACrefbtitle {Lecture Notes for Physics 229: Quantum Information and
+  Computation} {Lecture notes for physics 229: Quantum information and
+  computation}.
+\newblock
+\begin{APACrefURL} \url{http://theory.caltech.edu/~preskill/ph229/}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Preskill%
+}{%
+Preskill%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+preskill_lecture_notes}
+\APACinsertmetastar {%
+preskill_lecture_notes}%
+\begin{APACrefauthors}%
+Preskill, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+\APACrefbtitle {Lecture Notes on Quantum Computation.} {Lecture notes on
+  quantum computation.}
+\newblock
+\APAChowpublished {California Institute of Technology}.
+\newblock
+\APACrefnote{Available online}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Quek%
+, Fort%
+\BCBL {}\ \BBA {} Ng%
+}{%
+Quek%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+Quek2021}
+\APACinsertmetastar {%
+Quek2021}%
+\begin{APACrefauthors}%
+Quek, Y.%
+, Fort, S.%
+\BCBL {}\ \BBA {} Ng, H\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Adaptive quantum state tomography with neural networks}
+  {Adaptive quantum state tomography with neural networks}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{npj Quantum Information}{7}{105}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/s41534-021-00436-9} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sakurai%
+\ \BBA {} Napolitano%
+}{%
+Sakurai%
+\ \BBA {} Napolitano%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+sakurai2017modern}
+\APACinsertmetastar {%
+sakurai2017modern}%
+\begin{APACrefauthors}%
+Sakurai, J\BPBI J.%
+\BCBT {}\ \BBA {} Napolitano, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2017}.
+\newblock
+\APACrefbtitle {Modern Quantum Mechanics} {Modern quantum mechanics}\
+  (\PrintOrdinal{2nd}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/9781108499996} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Schlosshauer%
+}{%
+Schlosshauer%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+schlosshauer2007decoherence}
+\APACinsertmetastar {%
+schlosshauer2007decoherence}%
+\begin{APACrefauthors}%
+Schlosshauer, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2007}.
+\newblock
+\APACrefbtitle {Decoherence and the Quantum-to-Classical Transition}
+  {Decoherence and the quantum-to-classical transition}.
+\newblock
+\APACaddressPublisher{Berlin}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Seevinck%
+\ \BBA {} Uffink%
+}{%
+Seevinck%
+\ \BBA {} Uffink%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Seevinck2008}
+\APACinsertmetastar {%
+Seevinck2008}%
+\begin{APACrefauthors}%
+Seevinck, M.%
+\BCBT {}\ \BBA {} Uffink, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Partial Separability and Entanglement Criteria for
+  Multiqubit Quantum States} {Partial separability and entanglement criteria
+  for multiqubit quantum states}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{78}{3}{032101}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.78.032101} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shannon%
+}{%
+Shannon%
+}{%
+{\protect \APACyear {1948}}%
+}]{%
+shannon1948mathematical}
+\APACinsertmetastar {%
+shannon1948mathematical}%
+\begin{APACrefauthors}%
+Shannon, C\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1948}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Mathematical Theory of Communication} {A mathematical
+  theory of communication}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Bell System Technical Journal}{27}{3}{379--423}.
+\newblock
+\begin{APACrefDOI} \doi{10.1002/j.1538-7305.1948.tb01338.x} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tanenbaum%
+\ \BBA {} Austin%
+}{%
+Tanenbaum%
+\ \BBA {} Austin%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+tanenbaum2013structured}
+\APACinsertmetastar {%
+tanenbaum2013structured}%
+\begin{APACrefauthors}%
+Tanenbaum, A\BPBI S.%
+\BCBT {}\ \BBA {} Austin, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Structured Computer Organization} {Structured computer
+  organization}\ (\PrintOrdinal{6th}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Pearson}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Taufiqi%
+\ \protect \BOthers {.}}{%
+Taufiqi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2024}}%
+}]{%
+taufiqi2024asymmetric}
+\APACinsertmetastar {%
+taufiqi2024asymmetric}%
+\begin{APACrefauthors}%
+Taufiqi, M.%
+, Purwanto, A.%
+, Yuwana, L.%
+, Muniandy, S\BPBI V.%
+, Al-Amin, M\BPBI A.%
+, Prabowo, A\BPBI A.%
+\BCBL {}\ \BBA {} Subagyo, B\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2024}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Asymmetric bidirectional quantum controlled
+  teleportation via a seven-qubit Werner-like mixed state} {Asymmetric
+  bidirectional quantum controlled teleportation via a seven-qubit werner-like
+  mixed state}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physica Scripta}{99}{6}{065116}.
+\newblock
+\begin{APACrefDOI} \doi{10.1088/1402-4896/ad42dc} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Verstraete%
+, Dehaene%
+, Moor%
+\BCBL {}\ \BBA {} Verschelde%
+}{%
+Verstraete%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2002}}%
+}]{%
+Verstraete2002}
+\APACinsertmetastar {%
+Verstraete2002}%
+\begin{APACrefauthors}%
+Verstraete, F.%
+, Dehaene, J.%
+, Moor, B\BPBI D.%
+\BCBL {}\ \BBA {} Verschelde, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Four Qubits Can Be Entangled in Nine Different Ways}
+  {Four qubits can be entangled in nine different ways}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{65}{5}{052112}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.65.052112} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Werner%
+}{%
+Werner%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+Werner1989}
+\APACinsertmetastar {%
+Werner1989}%
+\begin{APACrefauthors}%
+Werner, R\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Quantum States with Einstein-Podolsky-Rosen Correlations
+  Admitting a Hidden-Variable Model} {Quantum states with
+  einstein-podolsky-rosen correlations admitting a hidden-variable
+  model}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review A}{40}{8}{4277--4281}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevA.40.4277} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wootters%
+}{%
+Wootters%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+wootters1998entanglement}
+\APACinsertmetastar {%
+wootters1998entanglement}%
+\begin{APACrefauthors}%
+Wootters, W\BPBI K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Entanglement of Formation of an Arbitrary State of Two
+  Qubits} {Entanglement of formation of an arbitrary state of two
+  qubits}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Physical Review Letters}{80}{10}{2245--2248}.
+\newblock
+\begin{APACrefDOI} \doi{10.1103/PhysRevLett.80.2245} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zhu%
+, Zhao%
+\BCBL {}\ \BBA {} Fei%
+}{%
+Zhu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Zhu2020}
+\APACinsertmetastar {%
+Zhu2020}%
+\begin{APACrefauthors}%
+Zhu, X\BPBI N.%
+, Zhao, M\BPBI J.%
+\BCBL {}\ \BBA {} Fei, S\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Entanglement criteria and quantification in bipartite
+  quantum systems} {Entanglement criteria and quantification in bipartite
+  quantum systems}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{International Journal of Theoretical
+  Physics}{59}{}{1688--1700}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s10773-020-04234-5} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
