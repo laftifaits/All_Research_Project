@@ -1,0 +1,860 @@
+\chapter{Kode Matlab Grafik}
+
+Kode grafik siklus Carnot kuantum biasa.
+\begin{verbatim*}
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+P = log(2)/2 .* ((r.^2 - 4) ./ (r.^3 - r.^2));
+
+% Plots
+plot(r, P, 'LineWidth', 2, 'Color', '0.85, 0.33, 0.10');
+xlim([min(r), max(r)]);
+ylim([0, 0.1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+
+B1 = 0;
+eta1 = (1 - (2 ./ r).^2) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (2 ./ r).^2) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (2 ./ r).^2) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (2 ./ r).^2) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+'0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+'0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+'0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+'0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, max(eta1)]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 2:0.001:1000;
+P = log(2)/2 .* ((r.^2 - 4) ./ (r.^3 - r.^2));
+
+B1 = 0;
+eta1 = (1 - (2 ./ r).^2) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (2 ./ r).^2) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (2 ./ r).^2) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (2 ./ r).^2) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(eta1, P, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+'0.85, 0.33, 0.10');
+hold on
+plot(eta2, P, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+'0.93, 0.69, 0.13');
+plot(eta3, P, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+'0.39, 0.83, 0.07');
+plot(eta4, P, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+'0.30, 0.75, 0.93');
+
+% xlim([min(eta), max(eta)]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+\end{verbatim*}
+
+Kode grafik siklus Otto kuantum biasa.
+\begin{verbatim*}
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.000001:20;
+P = 3/4 .* ((r.^2 - 1) ./ (r.^3 - r.^2));
+
+% Plots
+plot(r, P, 'LineWidth', 2, 'Color', '0.85, 0.33, 0.10');
+xlim([min(r), max(r)]);
+ylim([0, 1.5]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+
+B1 = 0;
+eta1 = (1 - (1 ./ r).^2) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (1 ./ r).^2) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (1 ./ r).^2) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (1 ./ r).^2) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+'0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+'0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+'0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+'0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, max(eta1)]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 1:0.00001:1.5;
+P = 3/4 .* ((r.^2 - 1) ./ (r.^3 - r.^2));
+
+B1 = 0;
+eta1 = (1 - (1 ./ r).^2) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (1 ./ r).^2) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (1 ./ r).^2) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (1 ./ r).^2) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(eta1, P, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([0, 1]);
+ylim([0, 1.5]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+\end{verbatim*}
+
+Kode grafik siklus Brayton kuantum biasa.
+\begin{verbatim*}
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.01:20;
+P = 3/4 * (4^(1/3) - 1) .* ((r.^2 - 4^(2/3)) ./ (r.^3 - r.^2));
+
+% Plots
+plot(r, P, 'LineWidth', 2, 'Color', '0.85, 0.33, 0.10');
+xlim([min(r), max(r)]);
+ylim([0, 0.2]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+
+B1 = 0;
+eta1 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, max(eta1)]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 1:0.01:10000;
+P = 3/4 * (4^(1/3) - 1) .* ((r.^2 - 4^(2/3)) ./ (r.^3 - r.^2));
+
+B1 = 0;
+eta1 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (4^(1/3) ./ r).^2) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(eta1, P, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([0, 1]);
+ylim([0, 0.2]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+\end{verbatim*}
+
+Kode grafik siklus Carnot kuantum fraksional.
+\begin{verbatim*}
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+
+a1 = 2;
+P1 = (a1/4) * ((r.^a1 - 2^a1) ./ (r.^(a1 + 1) - r.^a1)) * log(2);
+
+a2 = 1.85;
+P2 = (a2/4) * ((r.^a2 - 2^a2) ./ (r.^(a2 + 1) - r.^a2)) * log(2);
+
+a3 = 1.68;
+P3 = (a3/4) * ((r.^a3 - 2^a3) ./ (r.^(a3 + 1) - r.^a3)) * log(2);
+
+a4 = 1.5;
+P4 = (a4/4) * ((r.^a4 - 2^a4) ./ (r.^(a4 + 1) - r.^a4)) * log(2);
+
+% Plots
+plot(r, P1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, P2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, P3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, P4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 0.1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+a = 1.85;
+P = (a/4) * ((r.^a - 2^a) ./ (r.^(a + 1) - r.^a)) * log(2);
+
+% Plots
+plot(r, P, 'LineWidth', 2, 'Color', '0.85, 0.33, 0.10');
+xlim([min(r), max(r)]);
+ylim([0, 0.1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+B = 0.01;
+
+a1 = 2;
+eta1 = (1 - (2 ./ r) .^ a1) ./ (1 + B .* (r - 1));
+
+a2 = 1.85;
+eta2 = (1 - (2 ./ r) .^ a2) ./ (1 + B .* (r - 1));
+
+a3 = 1.68;
+eta3 = (1 - (2 ./ r) .^ a3) ./ (1 + B .* (r - 1));
+
+a4 = 1.5;
+eta4 = (1 - (2 ./ r) .^ a4) ./ (1 + B .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+a = 1.85;
+
+B1 = 0;
+eta1 = (1 - (2 ./ r) .^ a) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (2 ./ r) .^ a) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (2 ./ r) .^ a) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (2 ./ r) .^ a) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 2:0.001:10000;
+B = 0.01;
+
+a1 = 2;
+eta1 = (1 - (2 ./ r) .^ a1) ./ (1 + B .* (r - 1));
+P1 = (a1/4) * ((r.^a1 - 2^a1) ./ (r.^(a1 + 1) - r.^a1)) * log(2);
+
+a2 = 1.85;
+eta2 = (1 - (2 ./ r) .^ a2) ./ (1 + B .* (r - 1));
+P2 = (a2/4) .* (eta2 .* (1 + B .* (r - 1))) ./ (r - 1) * log(2);
+
+a3 = 1.68;
+eta3 = (1 - (2 ./ r) .^ a3) ./ (1 + B .* (r - 1));
+P3 = (a3/4) .* (eta3 .* (1 + B .* (r - 1))) ./ (r - 1) * log(2);
+
+a4 = 1.5;
+eta4 = (1 - (2 ./ r) .^ a4) ./ (1 + B .* (r - 1));
+P4 = (a4/4) .* (eta4 .* (1 + B .* (r - 1))) ./ (r - 1) * log(2);
+
+% Plots
+plot(eta1, P1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show', 'Location', 'northwest');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 2:0.001:10000;
+a = 1.85;
+
+B1 = 0;
+eta1 = (1 - (2 ./ r) .^ a) ./ (1 + B1 .* (r - 1));
+P1 = (a/4) .* (eta1 .* (1 + B1 .* (r - 1))) ./ (r - 1) * log(2);
+
+B2 = 0.01;
+eta2 = (1 - (2 ./ r) .^ a) ./ (1 + B2 .* (r - 1));
+P2 = (a/4) .* (eta2 .* (1 + B2 .* (r - 1))) ./ (r - 1) * log(2);
+
+B3 = 0.03;
+eta3 = (1 - (2 ./ r) .^ a) ./ (1 + B3 .* (r - 1));
+P3 = (a/4) .* (eta3 .* (1 + B3 .* (r - 1))) ./ (r - 1) * log(2);
+
+B4 = 0.07;
+eta4 = (1 - (2 ./ r) .^ a) ./ (1 + B4 .* (r - 1));
+P4 = (a/4) .* (eta4 .* (1 + B4 .* (r - 1))) ./ (r - 1) * log(2);
+
+% Plots
+plot(eta1, P1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+ylim([0,0.1]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+\end{verbatim*}
+
+Kode grafik siklus Otto kuantum fraksional
+\begin{verbatim*}
+clc; clear all; close all;
+
+% Equation statements
+r = 1:0.00001:20;
+
+a1 = 2;
+P1 = ((2^a1 - 1) /4) * ((r.^a1 - 1) ./ (r.^(a1 + 1) - r.^a1));
+
+a2 = 1.85;
+P2 = ((2^a2 - 1) /4) * ((r.^a2 - 1) ./ (r.^(a2 + 1) - r.^a2));
+
+a3 = 1.68;
+P3 = ((2^a3 - 1) /4) * ((r.^a3 - 1) ./ (r.^(a3 + 1) - r.^a3));
+
+a4 = 1.5;
+P4 = ((2^a4 - 1) /4) * ((r.^a4 - 1) ./ (r.^(a4 + 1) - r.^a4));
+
+% Plots
+plot(r, P1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, P2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, P3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, P4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([0, max(r)]);
+ylim([0, 1.5]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 1:0.00001:20;
+a = 1.85;
+P = ((2^a - 1) /4) * ((r.^a - 1) ./ (r.^(a + 1) - r.^a));
+
+% Plots
+plot(r, P, 'LineWidth', 2, 'Color', '0.85, 0.33, 0.10');
+xlim([0, max(r)]);
+ylim([0, max(P)]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+B = 0.01;
+
+a1 = 2;
+eta1 = (1 - (1 ./ r) .^ a1) ./ (1 + B .* (r - 1));
+
+a2 = 1.85;
+eta2 = (1 - (1 ./ r) .^ a2) ./ (1 + B .* (r - 1));
+
+a3 = 1.68;
+eta3 = (1 - (1 ./ r) .^ a3) ./ (1 + B .* (r - 1));
+
+a4 = 1.5;
+eta4 = (1 - (1 ./ r) .^ a4) ./ (1 + B .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+a = 1.85;
+
+B1 = 0;
+eta1 = (1 - (1 ./ r) .^ a) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (1 ./ r) .^ a) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (1 ./ r) .^ a) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (1 ./ r) .^ a) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 1:0.001:10000;
+B = 0.01;
+
+a1 = 2;
+eta1 = (1 - (1 ./ r) .^ a1) ./ (1 + B .* (r - 1));
+P1 = ((2^a1 - 1) /4) * ((r.^a1 - 1) ./ (r.^(a1 + 1) - r.^a1));
+
+a2 = 1.85;
+eta2 = (1 - (1 ./ r) .^ a2) ./ (1 + B .* (r - 1));
+P2 = ((2^a2 - 1) /4) * ((r.^a2 - 1) ./ (r.^(a2 + 1) - r.^a2));
+
+a3 = 1.68;
+eta3 = (1 - (1 ./ r) .^ a3) ./ (1 + B .* (r - 1));
+P3 = ((2^a3 - 1) /4) * ((r.^a3 - 1) ./ (r.^(a3 + 1) - r.^a3));
+
+a4 = 1.5;
+eta4 = (1 - (1 ./ r) .^ a4) ./ (1 + B .* (r - 1));
+P4 = ((2^a4 - 1) /4) * ((r.^a4 - 1) ./ (r.^(a4 + 1) - r.^a4));
+
+% Plots
+plot(eta1, P1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 1:0.001:10000;
+a = 1.85;
+
+B1 = 0;
+eta1 = (1 - (1 ./ r) .^ a) ./ (1 + B1 .* (r - 1));
+P1 = ((2^a - 1) /4) * ((r.^a - 1) ./ (r.^(a + 1) - r.^a));
+
+B2 = 0.01;
+eta2 = (1 - (1 ./ r) .^ a) ./ (1 + B2 .* (r - 1));
+P2 = ((2^a - 1) /4) * ((r.^a - 1) ./ (r.^(a + 1) - r.^a));
+
+B3 = 0.03;
+eta3 = (1 - (1 ./ r) .^ a) ./ (1 + B3 .* (r - 1));
+P3 = ((2^a - 1) /4) * ((r.^a - 1) ./ (r.^(a + 1) - r.^a));
+
+B4 = 0.07;
+eta4 = (1 - (1 ./ r) .^ a) ./ (1 + B4 .* (r - 1));
+P4 = ((2^a - 1) /4) * ((r.^a - 1) ./ (r.^(a + 1) - r.^a));
+
+% Plots
+plot(eta1, P1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+ylim([0,1.2]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+\end{verbatim*}
+
+Kode grafik siklus Brayton kuantum fraksional.
+\begin{verbatim*}
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+
+a1 = 2;
+P1 = ((a1 + 1) / 4) .* (2^(a1 ./ (a1 + 1)) - 1) .* ...
+     ((r.^a1 - 2^(a1^2 ./ (a1 + 1))) ./ (r.^(a1 + 1) - r.^a1));
+
+a2 = 1.85;
+P2 = ((a2 + 1) / 4) .* (2^(a2 ./ (a2 + 1)) - 1) .* ...
+     ((r.^a2 - 2^(a2^2 ./ (a2 + 1))) ./ (r.^(a2 + 1) - r.^a2));
+
+a3 = 1.68;
+P3 = ((a3 + 1) / 4) .* (2^(a3 ./ (a3 + 1)) - 1) .* ...
+     ((r.^a3 - 2^(a3^2 ./ (a3 + 1))) ./ (r.^(a3 + 1) - r.^a3));
+
+a4 = 1.5;
+P4 = ((a4 + 1) / 4) .* (2^(a4 ./ (a4 + 1)) - 1) .* ...
+     ((r.^a4 - 2^(a4^2 ./ (a4 + 1))) ./ (r.^(a4 + 1) - r.^a4));
+
+% Plots
+plot(r, P1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, P2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, P3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, P4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 0.19]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+a = 1.85;
+P = ((a + 1) / 4) .* (2^(a ./ (a + 1)) - 1) .* ...
+    ((r.^a - 2^(a^2 ./ (a + 1))) ./ (r.^(a + 1) - r.^a));
+
+% Plots
+plot(r, P, 'LineWidth', 2, 'Color', '0.85, 0.33, 0.10');
+xlim([min(r), max(r)]);
+ylim([0, 0.19]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+B = 0.01;
+
+a1 = 2;
+eta1 = (1 - (2 .^(a1 ./ (a1 + 1)) ./ r) .^ a1) ./ (1 + B .* (r - 1));
+
+a2 = 1.85;
+eta2 = (1 - (2 .^(a2 ./ (a2 + 1)) ./ r) .^ a2) ./ (1 + B .* (r - 1));
+
+a3 = 1.68;
+eta3 = (1 - (2 .^(a3 ./ (a3 + 1)) ./ r) .^ a3) ./ (1 + B .* (r - 1));
+
+a4 = 1.5;
+eta4 = (1 - (2 .^(a4 ./ (a4 + 1)) ./ r) .^ a4) ./ (1 + B .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.1:20;
+a = 1.85;
+
+B1 = 0;
+eta1 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B1 .* (r - 1));
+
+B2 = 0.01;
+eta2 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B2 .* (r - 1));
+
+B3 = 0.03;
+eta3 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B3 .* (r - 1));
+
+B4 = 0.07;
+eta4 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B4 .* (r - 1));
+
+% Plots
+plot(r, eta1, 'DisplayName', '\beta = 0', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(r, eta2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(r, eta3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(r, eta4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([min(r), max(r)]);
+ylim([0, 1]);
+xlabel('r', 'FontWeight', 'bold');
+ylabel('\eta', 'FontWeight', 'bold');
+legend('show', 'Location', 'southeast');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.001:10000;
+B = 0.01;
+
+a1 = 2;
+eta1 = (1 - (2 .^(a1 ./ (a1 + 1)) ./ r) .^ a1) ./ (1 + B .* (r - 1));
+P1 = ((a1 + 1) / 4) .* (2^(a1 ./ (a1 + 1)) - 1) .* ...
+     ((r.^a1 - 2^(a1^2 ./ (a1 + 1))) ./ (r.^(a1 + 1) - r.^a1));
+
+a2 = 1.85;
+eta2 = (1 - (2 .^(a2 ./ (a2 + 1)) ./ r) .^ a2) ./ (1 + B .* (r - 1));
+P2 = ((a2 + 1) / 4) .* (2^(a2 ./ (a2 + 1)) - 1) .* ...
+     ((r.^a2 - 2^(a2^2 ./ (a2 + 1))) ./ (r.^(a2 + 1) - r.^a2));
+
+a3 = 1.68;
+eta3 = (1 - (2 .^(a3 ./ (a3 + 1)) ./ r) .^ a3) ./ (1 + B .* (r - 1));
+P3 = ((a3 + 1) / 4) .* (2^(a3 ./ (a3 + 1)) - 1) .* ...
+     ((r.^a3 - 2^(a3^2 ./ (a3 + 1))) ./ (r.^(a3 + 1) - r.^a3));
+
+a4 = 1.5;
+eta4 = (1 - (2 .^(a4 ./ (a4 + 1)) ./ r) .^ a4) ./ (1 + B .* (r - 1));
+P4 = ((a4 + 1) / 4) .* (2^(a4 ./ (a4 + 1)) - 1) .* ...
+     ((r.^a4 - 2^(a4^2 ./ (a4 + 1))) ./ (r.^(a4 + 1) - r.^a4));
+
+% Plots
+plot(eta1, P1, 'DisplayName', '\alpha = 2', 'LineWidth', 2, 'Color', ...
+    '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P2, 'DisplayName', '\alpha = 1.85', 'LineWidth', 2, 'Color', ...
+    '0.93, 0.69, 0.13');
+plot(eta3, P3, 'DisplayName', '\alpha = 1.68', 'LineWidth', 2, 'Color', ...
+    '0.39, 0.83, 0.07');
+plot(eta4, P4, 'DisplayName', '\alpha = 1.5', 'LineWidth', 2, 'Color', ...
+    '0.30, 0.75, 0.93');
+
+xlim([0, 1])
+ylim([0, 0.19]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+
+clc; clear all; close all;
+
+% Equation statements
+r = 0:0.001:10000;
+a = 1.85;
+
+B1 = 0;
+eta1 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B1 .* (r - 1));
+P1 = ((a + 1) / 4) .* (2^(a ./ (a + 1)) - 1) .* ...
+     ((r.^a - 2^(a^2 ./ (a + 1))) ./ (r.^(a + 1) - r.^a));
+
+B2 = 0.01;
+eta2 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B2 .* (r - 1));
+P2 = ((a + 1) / 4) .* (2^(a ./ (a + 1)) - 1) .* ...
+     ((r.^a - 2^(a^2 ./ (a + 1))) ./ (r.^(a + 1) - r.^a));
+
+B3 = 0.03;
+eta3 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B3 .* (r - 1));
+P3 = ((a + 1) / 4) .* (2^(a ./ (a + 1)) - 1) .* ...
+     ((r.^a - 2^(a^2 ./ (a + 1))) ./ (r.^(a + 1) - r.^a));
+
+B4 = 0.07;
+eta4 = (1 - (2 .^(a ./ (a + 1)) ./ r) .^ a) ./ (1 + B4 .* (r - 1));
+P4 = ((a + 1) / 4) .* (2^(a ./ (a + 1)) - 1) .* ...
+     ((r.^a - 2^(a^2 ./ (a + 1))) ./ (r.^(a + 1) - r.^a));
+
+% Plots
+plot(eta1, P1, 'DisplayName', '\beta = 0', 'LineWidth', 2, ...
+    'Color', '0.85, 0.33, 0.10');
+hold on
+plot(eta2, P2, 'DisplayName', '\beta = 0.01', 'LineWidth', 2, ...
+    'Color', '0.93, 0.69, 0.13');
+plot(eta3, P3, 'DisplayName', '\beta = 0.03', 'LineWidth', 2, ...
+    'Color', '0.39, 0.83, 0.07');
+plot(eta4, P4, 'DisplayName', '\beta = 0.07', 'LineWidth', 2, ...
+    'Color', '0.30, 0.75, 0.93');
+
+xlim([0, 1])
+ylim([0, 0.19]);
+xlabel('\eta', 'FontWeight', 'bold');
+ylabel('P*', 'FontWeight', 'bold');
+legend('show');
+\end{verbatim*}
+

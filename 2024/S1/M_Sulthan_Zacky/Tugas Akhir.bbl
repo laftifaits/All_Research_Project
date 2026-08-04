@@ -1,0 +1,26 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Purwanto%
+}{%
+Purwanto%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+GusPur2016Kuantum}
+\APACinsertmetastar {%
+GusPur2016Kuantum}%
+\begin{APACrefauthors}%
+Purwanto, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {Fisika Kuantum: Edisi 2 Revisi} {Fisika kuantum: Edisi 2
+  revisi}.
+\newblock
+\APACaddressPublisher{}{Gava Media}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

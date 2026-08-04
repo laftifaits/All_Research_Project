@@ -1,0 +1,2128 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.17)  25 FEB 2026 12:09
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Tugas Akhir"
+(/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Tugas Akhir.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@chapter=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen141
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count196
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count197
+\leftroot@=\count198
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count199
+\DOTSCASE@=\count266
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count267
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count268
+\dotsspace@=\muskip16
+\c@parentequation=\count269
+\dspbrk@lvl=\count270
+\tag@help=\toks20
+\row@=\count271
+\column@=\count272
+\maxfields@=\count273
+\andhelp@=\toks21
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks22
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks24
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen152
+\captionmargin=\dimen153
+\caption@leftmargin=\dimen154
+\caption@rightmargin=\dimen155
+\caption@width=\dimen156
+\caption@indent=\dimen157
+\caption@parindent=\dimen158
+\caption@hangindent=\dimen159
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count274
+\c@continuedfloat=\count275
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count276
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count277
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count278
+\U@D=\dimen160
+\l@unhyphenated=\language89
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count279
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-indonesian/bahasa.ldf
+Language: bahasa 2017/02/15 v1.0m Bahasa Indonesia support from the babel system
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-indonesian/indonesian.ldf
+Language: indonesian 2017/02/15 v1.0m Bahasa Indonesia support from the babel system
+))) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count280
+\Gm@cntv=\count281
+\c@Gm@tempcnt=\count282
+\Gm@bindingoffset=\dimen161
+\Gm@wd@mp=\dimen162
+\Gm@odd@mp=\dimen163
+\Gm@even@mp=\dimen164
+\Gm@layoutwidth=\dimen165
+\Gm@layoutheight=\dimen166
+\Gm@layouthoffset=\dimen167
+\Gm@layoutvoffset=\dimen168
+\Gm@dimlist=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count283
+\mult@box=\box53
+\multicol@leftmargin=\dimen169
+\c@unbalance=\count284
+\c@collectmore=\count285
+\doublecol@number=\count286
+\multicoltolerance=\count287
+\multicolpretolerance=\count288
+\full@width=\dimen170
+\page@free=\dimen171
+\premulticols=\dimen172
+\postmulticols=\dimen173
+\multicolsep=\skip53
+\multicolbaselineskip=\skip54
+\partial@page=\box54
+\last@line=\box55
+\mc@boxedresult=\box56
+\maxbalancingoverflow=\dimen174
+\mult@rightbox=\box57
+\mult@grightbox=\box58
+\mult@firstbox=\box59
+\mult@gfirstbox=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\c@minrows=\count289
+\c@columnbadness=\count290
+\c@finalcolumnbadness=\count291
+\last@try=\dimen175
+\multicolovershoot=\dimen176
+\multicolundershoot=\dimen177
+\mult@nat@firstbox=\box97
+\colbreak@box=\box98
+\mc@col@check@num=\count292
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip55
+\multirow@cntb=\count293
+\multirow@dima=\skip56
+\bigstrutjot=\dimen178
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen179
+\ar@mcellbox=\box99
+\extrarowheight=\dimen180
+\NC@list=\toks26
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box100
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks27
+\minrowclearance=\skip59
+\rownum=\count294
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count295
+\float@exts=\toks28
+\float@box=\box101
+\@float@everytoks=\toks29
+\@floatcapt=\box102
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count296
+\calc@Bcount=\count297
+\calc@Adimen=\dimen181
+\calc@Bdimen=\dimen182
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count298
+\calc@Cskip=\skip62
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count299
+\l_MT_multwidth_dim=\dimen183
+\origjot=\skip63
+\l_MT_shortvdotswithinadjustabove_dim=\dimen184
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen185
+\l_MT_above_intertext_sep=\dimen186
+\l_MT_below_intertext_sep=\dimen187
+\l_MT_above_shortintertext_sep=\dimen188
+\l_MT_below_shortintertext_sep=\dimen189
+\xmathstrut@box=\box103
+\xmathstrut@dim=\dimen190
+) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen191
+\WF@size=\dimen192
+\c@WF@wrappedlines=\count300
+\WF@box=\box104
+\WF@everypar=\toks30
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count301
+\c@@ppsavesec=\count302
+\c@@ppsaveapp=\count303
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count304
+\lst@gtempboxa=\box105
+\lst@token=\toks31
+\lst@length=\count305
+\lst@currlwidth=\dimen193
+\lst@column=\count306
+\lst@pos=\count307
+\lst@lostspace=\dimen194
+\lst@width=\dimen195
+\lst@newlines=\count308
+\lst@lineno=\count309
+\lst@maxwidth=\dimen196
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count310
+\lst@skipnumbers=\count311
+\lst@framebox=\box106
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count312
+\l__pdf_internal_box=\box107
+))
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count313
+) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count314
+)
+\@linkdim=\dimen197
+\Hy@linkcounter=\count315
+\Hy@pagecounter=\count316
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count317
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count318
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen198
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count319
+\Field@Width=\dimen199
+\Fld@charsize=\dimen256
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring OFF on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count320
+\c@Item=\count321
+\c@Hfootnote=\count322
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count323
+\c@bookmark@seq@number=\count324
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip64
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (/usr/share/texlive/texmf-dist/tex/latex/apacite/apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count325
+\bibleftmargin=\skip65
+\bibindent=\skip66
+\bibparsep=\skip67
+\bibitemsep=\skip68
+\biblabelsep=\skip69
+) (/usr/share/texlive/texmf-dist/tex/latex/background/background.sty
+Package: background 2014/03/04 v2.1 background material
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
+)
+\XKV@depth=\count326
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen257
+\pgfutil@tempdimb=\dimen258
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box108
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks37
+))
+\pgf@x=\dimen259
+\pgf@y=\dimen260
+\pgf@xa=\dimen261
+\pgf@ya=\dimen262
+\pgf@xb=\dimen263
+\pgf@yb=\dimen264
+\pgf@xc=\dimen265
+\pgf@yc=\dimen266
+\pgf@xd=\dimen267
+\pgf@yd=\dimen268
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count327
+\c@pgf@countb=\count328
+\c@pgf@countc=\count329
+\c@pgf@countd=\count330
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+\pgf@sys@id@count=\count331
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count332
+\pgfsyssoftpath@bigbuffer@items=\count333
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen269
+\pgfmath@count=\count334
+\pgfmath@box=\box109
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count335
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen270
+\pgf@picmaxx=\dimen271
+\pgf@picminy=\dimen272
+\pgf@picmaxy=\dimen273
+\pgf@pathminx=\dimen274
+\pgf@pathmaxx=\dimen275
+\pgf@pathminy=\dimen276
+\pgf@pathmaxy=\dimen277
+\pgf@xx=\dimen278
+\pgf@xy=\dimen279
+\pgf@yx=\dimen280
+\pgf@yy=\dimen281
+\pgf@zx=\dimen282
+\pgf@zy=\dimen283
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen284
+\pgf@path@lasty=\dimen285
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen286
+\pgf@shorten@start@additional=\dimen287
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box110
+\pgf@hbox=\box111
+\pgf@layerbox@main=\box112
+\pgf@picture@serial@count=\count336
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen288
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen289
+\pgf@pt@y=\dimen290
+\pgf@pt@temp=\dimen291
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen292
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen293
+\pgf@sys@shading@range@num=\count337
+\pgf@shadingcount=\count338
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box113
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box114
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen294
+\pgf@nodesepend=\dimen295
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen296
+\pgffor@skip=\dimen297
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count339
+\pgfplotmarksize=\dimen298
+)
+\tikz@lastx=\dimen299
+\tikz@lasty=\dimen300
+\tikz@lastxsaved=\dimen301
+\tikz@lastysaved=\dimen302
+\tikz@lastmovetox=\dimen303
+\tikz@lastmovetoy=\dimen304
+\tikzleveldistance=\dimen305
+\tikzsiblingdistance=\dimen306
+\tikz@figbox=\box115
+\tikz@figbox@bg=\box116
+\tikz@tempbox=\box117
+\tikz@tempbox@bg=\box118
+\tikztreelevel=\count340
+\tikznumberofchildren=\count341
+\tikznumberofcurrentchild=\count342
+\tikz@fig@count=\count343
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count344
+\pgfmatrixcurrentcolumn=\count345
+\pgf@matrix@numberofcolumns=\count346
+)
+\tikz@expandcount=\count347
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/share/texlive/texmf-dist/tex/latex/everypage/everypage.sty
+Package: everypage 2020/10/17 R2.0b Hooks to run on every page
+
+
+Package everypage Warning: Functionality similar to this package has recently
+(everypage)                been implemented in LaTeX. This package is now in
+(everypage)                legacy status.
+(everypage)                Please, don't use it in new documents and packages.
+
+
+Package everypage Warning: You appear to be running a version of LaTeX
+(everypage)                providing the new functionality.
+(everypage)                Doing the best to deliver the original `everypage`
+(everypage)                interface on top of it. Strict equivalence is
+(everypage)                not possible, breakage may occur.
+(everypage)                If truly needed, Use `everypage-1x` to force the
+(everypage)                loading of an older code base.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks46
+\AP@partial=\box119
+\AP@footins=\box120
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen307
+\TX@old@table=\dimen308
+\TX@old@col=\dimen309
+\TX@target=\dimen310
+\TX@delta=\dimen311
+\TX@cols=\count348
+\TX@ftn=\toks47
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen312
+\lightrulewidth=\dimen313
+\cmidrulewidth=\dimen314
+\belowrulesep=\dimen315
+\belowbottomsep=\dimen316
+\aboverulesep=\dimen317
+\abovetopsep=\dimen318
+\cmidrulesep=\dimen319
+\cmidrulekern=\dimen320
+\defaultaddspace=\dimen321
+\@cmidla=\count349
+\@cmidlb=\count350
+\@aboverulesep=\dimen322
+\@belowrulesep=\dimen323
+\@thisruleclass=\count351
+\@lastruleclass=\count352
+\@thisrulewidth=\dimen324
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+ Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box121
+)
+\tc@llx=\dimen325
+\tc@lly=\dimen326
+\tc@urx=\dimen327
+\tc@ury=\dimen328
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen329
+\adjbox@Height=\dimen330
+\adjbox@Depth=\dimen331
+\adjbox@Totalheight=\dimen332
+\adjbox@pwidth=\dimen333
+\adjbox@pheight=\dimen334
+\adjbox@pdepth=\dimen335
+\adjbox@ptotalheight=\dimen336
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count353
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box122
+\sift@deathcycles=\count354
+\@vwid@loff=\dimen337
+\@vwid@roff=\dimen338
+)) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip70
+\enit@outerparindent=\dimen339
+\enit@toks=\toks48
+\enit@inbox=\box123
+\enit@count@id=\count355
+\enitdp@description=\count356
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/generic/mleftright/mleftright.sty
+Package: mleftright 2019/12/03 v1.2 Math left/right delim. as open/close (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/grffile/grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legacy)
+Package grffile Info: This package is an empty stub for compatibility on input line 40.
+) (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip71
+\subfigcapskip=\skip72
+\subfigcaptopadj=\dimen340
+\subfigbottomskip=\skip73
+\subfigcapmargin=\dimen341
+\subfiglabelskip=\skip74
+
+
+/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty:113: LaTeX Error: Command \c@subfigure already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 \newcounter{subfigure}
+                            [figure]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty:123: LaTeX Error: Command \l@subfigure already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 ...xxxline{\ext@subfigure}{2}{3.8em}{2.5em}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@lofdepth=\count357
+
+/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty:126: LaTeX Error: Command \c@subtable already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 \newcounter{subtable}
+                           [table]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty:136: LaTeX Error: Command \l@subtable already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 ...dxxxline{\ext@subtable}{2}{3.8em}{2.5em}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@lotdepth=\count358
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+
+/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty:220: LaTeX Error: Command \subfigure already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220       {\@subfigure[\@empty]}}
+                                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\subfig@top=\skip75
+\subfig@bottom=\skip76
+
+/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty:413: LaTeX Error: Command \subref already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.413   \ref{sub@#1}}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen342
+\ESO@tempdimb=\dimen343
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\AM@pagewidth=\dimen344
+\AM@pageheight=\dimen345
+\AM@fboxrule=\dimen346
+ (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count359
+\AM@pagebox=\box124
+\AM@global@opts=\toks49
+\AM@pagecnt=\count360
+\AM@toc@title=\toks50
+\AM@lof@heading=\toks51
+\c@AM@survey=\count361
+\AM@templatesizebox=\box125
+) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip77
+\f@nch@O@elh=\skip78
+\f@nch@O@erh=\skip79
+\f@nch@O@olh=\skip80
+\f@nch@O@orh=\skip81
+\f@nch@O@elf=\skip82
+\f@nch@O@erf=\skip83
+\f@nch@O@olf=\skip84
+\f@nch@O@orf=\skip85
+)
+No file "Tugas Akhir".aux.
+\openout1 = `"Tugas Akhir.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count362
+\scratchdimen=\dimen347
+\scratchbox=\box126
+\nofMPsegments=\count363
+\nofMParguments=\count364
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count365
+\MPscratchDim=\dimen348
+\MPnumerator=\count366
+\makeMPintoPDFobject=\count367
+\everyMPtoPDFconversion=\toks53
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: subfigure package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 688.5567pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=688.5567pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-18.78552pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\c@lstlisting=\count368
+Package hyperref Info: Link coloring OFF on input line 92.
+\@outlinefile=\write5
+\openout5 = `"Tugas Akhir.out"'.
+
+\c@maskedRefs=\count369
+
+Package apacite Warning: No suitable language definition file (bahasa.apc) found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/BagianDepan/Cover Luar.tex
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 32.
+
+)
+<Images/BG Cover Luar.pdf, id=7, 597.55246pt x 845.19763pt>
+File: Images/BG Cover Luar.pdf Graphic file (type pdf)
+<use Images/BG Cover Luar.pdf>
+Package pdftex.def Info: Images/BG Cover Luar.pdf  used on input line 96.
+(pdftex.def)             Requested size: 597.551pt x 845.0537pt.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/BG Cover Luar.pdf>] [2]
+\openout2 = `"Contents/BagianDepan/Cover Dalam.aux"'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/BagianDepan/Cover Dalam.tex
+<Images/BG Cover Dalam.pdf, id=33, 597.55246pt x 845.19763pt>
+File: Images/BG Cover Dalam.pdf Graphic file (type pdf)
+<use Images/BG Cover Dalam.pdf>
+Package pdftex.def Info: Images/BG Cover Dalam.pdf  used on input line 40.
+(pdftex.def)             Requested size: 597.551pt x 845.0537pt.
+ [1
+
+ </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/BG Cover Dalam.pdf>] [2]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 86.
+
+File: Images/BG Cover Dalam.pdf Graphic file (type pdf)
+<use Images/BG Cover Dalam.pdf>
+Package pdftex.def Info: Images/BG Cover Dalam.pdf  used on input line 90.
+(pdftex.def)             Requested size: 597.551pt x 845.0537pt.
+[3]) [4]
+\openout2 = `"Contents/BagianDepan/Lembar Pengesahan 1.aux"'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/BagianDepan/Lembar Pengesahan 1.tex
+<Images/Lembar Pengesahan 1.jpg, id=63, 597.31155pt x 844.8363pt>
+File: Images/Lembar Pengesahan 1.jpg Graphic file (type jpg)
+<use Images/Lembar Pengesahan 1.jpg>
+Package pdftex.def Info: Images/Lembar Pengesahan 1.jpg  used on input line 15.
+(pdftex.def)             Requested size: 597.56528pt x 845.06628pt.
+ [5
+
+
+
+ </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Lembar Pengesahan 1.jpg>]) [6]
+\openout2 = `"Contents/BagianDepan/Lembar Orisinalitas 1.aux"'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/BagianDepan/Lembar Orisinalitas 1.tex
+<Images/Lembar Orisinalitas.jpeg, id=73, 1134.2375pt x 1606.0pt>
+File: Images/Lembar Orisinalitas.jpeg Graphic file (type jpg)
+<use Images/Lembar Orisinalitas.jpeg>
+Package pdftex.def Info: Images/Lembar Orisinalitas.jpeg  used on input line 15.
+(pdftex.def)             Requested size: 597.52585pt x 845.07408pt.
+ [7
+
+
+
+ </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Lembar Orisinalitas.jpeg>]) [8]
+\openout2 = `Contents/Abstrak/Abstrak.aux'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/Abstrak/Abstrak.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (300.38039pt too wide) detected at line 11
+[]
+ []
+
+
+Overfull \hbox (392.17123pt too wide) detected at line 18
+[]
+ []
+
+[9
+
+
+
+]) [10]
+\openout2 = `./Contents/Abstrak/Abstract.aux'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Abstrak/Abstract.tex
+Overfull \hbox (298.09569pt too wide) detected at line 10
+[]
+ []
+
+
+Overfull \hbox (386.60641pt too wide) detected at line 17
+[]
+ []
+
+[11
+
+
+
+]) [12]
+\openout2 = `"./Contents/BagianDepan/Kata Pengantar.aux"'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/BagianDepan/Kata Pengantar.tex [13
+
+
+
+]) [14]
+No file "Tugas Akhir".toc.
+\tf@toc=\write6
+\openout6 = `"Tugas Akhir.toc"'.
+
+[15
+
+
+
+] [16
+
+]
+No file "Tugas Akhir".lof.
+\tf@lof=\write7
+\openout7 = `"Tugas Akhir.lof"'.
+
+[17]
+\openout2 = `./Contents/Bab-1.aux'.
+
+
+No file ./Contents/Bab-1.tex.
+\openout2 = `./Contents/Daster/Bab-2.aux'.
+
+(/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-2.tex
+Bab 1.
+
+LaTeX Warning: Citation `Zhou2023Fractional' undefined on input line 4.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.21 \begin{align}
+                   [1
+
+
+
+
+
+]
+
+LaTeX Warning: Reference `eq:FracDiffb<x' on page 2 undefined on input line 29.
+
+
+LaTeX Warning: Reference `eq:FracDiffb<x_1' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Reference `eq:FracDiffb>x' on page 2 undefined on input line 34.
+
+
+LaTeX Warning: Reference `eq:FracDiff+' on page 2 undefined on input line 39.
+
+
+LaTeX Warning: Reference `eq:FracDiff-' on page 2 undefined on input line 39.
+
+
+LaTeX Warning: Reference `eq:FracDiff+' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Reference `eq:FracDiff-' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Reference `eq:RieszDiff' on page 2 undefined on input line 44.
+
+
+LaTeX Warning: Reference `eq:RieszDiffReg' on page 2 undefined on input line 48.
+
+
+LaTeX Warning: Citation `Mainardi2013Fractional' undefined on input line 48.
+
+
+LaTeX Warning: Citation `Herrmann2014Fractional' undefined on input line 51.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 \par
+          Setelah hal tersebut disampaikan, mungkin akan muncul sebuah perta... [2]
+
+LaTeX Warning: Citation `Falconer2004Fractal' undefined on input line 58.
+
+<Images/Sierpinski Triangle.png, id=174, 433.62pt x 396.609pt>
+File: Images/Sierpinski Triangle.png Graphic file (type png)
+<use Images/Sierpinski Triangle.png>
+Package pdftex.def Info: Images/Sierpinski Triangle.png  used on input line 62.
+(pdftex.def)             Requested size: 227.62206pt x 208.19257pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+
+LaTeX Warning: Citation `Mandelbrot1982Fractal' undefined on input line 69.
+
+
+LaTeX Warning: Citation `Schwarz2023Statistics' undefined on input line 70.
+
+
+LaTeX Warning: Reference `eq:NoiseStat1' on page 4 undefined on input line 79.
+
+[4 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Sierpinski Triangle.png>]
+
+LaTeX Warning: Reference `eq:<iqw>_xi' on page 5 undefined on input line 106.
+
+
+LaTeX Warning: Reference `eq:<iqw>_xi' on page 5 undefined on input line 110.
+
+
+LaTeX Warning: Reference `eq:NoiseStat1' on page 5 undefined on input line 114.
+
+
+LaTeX Warning: Reference `eq:NoiseStat2' on page 5 undefined on input line 114.
+
+[5]
+
+LaTeX Warning: Reference `eq:<iqint>_xi' on page 6 undefined on input line 122.
+
+
+LaTeX Warning: Reference `eq:<iqw>_xi' on page 6 undefined on input line 122.
+
+
+LaTeX Warning: Citation `Huang1978Stochastic' undefined on input line 126.
+
+
+LaTeX Warning: Reference `eq:pdfBrownian' on page 6 undefined on input line 130.
+
+
+LaTeX Warning: Reference `eq:w-w0_relation' on page 6 undefined on input line 134.
+
+
+LaTeX Warning: Citation `Sutton2024Brownian' undefined on input line 134.
+
+
+LaTeX Warning: Citation `Viswanathan2008Levy' undefined on input line 135.
+
+
+LaTeX Warning: Citation `Laskin2018Fractional' undefined on input line 151.
+
+[6]
+
+LaTeX Warning: Citation `Peres2004Quantum' undefined on input line 158.
+
+
+LaTeX Warning: Citation `Zettili2009Quantum' undefined on input line 183.
+
+
+LaTeX Warning: Citation `Feynman1948Quantum' undefined on input line 186.
+
+<Images/Feynman Setup.png, id=244, 534.19576pt x 221.02576pt>
+File: Images/Feynman Setup.png Graphic file (type png)
+<use Images/Feynman Setup.png>
+Package pdftex.def Info: Images/Feynman Setup.png  used on input line 189.
+(pdftex.def)             Requested size: 227.62206pt x 94.1792pt.
+[7]
+
+LaTeX Warning: Citation `Das2019Field' undefined on input line 197.
+
+
+LaTeX Warning: Reference `eq:FeynmanSetup' on page 8 undefined on input line 197.
+
+
+LaTeX Warning: Citation `Kibble2004Classical' undefined on input line 205.
+
+[8 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Feynman Setup.png>]
+
+LaTeX Warning: Reference `eq:Psi(xgt)Taylor' on page 9 undefined on input line 232.
+
+
+LaTeX Warning: Reference `eq:FeynmanA' on page 9 undefined on input line 238.
+
+
+LaTeX Warning: Reference `eq:VTaylor1' on page 9 undefined on input line 239.
+
+
+LaTeX Warning: Reference `eq:Psi(xgt)Taylor' on page 9 undefined on input line 243.
+
+[9]
+
+LaTeX Warning: Reference `eq:ddtPsiDefinition' on page 10 undefined on input line 259.
+
+
+LaTeX Warning: Citation `Derbes1996Feynman' undefined on input line 268.
+
+
+LaTeX Warning: Citation `Xia2024Performance' undefined on input line 273.
+
+
+LaTeX Warning: Reference `eq:FeynmanSetup' on page 10 undefined on input line 273.
+
+
+LaTeX Warning: Reference `eq:FreePartKernel' on page 10 undefined on input line 281.
+
+
+LaTeX Warning: Reference `eq:FractionalPathInt1' on page 10 undefined on input line 286.
+
+[10]
+
+LaTeX Warning: Reference `eq:FractionalPathInt1' on page 11 undefined on input line 291.
+
+
+LaTeX Warning: Reference `eq:Fractional1DSchrodinger' on page 11 undefined on input line 308.
+
+
+LaTeX Warning: Reference `eq:Schrodinger' on page 11 undefined on input line 308.
+
+<Images/1D IPW.png, id=315, 433.62pt x 396.609pt>
+File: Images/1D IPW.png Graphic file (type png)
+<use Images/1D IPW.png>
+Package pdftex.def Info: Images/1D IPW.png  used on input line 314.
+(pdftex.def)             Requested size: 227.62206pt x 208.19257pt.
+[11]
+
+LaTeX Warning: Citation `Sathish2014Particle' undefined on input line 318.
+
+
+LaTeX Warning: Reference `eq:TotalProbability' on page 12 undefined on input line 318.
+
+
+LaTeX Warning: Citation `Griffiths_Schroeter_2018' undefined on input line 339.
+
+
+LaTeX Warning: Reference `eq:PsiNonFrac' on page 12 undefined on input line 339.
+
+
+LaTeX Warning: Reference `eq:TimeIndpSchrodinger' on page 12 undefined on input line 347.
+
+[12 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/1D IPW.png>]
+
+LaTeX Warning: Reference `eq:StandingWaveEquation' on page 13 undefined on input line 351.
+
+
+LaTeX Warning: Reference `eq:Boundary1' on page 13 undefined on input line 360.
+
+
+LaTeX Warning: Reference `eq:Boundary2' on page 13 undefined on input line 360.
+
+
+LaTeX Warning: Reference `eq:NormalizationIPW' on page 13 undefined on input line 364.
+
+
+LaTeX Warning: Citation `Zachos2005Quantum' undefined on input line 380.
+
+
+LaTeX Warning: Citation `GusPur2016Kuantum' undefined on input line 380.
+
+
+LaTeX Warning: Reference `fig:1DIPW' on page 13 undefined on input line 381.
+
+
+LaTeX Warning: Reference `eq:IPWCondition' on page 13 undefined on input line 381.
+
+
+LaTeX Warning: Reference `eq:Fractional1DSchrodinger' on page 13 undefined on input line 381.
+
+
+LaTeX Warning: Reference `eq:TimeIndpFracSchrodinger' on page 13 undefined on input line 386.
+
+
+LaTeX Warning: Reference `eq:FracIPWEigen1' on page 13 undefined on input line 390.
+
+
+LaTeX Warning: Reference `eq:RieszDef' on page 13 undefined on input line 390.
+
+[13]
+
+LaTeX Warning: Reference `eq:Boundary1' on page 14 undefined on input line 407.
+
+
+LaTeX Warning: Reference `eq:Boundary2' on page 14 undefined on input line 407.
+
+
+LaTeX Warning: Reference `eq:FracIPWEigen1' on page 14 undefined on input line 407.
+
+
+LaTeX Warning: Reference `eq:FracIPWEigen2' on page 14 undefined on input line 407.
+
+
+LaTeX Warning: Reference `eq:EigenEnergyFractional' on page 14 undefined on input line 411.
+
+
+LaTeX Warning: Reference `eq:NormalizationIPW' on page 14 undefined on input line 411.
+
+
+LaTeX Warning: Reference `eq:PsiXSolution' on page 14 undefined on input line 415.
+
+
+LaTeX Warning: Citation `Guo2006Some' undefined on input line 415.
+
+
+LaTeX Warning: Citation `Turns2020Thermo' undefined on input line 432.
+
+
+LaTeX Warning: Citation `Lewis2020Thermo' undefined on input line 432.
+
+[14]
+
+LaTeX Warning: Citation `Sekerka2015Thermal' undefined on input line 436.
+
+
+LaTeX Warning: Citation `LeBellac2011Quantum' undefined on input line 441.
+
+
+LaTeX Warning: Citation `Strasberg2021First' undefined on input line 445.
+
+
+LaTeX Warning: Reference `eq:QuantumU' on page 15 undefined on input line 445.
+
+
+LaTeX Warning: Citation `Dann2023Unification' undefined on input line 449.
+
+[15]
+
+LaTeX Warning: Citation `Quan2008QHE' undefined on input line 454.
+
+
+LaTeX Warning: Citation `Dinccer2012Thermodynamic' undefined on input line 455.
+
+
+LaTeX Warning: Citation `Zemansky1997Thermo' undefined on input line 463.
+
+[16]
+
+LaTeX Warning: Citation `Schroeder2020Thermal' undefined on input line 467.
+
+<Images/Piston & Movable Wall.png, id=427, 792.561pt x 382.593pt>
+File: Images/Piston & Movable Wall.png Graphic file (type png)
+<use Images/Piston & Movable Wall.png>
+Package pdftex.def Info: Images/Piston & Movable Wall.png  used on input line 530.
+(pdftex.def)             Requested size: 273.14923pt x 131.86044pt.
+
+LaTeX Warning: Citation `Toyota2017Pistons' undefined on input line 531.
+
+
+LaTeX Warning: Citation `Toyota2017Pistons' undefined on input line 531.
+
+
+LaTeX Warning: Citation `Latifah2013QHE' undefined on input line 534.
+
+
+LaTeX Warning: Citation `Purwanto2016QHE' undefined on input line 536.
+
+<Images/Quantum Carnot Cycle.png, id=436, 433.62pt x 389.82pt>
+File: Images/Quantum Carnot Cycle.png Graphic file (type png)
+<use Images/Quantum Carnot Cycle.png>
+Package pdftex.def Info: Images/Quantum Carnot Cycle.png  used on input line 539.
+(pdftex.def)             Requested size: 227.62206pt x 204.62883pt.
+
+LaTeX Warning: Citation `Bender2000Quantum' undefined on input line 540.
+
+
+LaTeX Warning: Citation `Bender2000Quantum' undefined on input line 540.
+
+[17 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Piston & Movable Wall.png (PNG copy)>]
+
+LaTeX Warning: Reference `eq:CarnotE_AB' on page 18 undefined on input line 548.
+
+
+LaTeX Warning: Reference `eq:QuantumU' on page 18 undefined on input line 548.
+
+[18 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Quantum Carnot Cycle.png>]
+
+LaTeX Warning: Reference `eq:RegCarnotFab' on page 19 undefined on input line 579.
+
+
+LaTeX Warning: Citation `Wu2006Brayton' undefined on input line 583.
+
+
+LaTeX Warning: Reference `eq:RegCarnotFcd' on page 19 undefined on input line 604.
+
+
+LaTeX Warning: Citation `LibreTexts2021Carnot' undefined on input line 609.
+
+[19]
+
+LaTeX Warning: Reference `fig:QCarnotCycle' on page 20 undefined on input line 619.
+
+
+LaTeX Warning: Reference `eq:RegCarnotW' on page 20 undefined on input line 627.
+
+
+LaTeX Warning: Reference `eq:TauDef' on page 20 undefined on input line 627.
+
+
+LaTeX Warning: Reference `eq:RegCarnotQab' on page 20 undefined on input line 637.
+
+
+LaTeX Warning: Reference `eq:RegCarnotW' on page 20 undefined on input line 637.
+
+<Images/Ordinary Carnot P vs r.png, id=480, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Carnot P vs r.png Graphic file (type png)
+<use Images/Ordinary Carnot P vs r.png>
+Package pdftex.def Info: Images/Ordinary Carnot P vs r.png  used on input line 656.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+[20]
+<Images/Ordinary Carnot Eta vs r.png, id=494, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Carnot Eta vs r.png Graphic file (type png)
+<use Images/Ordinary Carnot Eta vs r.png>
+Package pdftex.def Info: Images/Ordinary Carnot Eta vs r.png  used on input line 663.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+<Images/Ordinary Carnot P vs Eta.png, id=495, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Carnot P vs Eta.png Graphic file (type png)
+<use Images/Ordinary Carnot P vs Eta.png>
+Package pdftex.def Info: Images/Ordinary Carnot P vs Eta.png  used on input line 670.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+ [21 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Carnot P vs r.png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Carnot Eta vs r.png (PNG copy)>]
+
+LaTeX Warning: Citation `Wang2012Optimization' undefined on input line 674.
+
+<Images/Quantum Otto Cycle.png, id=504, 433.62pt x 392.886pt>
+File: Images/Quantum Otto Cycle.png Graphic file (type png)
+<use Images/Quantum Otto Cycle.png>
+Package pdftex.def Info: Images/Quantum Otto Cycle.png  used on input line 680.
+(pdftex.def)             Requested size: 227.62206pt x 206.23825pt.
+
+LaTeX Warning: Citation `Thomas2011Coupled' undefined on input line 681.
+
+
+LaTeX Warning: Citation `Thomas2011Coupled' undefined on input line 681.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Carnot P vs Eta.png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:QOttoCycle' on page 23 undefined on input line 684.
+
+
+LaTeX Warning: Reference `eq:RegOttoQab' on page 23 undefined on input line 701.
+
+
+LaTeX Warning: Reference `eq:RegOttoQcd' on page 23 undefined on input line 701.
+
+[23 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Quantum Otto Cycle.png>]
+
+LaTeX Warning: Reference `eq:TauDef' on page 24 undefined on input line 706.
+
+<Images/Ordinary Otto P vs r.png, id=526, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Otto P vs r.png Graphic file (type png)
+<use Images/Ordinary Otto P vs r.png>
+Package pdftex.def Info: Images/Ordinary Otto P vs r.png  used on input line 732.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+
+Underfull \vbox (badness 7099) has occurred while \output is active []
+
+ [24]
+<Images/Ordinary Otto Eta vs r.png, id=538, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Otto Eta vs r.png Graphic file (type png)
+<use Images/Ordinary Otto Eta vs r.png>
+Package pdftex.def Info: Images/Ordinary Otto Eta vs r.png  used on input line 739.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+<Images/Ordinary Otto P vs Eta.png, id=539, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Otto P vs Eta.png Graphic file (type png)
+<use Images/Ordinary Otto P vs Eta.png>
+Package pdftex.def Info: Images/Ordinary Otto P vs Eta.png  used on input line 746.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+ [25 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Otto P vs r.png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Otto Eta vs r.png (PNG copy)>]
+
+LaTeX Warning: Citation `Pena2020QHE' undefined on input line 750.
+
+<Images/Quantum Brayton Cycle.png, id=548, 433.62pt x 396.609pt>
+File: Images/Quantum Brayton Cycle.png Graphic file (type png)
+<use Images/Quantum Brayton Cycle.png>
+Package pdftex.def Info: Images/Quantum Brayton Cycle.png  used on input line 756.
+(pdftex.def)             Requested size: 227.62206pt x 208.19257pt.
+
+LaTeX Warning: Citation `Huang2013Brayton' undefined on input line 757.
+
+
+LaTeX Warning: Citation `Huang2013Brayton' undefined on input line 757.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Otto P vs Eta.png (PNG copy)>]
+
+LaTeX Warning: Reference `eq:RegBraytonWab' on page 27 undefined on input line 778.
+
+
+LaTeX Warning: Reference `eq:RegBraytonUab' on page 27 undefined on input line 778.
+
+[27 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Quantum Brayton Cycle.png>]
+
+LaTeX Warning: Reference `eq:RegBraytonWcd' on page 28 undefined on input line 799.
+
+
+LaTeX Warning: Reference `eq:RegBraytonUcd' on page 28 undefined on input line 799.
+
+
+LaTeX Warning: Reference `eq:RegBraytonQab' on page 28 undefined on input line 805.
+
+
+LaTeX Warning: Reference `eq:RegBraytonQcd' on page 28 undefined on input line 805.
+
+
+LaTeX Warning: Citation `MIT_BraytonCycle' undefined on input line 805.
+
+<Images/Ordinary Brayton P vs r.png, id=573, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Brayton P vs r.png Graphic file (type png)
+<use Images/Ordinary Brayton P vs r.png>
+Package pdftex.def Info: Images/Ordinary Brayton P vs r.png  used on input line 836.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+[28]
+<Images/Ordinary Brayton Eta vs r.png, id=587, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Brayton Eta vs r.png Graphic file (type png)
+<use Images/Ordinary Brayton Eta vs r.png>
+Package pdftex.def Info: Images/Ordinary Brayton Eta vs r.png  used on input line 843.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+<Images/Ordinary Brayton P vs Eta.png, id=588, 526.96875pt x 395.22656pt>
+File: Images/Ordinary Brayton P vs Eta.png Graphic file (type png)
+<use Images/Ordinary Brayton P vs Eta.png>
+Package pdftex.def Info: Images/Ordinary Brayton P vs Eta.png  used on input line 850.
+(pdftex.def)             Requested size: 273.14923pt x 204.86768pt.
+ [29 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Brayton P vs r.png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Brayton Eta vs r.png (PNG copy)>]
+
+LaTeX Warning: Citation `Fikri2020QHE' undefined on input line 854.
+
+) [30 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Ordinary Brayton P vs Eta.png (PNG copy)>]
+\openout2 = `./Contents/Daster/Bab-3.aux'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-3.tex
+Bab 2.
+<Images/Diagram Alir.PNG, id=605, 443.40656pt x 398.99063pt>
+File: Images/Diagram Alir.PNG Graphic file (type png)
+<use Images/Diagram Alir.PNG>
+Package pdftex.def Info: Images/Diagram Alir.PNG  used on input line 10.
+(pdftex.def)             Requested size: 318.66948pt x 286.76772pt.
+[31
+
+
+
+
+ </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Diagram Alir.PNG>]) [32]
+\openout2 = `./Contents/Daster/Bab-4.aux'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-4.tex
+Bab 3.
+
+LaTeX Warning: Reference `eq:EigenEnergyFractional' on page 33 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:QCarnotCycle' on page 33 undefined on input line 6.
+
+[33
+
+
+
+
+]
+
+LaTeX Warning: Reference `eq:FracCarnotFab' on page 34 undefined on input line 39.
+
+
+LaTeX Warning: Reference `eq:FracCarnotFcd' on page 34 undefined on input line 65.
+
+
+LaTeX Warning: Reference `eq:FracCarnotQab' on page 34 undefined on input line 70.
+
+
+LaTeX Warning: Reference `eq:FracCarnotQcd' on page 34 undefined on input line 70.
+
+
+LaTeX Warning: Reference `eq:FracCarnotW' on page 34 undefined on input line 75.
+
+
+LaTeX Warning: Reference `eq:TauDef' on page 34 undefined on input line 75.
+
+[34]
+
+LaTeX Warning: Reference `eq:FracCarnotQab' on page 35 undefined on input line 86.
+
+
+LaTeX Warning: Reference `eq:FracCarnotW' on page 35 undefined on input line 86.
+
+<Images/FracCarnot_PvsR_a.png, id=641, 526.96875pt x 395.22656pt>
+File: Images/FracCarnot_PvsR_a.png Graphic file (type png)
+<use Images/FracCarnot_PvsR_a.png>
+Package pdftex.def Info: Images/FracCarnot_PvsR_a.png  used on input line 106.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracCarnot_PvsR_B(a=1.85).png, id=642, 526.96875pt x 395.22656pt>
+File: Images/FracCarnot_PvsR_B(a=1.85).png Graphic file (type png)
+<use Images/FracCarnot_PvsR_B(a=1.85).png>
+Package pdftex.def Info: Images/FracCarnot_PvsR_B(a=1.85).png  used on input line 113.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+Underfull \vbox (badness 4556) has occurred while \output is active []
+
+ [35]
+
+LaTeX Warning: Reference `fig:FracCarnotPvsR_a' on page 36 undefined on input line 126.
+
+
+LaTeX Warning: Reference `fig:FracCarnotPvsR_B' on page 36 undefined on input line 126.
+
+<Images/FracCarnot_EtavsR_a(B=0.01).png, id=652, 526.96875pt x 395.22656pt>
+File: Images/FracCarnot_EtavsR_a(B=0.01).png Graphic file (type png)
+<use Images/FracCarnot_EtavsR_a(B=0.01).png>
+Package pdftex.def Info: Images/FracCarnot_EtavsR_a(B=0.01).png  used on input line 131.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracCarnot_EtavsR_B(a=1.85).png, id=653, 526.96875pt x 395.22656pt>
+File: Images/FracCarnot_EtavsR_B(a=1.85).png Graphic file (type png)
+<use Images/FracCarnot_EtavsR_B(a=1.85).png>
+Package pdftex.def Info: Images/FracCarnot_EtavsR_B(a=1.85).png  used on input line 138.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+LaTeX Warning: Reference `fig:FracCarnotEtavsR_a' on page 36 undefined on input line 151.
+
+
+LaTeX Warning: Reference `fig:FracCarnotEtavsR_B' on page 36 undefined on input line 151.
+
+<Images/FracCarnot_PvsEta_a(B=0.01).png, id=654, 526.96875pt x 395.22656pt>
+File: Images/FracCarnot_PvsEta_a(B=0.01).png Graphic file (type png)
+<use Images/FracCarnot_PvsEta_a(B=0.01).png>
+Package pdftex.def Info: Images/FracCarnot_PvsEta_a(B=0.01).png  used on input line 156.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracCarnot_PvsEta_B(a=1.85).png, id=655, 526.96875pt x 395.22656pt>
+File: Images/FracCarnot_PvsEta_B(a=1.85).png Graphic file (type png)
+<use Images/FracCarnot_PvsEta_B(a=1.85).png>
+Package pdftex.def Info: Images/FracCarnot_PvsEta_B(a=1.85).png  used on input line 163.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+[36 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracCarnot_PvsR_a.png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracCarnot_PvsR_B(a=1.85).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracCarnot_EtavsR_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracCarnot_EtavsR_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:FracCarnotPvsEta_a' on page 37 undefined on input line 176.
+
+
+LaTeX Warning: Reference `fig:FracCarnotPvsEta_B' on page 37 undefined on input line 176.
+
+
+LaTeX Warning: Reference `fig:QOttoCycle' on page 37 undefined on input line 203.
+
+[37 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracCarnot_PvsEta_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracCarnot_PvsEta_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `eq:FracOttoQab' on page 38 undefined on input line 221.
+
+
+LaTeX Warning: Reference `eq:FracOttoQcd' on page 38 undefined on input line 221.
+
+
+LaTeX Warning: Reference `eq:TauDef' on page 38 undefined on input line 225.
+
+
+LaTeX Warning: Reference `eq:FracOttoQcd' on page 38 undefined on input line 225.
+
+
+LaTeX Warning: Reference `eq:FracOttoQab' on page 38 undefined on input line 235.
+
+
+LaTeX Warning: Reference `eq:FracOttoW' on page 38 undefined on input line 235.
+
+[38]
+<Images/FracOtto_PvsR_a(B=0.01).png, id=683, 526.96875pt x 395.22656pt>
+File: Images/FracOtto_PvsR_a(B=0.01).png Graphic file (type png)
+<use Images/FracOtto_PvsR_a(B=0.01).png>
+Package pdftex.def Info: Images/FracOtto_PvsR_a(B=0.01).png  used on input line 255.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracOtto_PvsR_B(a=1.85).png, id=684, 526.96875pt x 395.22656pt>
+File: Images/FracOtto_PvsR_B(a=1.85).png Graphic file (type png)
+<use Images/FracOtto_PvsR_B(a=1.85).png>
+Package pdftex.def Info: Images/FracOtto_PvsR_B(a=1.85).png  used on input line 262.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+
+LaTeX Warning: Reference `fig:FracOttoPvsR_a' on page 39 undefined on input line 275.
+
+
+LaTeX Warning: Reference `fig:FracOttoPvsR_B' on page 39 undefined on input line 275.
+
+<Images/FracOtto_EtavsR_a(B=0.01).png, id=685, 526.96875pt x 395.22656pt>
+File: Images/FracOtto_EtavsR_a(B=0.01).png Graphic file (type png)
+<use Images/FracOtto_EtavsR_a(B=0.01).png>
+Package pdftex.def Info: Images/FracOtto_EtavsR_a(B=0.01).png  used on input line 281.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracOtto_EtavsR_B(a=1.85).png, id=686, 526.96875pt x 395.22656pt>
+File: Images/FracOtto_EtavsR_B(a=1.85).png Graphic file (type png)
+<use Images/FracOtto_EtavsR_B(a=1.85).png>
+Package pdftex.def Info: Images/FracOtto_EtavsR_B(a=1.85).png  used on input line 288.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracOtto_PvsR_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracOtto_PvsR_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:FracOttoEtavsR_a' on page 40 undefined on input line 295.
+
+
+LaTeX Warning: Reference `fig:FracOttoEtavsR_B' on page 40 undefined on input line 295.
+
+<Images/FracOtto_PvsEta_a(B=0.01).png, id=694, 526.96875pt x 395.22656pt>
+File: Images/FracOtto_PvsEta_a(B=0.01).png Graphic file (type png)
+<use Images/FracOtto_PvsEta_a(B=0.01).png>
+Package pdftex.def Info: Images/FracOtto_PvsEta_a(B=0.01).png  used on input line 307.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracOtto_PvsEta_B(a=1.85).png, id=695, 526.96875pt x 395.22656pt>
+File: Images/FracOtto_PvsEta_B(a=1.85).png Graphic file (type png)
+<use Images/FracOtto_PvsEta_B(a=1.85).png>
+Package pdftex.def Info: Images/FracOtto_PvsEta_B(a=1.85).png  used on input line 314.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+LaTeX Warning: Reference `fig:FracOttoPvsEta_a' on page 40 undefined on input line 327.
+
+
+LaTeX Warning: Reference `fig:FracOttoPvsEta_B' on page 40 undefined on input line 327.
+
+[40 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracOtto_EtavsR_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracOtto_EtavsR_B(a=1.85).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracOtto_PvsEta_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracOtto_PvsEta_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:QBraytonCycle' on page 41 undefined on input line 330.
+
+
+LaTeX Warning: Reference `eq:FracBraytonConstF' on page 41 undefined on input line 334.
+
+
+LaTeX Warning: Reference `eq:FracBraytonConstF' on page 41 undefined on input line 343.
+
+
+LaTeX Warning: Reference `eq:FracBraytonLaLbRelation' on page 41 undefined on input line 343.
+
+[41]
+
+LaTeX Warning: Reference `eq:FracBraytonQab' on page 42 undefined on input line 372.
+
+
+LaTeX Warning: Reference `eq:FracBraytonQcd' on page 42 undefined on input line 372.
+
+
+LaTeX Warning: Reference `eq:FracBraytonQab' on page 42 undefined on input line 377.
+
+
+LaTeX Warning: Reference `eq:FracBraytonW' on page 42 undefined on input line 377.
+
+[42]
+<Images/FracBrayton_PvsR_a(B=0.01).png, id=725, 526.96875pt x 395.22656pt>
+File: Images/FracBrayton_PvsR_a(B=0.01).png Graphic file (type png)
+<use Images/FracBrayton_PvsR_a(B=0.01).png>
+Package pdftex.def Info: Images/FracBrayton_PvsR_a(B=0.01).png  used on input line 398.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracBrayton_PvsR_B(a=1.85).png, id=726, 526.96875pt x 395.22656pt>
+File: Images/FracBrayton_PvsR_B(a=1.85).png Graphic file (type png)
+<use Images/FracBrayton_PvsR_B(a=1.85).png>
+Package pdftex.def Info: Images/FracBrayton_PvsR_B(a=1.85).png  used on input line 405.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+
+LaTeX Warning: Reference `fig:FracBraytonPvsR_a' on page 43 undefined on input line 412.
+
+
+LaTeX Warning: Reference `fig:FracBraytonPvsR_B' on page 43 undefined on input line 412.
+
+<Images/FracBrayton_EtavsR_a(B=0.01).png, id=727, 526.96875pt x 395.22656pt>
+File: Images/FracBrayton_EtavsR_a(B=0.01).png Graphic file (type png)
+<use Images/FracBrayton_EtavsR_a(B=0.01).png>
+Package pdftex.def Info: Images/FracBrayton_EtavsR_a(B=0.01).png  used on input line 417.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracBrayton_EtavsR_B(a=1.85).png, id=728, 526.96875pt x 395.22656pt>
+File: Images/FracBrayton_EtavsR_B(a=1.85).png Graphic file (type png)
+<use Images/FracBrayton_EtavsR_B(a=1.85).png>
+Package pdftex.def Info: Images/FracBrayton_EtavsR_B(a=1.85).png  used on input line 424.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+[43 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracBrayton_PvsR_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracBrayton_PvsR_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:FracBraytonEtavsR_a' on page 44 undefined on input line 431.
+
+
+LaTeX Warning: Reference `fig:FracBraytonEtavsR_B' on page 44 undefined on input line 431.
+
+<Images/FracBrayton_PvsEta_a(B=0.01).png, id=737, 526.96875pt x 395.22656pt>
+File: Images/FracBrayton_PvsEta_a(B=0.01).png Graphic file (type png)
+<use Images/FracBrayton_PvsEta_a(B=0.01).png>
+Package pdftex.def Info: Images/FracBrayton_PvsEta_a(B=0.01).png  used on input line 436.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+<Images/FracBrayton_PvsEta_B(a=1.85).png, id=738, 526.96875pt x 395.22656pt>
+File: Images/FracBrayton_PvsEta_B(a=1.85).png Graphic file (type png)
+<use Images/FracBrayton_PvsEta_B(a=1.85).png>
+Package pdftex.def Info: Images/FracBrayton_PvsEta_B(a=1.85).png  used on input line 443.
+(pdftex.def)             Requested size: 223.07211pt x 167.30267pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracBrayton_EtavsR_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracBrayton_EtavsR_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:FracBraytonPvsEta_a' on page 45 undefined on input line 450.
+
+
+LaTeX Warning: Reference `fig:FracBraytonPvsEta_B' on page 45 undefined on input line 450.
+
+
+LaTeX Warning: Reference `eq:Action' on page 45 undefined on input line 453.
+
+
+LaTeX Warning: Citation `Hilfer2000Applications' undefined on input line 453.
+
+
+LaTeX Warning: Reference `eq:Action2' on page 45 undefined on input line 457.
+
+
+LaTeX Warning: Reference `eq:FractionalHamiltonian' on page 45 undefined on input line 457.
+
+[45 </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracBrayton_PvsEta_a(B=0.01).png (PNG copy)> </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/FracBrayton_PvsEta_B(a=1.85).png (PNG copy)>]
+
+LaTeX Warning: Reference `eq:Action3' on page 46 undefined on input line 461.
+
+[46])
+\openout2 = `./Contents/Daster/Bab-5.aux'.
+
+ (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-5.tex
+Bab 4.
+[47
+
+
+
+
+]) [48] (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Tugas Akhir.bbl) [49
+
+
+
+] [50]
+\openout2 = `./Contents/LAMPIRAN-A.aux'.
+
+
+No file ./Contents/LAMPIRAN-A.tex.
+\openout2 = `"./Contents/BagianBelakang/Biodata Penulis.aux"'.
+
+(/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/BagianBelakang/Biodata Penulis.tex
+<Images/Pas Foto 3x4.jpg, id=783, 289.08pt x 433.62pt>
+File: Images/Pas Foto 3x4.jpg Graphic file (type jpg)
+<use Images/Pas Foto 3x4.jpg>
+Package pdftex.def Info: Images/Pas Foto 3x4.jpg  used on input line 5.
+(pdftex.def)             Requested size: 142.26357pt x 199.16988pt.
+) [51
+
+
+
+
+ </home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Images/Pas Foto 3x4.jpg>] (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Tugas Akhir.aux (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/BagianDepan/Cover Dalam.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/BagianDepan/Lembar Pengesahan 1.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/BagianDepan/Lembar Orisinalitas 1.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Contents/Abstrak/Abstrak.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Abstrak/Abstract.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/BagianDepan/Kata Pengantar.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Bab-1.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-2.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-3.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-4.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/Daster/Bab-5.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/LAMPIRAN-A.aux) (/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/./Contents/BagianBelakang/Biodata Penulis.aux))
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `"Tugas Akhir".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Tugas Akhir".out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  CC1267704D675E8505B1898BB867A4DC;4434.
+ ) 
+Here is how much of TeX's memory you used:
+ 31112 strings out of 474222
+ 576308 string characters out of 5748733
+ 1945975 words of memory out of 5000000
+ 52398 multiletter control sequences out of 15000+600000
+ 570934 words of font info for 81 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,17n,101p,1715b,866s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.Hilfer2000Applications} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Fikri2020QHE} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.MIT_BraytonCycle} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Huang2013Brayton} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Pena2020QHE} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Thomas2011Coupled} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Wang2012Optimization} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.LibreTexts2021Carnot} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Wu2006Brayton} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Bender2000Quantum} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Purwanto2016QHE} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Latifah2013QHE} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Toyota2017Pistons} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Schroeder2020Thermal} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Zemansky1997Thermo} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Dinccer2012Thermodynamic} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Quan2008QHE} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Dann2023Unification} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Strasberg2021First} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.LeBellac2011Quantum} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Sekerka2015Thermal} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Lewis2020Thermo} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Turns2020Thermo} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Guo2006Some} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Zachos2005Quantum} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Griffiths_Schroeter_2018} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Sathish2014Particle} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Xia2024Performance} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Derbes1996Feynman} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Kibble2004Classical} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Das2019Field} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Feynman1948Quantum} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Zettili2009Quantum} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Peres2004Quantum} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Laskin2018Fractional} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Viswanathan2008Levy} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Sutton2024Brownian} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Huang1978Stochastic} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Schwarz2023Statistics} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Mandelbrot1982Fractal} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Falconer2004Fractal} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Herrmann2014Fractional} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Mainardi2013Fractional} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.Zhou2023Fractional} has been referenced but does not exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "/home/aliefhisyam/MyTA/TA_01/Final_Project___Fractional_Quantum_Heat_Engine/Tugas Akhir.pdf" (70 pages, 3976694 bytes).
+PDF statistics:
+ 949 PDF objects out of 1000 (max. 8388607)
+ 770 compressed objects within 8 object streams
+ 361 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
+
